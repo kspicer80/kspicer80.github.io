@@ -24,7 +24,7 @@ As I say, it's possible all these new tools are totally unhelpful, although I su
 
 This is very nicely put—I dig it.)
 
-{{< figure src="images/imgforblogposts/post_2/moretti.jpg" link="https://litlab.stanford.edu/LiteraryLabPamphlet2.pdf" caption="Fig. 1: Original Image from one of Franco Moretti's _Lit Lab_, cited in Karen Schulz's 2011 _NYT_ [article](ww.nytimes.com/2011/06/26/books/review/the-mechanic-muse-what-is-distantreading.html?mtrref=www.google.com&gwh=A032D8110AE93BB4C005AC4223DC84E4&gwt=pay), "The Mechanic Muse" >}}
+{{< figure src="images/imgforblogposts/post_2/moretti.jpg" link="https://litlab.stanford.edu/LiteraryLabPamphlet2.pdf" caption="Fig. 1: Original Image from one of Franco Moretti's _Lit Lab_, cited in Karen Schulz's 2011 _NYT_ [article](ww.nytimes.com/2011/06/26/books/review/the-mechanic-muse-what-is-distantreading.html?mtrref=www.google.com&gwh=A032D8110AE93BB4C005AC4223DC84E4&gwt=pay), "The Mechanic Muse" " >}}
 
 The whole "close vs. distant" reading issue is no doubt just about gatekeeping, as Ted Underwood has [argued](http://dhdebates.gc.cuny.edu/debates/text/95), and is one of those things where my (re)turn to Deleuze is helpful:  a logic of opposition should not be chosen over a language of difference—distant reading is perhaps just simply a different way of reading and not necessarily opposed to reading closely. An unsupervised (or supervised) nondeterministic algorithm is what we do when we humans read closely?  Why not?
 
