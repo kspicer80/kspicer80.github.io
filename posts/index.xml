@@ -5,6 +5,6 @@ The other one had the following in .yaml header &amp;hellip;: but deleting it fo
 Let&amp;rsquo;s do a little testing of images:
 We&amp;rsquo;ll have a look see to see what we get!</description><content type="html"><![CDATA[<p>Once again, a third post using the Atom editor rather than directly through GitHub in the browser.</p>
 <p>Let&rsquo;s do a little testing of images:</p>
-<p><img src="test.png" alt=""></p>
+<p><img src="/images/test.png" alt=""></p>
 <p>We&rsquo;ll have a look see to see what we get!</p>
 ]]></content></item><item><title>First Post Test</title><link>https://kspicer80.github.io/posts/first-post-test/</link><pubDate>Thu, 10 Feb 2022 08:19:43 -0600</pubDate><guid>https://kspicer80.github.io/posts/first-post-test/</guid><description/><content type="html"></content></item></channel></rss>
