@@ -3,7 +3,7 @@ title: "Inaugural Post and ... Re-posting an Old Post (1 of 4) from an Older Wor
 date: 2021-12-24T08:19:43-06:00
 draft: false
 toc: false
-images:
+images: /imgforblogposts/post_1/ramona_sentence.svg
 tags:
   - beverly cleary, bevery cleary ramona, dependency parsing, dh, digital humanities, old wordpress posts, displacy, python, python nltk, spacy, visualization
 ---
