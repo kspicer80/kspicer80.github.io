@@ -26,7 +26,7 @@ This is very nicely put—I dig it.)
 
 {{< rawhtml >}}
   <p align = "center">
-    <img src = "../../imgforblogposts/post_2/moretti.jpg">
+    <img src = "/imgforblogposts/post_2/moretti.jpg">
     </p>
   <p>
   <p align = "center">
