@@ -15,10 +15,6 @@ Playing around with [spaCy](https://spacy.io/)-displaCy and a sentence from Beve
 
 ![](/images/imgforblogposts/post_1/ramona_sentence.svg)
 
-<p align = "center">
-<img src = "/images/imgforblogposts/post_1/ramona_sentence.svg">
-</p>
-
 Feel free to go and compare the nicer (less black-and-white version) provided by Google's Cloud Natural Language API [here](https://cloud.google.com/natural-language/). 
 
 More to come ... (I'm also hoping to use this whole site as a kind of sandbox in which to play around with many of these new toys, not to mention just Wordpress itself ... [I need a bunch more time playing around with this new "block" editor thing here too[updated as of 12.24.2021: I need more time to fiddle around with Markdown, HTML, and a bunch of other stuff]]—nobody'll read these things anyways, so here seems as good a place as any, lol ...)
