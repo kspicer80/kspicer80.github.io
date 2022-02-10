@@ -13,7 +13,7 @@ So after a week-long [research institute](http://dhsouthbend.org/dhri/) put toge
 
 Playing around with [spaCy](https://spacy.io/)-displaCy and a sentence from Beverly Cleary's _Ramona Forever_ (image shows a "dependency parsing" for the novel's first sentence—my youngest child is reading all of these books at the moment):
 
-![]("/images/imgforblogposts/post_1/ramona_sentence.svg")
+![](/images/imgforblogposts/post_1/ramona_sentence.svg)
 
 <p align = "center">
 <img src = "/images/imgforblogposts/post_1/ramona_sentence.svg">
