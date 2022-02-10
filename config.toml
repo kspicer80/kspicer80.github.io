@@ -1,4 +1,4 @@
-baseURL = 'http://example.org/'
+baseURL = 'https://kspicer80.github.io/'
 languageCode = 'en-us'
 title = 'Digital Forays'
 theme = 'hello-friend-ng'
@@ -11,7 +11,7 @@ paginate = 10
   dateformNumTime = "2006-01-02 15:04"
 
   # Subtitle for home
-  homeSubtitle = "A simple and beautiful blog"
+  homeSubtitle = "Tracing Paths through the Digital "
 
   # Set disableReadOtherPosts to true in order to hide the links to other posts.
   disableReadOtherPosts = false
@@ -20,7 +20,7 @@ paginate = 10
   enableSharingButtons = true
 
   # Metadata mostly used in document's head
-  description = "My new homepage or blog"
+  description = "My Digital Humanities Blog"
   keywords = "homepage, blog"
   images = [""]
 
