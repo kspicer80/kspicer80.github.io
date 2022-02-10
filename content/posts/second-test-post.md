@@ -7,4 +7,18 @@ date = "2014-04-02"
 categories = [ "Development", "golang", ] 
 +++
 
-Once more, some content!
+Once more, some content
+
+The other one had the following in .yaml header ...:
+
+``` python
+---
+title: "First Post Test"
+date: 2022-02-10T08:19:43-06:00
+draft: false
+toc: false
+images:
+tags:
+  - untagged
+---
+```
