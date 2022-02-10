@@ -1,9 +1,85 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Digital Forays</title><link>https://kspicer80.github.io/posts/</link><description>Recent content in Posts on Digital Forays</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&lt;a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0&lt;/a></copyright><lastBuildDate>Thu, 10 Feb 2022 08:19:43 -0600</lastBuildDate><atom:link href="https://kspicer80.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>A Third Test Post</title><link>https://kspicer80.github.io/posts/third-test-post/</link><pubDate>Thu, 10 Feb 2022 08:19:43 -0600</pubDate><guid>https://kspicer80.github.io/posts/third-test-post/</guid><description>Once again, a third post using the Atom editor rather than directly through GitHub in the browser.
-Let&amp;rsquo;s do a little testing of images:
-We&amp;rsquo;ll have a look see to see what we get!</description><content type="html"><![CDATA[<p>Once again, a third post using the Atom editor rather than directly through GitHub in the browser.</p>
-<p>Let&rsquo;s do a little testing of images:</p>
-<p><img src="/images/test.png" alt=""></p>
-<p>We&rsquo;ll have a look see to see what we get!</p>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Digital Forays</title><link>https://kspicer80.github.io/posts/</link><description>Recent content in Posts on Digital Forays</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&lt;a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0&lt;/a></copyright><lastBuildDate>Sat, 25 Dec 2021 08:19:43 -0600</lastBuildDate><atom:link href="https://kspicer80.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Still Playing Around with Python, NLTK, spaCy, etc.</title><link>https://kspicer80.github.io/posts/2019-12-24-still-playing-around-with-python-nltk-spacy-etc_03/</link><pubDate>Sat, 25 Dec 2021 08:19:43 -0600</pubDate><guid>https://kspicer80.github.io/posts/2019-12-24-still-playing-around-with-python-nltk-spacy-etc_03/</guid><description>Ugh, so clearly my discipline in posting is nonexistent. It&amp;rsquo;s fine—I&amp;rsquo;m still just dipping my toes in the water here—and not only that, I&amp;rsquo;m interested in trying to document my learning curve here, such as it is &amp;hellip; here&amp;rsquo;s a WordCloud for Bram Stoker&amp;rsquo;s Dracula:
+This past July I got an opportunity to do a NEH Summer Seminar over at the University of Iowa (&amp;quot;Religion, Secularism, and the Novel&amp;quot;), where the group read a number of canonical novels (Crusoe, Silas Marner, Dracula, On the Road, and Home).</description><content type="html"><![CDATA[<p>Ugh, so clearly my discipline in posting is nonexistent. It&rsquo;s fine—I&rsquo;m still just dipping my toes in the water here—and not only that, I&rsquo;m interested in trying to document my learning curve here, such as it is &hellip; here&rsquo;s a WordCloud for Bram Stoker&rsquo;s <em>Dracula</em>:</p>
+<p><img src="/images/imgforblogposts/post_3/figure_1_stoker_word_cloud.png" alt="Fig. 1: Word Cloud for Bram Stoker&rsquo;s Dracula"></p>
+<p>This past July I got an opportunity to do a NEH Summer Seminar over at the University of Iowa (&quot;<a href="https://religion-secularism-novel.sites.uiowa.edu/">Religion, Secularism, and the Novel</a>&quot;), where the group read a number of canonical novels (<em>Crusoe</em>, <em>Silas Marner</em>, <em>Dracula</em>, <em>On the Road</em>, and <em>Home</em>). I enjoyed the seminar and loved all the so-called traditional humanities stuff: deep discussion, attentiveness to rhetoric and form, and all the other things that we literary scholars do so well. I did also fidget around with some of the newer DH methods (at the time it was really just basic computational stuff: counting tokens, plotting frequency dispersions, making silly little Word Clouds, etc.) on those very same texts we were looking at (excluding Robinson&rsquo;s <em>Home</em>).</p>
+<p>Here&rsquo;s a <a href="https://www.nltk.org/book_1ed/ch01.html">&ldquo;lexical dispersion plot&rdquo;</a> for the word &ldquo;time&rdquo; in Stoker&rsquo;s <em>Dracula</em>:</p>
+<p><img src="/images/imgforblogposts/post_3/figure_2_time_in_stoker.png" alt="Time"></p>
+<p>Here&rsquo;s a dispersion plot for some of the major characters in <em>Dracula</em>:</p>
+<p><img src="/images/imgforblogposts/post_3/figure_3_character_dispersion_plots.png" alt="Character Dispersion Plots"></p>
+<p>Here are some common nouns in <em>Dracula</em>:</p>
+<p><img src="/images/imgforblogposts/post_3/figure_4_common_word_counts.png" alt="Common Nouns"></p>
+<p>Another Dispersion Plot</p>
+<p>I didn&rsquo;t really find anything too profound—although it did for some reason surprise me just slightly that a word like &ldquo;time&rdquo; occurred as frequently as it did in <em>Dracula</em> (simple counts found it 373 times [full exploratory notebook for this is available <a href="https://github.com/kspicer80/nehsummerseminar2019playground/blob/master/nehexploratorynotebook.ipynb">here</a>—the dispersion plots too at this moment in time aren&rsquo;t actually plotting in Jupyter Notebooks {the <a href="https://github.com/googlecolab/colabtools/issues/397">issue</a>, it seems, is <a href="https://stackoverflow.com/questions/54264548/nltk-lexical-dispersion-plot-does-not-show-on-google-colab">known</a> as of 24 December 2019}]).</p>
+<p>I also spent a little bit of time messing around with <a href="https://spacy.io/">spaCy</a>—tinkering around with the &ldquo;Part of Speech&rdquo; (POS) tagger and other things on the four texts. Here are some counts of different parts of speech in the four novels:</p>
+<p><img src="/images/imgforblogposts/post_3/figure_5_kinds_of_words_kerouac.png" alt="Different Counts of Parts Speech"></p>
+<p>Dean, in <em>On the Road</em>, always trying to live in the eternal now, makes total sense the verb &ldquo;to be&rdquo; would show up all around him.</p>
+<p><img src="/images/imgforblogposts/post_3/figure_6_kerouac_gender.png" alt="Dean Verbs"></p>
+<p>The code to generate the above figure is available <a href="https://gist.github.com/kspicer80/f78d0cfccc43a9e07b05efca6b652b96">here</a>)</p>
+<p>One of the day&rsquo;s questions about <em>On the Road</em> at the NEH Seminar had to do with what exactly it is like to read a book like <em>On the Road</em> after the #MeToo movement. Some quick counting of the verbs used to describe Marylou, for instance, comes up as follows:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"> (<span style="color:#e6db74">&#39;be&#39;</span>, <span style="color:#ae81ff">34</span>),
+ (<span style="color:#e6db74">&#39;have&#39;</span>, <span style="color:#ae81ff">10</span>),
+ (<span style="color:#e6db74">&#39;want&#39;</span>, <span style="color:#ae81ff">10</span>),
+ (<span style="color:#e6db74">&#39;know&#39;</span>, <span style="color:#ae81ff">9</span>),
+ (<span style="color:#e6db74">&#39;go&#39;</span>, <span style="color:#ae81ff">9</span>),
+ (<span style="color:#e6db74">&#39;say&#39;</span>, <span style="color:#ae81ff">8</span>),
+ (<span style="color:#e6db74">&#39;sleep&#39;</span>, <span style="color:#ae81ff">7</span>),
+ (<span style="color:#e6db74">&#39;see&#39;</span>, <span style="color:#ae81ff">6</span>),
+ (<span style="color:#e6db74">&#39;get&#39;</span>, <span style="color:#ae81ff">5</span>),
+ (<span style="color:#e6db74">&#39;sit&#39;</span>, <span style="color:#ae81ff">5</span>),
+ (<span style="color:#e6db74">&#39;make&#39;</span>, <span style="color:#ae81ff">5</span>),
+ (<span style="color:#e6db74">&#39;take&#39;</span>, <span style="color:#ae81ff">5</span>),
+ (<span style="color:#e6db74">&#39;tell&#39;</span>, <span style="color:#ae81ff">4</span>),
+ (<span style="color:#e6db74">&#39;find&#39;</span>, <span style="color:#ae81ff">4</span>),
+ (<span style="color:#e6db74">&#39;jump&#39;</span>, <span style="color:#ae81ff">3</span>),
+ (<span style="color:#e6db74">&#39;run&#39;</span>, <span style="color:#ae81ff">3</span>),
+ (<span style="color:#e6db74">&#39;do&#39;</span>, <span style="color:#ae81ff">3</span>),
+ (<span style="color:#e6db74">&#39;drive&#39;</span>, <span style="color:#ae81ff">3</span>),
+ (<span style="color:#e6db74">&#39;wait&#39;</span>, <span style="color:#ae81ff">3</span>),
+ (<span style="color:#e6db74">&#39;lean&#39;</span>, <span style="color:#ae81ff">3</span>)
+</code></pre></div><p>Looking at Sal:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"> (<span style="color:#e6db74">&#39;be&#39;</span>, <span style="color:#ae81ff">25</span>),
+ (<span style="color:#e6db74">&#39;go&#39;</span>, <span style="color:#ae81ff">18</span>),
+ (<span style="color:#e6db74">&#39;say&#39;</span>, <span style="color:#ae81ff">14</span>),
+ (<span style="color:#e6db74">&#39;get&#39;</span>, <span style="color:#ae81ff">10</span>),
+ (<span style="color:#e6db74">&#39;tell&#39;</span>, <span style="color:#ae81ff">8</span>),
+ (<span style="color:#e6db74">&#39;think&#39;</span>, <span style="color:#ae81ff">8</span>),
+ (<span style="color:#e6db74">&#39;have&#39;</span>, <span style="color:#ae81ff">7</span>),
+ (<span style="color:#e6db74">&#39;want&#39;</span>, <span style="color:#ae81ff">5</span>),
+ (<span style="color:#e6db74">&#39;know&#39;</span>, <span style="color:#ae81ff">4</span>),
+ (<span style="color:#e6db74">&#39;come&#39;</span>, <span style="color:#ae81ff">4</span>),
+ (<span style="color:#e6db74">&#39;dig&#39;</span>, <span style="color:#ae81ff">4</span>),
+ (<span style="color:#e6db74">&#39;do&#39;</span>, <span style="color:#ae81ff">3</span>),
+ (<span style="color:#e6db74">&#39;call&#39;</span>, <span style="color:#ae81ff">3</span>),
+ (<span style="color:#e6db74">&#39;let&#39;</span>, <span style="color:#ae81ff">3</span>),
+ (<span style="color:#e6db74">&#39;make&#39;</span>, <span style="color:#ae81ff">3</span>),
+ (<span style="color:#e6db74">&#39;see&#39;</span>, <span style="color:#ae81ff">3</span>),
+ (<span style="color:#e6db74">&#39;ask&#39;</span>, <span style="color:#ae81ff">2</span>),
+ (<span style="color:#e6db74">&#39;arrive&#39;</span>, <span style="color:#ae81ff">2</span>),
+ (<span style="color:#e6db74">&#39;remember&#39;</span>, <span style="color:#ae81ff">2</span>),
+ (<span style="color:#e6db74">&#39;find&#39;</span>, <span style="color:#ae81ff">2</span>)
+</code></pre></div><p>And now at Dean:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"> (<span style="color:#e6db74">&#39;be&#39;</span>, <span style="color:#ae81ff">198</span>),
+ (<span style="color:#e6db74">&#39;say&#39;</span>, <span style="color:#ae81ff">105</span>),
+ (<span style="color:#e6db74">&#39;go&#39;</span>, <span style="color:#ae81ff">44</span>),
+ (<span style="color:#e6db74">&#39;have&#39;</span>, <span style="color:#ae81ff">41</span>),
+ (<span style="color:#e6db74">&#39;take&#39;</span>, <span style="color:#ae81ff">29</span>),
+ (<span style="color:#e6db74">&#39;come&#39;</span>, <span style="color:#ae81ff">28</span>),
+ (<span style="color:#e6db74">&#39;see&#39;</span>, <span style="color:#ae81ff">27</span>),
+ (<span style="color:#e6db74">&#39;know&#39;</span>, <span style="color:#ae81ff">26</span>),
+ (<span style="color:#e6db74">&#39;tell&#39;</span>, <span style="color:#ae81ff">25</span>),
+ (<span style="color:#e6db74">&#39;get&#39;</span>, <span style="color:#ae81ff">25</span>),
+ (<span style="color:#e6db74">&#39;yell&#39;</span>, <span style="color:#ae81ff">21</span>),
+ (<span style="color:#e6db74">&#39;do&#39;</span>, <span style="color:#ae81ff">17</span>),
+ (<span style="color:#e6db74">&#39;drive&#39;</span>, <span style="color:#ae81ff">17</span>),
+ (<span style="color:#e6db74">&#39;want&#39;</span>, <span style="color:#ae81ff">14</span>),
+ (<span style="color:#e6db74">&#39;cry&#39;</span>, <span style="color:#ae81ff">14</span>),
+ (<span style="color:#e6db74">&#39;sit&#39;</span>, <span style="color:#ae81ff">13</span>),
+ (<span style="color:#e6db74">&#39;look&#39;</span>, <span style="color:#ae81ff">12</span>),
+ (<span style="color:#e6db74">&#39;talk&#39;</span>, <span style="color:#ae81ff">11</span>),
+ (<span style="color:#e6db74">&#39;sleep&#39;</span>, <span style="color:#ae81ff">11</span>),
+ (<span style="color:#e6db74">&#39;stand&#39;</span>, <span style="color:#ae81ff">11</span>)
+</code></pre></div><p>As I say, I&rsquo;m still just dipping my toes in &hellip; more to come I&rsquo;m sure.</p>
+<p>P.S. Code used to generate things here can be found in <a href="https://github.com/kspicer80/nehsummerseminar2019playground">this repo</a>.</p>
 ]]></content></item><item><title>More (Initial) Digital Humanities Stuff</title><link>https://kspicer80.github.io/posts/2019-07-06-more-initial-digital-humanities-stuff_02/</link><pubDate>Fri, 24 Dec 2021 09:19:43 -0600</pubDate><guid>https://kspicer80.github.io/posts/2019-07-06-more-initial-digital-humanities-stuff_02/</guid><description>I am totally not under the impression that any of these initial thoughts on my inchoate exploration of the DH field (a field whose history I am only now beginning to really grasp) will be of any use whatsoever. I am just beginning to dip my toes into water that others are already expert swimmers in—and have been for many many years. I am not sure either if the kinds of things these digital or computational tools can do will be all they helpful to me in the long run.</description><content type="html"><![CDATA[<p>I am totally not under the impression that any of these initial thoughts on my inchoate exploration of the DH field (a field whose history I am only now beginning to really grasp) will be of any use whatsoever. I am just beginning to dip my toes into water that others are already expert swimmers in—and have been for many many years. </p>
 <p>I am not sure either if the kinds of things these digital or computational tools can do will be all they helpful to me in the long run.  The literature is rife with the central question that no doubt is preeminent for most scholars in the humanities, especially those of us who cut our teeth on &ldquo;close reading.&rdquo;  At the same time, learning about some of these new tools would seem to be fine give my recent (as of around July or August of last year) turn to a much more Deleuzian—rather than Derridean—philosophical posture and style of thinking.  Why not use these tools to proliferate new and bizarre ways of thinking about what it is humanities scholars do?  Why not take Nabokov&rsquo;s <em>Lolita</em> and feed it through a bunch of algorithms designed for <a href="https://en.wikipedia.org/wiki/Sentiment_analysis">sentiment analysis</a>? (Actually, I&rsquo;m in the process of doing just that and it strikes me that Nabokov&rsquo;s novel would seem to be one of those that should be a nice testing ground for all kinds of work in DH [and it could be already for all I know; as I say, I&rsquo;m just barely getting a sense for what&rsquo;s been done in the field so far, it&rsquo;s all totally brand new to me).  Even from the very first line of that novel Nabokov is playing with the very stuff of language—carving up into phonemes the name of the eponymous love interest of Humbert Humbert.  I also noticed, just flipping through my copy recently, of what a morass <em>Lolita</em> could be for someone first training their (or their algorithm&rsquo;s sights on it):  the constant switch from English to French, the never-ending insertions of French phrases and names and dialogue, and—just staying within the language of English:   Nabokov&rsquo;s constant attention to and awareness of the phonetic stuff of language, e.g. take this from Part One:</p>
 <blockquote>
