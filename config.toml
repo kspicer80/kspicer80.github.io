@@ -4,8 +4,6 @@ title = 'Digital Forays'
 theme = 'hello-friend-ng'
 paginate = 10
 
-canonifyURLs = true
-
 [params]
   dateform        = "Jan 2, 2006"
   dateformShort   = "Jan 2"
