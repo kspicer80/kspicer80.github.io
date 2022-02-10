@@ -39,7 +39,9 @@ Six years of data—all in one simple CSV file—no more jumping between workshe
 With all that in place it was just a simple hop, skip, and a jump to some simple visualizations of the data:
 
 ![](/images/imgforblogposts/post_6/Figure_1.png)
+
 ![](/images/imgforblogposts/post_6/Figure_2.png)
+
 ![](/images/imgforblogposts/post_6/Figure_3.png)
 
 Again, nothing fancy, but just a whole lot easier to work with everything when it's nice and "tidy." Working with and querying the data became so much simpler—a line of code here and there and I could get information about averages—both current and historical—, information on student performance based on instructor, performance on individual outcomes, and so much more. And all because the data was cleaned up. Not to mention that with the structure in place going forward adding to the dataset becomes even simpler as well.
