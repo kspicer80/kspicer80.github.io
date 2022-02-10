@@ -12,6 +12,6 @@ Once again, a third post using the Atom editor rather than directly through GitH
 
 Let's do a little testing of images:
 
-![](test.png)
+![](/images/test.png)
 
 We'll have a look see to see what we get!
