@@ -1,6 +1,7 @@
 ---
 title: "Playing with Plain Text and CSS Templates"
-date: 2021-12-27T08:19:43-06:00
+date: 2021-12-26T12:00:00-06:00
+lastmod: 2021-12-26T12:00:00-06:00
 draft: false
 toc: false
 images:

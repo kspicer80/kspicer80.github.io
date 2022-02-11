@@ -1,6 +1,7 @@
 ---
 title: "Visualizing Online Class Discussion Boards"
-date: 2021-12-26T08:19:43-06:00
+date: 2019-12-31T12:00:00-06:00
+  2021-12-27T08:19:43-06:00
 draft: false
 toc: false
 images:

@@ -1,6 +1,7 @@
 ---
 title: "More (Initial) Digital Humanities Stuff"
-date: 2021-12-24T09:19:43-06:00
+date: 2019-07-06T12:05:00-06:00
+lastmod: 2021-12-24T09:19:43-06:00
 draft: false
 toc: false
 images:
