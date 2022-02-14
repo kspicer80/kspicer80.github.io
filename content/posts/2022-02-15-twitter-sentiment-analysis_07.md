@@ -1,5 +1,5 @@
 ---
-title: "Sentiment Analysis of Peer Institutions' Main Twitter Accounts"
+title: "Sentiment Analysis of Some Chicagoland Universities' Main Twitter Accounts"
 date: 2022-02-14
 draft: false
 toc: false
