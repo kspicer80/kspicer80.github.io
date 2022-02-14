@@ -1,7 +1,7 @@
 ---
 title: "Sentiment Analysis of Peer Institutions' Main Twitter Accounts"
 date: 2022-02-14T014:06:31-06:00
-draft: true
+draft: false
 toc: false
 images:
 tags:
