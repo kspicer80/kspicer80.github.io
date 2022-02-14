@@ -1,2 +1,2 @@
 {{ $file := .Get 0 }}
-{{ printf "%s%s" .Page.File.Dir $file | readFile | safeHTML }}
+{{ $file | readFile | safeHTML }}
