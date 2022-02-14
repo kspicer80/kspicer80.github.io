@@ -19,7 +19,9 @@
 <p>And what about some visuals of sentiment over time? Here&rsquo;s an image of TextBlob&rsquo;s analysis of the &ldquo;polarity&rdquo; and &ldquo;subjectivity&rdquo; scores for each and every USF tweet, ever:</p>
 <p><img src="/images/imgforblogposts/post_7/usf_sentiment_scores_all_time.png" alt=""></p>
 <p>There is quite a bit of data here one could dig into a bit more deeply. What do like and retweet counts look like for some of the school accounts (and how about coding the graphs with the school colors?)—especially over the lifespan of the account? Here&rsquo;s one for Lewis:</p>
-<p>{{ &lt; figure src=&quot;/images/imgforblogposts/post_7/lewisu_like_retweet_over_time.png&quot; height=&ldquo;auto&rdquo; width=&ldquo;425&rdquo; &gt; }}</p>
+<figure><img src="/images/imgforblogposts/post_7/lewisu_like_retweet_over_time.png" width="425" height="auto"/>
+</figure>
+
 <p>What about using the <a href="https://bokeh.org/">Bokeh library</a> to add some little &ldquo;hovertools&rdquo; that would link each point on the graph to each individual tweet?</p>
 
 

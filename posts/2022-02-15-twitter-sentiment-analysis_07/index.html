@@ -24,7 +24,7 @@ Sentiment Analysis of Some Chicagoland Universities' Main Twitter Accounts :: Di
 <meta itemprop=name content="Sentiment Analysis of Some Chicagoland Universities' Main Twitter Accounts">
 <meta itemprop=description content="Well, February has come around and that&rsquo;s the time at my school where we get all kinds of nice financial data about how wages and compensation by faculty rank compare between a number of &ldquo;peer institutions&rdquo; (the usual ones linked with USF here in Chicagoland are Benedictine, Dominican, Lewis, and Saint Xavier) I wondered a bit if one might do a little bit of data visualization not of financial information, but of, say, Twitter accounts."><meta itemprop=datePublished content="2022-02-14T12:00:00-06:00">
 <meta itemprop=dateModified content="2022-02-14T12:00:00-06:00">
-<meta itemprop=wordCount content="27722"><meta itemprop=image content="https://kspicer80.github.io/">
+<meta itemprop=wordCount content="27714"><meta itemprop=image content="https://kspicer80.github.io/">
 <meta itemprop=keywords content="sentiment analysis,TextBlob,digital humanities,Bokeh Visualization library,Python,twitter analysis,">
 <meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://kspicer80.github.io/">
@@ -88,7 +88,8 @@ Sentiment Analysis of Some Chicagoland Universities' Main Twitter Accounts :: Di
 <p>And what about some visuals of sentiment over time? Here&rsquo;s an image of TextBlob&rsquo;s analysis of the &ldquo;polarity&rdquo; and &ldquo;subjectivity&rdquo; scores for each and every USF tweet, ever:</p>
 <p><img src=/images/imgforblogposts/post_7/usf_sentiment_scores_all_time.png alt></p>
 <p>There is quite a bit of data here one could dig into a bit more deeply. What do like and retweet counts look like for some of the school accounts (and how about coding the graphs with the school colors?)—especially over the lifespan of the account? Here&rsquo;s one for Lewis:</p>
-<p>{{ &lt; figure src="/images/imgforblogposts/post_7/lewisu_like_retweet_over_time.png" height=&ldquo;auto&rdquo; width=&ldquo;425&rdquo; > }}</p>
+<figure><img src=/images/imgforblogposts/post_7/lewisu_like_retweet_over_time.png width=425 height=auto>
+</figure>
 <p>What about using the <a href=https://bokeh.org/>Bokeh library</a> to add some little &ldquo;hovertools&rdquo; that would link each point on the graph to each individual tweet?</p><!doctype html>
 <html lang=en>
 <head>
@@ -118,7 +119,7 @@ Sentiment Analysis of Some Chicagoland Universities' Main Twitter Accounts :: Di
 <span class=tag><a href=https://kspicer80.github.io/tags/twitter-analysis/>twitter analysis</a></span>
 </p>
 <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6A2 2 0 004 4v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-27722 Words
+27714 Words
 </p>
 <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
 2022-02-14 18:00
