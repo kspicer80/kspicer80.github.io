@@ -25,6 +25,6 @@
 
 Here is a bit of markdown--and then below we want to try the bokeh plot just using the HTML:
 
-<embed type="text/html" src="/images/imgforblogposts/post_7/bokeh_test.html" width="600" height="400"></embed>
+{{< include-html "output.html" >}}
 
 And then we could have some more markdown here too!
