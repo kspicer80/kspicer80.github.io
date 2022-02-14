@@ -2,7 +2,7 @@
   title: "Bokeh Image Test Post"
   date: 2022-01-18T08:19:43-06:00
   lastmod: 2022-01-18T08:19:43-06:00
-  draft: true
+  draft: false
   toc: false
   images:
   tags:
