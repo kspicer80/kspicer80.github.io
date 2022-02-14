@@ -35,7 +35,7 @@ There is quite a bit of data here one could dig into a bit more deeply. What do 
 
 {{ < figure src:"/images/imgforblogposts/post_7/lewisu_like_retweet_over_time.png" height="auto" width="425"}}
 
-
+What about using the [Bokeh library](https://bokeh.org/) to add some little "hovertools" that would link each point on the graph to each individual tweet? 
 
 Trying to get the Bokeh plot to show up ...:
 
