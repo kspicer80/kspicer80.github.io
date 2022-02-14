@@ -29,7 +29,14 @@ Running all of the university's tweets through the [TextBlob](https://textblob.r
 
 And what about some visuals of sentiment over time? Here's an image of TextBlob's analysis of the "polarity" and "subjectivity" scores for each and every USF tweet, ever:
 
-![](/images/imgforblogposts/post_7/figure_1_usf_scatter.png)
+![](/images/imgforblogposts/post_7/usf_sentiment_scores_all_time.png)
 
+There is quite a bit of data here one could dig into a bit more deeply. What do like and retweet counts look like for some of the school accounts (and how about coding the graphs with the school colors?)—especially over the lifespan of the account? Here's one for Lewis:
+
+{{ < figure src:"/images/imgforblogposts/post_7/lewisu_like_retweet_over_time.png" height="auto" width="425"}}
+
+
+
+Trying to get the Bokeh plot to show up ...:
 
 As usual, all the data and code for this post are available in this [repo](https://github.com/kspicer80/chicagoland_university_twitter_analysis).
