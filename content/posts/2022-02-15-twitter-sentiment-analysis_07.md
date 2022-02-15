@@ -41,6 +41,6 @@ What about using the [Bokeh library](https://bokeh.org/) to add some little "hov
 
 {{< include-html "static/html/2021_02-14_usf_tweet_bokeh.html" >}}
 
-Not bad (all thanks to the following [post](https://xa1.at/hugo-include-html/) for Hugo shortcode for the Bokeh plot).
+Not bad (all thanks to the following [post](https://xa1.at/hugo-include-html/) for Hugo [shortcode(https://gohugo.io/content-management/shortcodes/) for the Bokeh plot).
 
 As usual, all the data and code for this post are available in this [repo](https://github.com/kspicer80/chicagoland_university_twitter_analysis).
