@@ -35,7 +35,7 @@ And what about some visuals of sentiment over time? Here's an image of TextBlob'
 
 There is quite a bit of data here one could dig into a bit more deeply. What do like and retweet counts look like for some of the school accounts (and how about coding the graphs with the school colors?)—especially over the lifespan of the account? Here's one for Lewis:
 
-{{< img src="images/imgforblogposts/post_7/lewisu_like_retweet_over_time.png" alt="Lewis U Likes and Retweets Over Time" >}}
+{{< figure src="/images/imgforblogposts/post_7/lewisu_like_retweet_over_time.png" height="auto" width="800" >}}
 
 What about using the [Bokeh library](https://bokeh.org/) to add some little "hovertools" that would link each point on the graph to each individual tweet?
 
