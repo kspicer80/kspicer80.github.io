@@ -1,5 +1,5 @@
 ---
-title: "Classification Fun!"
+title: "Classification Fun! ... with some Literary Texts by Willa Cather and Sarah Orne Jewett"
 date: 
 draft: true
 toc: false
@@ -11,11 +11,11 @@ tags:
   - digital humanities
   - python for the digital humanities
   - Python
-  - k-means nearest neighbors
+  - k-nearest neighbors
   - keras
   - tensorflow
   - literary style
   - word frequency
   - word frequencies
-  - 
+  - sklearn
 ---

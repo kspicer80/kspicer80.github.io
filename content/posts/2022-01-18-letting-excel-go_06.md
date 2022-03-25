@@ -35,7 +35,7 @@ And then, after doing a bunch of work making my way through Codecademy's [data a
 
 Six years of data—all in one simple CSV file—no more jumping between worksheets in one big file, no more leaping from sheet to sheet to generate graphs or to calculate even the most basic of summary statistics. Again, very far from high-powered machine learning models, K-means clustering, and all of that—just simple data tidying that even the most rudimentary knowledge of the [pandas library](https://pandas.pydata.org/) in Python can start to work on quite nicely, quickly, and simply. Nothing fancy, just a nice clean .csv file:
 
-![](//images/imgforblogposts/post_6/simple_csv_file.png)
+![](/images/imgforblogposts/post_6/simple_csv_file.png)
 
 With all that in place it was just a simple hop, skip, and a jump to some simple visualizations of the data:
 
