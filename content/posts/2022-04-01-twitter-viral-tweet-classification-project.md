@@ -47,7 +47,7 @@ print(viral_tweets.agg(
 ```
 Graphing these values we get the following: 
 
-![Mean and Median Values](/static/images/imgforblogposts/post_8/Figure_1.png)
+![Mean and Median Values](/static/images/imgforblogposts/post_8/Figure_1_summary_statistics.png)
 
 The first time around here I just went with the median value as the cutoff for a "viral tweet," so any row in the pandas dataframe that had more than the median number in a row, a new ```is_viral``` column got created and the row coded with ```1``` if it met the threshold and a ```0``` otherwise:
 
@@ -89,7 +89,7 @@ plt.legend(['features: tweet length, # of followers, # of friends'])
 
 along with a graph:
 
-![First Run of Accuracy Scores Graph](/static/images/imgforblogposts/post_8/Figure_2_first_run_of_scores.png)
+![First Run of Accuracy Scores Graph](/static/images/imgforblogposts/post_8/Figure_2_first_run_of_scores_01.png)
 
 So we can see the roughly effectiveness of the classifier's ability to detect a viral tweet (based only on the data in the ```'tweet_length', 'followers_count',``` and ```'friends_count'``` columns) hovering around 60% or so. There's a steady drop off once the numbers of clusters gets to around 75. 
 
@@ -104,6 +104,20 @@ classifier.fit(h_train_data, h_train_labels)
 print(classifier.score(h_test_data, h_test_labels))
 ```
 
-It was intriguing to continue to add features to the model to see what the results would be—it was easy enough to thus train multiple models (with different numbers of features) and graph their effectiveness:
+Scores taking the hashtags into account were as follows:
 
-![Multiple Models](/static/images/imgforblogposts/Figure_3_three_accuracy_scores.png)
+![](/static/images/imgforblogposts/post_8/hashtag_added.png)
+
+A model with the ```'tweet_length_alone'```:
+
+![Tweet Length Alone](/static/images/imgforblogposts/post_8/tweet_length_alone.png)
+
+It was intriguing to continue to add features to the model to see what the results would be—it was easy enough to thus train multiple models (with different numbers of features) and graph their effectiveness. I tried models where we added ```'favorite_count'```. 
+
+![Multiple Models](/static/images/imgforblogposts/post_8/tweet_length_friends_count_favorite_count.png)
+
+Curiously, the model with the most features in it performed far less well than the ones with fewer:
+
+![Four Models](/static/images/imgforblogposts/post_8/four_models.png)
+
+Super-fun stuff—to be sure.
