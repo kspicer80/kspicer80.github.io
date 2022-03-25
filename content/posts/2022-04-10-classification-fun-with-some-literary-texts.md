@@ -1,5 +1,5 @@
 ---
-title: "Classification Fun! ... with some Literary Texts by Willa Cather and Sarah Orne Jewett"
+title: "K-Nearest Neighbors Classification Fun! ... with some Literary Texts by Willa Cather and Sarah Orne Jewett"
 date: 
 draft: true
 toc: false
