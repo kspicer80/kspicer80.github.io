@@ -45,7 +45,7 @@ print(viral_tweets.agg(
     }
 ))
 ```
-Graphing these values we get the following: ![Mean and Median Values](/static/images/imgforblogposts/post_8/Figure_1_summary_statistics.png)
+Graphing these values we get the following: ![Mean and Median Values](/images/imgforblogposts/post_8/Figure_1_summary_statistics.png)
 The first time around here I just went with the median value as the cutoff for a "viral tweet," so any row in the pandas dataframe that had more than the median number in a row, a new ```is_viral``` column got created and the row coded with ```1``` if it met the threshold and a ```0``` otherwise:
 
 ``` python
@@ -86,7 +86,7 @@ plt.legend(['features: tweet length, # of followers, # of friends'])
 
 along with a graph:
 
-![First Run of Accuracy Scores Graph](/static/images/imgforblogposts/post_8/Figure_2_first_run_of_scores_01.png)
+![First Run of Accuracy Scores Graph](/images/imgforblogposts/post_8/Figure_2_first_run_of_scores_01.png)
 
 So we can see the roughly effectiveness of the classifier's ability to detect a viral tweet (based only on the data in the ```'tweet_length', 'followers_count',``` and ```'friends_count'``` columns) hovering around 60% or so. There's a steady drop off once the numbers of clusters gets to around 75.
 
@@ -103,20 +103,20 @@ print(classifier.score(h_test_data, h_test_labels))
 
 Scores taking the hashtags into account were as follows:
 
-![](/static/images/imgforblogposts/post_8/hashtag_added.png)
+![](/images/imgforblogposts/post_8/hashtag_added.png)
 
 A model with the ```'tweet_length_alone'```:
 
-![Tweet Length Alone](/static/images/imgforblogposts/post_8/tweet_length_alone.png)
+![Tweet Length Alone](/images/imgforblogposts/post_8/tweet_length_alone.png)
 
 It was intriguing to continue to add features to the classifier to see what the results would be—it was easy enough to thus train multiple models (with different numbers of features) and graph their effectiveness. I tried models where we added ```'favorite_count'```.
 
-![Multiple Models](/static/images/imgforblogposts/post_8/tweet_length_friends_count_favorite_count.png)
+![Multiple Models](/images/imgforblogposts/post_8/tweet_length_friends_count_favorite_count.png)
 
 Curiously, the model with the most features in it performed far less well than the ones with fewer:
 
-![Four Models](/static/images/imgforblogposts/post_8/four_models.png)
+![Four Models](/images/imgforblogposts/post_8/four_models.png)
 
-One of the suggestions in the project asked one to wonder a bit about the threshold we used to define a "viral tweet." We started with the median for the number of retweets a tweet in the dataset received. That number, 13, what if we tinkered a bit with that number? The mean for the ```'retweet_count'``` was much higher. Would the classifier before any better if we set the threshold at the mean? Easy enough to have a look-see. Rerunning the script with the mean as the threshold, again splitting the dataset, training the models, and then plotting some scores, we get a considerable increase in accuracy: ![Using the Mean as the "Viral Tweet" Threshold](/static/images/imgforblogposts/post_8/four_models_with_mean_as_threshold.png) All of these models—with varying numbers of features used—performed much better; all four of them level-out right around 86% accuracy, with the model utilizing "tweet_length, # of followers, # of friends, and # of hashtags" performing best amongst the four.
+One of the suggestions in the project asked one to wonder a bit about the threshold we used to define a "viral tweet." We started with the median for the number of retweets a tweet in the dataset received. That number, 13, what if we tinkered a bit with that number? The mean for the ```'retweet_count'``` was much higher. Would the classifier before any better if we set the threshold at the mean? Easy enough to have a look-see. Rerunning the script with the mean as the threshold, again splitting the dataset, training the models, and then plotting some scores, we get a considerable increase in accuracy: ![Using the Mean as the "Viral Tweet" Threshold](/images/imgforblogposts/post_8/four_models_with_mean_as_threshold.png) All of these models—with varying numbers of features used—performed much better; all four of them level-out right around 86% accuracy, with the model utilizing "tweet_length, # of followers, # of friends, and # of hashtags" performing best amongst the four.
 
 Super-fun stuff—to be sure.
