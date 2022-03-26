@@ -1,7 +1,7 @@
 ---
 title: "Viral Tweet Classification Project"
-date: 
-draft: true
+date: 2022-03-26T12:00:00-06:00
+draft: false
 toc: false
 images:
 tags:
@@ -45,10 +45,7 @@ print(viral_tweets.agg(
     }
 ))
 ```
-Graphing these values we get the following: 
-
-![Mean and Median Values](/static/images/imgforblogposts/post_8/Figure_1_summary_statistics.png)
-
+Graphing these values we get the following: ![Mean and Median Values](/static/images/imgforblogposts/post_8/Figure_1_summary_statistics.png)
 The first time around here I just went with the median value as the cutoff for a "viral tweet," so any row in the pandas dataframe that had more than the median number in a row, a new ```is_viral``` column got created and the row coded with ```1``` if it met the threshold and a ```0``` otherwise:
 
 ``` python
@@ -63,7 +60,7 @@ viral_tweets['followers_count'] = viral_tweets.apply(lambda x: x['user']['follow
 viral_tweets['friends_count'] = viral_tweets.apply(lambda x: x['user']['friends_count'], axis=1)
 ```
 
-Next we separated out the ```is_viral``` as that will contain the label of each tweet (```1``` for viral, otherwise ```0```). Next we dropped all the columns from the dataframe that we weren't planning on using and just keeping the following list of columns: ```['tweet_length', 'followers_count', 'friends_count']. We scaled the data, getting us ready to start separating out the training and testing data and then training and fitting the classifier/model to the training data.  
+Next we separated out the ```is_viral``` as that will contain the label of each tweet (```1``` for viral, otherwise ```0```). Next we dropped all the columns from the dataframe that we weren't planning on using and just keeping the following list of columns: ```['tweet_length', 'followers_count', 'friends_count']```. We scaled the data, getting us ready to start separating out the training and testing data and then training and fitting the classifier/model to the training data.
 
 As per usual, we used the ```train_test_split``` function from [sklearn's](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html) library:
 
@@ -91,7 +88,7 @@ along with a graph:
 
 ![First Run of Accuracy Scores Graph](/static/images/imgforblogposts/post_8/Figure_2_first_run_of_scores_01.png)
 
-So we can see the roughly effectiveness of the classifier's ability to detect a viral tweet (based only on the data in the ```'tweet_length', 'followers_count',``` and ```'friends_count'``` columns) hovering around 60% or so. There's a steady drop off once the numbers of clusters gets to around 75. 
+So we can see the roughly effectiveness of the classifier's ability to detect a viral tweet (based only on the data in the ```'tweet_length', 'followers_count',``` and ```'friends_count'``` columns) hovering around 60% or so. There's a steady drop off once the numbers of clusters gets to around 75.
 
 The project then wondered if there were other features within the dataset that we could use to increase the model's predictive effectiveness. For this next round I added the ```'number_of_hashtags'``` to see what results that might produce. We then added that column and retrained the classifier:
 
@@ -112,12 +109,14 @@ A model with the ```'tweet_length_alone'```:
 
 ![Tweet Length Alone](/static/images/imgforblogposts/post_8/tweet_length_alone.png)
 
-It was intriguing to continue to add features to the model to see what the results would be—it was easy enough to thus train multiple models (with different numbers of features) and graph their effectiveness. I tried models where we added ```'favorite_count'```. 
+It was intriguing to continue to add features to the classifier to see what the results would be—it was easy enough to thus train multiple models (with different numbers of features) and graph their effectiveness. I tried models where we added ```'favorite_count'```.
 
 ![Multiple Models](/static/images/imgforblogposts/post_8/tweet_length_friends_count_favorite_count.png)
 
 Curiously, the model with the most features in it performed far less well than the ones with fewer:
 
 ![Four Models](/static/images/imgforblogposts/post_8/four_models.png)
+
+One of the suggestions in the project asked one to wonder a bit about the threshold we used to define a "viral tweet." We started with the median for the number of retweets a tweet in the dataset received. That number, 13, what if we tinkered a bit with that number? The mean for the ```'retweet_count'``` was much higher. Would the classifier before any better if we set the threshold at the mean? Easy enough to have a look-see. Rerunning the script with the mean as the threshold, again splitting the dataset, training the models, and then plotting some scores, we get a considerable increase in accuracy: ![Using the Mean as the "Viral Tweet" Threshold](/static/images/imgforblogposts/post_8/four_models_with_mean_as_threshold.png) All of these models—with varying numbers of features used—performed much better; all four of them level-out right around 86% accuracy, with the model utilizing "tweet_length, # of followers, # of friends, and # of hashtags" performing best amongst the four.
 
 Super-fun stuff—to be sure.
