@@ -1,6 +1,6 @@
 ---
 title: "Viral Tweet Classification Project"
-date: 2022-03-26T12:00:00-06:00
+date: 2022-03-26
 draft: false
 toc: false
 images:
