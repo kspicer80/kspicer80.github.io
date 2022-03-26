@@ -111,11 +111,15 @@ A model with the ```'tweet_length_alone'```:
 
 It was intriguing to continue to add features to the classifier to see what the results would be—it was easy enough to thus train multiple models (with different numbers of features) and graph their effectiveness. I tried models where we added ```'favorite_count'```.
 
+
 ![Multiple Models](/images/imgforblogposts/post_8/tweet_length_friends_count_favorite_count.png)
+
 
 Curiously, the model with the most features in it performed far less well than the ones with fewer:
 
+
 ![Four Models](/images/imgforblogposts/post_8/four_models.png)
+
 
 One of the suggestions in the project asked one to wonder a bit about the threshold we used to define a "viral tweet." We started with the median for the number of retweets a tweet in the dataset received. That number, 13, what if we tinkered a bit with that number? The mean for the ```'retweet_count'``` was much higher. Would the classifier before any better if we set the threshold at the mean? Easy enough to have a look-see. Rerunning the script with the mean as the threshold, again splitting the dataset, training the models, and then plotting some scores, we get a considerable increase in accuracy: ![Using the Mean as the "Viral Tweet" Threshold](/images/imgforblogposts/post_8/four_models_with_mean_as_threshold.png) All of these models—with varying numbers of features used—performed much better; all four of them level-out right around 86% accuracy, with the model utilizing "tweet_length, # of followers, # of friends, and # of hashtags" performing best amongst the four.
 
