@@ -6,7 +6,7 @@ theme = 'hello-friend-ng'
 paginate = 10
 
 [params]
-  author = Dr. Kevin Andrew Spicer
+  author = "Dr. Kevin Andrew Spicer"
   dateform        = "Jan 2, 2006"
   dateformShort   = "Jan 2"
   dateformNum     = "2006-01-02"
