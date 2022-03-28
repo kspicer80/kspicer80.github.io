@@ -151,15 +151,15 @@ Karsdorp, et. al., following [Schöch](https://arxiv.org/abs/2103.13019), use a 
 
 With all of this in a numpy array, it's simple enough to look up a word in the matrix, find it's index, and then see how all of the plays/genres use that word. What if we used the English "blood" and "love" to map out all of the plays/genres? We'd get something like the following:
 
-![blood and love in Shakespeare's plays](/images/imgforblogposts/post_9/Figure_1.png)
+![blood and love in Shakespeare's plays](/static/images/imgforblogposts/post_9/Figure_1.png)
 
 We could substitute any other word we like and then see how "close" together the plays are when focusing on the two words of our choosing—here's "love" and "hate" on the X and Y axis respectively (the [repo](https://github.com/kspicer80/humanities_data_analysis) for all of this also has functions that will allow one to use different ["distance metrics"](https://www.analyticsvidhya.com/blog/2020/02/4-types-of-distance-metrics-in-machine-learning/) with which to define and quantify the "closeness" or "similarity' between any two plays or between different genres"):
 
-![love and hate](/images/imgforblogposts/post_9/Figure_2.png)
+![love and hate](/static/images/imgforblogposts/post_9/Figure_2.png)
 
 We could also wonder a bit about how the genres themselves get arranged—simple enough:
 
-![genre distances based on frequency of "love" and "hate"](/images/imgforblogposts/post_9/Figure_3.png)
+![genre distances based on frequency of "love" and "hate"](/static/images/imgforblogposts/post_9/Figure_3.png)
 
 I suppose what I've found most useful here is not so much any profound insights into the bard's works (it's great to find other (computation/visual/digital) ways into his texts—and often for me that can function as a nice result in and of itself, but, instead, this "computational" way of thinking about things that is no doubt still really new and foreign to my strictly humanities-oriented background and training. It's incredibly simple, but learning how to get all of these plays into a nice, structured format that one can then write a couple of rather simple functions to then produce visualizations of the data that are another avenue into the original texts is really fantastic. Not to mention the fact that one could then take these very simple functions/calculations and utilize them in different situations—say, for example, using them in a machine learning algorithm for authorship attribution or in larger projects within the realm of stylometry, etc.—has made all this new knowledge and all these new skills incredibly generative. (With regards to Shakespeare's "late romances"—my mentor in graduate school just called them tragicomedies—I could imagine grabbing a bunch of texts by playwrights that would follow in the wake of Shakespeare: I have only recently come across the ["EarlyPrint"](https://earlyprint.org/) website, which I know has a number of plays by Beaumont and Fletcher. It would be curious to see how close or far away those texts are from some of the plays within the "late romances" list above ... )
 
