@@ -1,5 +1,4 @@
 baseURL = 'https://kspicer80.github.io/'
-canonifyurls = true
 languageCode = 'en-us'
 title = 'Digital Forays'
 theme = 'hello-friend-ng'
