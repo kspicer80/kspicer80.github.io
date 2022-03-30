@@ -20,6 +20,6 @@ tags:
   - sklearn
 ---
 
-In my DH journey, the work of Dr. William Mattingly has been something of a constant conmpanion and guide.
+In my DH journey, the work of [Dr. William Mattingly](https://pythonhumanities.com/python-for-dh-course/) has been something of a constant companion and guide.
 
 His video laying out the steps for a ["Binary Data Classification"](https://www.youtube.com/watch?v=tPgQH5UTC9k) were clear quite clarifying for me in all kinds of ways,
