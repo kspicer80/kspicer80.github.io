@@ -118,8 +118,32 @@ def train_model(model, tt_data, val_size=.3, epochs=1, batch_size=16):
     return(model)
   ```
 
-I went and added some lines above in order to be able to graph the [loss and accuracy](https://stackoverflow.com/questions/34518656/how-to-interpret-loss-and-accuracy-for-a-machine-learning-model#:~:text=Loss%20value%20implies%20how%20well,no%20learning%20is%20taking%20place.) of the model:
+I went and added some lines above in order to be able to graph the [loss and accuracy](https://stackoverflow.com/questions/34518656/how-to-interpret-loss-and-accuracy-for-a-machine-learning-model#:~:text=Loss%20value%20implies%20how%20well,no%20learning%20is%20taking%20place) of the model:
 
 ![Model Loss](/static/images/imgforblogposts/post_10/model_loss.png)
 
 ![Model Accuracy](/static/images/imgforblogposts/post_10/model_accuracy.png)
+
+In a later incarnation I pulled the code for the plots and wrote functions to handle them:
+
+``` python
+def plot_model_loss(model_name, string_1='loss', string_2='val_loss'):
+    plt.plot(model_name.history[string_1])
+    plt.plot(model_name.history[string_2])
+    plt.title('model loss')
+    plt.ylabel(string_1)
+    plt.xlabel('epoch')
+    plt.legend(['train', 'test'], loc='upper left')
+    plt.show()
+
+def plot_model_accuracy(model_name, string_1='accuracy', string_2='val_accuracy'):
+    plt.plot(model_name.history[string_1])
+    plt.plot(model_name.history[string_2])
+    plt.title('model accuracy')
+    plt.ylabel('accuracy')
+    plt.xlabel('epoch')
+    plt.legend(['train', 'val'], loc='lower right')
+    plt.show()
+```
+
+Scores would seem to suggest that the classifier has done a pretty good job of separating out the work of 
