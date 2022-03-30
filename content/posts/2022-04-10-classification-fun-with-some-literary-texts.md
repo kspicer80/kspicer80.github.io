@@ -50,7 +50,7 @@ def padding_data(sentences, index, maxlen=25):
     return(new_sentences)
   ```
   
-Next is a function that will index each and every token within the text file and append it to a .json file that will keep track of every token and its associated index number:
+Next is a function that will index each and every token within the text file and append it to a .json file that will store every token and its associated index number:
 
 ``` python
 def create_index(texts, filename):
@@ -63,4 +63,12 @@ def create_index(texts, filename):
     with open(filename, "w") as f:
         json.dump(word_index, f, indent=4)
 ``` 
+
+In the tutorial, Mattingly uses a max_length of 25 words; a quick graph of the average sentence lengths for each of our author's texts would suggest that number is probably not a bad choice for our dataset:
+
+![Jewett's Average Sentence Lengths](/static/images/imgforblogposts/post_10/jewett_mean_sentence_lengths.png)
+
+![Cather's Average Sentence Lengths](/static/images/imgforblogposts/post_10/cather_mean_sentence_lengths.png)
+
+
   
