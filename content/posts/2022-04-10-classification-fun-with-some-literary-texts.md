@@ -118,8 +118,34 @@ def train_model(model, tt_data, val_size=.3, epochs=1, batch_size=16):
     return(model)
   ```
 
-I went and added some lines above in order to be able to graph the [loss and accuracy](https://stackoverflow.com/questions/34518656/how-to-interpret-loss-and-accuracy-for-a-machine-learning-model#:~:text=Loss%20value%20implies%20how%20well,no%20learning%20is%20taking%20place.) of the model:
+After testing, the loss and accuracy for the model turned out to be ```[0.32046514101210954, 0.875969]``` respectively. The keras library also allows us to see the loss and accuracy over each epoch of training:
 
 ![Model Loss](/static/images/imgforblogposts/post_10/model_loss.png)
 
 ![Model Accuracy](/static/images/imgforblogposts/post_10/model_accuracy.png)
+
+In the code snippet above the plot was included in the ```train_model``` function, but one could just as easily pull them out as their own functions so we have one function only do one specific job:
+
+``` python
+def plot_model_loss(model_name, string_1='loss', string_2='val_loss'):
+    plt.plot(model_name.history[string_1])
+    plt.plot(model_name.history[string_2])
+    plt.title('model loss')
+    plt.ylabel(string_1)
+    plt.xlabel('epoch')
+    plt.legend(['train', 'test'], loc='upper left')
+    plt.show()
+
+def plot_model_accuracy(model_name, string_1='accuracy', string_2='val_accuracy'):
+    plt.plot(model_name.history[string_1])
+    plt.plot(model_name.history[string_2])
+    plt.title('model accuracy')
+    plt.ylabel('accuracy')
+    plt.xlabel('epoch')
+    plt.legend(['train', 'val'], loc='lower right')
+    plt.show()
+```
+
+What happens when we turn the model on a text by, say, Cather, that it has not seen yet before? I quite enjoy Cather's [short story](https://cather.unl.edu/writings/shortfiction/ss006), "Paul's Case: A Study in Temperament." The script will read in the text, utilize the ```word_index.json``` file to replace each word with the number of the word in the .json. One can then keep track of each sentence to see the model's predictions: a score close to ```0``` suggests the model thinks it's by Cather; the closer to ```1```, it thinks it more likely that the sentence belongs to Jewett.
+
+(Full test log is available here ...)  
