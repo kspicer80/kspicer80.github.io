@@ -50,7 +50,7 @@ def padding_data(sentences, index, maxlen=25):
     return(new_sentences)
   ```
 
-Next is a function that will index each and every token within the text file and append it to a .json file that will store every token and its associated index number:
+Next is a function that will convert each and every token within the text into an integer—as per the [keras documentation](https://www.tensorflow.org/api_docs/python/tf/keras/preprocessing/text/Tokenizer) the functions in the ```tf.keras.preprocessing.text.Tokenizer``` class "allows to vectorize a text corpus, by turning each text into either a sequence of integers (each integer being the index of a token in a dictionary) or into a vector where the coefficient for each token could be binary, based on word count, based on tf-idf ...":
 
 ``` python
 def create_index(texts, filename):
@@ -80,7 +80,7 @@ def label_data(sentences, label):
     return(total_chunks)
 ```
 
-Now with all the data structured and ordered in the way the keras model needs it, we can create the training data, create, train, and fit the model on the dataset:
+Now with all the data structured and ordered in the way the keras model needs it, we can create the training data and then create, train, and fit the model on the dataset:
 
 ``` python
 def train_model(model, tt_data, val_size=.3, epochs=1, batch_size=16):
@@ -146,6 +146,9 @@ def plot_model_accuracy(model_name, string_1='accuracy', string_2='val_accuracy'
     plt.show()
 ```
 
-What happens when we turn the model on a text by, say, Cather, that it has not seen yet before? I quite enjoy Cather's [short story](https://cather.unl.edu/writings/shortfiction/ss006), "Paul's Case: A Study in Temperament." The script will read in the text, utilize the ```word_index.json``` file to replace each word with the number of the word in the .json. One can then keep track of each sentence to see the model's predictions: a score close to ```0``` suggests the model thinks it's by Cather; the closer to ```1```, it thinks it more likely that the sentence belongs to Jewett.
+What happens when we turn the model on a text by, say, Cather, that it has not seen yet before? I quite enjoy Cather's [short story](https://cather.unl.edu/writings/shortfiction/ss006), "Paul's Case: A Study in Temperament." The script will read in the text, utilize the ```word_index.json``` file to replace each word with its corresponding integer in the .json.
 
-(Full test log is available here ...)
+
+Mattingly's tutorial also has the model output each of its predictions to a plain .txt file for further use. One can then keep track of each sentence to see the model's predictions: a score close to ```0``` is the model prediction that it's by Cather; the closer to ```1```, it thinks it more likely that the sentence belongs to Jewett.
+
+(Full test log is available here ...) [BE SURE TO FILL THIS IN LATER!!!!!]
