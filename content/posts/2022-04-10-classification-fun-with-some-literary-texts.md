@@ -148,4 +148,4 @@ def plot_model_accuracy(model_name, string_1='accuracy', string_2='val_accuracy'
 
 What happens when we turn the model on a text by, say, Cather, that it has not seen yet before? I quite enjoy Cather's [short story](https://cather.unl.edu/writings/shortfiction/ss006), "Paul's Case: A Study in Temperament." The script will read in the text, utilize the ```word_index.json``` file to replace each word with the number of the word in the .json. One can then keep track of each sentence to see the model's predictions: a score close to ```0``` suggests the model thinks it's by Cather; the closer to ```1```, it thinks it more likely that the sentence belongs to Jewett.
 
-(Full test log is available here ...)  
+(Full test log is available here ...)
