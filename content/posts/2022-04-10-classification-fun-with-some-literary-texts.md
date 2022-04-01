@@ -118,7 +118,7 @@ def train_model(model, tt_data, val_size=.3, epochs=1, batch_size=16):
     return(model)
   ```
 
-After testing, the loss and accuracy for the model turned out to be ```[0.32046514101210954, 0.875969]``` respectively. The keras library also allows us to see the loss and accuracy over each epoch of training:
+After testing, the loss and accuracy for the model turned out to be ```[0.32046514101210954, 0.875969]``` respectively. The [keras library](https://keras.io/) also allows us to see the loss and accuracy over each epoch of training:
 
 ![Model Loss](/static/images/imgforblogposts/post_10/model_loss.png)
 
@@ -148,7 +148,6 @@ def plot_model_accuracy(model_name, string_1='accuracy', string_2='val_accuracy'
 
 What happens when we turn the model on a text by, say, Cather, that it has not seen yet before? I quite enjoy Cather's [short story](https://cather.unl.edu/writings/shortfiction/ss006), "Paul's Case: A Study in Temperament." The script will read in the text, utilize the ```word_index.json``` file to replace each word with its corresponding integer in the .json.
 
-
-Mattingly's tutorial also has the model output each of its predictions to a plain .txt file for further use. One can then keep track of each sentence to see the model's predictions: a score close to ```0``` is the model prediction that it's by Cather; the closer to ```1```, it thinks it more likely that the sentence belongs to Jewett.
+Mattingly's tutorial also has the model output each of its predictions to a plain .txt file for further use. One can then keep track of each sentence to see the model's predictions: a score close to ```0``` is the model prediction that it's by Cather; the closer to ```1```, it thinks it more likely that the sentence belongs to Jewett. I would imagine that one could alter the workflow here a little bit to have the predictions outputted into a pandas dataframe. A fairly small amount of data wrangling can get that done (simple/good-enough script [here](https://github.com/kspicer80/authorship_attribution_studies/blob/main/cather_jewett/interpreting_model_results/model_results_to_df.py))
 
 (Full test log is available here ...) [BE SURE TO FILL THIS IN LATER!!!!!]
