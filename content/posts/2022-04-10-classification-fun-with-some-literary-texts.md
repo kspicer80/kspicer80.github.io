@@ -50,7 +50,7 @@ def padding_data(sentences, index, maxlen=25):
     return(new_sentences)
   ```
 
-Next is a function that will convert each and every token within the text into an integer—as per the [keras documentation](https://www.tensorflow.org/api_docs/python/tf/keras/preprocessing/text/Tokenizer) the functions in the ```tf.keras.preprocessing.text.Tokenizer``` class "allows to vectorize a text corpus, by turning each text into either a sequence of integers (each integer being the index of a token in a dictionary) or into a vector where the coefficient for each token could be binary, based on word count, based on tf-idf ...":
+Next is a function that will index each and every token within the text file and append it to a .json file that will store every token and its associated index number:
 
 ``` python
 def create_index(texts, filename):
@@ -80,7 +80,7 @@ def label_data(sentences, label):
     return(total_chunks)
 ```
 
-Now with all the data structured and ordered in the way the keras model needs it, we can create the training data and then create, train, and fit the model on the dataset:
+Now with all the data structured and ordered in the way the keras model needs it, we can create the training data, create, train, and fit the model on the dataset:
 
 ``` python
 def train_model(model, tt_data, val_size=.3, epochs=1, batch_size=16):
@@ -118,7 +118,7 @@ def train_model(model, tt_data, val_size=.3, epochs=1, batch_size=16):
     return(model)
   ```
 
-After testing, the loss and accuracy for the model turned out to be ```[0.32046514101210954, 0.875969]``` respectively. The [keras library](https://keras.io/) also allows us to see the loss and accuracy over each epoch of training:
+After testing, the loss and accuracy for the model turned out to be ```[0.32046514101210954, 0.875969]``` respectively. The keras library also allows us to see the loss and accuracy over each epoch of training:
 
 ![Model Loss](/static/images/imgforblogposts/post_10/model_loss.png)
 
@@ -146,13 +146,6 @@ def plot_model_accuracy(model_name, string_1='accuracy', string_2='val_accuracy'
     plt.show()
 ```
 
-<<<<<<< Updated upstream
-What happens when we turn the model on a text by, say, Cather, that it has not seen yet before? I quite enjoy Cather's [short story](https://cather.unl.edu/writings/shortfiction/ss006), "Paul's Case: A Study in Temperament." The script will read in the text, utilize the ```word_index.json``` file to replace each word with its corresponding integer in the .json.
-
-Mattingly's tutorial also has the model output each of its predictions to a plain .txt file for further use. One can then keep track of each sentence to see the model's predictions: a score close to ```0``` is the model prediction that it's by Cather; the closer to ```1```, it thinks it more likely that the sentence belongs to Jewett. I would imagine that one could alter the workflow here a little bit to have the predictions outputted into a pandas dataframe. A fairly small amount of data wrangling can get that done (simple/good-enough script [here](https://github.com/kspicer80/authorship_attribution_studies/blob/main/cather_jewett/interpreting_model_results/model_results_to_df.py))
-
-(Full test log is available here ...) [BE SURE TO FILL THIS IN LATER!!!!!]
-=======
 What happens when we turn the model on a text by, say, Cather, that it has not seen yet before? I quite enjoy her [short story](https://cather.unl.edu/writings/shortfiction/ss006), "Paul's Case: A Study in Temperament." The script will read in the text, utilize the ```word_index.json``` file to replace each word with the number of the word in the .json. One can then keep track of each sentence to see the model's predictions: a score close to ```0``` suggests the model thinks it's by Cather; the closer to ```1```, the prediction is that it belongs to Jewett. (The full test log [file](https://github.com/kspicer80/authorship_attribution_studies/blob/main/cather_jewett/logging_predictions/test_log_file.txt) from the console is available here.) We could easily write a little bit of code as well to get the .txt file with all the predictions into a dataframe for even further analysis relatively quickly and easily—scatter plots are then easy-enough to produce so one could visualize the predictions of the model per individual sentence.
 
 ``` python
@@ -176,5 +169,6 @@ plt.title("Predictions for Each Sentence of Cather's 'Paul's Case'")
 plt.show()
 ```
 
-![Predictions on Cather's "Paul's Case"](/static/images/imgforblogposts/post_10/model_predictions_scatter_for_pauls_case.png)
->>>>>>> Stashed changes
+![Predictions on Cather's "Paul's Case"](/static/images/imgforblogposts/post_10/model_predictions_scatter_for_pauls_case.png) 
+
+Most of the sentences are predicted to be by Cather. Curiously, feeding the model a text by Jewett, "Mate"
