@@ -146,8 +146,35 @@ def plot_model_accuracy(model_name, string_1='accuracy', string_2='val_accuracy'
     plt.show()
 ```
 
+<<<<<<< Updated upstream
 What happens when we turn the model on a text by, say, Cather, that it has not seen yet before? I quite enjoy Cather's [short story](https://cather.unl.edu/writings/shortfiction/ss006), "Paul's Case: A Study in Temperament." The script will read in the text, utilize the ```word_index.json``` file to replace each word with its corresponding integer in the .json.
 
 Mattingly's tutorial also has the model output each of its predictions to a plain .txt file for further use. One can then keep track of each sentence to see the model's predictions: a score close to ```0``` is the model prediction that it's by Cather; the closer to ```1```, it thinks it more likely that the sentence belongs to Jewett. I would imagine that one could alter the workflow here a little bit to have the predictions outputted into a pandas dataframe. A fairly small amount of data wrangling can get that done (simple/good-enough script [here](https://github.com/kspicer80/authorship_attribution_studies/blob/main/cather_jewett/interpreting_model_results/model_results_to_df.py))
 
 (Full test log is available here ...) [BE SURE TO FILL THIS IN LATER!!!!!]
+=======
+What happens when we turn the model on a text by, say, Cather, that it has not seen yet before? I quite enjoy her [short story](https://cather.unl.edu/writings/shortfiction/ss006), "Paul's Case: A Study in Temperament." The script will read in the text, utilize the ```word_index.json``` file to replace each word with the number of the word in the .json. One can then keep track of each sentence to see the model's predictions: a score close to ```0``` suggests the model thinks it's by Cather; the closer to ```1```, the prediction is that it belongs to Jewett. (The full test log [file](https://github.com/kspicer80/authorship_attribution_studies/blob/main/cather_jewett/logging_predictions/test_log_file.txt) from the console is available here.) We could easily write a little bit of code as well to get the .txt file with all the predictions into a dataframe for even further analysis relatively quickly and easily—scatter plots are then easy-enough to produce so one could visualize the predictions of the model per individual sentence.
+
+``` python
+import pandas as pd
+import matplotlib.pyplot as plt
+
+file = r'cather_jewett\interpreting_model_results\mate_of_the_daylight_results.txt'
+results = pd.read_csv(file, header=None, sep=',')
+results.rename(columns={0: 'prediction', 1: 'text'}, inplace=True)
+results['test'] = results['prediction'].str.extract(r'((?<=\[).*?(?=\]))')
+results['cleaned_prediction'] = results['test'].astype(float)
+cather_df = results.loc[results.cleaned_prediction <= 0.5]
+jewett_df = results.loc[results.cleaned_prediction >= 0.5]
+predictions = results['cleaned_prediction']
+plt.plot(predictions)
+plt.clf()
+plt.scatter(predictions.index, predictions.values, alpha=0.4, color='firebrick')
+plt.xlabel("sentence")
+plt.ylabel("prediction")
+plt.title("Predictions for Each Sentence of Cather's 'Paul's Case'")
+plt.show()
+```
+
+![Predictions on Cather's "Paul's Case"](/static/images/imgforblogposts/post_10/model_predictions_scatter_for_pauls_case.png)
+>>>>>>> Stashed changes
