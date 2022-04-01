@@ -1,7 +1,7 @@
 ---
 title: "K-Nearest Neighbors Classification Fun! ... with some Literary Texts by Willa Cather and Sarah Orne Jewett"
-date:
-draft: true
+date: 2022-04-01
+draft: false
 toc: false
 images:
 tags:
@@ -22,13 +22,13 @@ tags:
 
 In my DH journey, the work of [Dr. William Mattingly](https://pythonhumanities.com/python-for-dh-course/) has been something of a constant companion and guide.
 
-His video laying out the steps for a ["Binary Data Classification"](https://www.youtube.com/watch?v=tPgQH5UTC9k) were clear quite clarifying for me in all kinds of ways. The classifier's job in this video was to see if it could tell the difference between the work of Oscar Wilde and Dan Brown. What if we tried a different pair of authors/texts? As I offhandedly mentioned in my previous [post](https://kspicer80.github.io/posts/2022-03-29-vector-space-models-and-shakespeare/), finding texts in the public domain (like Shakespeare's for example), saves one quite a bit of time wrangling things together. I also, for some, reason, have found myself going back to some of the works of Willa Cather (admittedly, she's definitely not in my wheelhouse/field of study by any stretch of the imagination) and was wondering how a machine learning classifier might perform when looking at Cather's texts alongside those of one of her key influences, Sarah Orne Jewett:
+His video laying out the steps for a ["Binary Data Classification"](https://www.youtube.com/watch?v=tPgQH5UTC9k) was clear and quite clarifying for me in all kinds of ways. The classifier's job in this video was to see if it could tell the difference between the work of Oscar Wilde and Dan Brown. What if we tried a different pair of authors/texts? As I offhandedly mentioned in my previous [post](https://kspicer80.github.io/posts/2022-03-29-vector-space-models-and-shakespeare/), finding texts in the public domain (like Shakespeare's for example), saves one quite a bit of time wrangling things together. I also, for some, reason, have found myself going back to some of the works of Willa Cather (admittedly, she's definitely not in my wheelhouse/field of study by any stretch of the imagination) and was wondering how a machine learning classifier might perform when looking at Cather's texts alongside those of one of her key influences, Sarah Orne Jewett:
 
 {{< figure src="/static/images/imgforblogposts/post_10/o_pioneers_1913_dedication_to_jewett.png" caption="Original Image of Cather's Dedication of _O Pioneers_ to Jewett, courtesy of UNL's fantastic _Willa Cather Archive_ [here](https://cather.unl.edu/writings/books/0017)> " >}}
 
 Why not?—I figured I could tinker around a bit to see what's possible. Project Gutenberg has a number of texts by both [Cather](https://www.gutenberg.org/ebooks/author/22) and [Jewett](https://www.gutenberg.org/ebooks/author/202)—and the UNL _Willa Cather Archive_ has a good number of her texts [formatted in .xml](https://cather.unl.edu/writings/books). I grabbed as many of the texts from these two sources. Since the Gutenberg texts come with the typical boilerplate material at the start and end of the plain text file I pulled out a nice little script from ["C-W" on GitHub](https://github.com/c-w/gutenberg) that had a nice list of phrases used in the boilerplate material; [the simple script](https://github.com/kspicer80/authorship_attribution_studies/blob/main/cather_jewett/strip_headers_and_footers.py) would strip all the boilerplate when the text files get read in.
 
-The major steps here for this tinkering is to read in all the plain text files, split everything up by sentences, write a function that will "pad" the data so that any sentences that are less than a specific length ultimately get a ```?``` added to the sentence to bring it's length of the already specified ```max_length``` of each sentence. This is due to the way that the keras library likes to have data fed to it. That function looks as follows:
+The major steps here for this tinkering is to read in all the plain text files, split everything up by sentences, write a function that will "pad" the data so that any sentences that are less than a specific length ultimately get a ```?``` added to the sentence to bring it's length up to the already specified ```max_length``` of each sentence. This is due to the way that the keras library likes to have data fed to it. That function looks as follows:
 
 ``` python
 def padding_data(sentences, index, maxlen=25):
@@ -124,7 +124,7 @@ After testing, the loss and accuracy for the model turned out to be ```[0.320465
 
 ![Model Accuracy](/static/images/imgforblogposts/post_10/model_accuracy.png)
 
-In the code snippet above the plot was included in the ```train_model``` function, but one could just as easily pull them out as their own functions so we have one function only do one specific job:
+In the code snippet above the plot was included in the ```train_model``` function, but one could just as easily pull them out as their own functions so we have one function only do one specific job.
 
 ``` python
 def plot_model_loss(model_name, string_1='loss', string_2='val_loss'):
@@ -146,7 +146,7 @@ def plot_model_accuracy(model_name, string_1='accuracy', string_2='val_accuracy'
     plt.show()
 ```
 
-What happens when we turn the model on a text by, say, Cather, that it has not seen yet before? I quite enjoy her [short story](https://cather.unl.edu/writings/shortfiction/ss006), "Paul's Case: A Study in Temperament." The script will read in the text, utilize the ```word_index.json``` file to replace each word with the number of the word in the .json. One can then keep track of each sentence to see the model's predictions: a score close to ```0``` suggests the model thinks it's by Cather; the closer to ```1```, the prediction is that it belongs to Jewett. (The full test log [file](https://github.com/kspicer80/authorship_attribution_studies/blob/main/cather_jewett/logging_predictions/test_log_file.txt) from the console is available here.) We could easily write a little bit of code as well to get the .txt file with all the predictions into a dataframe for even further analysis relatively quickly and easily—scatter plots are then easy-enough to produce so one could visualize the predictions of the model per individual sentence.
+What happens when we turn the model on a text by, say, Cather, that it has not seen yet before? I quite enjoy her [short story](https://cather.unl.edu/writings/shortfiction/ss006), "Paul's Case: A Study in Temperament." The script will read in the text, utilize the ```word_index.json``` file to replace each word with the number of that word in the index. One can then keep track of each sentence to see the model's predictions: a score close to ```0``` suggests the model thinks it's by Cather; the closer to ```1```, the prediction is that it belongs to Jewett. (The full test log [file](https://github.com/kspicer80/authorship_attribution_studies/blob/main/cather_jewett/logging_predictions/test_log_file.txt) from the console is available here.) We could easily write [a little bit of code](https://github.com/kspicer80/authorship_attribution_studies/blob/main/cather_jewett/interpreting_model_results/model_results_to_df.py) as well to get the .txt file with all the predictions into a DataFrame for even further analysis; it's relatively quick and simple to get some nice scatter plots of the predictions for each and every sentence in the story:
 
 ``` python
 import pandas as pd
@@ -171,4 +171,10 @@ plt.show()
 
 ![Predictions on Cather's "Paul's Case"](/static/images/imgforblogposts/post_10/model_predictions_scatter_for_pauls_case.png) 
 
-Most of the sentences are predicted to be by Cather. Curiously, feeding the model a text by Jewett, "Mate"
+Most of the sentences are predicted to be by Cather. Curiously, feeding the model a text by Jewett, "A Mate of the Daylight," most of the predictions are towards the Cather side of the graph:
+
+![Predictions for "Mate"](/static/images/imgforblogposts/post_10/model_predictions_scatter_for_mate.png)
+
+It would no doubt be good to do a little bit of digging here to see what might be going on with the model's predictions about this Jewett story. Also, hopefully, in the near future, I can do a little bit of writing about some of the other classifiers one could build and set to work on these Cather and Jewett texts. 
+
+Again, as usual, more to come ...
