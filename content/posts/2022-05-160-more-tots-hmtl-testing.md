@@ -24,4 +24,4 @@ tags:
 
 All right, so let's do a little bit of testing of the whole XML through XSLT process to get an HTML version of James's _The Turn of the Screw_ with all my colored tags for it.
 
-[Here](static/html/hj_tots_tei_version_2.html) we go!
+[Here](static/hj_tots_tei_version_2.html) we go!
