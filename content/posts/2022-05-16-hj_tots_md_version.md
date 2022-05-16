@@ -1,6 +1,7 @@
 ---
 title: "HTML/Markdown Version of _The Turn of the Screw_ Testing"
-date: 2022-05-16
+type: "page"
+date: 2022-05-16 01:00:00
 draft: false
 toc: false
 images:
