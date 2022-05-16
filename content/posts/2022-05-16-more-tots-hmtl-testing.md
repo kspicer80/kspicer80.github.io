@@ -24,4 +24,6 @@ tags:
 
 All right, so let's do a little bit of testing of the whole XML through XSLT process to get an HTML version of James's _The Turn of the Screw_ with all my colored tags for it.
 
-[Here](https://kspicer80.github.io/posts/2022-05-16-hj_tots_md_version/) we go!
+The original .xml and .xsl file are up and available in the GitHub [repo](https://github.com/kspicer80/henry_james/tree/main/tei).
+
+And without further ado, [here](https://kspicer80.github.io/posts/2022-05-16-hj_tots_md_version/) we go!
