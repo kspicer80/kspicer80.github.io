@@ -1,6 +1,6 @@
 ---
 title: "Transforming TEI XML of _The Turn of the Screw_ into HTML"
-date: 2022-05-16 00:00:00
+date: 2022-05-16 00:15:00
 draft: false
 toc: false
 images:
