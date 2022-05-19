@@ -6404,7 +6404,7 @@
 </body>
 
 </html>
-]]></content></item><item><title>Transforming TEI XML of _The Turn of the Screw_ into HTML</title><link>https://kspicer80.github.io/posts/2022-05-16-more-tots-hmtl-testing/</link><pubDate>Sun, 15 May 2022 00:15:00 +0000</pubDate><guid>https://kspicer80.github.io/posts/2022-05-16-more-tots-hmtl-testing/</guid><description>All right, so let&amp;rsquo;s do a little bit of testing of the whole XML through XSLT process to get an HTML version of James&amp;rsquo;s The Turn of the Screw with all my colored tags for it.
+]]></content></item><item><title>Transforming TEI XML of _The Turn of the Screw_ into HTML</title><link>https://kspicer80.github.io/posts/2022-05-15-more-tots-hmtl-testing/</link><pubDate>Sun, 15 May 2022 00:15:00 +0000</pubDate><guid>https://kspicer80.github.io/posts/2022-05-15-more-tots-hmtl-testing/</guid><description>All right, so let&amp;rsquo;s do a little bit of testing of the whole XML through XSLT process to get an HTML version of James&amp;rsquo;s The Turn of the Screw with all my colored tags for it.
 The original .xml and .xsl file are up and available in the GitHub repo.
 And without further ado, here we go!</description><content type="html"><![CDATA[<p>All right, so let&rsquo;s do a little bit of testing of the whole XML through XSLT process to get an HTML version of James&rsquo;s <em>The Turn of the Screw</em> with all my colored tags for it.</p>
 <p>The original .xml and .xsl file are up and available in the GitHub <a href="https://github.com/kspicer80/henry_james/tree/main/tei">repo</a>.</p>
