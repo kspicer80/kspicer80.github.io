@@ -6,9 +6,7 @@
 <head>
   <title>
     <italic>The Turn of the Screw</italic>
-    <link href="css/hj_tots_style.css" rel="stylesheet">
   </title>
-  <base href="{{ .Site.BaseURL }}">
 </head>
 
 <body>
