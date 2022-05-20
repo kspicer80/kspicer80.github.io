@@ -51,3 +51,8 @@ paginate = 10
     identifier = "blog"
     name       = "Blog"
     url        = "/posts"
+    
+  [ markup.goldmark ]
+  [ markup.goldmark.extensions]
+    table = true
+  
