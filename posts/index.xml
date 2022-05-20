@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Digital Forays</title><link>https://kspicer80.github.io/posts/</link><description>Recent content in Posts on Digital Forays</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&lt;a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0&lt;/a></copyright><lastBuildDate>Mon, 16 May 2022 01:00:00 +0000</lastBuildDate><atom:link href="https://kspicer80.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>HTML Version of _The Turn of the Screw_ Testing</title><link>https://kspicer80.github.io/posts/2022-05-16-hj_tots_full_version/</link><pubDate>Mon, 16 May 2022 01:00:00 +0000</pubDate><guid>https://kspicer80.github.io/posts/2022-05-16-hj_tots_full_version/</guid><description>The Turn of the Screw By Henry James Encoded by: &amp;nbsp;Dr. Kevin Andrew Spicer Originally made public by Project Gutenberg—taken from their version of the text. Kind of Tag: Color: Kind of Tag: Color: Kind of Tag: Color: Douglas's Dialogue Mrs. Grose's Dialogue Narrator's Dialogue Flora's Dialogue The Governess's Dialogue Mrs. Griffin's Dialogue Story Group Member's Dialogue Story Group Members' Dialogue Mr.</description><content type="html"><![CDATA[
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Digital Forays</title><link>https://kspicer80.github.io/posts/</link><description>Recent content in Posts on Digital Forays</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&lt;a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0&lt;/a></copyright><lastBuildDate>Mon, 16 May 2022 01:00:00 +0000</lastBuildDate><atom:link href="https://kspicer80.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>HTML Version of _The Turn of the Screw_ Testing</title><link>https://kspicer80.github.io/posts/2022-05-16-hj_tots_full_version/</link><pubDate>Mon, 16 May 2022 01:00:00 +0000</pubDate><guid>https://kspicer80.github.io/posts/2022-05-16-hj_tots_full_version/</guid><description>The Turn of the Screw By Henry James Encoded by: &amp;nbsp;Dr. Kevin Andrew Spicer Originally made public by Project Gutenberg—taken from their version of the text. Prologue: ¶1 The story had held us, round the fire, sufficiently breathless, but except the obvious remark that it was gruesome, as, on Christmas Eve in an old house, a strange tale should essentially be, I remember no comment uttered till somebody happened to say that it was the only case he had met in which such a visitation had fallen on a child.</description><content type="html"><![CDATA[
 
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
@@ -16,82 +16,6 @@
   <h5>Encoded by: &nbsp;<a href="https://kspicer80.github.io">Dr. Kevin Andrew Spicer</a></h5>
   <h5>Originally made public by Project Gutenberg—taken from their <a href="https://www.gutenberg.org/files/209/209-h/209-h.htm">version</a> of the text.</h5>
   <img src="https://kspicer80.github.io//images/imgforblogposts/post_11/hj_tots_color_coded_tag_table.png" alt="Color-Coded Tag Table">
-
-  <table class="center">
-    <thead>
-      <tr>
-        <th>Kind of Tag:</th>
-        <th>Color:</th>
-        <th>Kind of Tag:</th>
-        <th>Color:</th>
-        <th>Kind of Tag:</th>
-        <th>Color:</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Douglas's Dialogue</td>
-        <td><svg width="100" height="25">
-            <rect width="100" height="25" style='fill: paleturquoise'>
-        </td>
-        <td>Mrs. Grose's Dialogue</td>
-        <td><svg width="100" height="25">
-            <rect width="100" height="25" style='fill: #CCCCFF'>
-        </td>
-        <td>Narrator's Dialogue</td>
-        <td><svg width="100" height="25">
-            <rect width="100" height="25" style='fill: BlueViolet'>
-        </td>
-      </tr>
-
-      <tr>
-        <td>Flora's Dialogue</td>
-        <td><svg width="100" height="25">
-            <rect width="100" height="25" style='fill: green'>
-        </td>
-        <td>The Governess's Dialogue</td>
-        <td><svg width="100" height="25">
-            <rect width="100" height="25" style='fill: Indigo'>
-        </td>
-        <td>Mrs. Griffin's Dialogue</td>
-        <td><svg width="100" height="25">
-            <rect width="100" height="25" style='fill: #ffae42'>
-        </td>
-      </tr>
-
-      <tr>
-        <td>Story Group Member's Dialogue</td>
-        <td><svg width="100" height="25">
-            <rect width="100" height="25" style='fill: SaddleBrown'>
-        </td>
-        <td>Story Group Members' Dialogue</td>
-        <td><svg width="100" height="25">
-            <rect width="100" height="25" style='fill: SlateBlue'>
-        </td>
-        <td>Mr. Griffin's Dialogue</td>
-        <td><svg width="100" height="25">
-            <rect width="100" height="25" style='fill: Yellow'>
-        </td>
-      </tr>
-
-      <tr>
-        <td>fire</td>
-        <td><svg width="100" height="25">
-            <rect width="100" height="25" style='fill: maroon'>
-        </td>
-        <td>dates</td>
-        <td><svg width="100" height="25">
-            <rect width="100" height="25" style='fill: GreenYellow'>
-        </td>
-        <td>times</td>
-        <td><svg width="100" height="25">
-            <rect width="100" height="25" style='fill: Olive'>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-
-
   <div class="chapter" n="0">
     <h3>Prologue:</h3>
     <div class="paragraph" n="1"><sup>¶1</sup>
