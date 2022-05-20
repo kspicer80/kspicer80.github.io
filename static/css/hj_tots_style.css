@@ -36,3 +36,16 @@ header, .row {
 p {
   white-space: pre-wrap;
 }
+
+.img-hover-zoom {
+  height: 300px;
+  overflow: visible;
+}
+
+.img-hover-zoom img {
+  transition: transform .5s ease;
+}
+
+.img-hover-zoom:hover img {
+  transform: scale(1.5);
+}
