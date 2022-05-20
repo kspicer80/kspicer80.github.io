@@ -24,6 +24,8 @@ paginate = 10
   description = "My Digital Humanities Blog"
   keywords = "homepage, blog"
   images = [""]
+  
+  customCSS = ["css/hj_tots_style.css"]
 
 [taxonomies]
     category = "blog"
