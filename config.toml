@@ -52,7 +52,4 @@ paginate = 10
     name       = "Blog"
     url        = "/posts"
     
-  [ markup.goldmark ]
-  [ markup.goldmark.extensions]
-    table = true
   
