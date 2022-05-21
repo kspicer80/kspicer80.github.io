@@ -16,7 +16,8 @@ table.center {
   margin-right: auto;
 }
 
-table {
+table tbody tr td {
+  font-size: 14px;
   border: 1px solid black;
 }
 
