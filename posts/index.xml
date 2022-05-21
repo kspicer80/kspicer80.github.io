@@ -602,7 +602,6 @@ So after a week-long research institute put together by some fantastic people at
 </span></span><span style="display:flex;"><span>output_path <span style="color:#f92672">=</span> Path(<span style="color:#e6db74">&#34;ramona_sentence.svg&#34;</span>)
 </span></span><span style="display:flex;"><span>output_path<span style="color:#f92672">.</span>open(<span style="color:#e6db74">&#34;w&#34;</span>, encoding<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;utf-8&#34;</span>)<span style="color:#f92672">.</span>write(dep_image)
 </span></span></code></pre></div>]]></content></item><item><title/><link>https://kspicer80.github.io/posts/2022-05-16-hj_tots_full_version/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kspicer80.github.io/posts/2022-05-16-hj_tots_full_version/</guid><description>The Turn of the Screw By Henry James Encoded by: &amp;nbsp;Dr. Kevin Andrew Spicer Originally made public by Project Gutenberg—taken from their version of the text. Prologue: ¶1 The story had held us, round the fire, sufficiently breathless, but except the obvious remark that it was gruesome, as, on Christmas Eve in an old house, a strange tale should essentially be, I remember no comment uttered till somebody happened to say that it was the only case he had met in which such a visitation had fallen on a child.</description><content type="html"><![CDATA[
-
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:xs="http://www.w3.org/2001/XMLSchema">
@@ -7009,6 +7008,4 @@ So after a week-long research institute put together by some fantastic people at
     </div>
   </div>
 </body>
-</html>
-{{ /rawhtml }}
-]]></content></item></channel></rss>
+</html>]]></content></item></channel></rss>
