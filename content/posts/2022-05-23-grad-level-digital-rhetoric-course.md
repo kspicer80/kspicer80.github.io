@@ -1,7 +1,7 @@
 ---
 title: "Graduate-Level Course in Digital Rhetoric (Summer 2022)"
 date: 2022-05-23 00:05:00
-draft: true
+draft: false
 toc: false
 images:
 tags:
@@ -21,4 +21,12 @@ We're barely a week into the seminar here, but already I've having quite a bit o
 
 > I find it increasingly irresponsible to study rhetoric and writing without accounting in some way for the various impacts of information and communication technologies. Likewise, I do not think that it is possible to understand these technologies without an appreciation of their rhetorical effects, both qua technology and as players in our discursive ecologies.
 
-I couldn't agree more with such a thing—although, for myself, I am wondering just exactly how far down the rabbit hold I want to go in terms of "accounting ... for the various impacts of information and communication technologies" when we think about and study rhetoric.
+I couldn't agree more with such a position—although, for myself, I am wondering just exactly how far down the rabbit hold I want to go in terms of "accounting ... for the various impacts of information and communication technologies" when we think about and study rhetoric. This very quickly (and easily?) gets one into questions of literacy. I am, of course, sympathetic to the whole analogy that sees literacy with the digital as being similar to the early days of the automobile. If one was driving an old Model T, it would behoove one to (possibly) know how it worked; over time, I can drive the car without worrying myself too much how exactly an internal combustion engine works. The same could be said for the computer. That said, now that I've learned how to code, how to program, how to script things, I can't really ever imagine how I lived without such knowledge and awareness. 
+
+Speaking of analogies, I found Brooke's use of the "interface" metaphor to be incredibly thought-provoking:
+
+> For better of worse, there is no explicit focus in this project on pedagogy, although I believe that there are some obvious classroom implications for many of the examples I offer. One of the equally obvious implications of the increasing trend toward online education is that we have begun to think of our classrooms, whether f2f or online, as interfaces as well, and in that sense, the writing classroom may ultimately take its place among the media I describe in this project. But there are no direct pedagogical consequences to this project other than its attitudes toward rhetoric and technology (pp. 199-200).
+
+I like this idea of trying to think about the classroom as a kind of "interface"—very interesting. Would it help us teachers to incorporate the language of "usability" and "user-testing" when we think about our presence and time in the classroom (especially in terms of courses that are "face-to-face"!) ... I like this a lot and will definitely chew on this a bit more, to be sure!
+
+I'll try to keep this space here on the blog up-to-date as the semester goes along—as always, more to come!
