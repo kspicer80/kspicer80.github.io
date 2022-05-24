@@ -1,6 +1,7 @@
 ---
 title: "Graduate-Level Course in Digital Rhetoric (Summer 2022)"
 date: 2022-05-23 00:05:00
+lastmod: 2022-05-24 12:00:00
 draft: false
 toc: false
 images:
@@ -28,5 +29,11 @@ Speaking of analogies, I found Brooke's use of the "interface" metaphor to be in
 > For better of worse, there is no explicit focus in this project on pedagogy, although I believe that there are some obvious classroom implications for many of the examples I offer. One of the equally obvious implications of the increasing trend toward online education is that we have begun to think of our classrooms, whether f2f or online, as interfaces as well, and in that sense, the writing classroom may ultimately take its place among the media I describe in this project. But there are no direct pedagogical consequences to this project other than its attitudes toward rhetoric and technology (pp. 199-200).
 
 I like this idea of trying to think about the classroom as a kind of "interface"—very interesting. Would it help us teachers to incorporate the language of "usability" and "user-testing" when we think about our presence and time in the classroom (especially in terms of courses that are "face-to-face"!) ... I like this a lot and will definitely chew on this a bit more, to be sure!
+
+No doubt this assertion is cousin to some of the larger arguments Brooke puts forward with regards to thinking about technologies and how they impact the teaching of writing: 
+
+> Our tendency has been to treat discursive technologies as if they were simply another specialty among many in our discipline, the province of a handful of experts, one of whom could be hired into a department thereby satisfying that particular "area." This attitude, another of our legacies inherited from English departments, has left us underprepared for the shift from page to screen; technology is transdisciplinary, cutting across the full range of activities we engage in as professionals, rather than subdisciplinary. The longer we wait to realize this, the harder we will have to struggle for respect and relevance as experts in writing. (p. 5)
+
+My two colleagues ([Drs. Beth McDermott](https://bethmcdermott.com/) and [Anna Ioanes](https://annaioanes.com/)) in the English Department have just finished a year-long grant project—generously funded by the [Arthur Vining Davis Foundation](https://www.avdf.org/) where they were interested in studying this "digital technology" side of things here at the [University of St. Francis](https://www.stfrancis.edu). The final report would appear to lend a great deal of credence to Brooke's argument that we really do have our feet to the fire when it comes to thinking more carefully and intentionally about the technological side of writing instruction. The creation of graduate-level courses in Multimodal Composition and Digital Rhetoric (of course) is a really fantastic start—though I have no doubt that there's still much more to be done, especially at the undergraduate level. 
 
 I'll try to keep this space here on the blog up-to-date as the semester goes along—as always, more to come!
