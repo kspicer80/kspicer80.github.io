@@ -1,7 +1,7 @@
 ---
 title: "Graduate-Level Course in Digital Rhetoric (Summer 2022)"
 date: 2022-05-23 00:05:00
-lastmod: 2022-05-24 12:00:00
+lastmod: 2022-05-24 15:17:00
 draft: false
 toc: false
 images:
@@ -9,6 +9,8 @@ tags:
   - digital humanities
   - digital rhetoric
   - dual-credit english composition
+  - data literacy
+  - digital literacy
   - work stuff
   - USF
   - summer teaching
