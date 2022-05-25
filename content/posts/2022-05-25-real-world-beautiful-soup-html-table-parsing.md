@@ -26,7 +26,7 @@ Given that I'm continuing to chronicle my DH journeys here, I figured I'd showca
 
 Doing some research for a favorite student of mine, I've been wandering around websites devoted to law school. One website [here](https://blog.powerscore.com/lsat/top-100-law-school-application-deadlines-2022-edition/) has a really fantastic little table on the page that has everything one could want—especially if one is a little behind on deadlines and trying to catch up a bit (i.e. figuring out which schools will allow students to start in the Spring or Summer semesters [for an answer to that query, head over [here](https://blog.powerscore.com/lsat/bid-153623-which-law-schools-offer-spring-and-summer-starts/)]). Now, of course, one could just do the simple ol' copy and paste of the table, but we all know how ornery things can get when one tries to paste it into Word or some other program and having to deal with all the formatting shenanigans—indeed, copy and pasting ends up with something like the following:
 
-![Copy and Pasting HMTL table data into Microsoft Word](static/images/imgforblogposts/post_12/copy_and_pasting_html_tables.png)
+![Copy and Pasting HMTL table data into Microsoft Word](/images/imgforblogposts/post_12/copy_and_pasting_html_tables.png)
 
 Rather than worry with that whole mess, why don't we write a little code to get the thing into a nice format, maybe a simple Markdown table since the ```.md``` file extension seems to be my new best friend since getting into all this fantastically cool DH stuff?
 
