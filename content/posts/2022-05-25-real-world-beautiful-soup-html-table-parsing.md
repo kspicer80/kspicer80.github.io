@@ -32,7 +32,7 @@ Rather than worry with that whole mess, why don't we write a little code to get 
 
 First things we had a look at the html for the page, using the "View Page Source" function in Chrome after right-clicking on the page. Looking for a ```table id``` of some kind, sure, enough, here it is:
 
-![HTML table code](/images/imgforblogposts/post_12/inspecting_the_html.png)
+![HTML table code](static/images/imgforblogposts/post_12/inspecting_the_html.png)
 
 I also want to give a big shoutout to Thiago Santos Figueira's very clear and simple [Medium post](https://medium.com/geekculture/web-scraping-tables-in-python-using-beautiful-soup-8bbc31c5803e) on using Beautiful Soup to parse content in tables. His use case is a little bit complicated as it cleans up some of the numbers in the table in question there, so we can fiddle a little bit and grab only what we want. So for the script, we get all the required libraries imported along with some pandas customizations:
 
