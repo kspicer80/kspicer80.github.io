@@ -1,5 +1,5 @@
 ---
-title: "Let's Do Some Real World HTML Table Parsing with Beautiful Soup!"
+title: "Let's Do Some Real World HTML Table Parsing with Beautiful Soup"
 date: 2022-05-25 00:05:00
 draft: false
 toc: false
