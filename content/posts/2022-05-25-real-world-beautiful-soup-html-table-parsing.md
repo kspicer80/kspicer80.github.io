@@ -71,7 +71,13 @@ tables = soup.find('table', class_ = 'tablepress')
 We also have the column names in the table that we want to grab too, so we next create a DataFrame and pass in a list of column names matching those in the HTML table:
 
 ``` python 
-df = pd.DataFrame(columns=['2021 Rank', 'Law School Name', 'Application Deadline', 'Latest Acceptable LSAT', 'Accept the GRE?', 'Notes from the University', 'Difference from last cycle'])
+df = pd.DataFrame(columns=['2021 Rank', 
+                          'Law School Name', 
+                          'Application Deadline', 
+                          'Latest Acceptable LSAT', 
+                          'Accept the GRE?', 
+                          'Notes from the University', 
+                          'Difference from last cycle'])
 ```
 
 Next we'll fashion a for loop to run through the table, finding all the rows within the table (```<tr>```), grabbing all the information in the table's body (```<tbody>```). We'll also get all the columns in the HTML table matched up with our DataFrame column names:
@@ -89,7 +95,14 @@ for row in table.tbody.find_all('tr'):
         notes = columns[5].text.strip()
         difference_from_last_year = columns[6].text.strip()
         
-        df = df.append({'2021 Rank': school_rank, 'Law School Name': school_name, 'Application Deadline': app_deadline, 'Latest Acceptable LSAT': latest_date, 'Accept the GRE?': gre, 'Notes from the University': notes, 'Difference from last cycle': difference_from_last_year}, ignore_index=True)
+        df = df.append({
+                        '2021 Rank': school_rank, 
+                        'Law School Name': school_name, 
+                        'Application Deadline': app_deadline, 
+                        'Latest Acceptable LSAT': latest_date, 
+                        'Accept the GRE?': gre, 
+                        'Notes from the University': notes, 
+                        'Difference from last cycle': difference_from_last_year}, ignore_index=True)
 ```
 
 (For future versions of myself, [pandas docs](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.append.html#pandas.DataFrame.append) give a deprecation warning here for the ```pandas.DataFrame.append``` function [even more info [here](https://pandas.pydata.org/docs/whatsnew/v1.4.0.html#whatsnew-140-deprecations-frame-series-append)]; that said, the above works as of the writing of this post, so I've left it as is here.) 
