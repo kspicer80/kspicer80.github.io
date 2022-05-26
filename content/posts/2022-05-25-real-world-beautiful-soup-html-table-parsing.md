@@ -120,6 +120,8 @@ print(df.to_markdown())
 
 And we have something super-easy to get into that fantastic ```.md``` extension. A fun little test case here. More to come, I'm sure, as always.
 
+The repo with this really simple script is available [here](https://github.com/kspicer80/bs4_playground).
+
 
 
 
