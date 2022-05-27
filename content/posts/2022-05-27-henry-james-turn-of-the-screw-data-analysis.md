@@ -1,7 +1,7 @@
 ---
 title: "More _The Turn of the Screw_ Data Analysis"
-date: 2022-05-28 00:20:00
-draft: true
+date: 2022-05-27 11:49:00
+draft: false
 toc: false
 images:
 tags:
@@ -41,7 +41,7 @@ prodigious_concordance = tots_text.concordance('prodigious', width=200)
 
 For "prodigious" we get the following output:
 
-![Concordance output for "prodigious"](images/imgforblogposts/post_13/concordance_for_prodigious.png)
+![Concordance output for "prodigious"](/images/imgforblogposts/post_13/concordance_for_prodigious.png)
 
 An equally simple call of the ```dispersion_plot``` NLTK function gives us an image of where the word appears in the text as a whole:
 
@@ -51,30 +51,26 @@ targets = ['prodigious']
 dispersion_plot(tokens, targets, ignore_case=True, title='Lexical Dispersion Plot for "Prodigious"')
 ```
 
-![Lexical Dispersion Plot for "Prodigious"](images/imgforblogposts/post_13/lexical_dispersion_plot_for_prodigious.png)
+![Lexical Dispersion Plot for "Prodigious"](/images/imgforblogposts/post_13/lexical_dispersion_plot_for_prodigious.png)
 
 Of course, we can plot them both on the same figure if we like:
 
-![Lexical Dispersion Plot for "Prodigious" and "Portentous"](images/imgforblogposts/post_13/lexical_dispersion_plot_for_prodigious_and_portentous.png)
+![Lexical Dispersion Plot for "Prodigious" and "Portentous"](/images/imgforblogposts/post_13/lexical_dispersion_plot_for_prodigious_and_portentous.png)
 
 We could also [lemmatize](https://en.wikipedia.org/wiki/Lemmatisation) the text [beforehand](https://www.nltk.org/_modules/nltk/stem/wordnet.html) and see if we get any more words hitting our target list (here we'll just provide a list of lemmas):
 
-``` python
+``` python 
 targets=['prodigious', 'prodigiously', 'prodigiousness', 'portentous', 'portentously']
 dispersion_plot(tokens, targets, ignore_case=True, title='Lexical Dispersion Plot of Lemmas for "Prodigious" and "Portentous"')
 ``` 
 
-![Lemma Lexical Dispersion Plot](images/imgforblogposts/post_13/lemma_lexical_dispersion_plot.png)
+![Lemma Lexical Dispersion Plot](/images/imgforblogposts/post_13/lemma_lexical_dispersion_plot.png)
 
 After a bunch of conversations with my student about these words, I thought it might be curious to see how the frequency of these words compare over a larger corpus of James's work. Easy enough—I grabbed all the texts I could from [Project Gutenberg by James](https://www.gutenberg.org/ebooks/author/113).
 
 Again, some very simple [Python code](https://github.com/kspicer80/henry_james/blob/main/prodigious_and_portentous_counts.py) can give us counts of these words and lemmas across multiple works by James:
 
-![Counts across James's Corpus](images/imgforblogposts/post_13/prodigious_and_portentous_counts_james_corpus.png)
-
-The code for this graph is available [here]()
-
-
+![Counts across James's Corpus](/images/imgforblogposts/post_13/prodigious_and_portentous_counts_across_james_corpus.png)
 
 All the code for this post is available in this [repo](https://github.com/kspicer80/henry_james). 
 
