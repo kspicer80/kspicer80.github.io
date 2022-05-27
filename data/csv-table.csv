@@ -1,5 +1,4 @@
 {{< csv-table > }}
-
 title,word_counts/portentous,word_counts/prodigiously,word_counts/prodigious,word_counts/portentously,total_word_count,word_counts
 1875_roderick_hudson,6,4,2,2,65278,
 1877_the_american,1,1,,4,65838,
@@ -29,6 +28,5 @@ title,word_counts/portentous,word_counts/prodigiously,word_counts/prodigious,wor
 1904_the_golden_bowl,6,1,7,,89794,
 1908_the_jolly_corner,1,,2,1,6737,
 1909_italian_hours,4,1,19,1,65937,
-1916_notes_on_novelists,4,4,11,1,65544,
-
+1916_notes_on_novelists,4,4,11,1,65544
 {{< /csv-table >}}
