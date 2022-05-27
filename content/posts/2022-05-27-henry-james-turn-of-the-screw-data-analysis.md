@@ -1,6 +1,6 @@
 ---
 title: "More _The Turn of the Screw_ Data Analysis"
-date: 2022-05-27 00:20:00
+date: 2022-05-28 00:20:00
 draft: true
 toc: false
 images:
@@ -66,7 +66,11 @@ dispersion_plot(tokens, targets, ignore_case=True, title='Lexical Dispersion Plo
 
 ![Lemma Lexical Dispersion Plot](images/imgforblogposts/post_13/lemma_lexical_dispersion_plot.png)
 
-After a bunch of conversations with my student about these words, I thought it might be curious to see how the frequency of these words compare over a larger corpus of James's work. Easy enough—I grabbed all the texts I could from [Project Gutenberg by James](https://www.gutenberg.org/ebooks/author/113) 
+After a bunch of conversations with my student about these words, I thought it might be curious to see how the frequency of these words compare over a larger corpus of James's work. Easy enough—I grabbed all the texts I could from [Project Gutenberg by James](https://www.gutenberg.org/ebooks/author/113).
+
+
+
+All the code for this post is available in this [repo](https://github.com/kspicer80/henry_james). 
 
 
 
