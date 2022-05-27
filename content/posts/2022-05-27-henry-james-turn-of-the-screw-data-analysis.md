@@ -22,7 +22,7 @@ I know I mentioned in [an earlier post](https://kspicer80.github.io/posts/2022-0
 
 First things first, let's have a look-see at the [NLTK library](https://www.nltk.org/) for some basic word counts/[lexical dispersion plots](https://www.nltk.org/api/nltk.draw.dispersion.html#module-nltk.draw.dispersion). 
 
-A simple use of the ```nltk.text.concordance```  function can give us a nice print out of a specific range of tokens within the text that has the word in question.
+A simple use of the [```nltk.text.concordance```](https://www.nltk.org/howto/concordance.html)  function can give us a nice print out of a specific range of tokens within the text that has the word in question.
 
 ``` python
 import nltk
@@ -57,7 +57,7 @@ Of course, we can plot them both on the same figure if we like:
 
 ![Lexical Dispersion Plot for "Prodigious" and "Portentous"](/images/imgforblogposts/post_13/lexical_dispersion_plot_for_prodigious_and_portentous.png)
 
-We could also [lemmatize](https://en.wikipedia.org/wiki/Lemmatisation) the text [beforehand](https://www.nltk.org/_modules/nltk/stem/wordnet.html) and see if we get any more words hitting our target list (here we'll just provide a list of lemmas):
+We could also [lemmatize](https://en.wikipedia.org/wiki/Lemmatisation) the text [beforehand](https://www.nltk.org/_modules/nltk/stem/wordnet.html) and see if we get any more words hitting our target list (here we'll just provide a list of lemmas to search for, find, and then plot):
 
 ``` python 
 targets=['prodigious', 'prodigiously', 'prodigiousness', 'portentous', 'portentously']
@@ -66,13 +66,15 @@ dispersion_plot(tokens, targets, ignore_case=True, title='Lexical Dispersion Plo
 
 ![Lemma Lexical Dispersion Plot](/images/imgforblogposts/post_13/lemma_lexical_dispersion_plot.png)
 
-After a bunch of conversations with my student about these words, I thought it might be curious to see how the frequency of these words compare over a larger corpus of James's work. Easy enough—I grabbed all the texts I could from [Project Gutenberg by James](https://www.gutenberg.org/ebooks/author/113).
+After a bunch of conversations with my student about these words, I thought it might be curious to see how the frequency of these words compare over a larger selection of James's corpus. Easy enough—I grabbed all the texts I could from [Project Gutenberg by James](https://www.gutenberg.org/ebooks/author/113).
 
 Again, some very simple [Python code](https://github.com/kspicer80/henry_james/blob/main/prodigious_and_portentous_counts.py) can give us counts of these words and lemmas across multiple works by James:
 
 ![Counts across James's Corpus](/images/imgforblogposts/post_13/prodigious_and_portentous_counts_across_james_corpus.png)
 
-All the code for this post is available in this [repo](https://github.com/kspicer80/henry_james). 
+We can see that the frequency of some of these words go over the course of time; we also see that the counts for _Turn_ are also pretty high, especially for "prodigious." More to come on this, for sure, as I would like to write a post dealing with the motif of repetition in the story. 
+
+(All the code for this post is available in this [repo](https://github.com/kspicer80/henry_james).)
 
 
 
