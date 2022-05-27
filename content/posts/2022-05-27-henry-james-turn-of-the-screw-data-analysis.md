@@ -71,11 +71,6 @@ After a bunch of conversations with my student about these words, I thought it m
 
 
 
-Shortcode stuff:
-
-{{ < quotes >}}
-
-
 
 
 
