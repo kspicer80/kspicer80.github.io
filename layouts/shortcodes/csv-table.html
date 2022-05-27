@@ -1,0 +1,12 @@
+{{< code file="layouts/shortcodes/csv-table" >}}
+{{ $rows := .Inner | transform.Unmarshal }}
+
+<table>
+		{{ range $rows }}
+		<tr>
+			{{ range . }}<td>{{ . }}</td> {{ end }}
+		</tr>
+		{{ end }}
+</table>
+{{< /code >}}
+
