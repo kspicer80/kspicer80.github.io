@@ -68,6 +68,12 @@ dispersion_plot(tokens, targets, ignore_case=True, title='Lexical Dispersion Plo
 
 After a bunch of conversations with my student about these words, I thought it might be curious to see how the frequency of these words compare over a larger corpus of James's work. Easy enough—I grabbed all the texts I could from [Project Gutenberg by James](https://www.gutenberg.org/ebooks/author/113).
 
+Again, some very simple [Python code](https://github.com/kspicer80/henry_james/blob/main/prodigious_and_portentous_counts.py) can give us counts of these words and lemmas across multiple works by James:
+
+![Counts across James's Corpus](images/imgforblogposts/post_13/prodigious_and_portentous_counts_james_corpus.png)
+
+The code for this graph is available [here]()
+
 
 
 All the code for this post is available in this [repo](https://github.com/kspicer80/henry_james). 
