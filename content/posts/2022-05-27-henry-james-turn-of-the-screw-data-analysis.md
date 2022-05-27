@@ -8,7 +8,9 @@ tags:
   - digital humanities
   - henry james
   - turn of the screw
-  - matplotlib 
+  - matplotlib
+  - nltk
+  - NLTK 
   - data visualization
   - word frequency counts
   - work stuff
@@ -69,10 +71,9 @@ After a bunch of conversations with my student about these words, I thought it m
 
 
 
-json data ...
+Shortcode stuff:
 
 {{ < quotes >}}
-
 
 
 
