@@ -6,4 +6,4 @@ draft: true
 
 Here's some dumped .csv data:
 
-{<< csv-table >>}
+{{% csv_table src="/static/csv/hj_word_counts.csv" %}}
