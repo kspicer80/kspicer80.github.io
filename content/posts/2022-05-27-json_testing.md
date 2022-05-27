@@ -1,10 +1,13 @@
 --- 
-title: .CSV Dump Testing
+title: .JSON Dump Testing
 date: 2022-05-27
 draft: false
 ---
 
-Here's some dumped .csv data:
+Here's some dumped .json data:
 
-{{% csv-table src="/static/csv/hj_word_counts.csv" maxLines="29" %}}
+{{ range $.Site.Data.hj_target_counts }}
+	{{ partial "hj_counts.html" . }}
+{{ end }}
+
 
