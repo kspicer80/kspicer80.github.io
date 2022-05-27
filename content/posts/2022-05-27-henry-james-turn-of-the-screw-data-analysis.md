@@ -72,7 +72,7 @@ Again, some very simple [Python code](https://github.com/kspicer80/henry_james/b
 
 ![Counts across James's Corpus](/images/imgforblogposts/post_13/prodigious_and_portentous_counts_across_james_corpus.png)
 
-We can see that the frequency of some of these words go over the course of time; we also see that the counts for _Turn_ are also pretty high, especially for "prodigious." More to come on this, for sure, as I would like to write a post dealing with the motif of repetition in the story. 
+We can see that the frequency of some of these words go over the course of time; we also see that the counts for _Turn_ are also pretty high, especially for "prodigious." More to come on this, for sure, as I would like to write a post dealing with the motif of repetition in the story and a pretty simple and straightforward script to count repetitions of tokens over the entirety of the novella.
 
 (All the code for this post is available in this [repo](https://github.com/kspicer80/henry_james).)
 
