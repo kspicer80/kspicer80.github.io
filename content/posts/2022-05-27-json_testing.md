@@ -6,5 +6,5 @@ draft: false
 
 Here's some dumped .csv data:
 
-{{% csv-table src="/static/csv/hj_word_counts.csv" %}}
+{{% csv-table src="/static/csv/hj_word_counts.csv" maxLines="29" %}}
 
