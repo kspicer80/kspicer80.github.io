@@ -3,7 +3,6 @@ title: "More _The Turn of the Screw_ Data Analysis"
 date: 2022-05-27 11:49:00
 draft: false
 toc: false
-images:
 tags:
   - digital humanities
   - henry james
