@@ -1,4 +1,1311 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Digital Forays</title><link>https://kspicer80.github.io/posts/</link><description>Recent content in Posts on Digital Forays</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&lt;a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0&lt;/a></copyright><lastBuildDate>Fri, 27 May 2022 11:49:00 +0000</lastBuildDate><atom:link href="https://kspicer80.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>More _The Turn of the Screw_ Data Analysis</title><link>https://kspicer80.github.io/posts/2022-05-27-henry-james-turn-of-the-screw-data-analysis/</link><pubDate>Fri, 27 May 2022 11:49:00 +0000</pubDate><guid>https://kspicer80.github.io/posts/2022-05-27-henry-james-turn-of-the-screw-data-analysis/</guid><description>I know I mentioned in an earlier post—a couple of different posts actually (here and here too)—that I&amp;rsquo;ve been doing a bunch of work with Henry James&amp;rsquo;s canonical The Turn of the Screw. I thought I would post a little bit more here of what I&amp;rsquo;ve been up to as of late with this. A student of mine was fascinated by the use of the words &amp;ldquo;prodigious&amp;rdquo; and &amp;ldquo;portentous&amp;rdquo; in the Governess&amp;rsquo;s narrative in Turn.</description><content type="html"><![CDATA[<p>I know I mentioned in <a href="https://kspicer80.github.io/posts/2022-04-20-tei-encoding-with-henry-james/">an earlier post</a>—a couple of different posts actually (<a href="https://kspicer80.github.io/posts/2022-05-15-more-tots-hmtl-testing_introductory_post/">here</a> and <a href="">here</a> too)—that I&rsquo;ve been doing a bunch of work with Henry James&rsquo;s canonical <em>The Turn of the Screw</em>. I thought I would post a little bit more here of what I&rsquo;ve been up to as of late with this. A student of mine was fascinated by the use of the words &ldquo;prodigious&rdquo; and &ldquo;portentous&rdquo; in the Governess&rsquo;s narrative in <em>Turn</em>. She said she noticed it frequently. It makes sense that these words would be in the Governess&rsquo;s narrative, given her penchant for playing the detective (or the psychoanalyst), always trying to read the signs pointing to forbidden knowledge. But how often does she use these words? Let&rsquo;s write some code, make some graphs, and figure it out.</p>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Digital Forays</title><link>https://kspicer80.github.io/posts/</link><description>Recent content in Posts on Digital Forays</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&lt;a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0&lt;/a></copyright><lastBuildDate>Sun, 29 May 2022 17:51:00 +0000</lastBuildDate><atom:link href="https://kspicer80.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Fetching Data from a TOML File into a HUGO Table</title><link>https://kspicer80.github.io/posts/2022-05-29-toml-data-to-hugo-table/</link><pubDate>Sun, 29 May 2022 17:51:00 +0000</pubDate><guid>https://kspicer80.github.io/posts/2022-05-29-toml-data-to-hugo-table/</guid><description>Continuing to learn the whole HUGO ecosystem here, I figured I would try a little testing of some things. What if I had a bunch of data in a simple .json or .toml or .yaml or whatever file and wanted to pull/fetch data from that file into one of my posts? I did have some data from the last post about Henry James&amp;rsquo;s use of certain words that we used to generate some of the graphs.</description><content type="html"><![CDATA[<p>Continuing to learn the whole HUGO ecosystem here, I figured I would try a little testing of some things. What if I had a bunch of data in a simple <a href="https://www.json.org/json-en.html">.json</a> or <a href="https://toml.io/en/">.toml</a> or <a href="https://yaml.org/">.yaml</a> or whatever file and wanted to pull/fetch data from that file into one of my posts? I did have some data from <a href="https://kspicer80.github.io/posts/2022-05-27-henry-james-turn-of-the-screw-data-analysis/">the last post</a> about Henry James&rsquo;s use of certain words that we used to generate some of the graphs. A little bit of fiddling around on the HUGO Discourse <a href="https://discourse.gohugo.io/">site</a>, which provides <a href="https://discourse.gohugo.io/t/how-do-i-generate-a-table-from-data-bundle/20396">a mountain of posts</a> yielded some rather simple little <a href="https://gohugo.io/content-management/shortcodes/">shortcodes</a> to fetch and pull data from another file stored in the <code>data</code> folder of this HUGO website. (Two other short writeups were quite helpful as well: <a href="https://harrycresswell.com/writing/passing-data-to-templates-hugo/">here</a> and <a href="https://zwbetz.com/create-an-html-table-from-a-toml-data-file-in-hugo/">here</a> and also <a href="https://peterychuang.co.uk/tech/hugo-data-files/">here</a> and in this short YouTube <a href="https://www.youtube.com/watch?v=zJjJuS7LgS8">video</a> from &ldquo;Pragmatic Reviews&rdquo;).)</p>
+<p>Assuming we had a .toml file that looked like the following,</p>
+<p><img src="/images/imgforblogposts/post_14/toml_datafile_screenshot.png" alt=".toml datafile screenshot">,</p>
+<p>it&rsquo;s pretty simple to get that data fetched and into a table here in this post, like this:</p>
+
+
+
+
+<table>
+  
+  
+    <tr>
+    
+      
+        
+        <th> 
+          title
+        </th>
+        
+      
+        
+        <th> 
+          portentous
+        </th>
+        
+      
+        
+        <th> 
+          portentously
+        </th>
+        
+      
+        
+        <th> 
+          prodigious
+        </th>
+        
+      
+        
+        <th> 
+          prodigiously
+        </th>
+        
+      
+        
+        <th> 
+          total_word_count
+        </th>
+        
+      
+    
+    </tr>
+    
+  
+    <tr>
+    
+      
+        
+        <td> 
+          1875_roderick_hudson
+        </td>
+        
+      
+        
+        <td> 
+          6
+        </td>
+        
+      
+        
+        <td> 
+          2
+        </td>
+        
+      
+        
+        <td> 
+          2
+        </td>
+        
+      
+        
+        <td> 
+          4
+        </td>
+        
+      
+        
+        <td> 
+          65278
+        </td>
+        
+      
+    
+    </tr>
+    
+  
+    <tr>
+    
+      
+        
+        <td> 
+          1877_the_american
+        </td>
+        
+      
+        
+        <td> 
+          1
+        </td>
+        
+      
+        
+        <td> 
+          4
+        </td>
+        
+      
+        
+        <td> 
+          0
+        </td>
+        
+      
+        
+        <td> 
+          1
+        </td>
+        
+      
+        
+        <td> 
+          65838
+        </td>
+        
+      
+    
+    </tr>
+    
+  
+    <tr>
+    
+      
+        
+        <td> 
+          1878_daisy_miller
+        </td>
+        
+      
+        
+        <td> 
+          0
+        </td>
+        
+      
+        
+        <td> 
+          0
+        </td>
+        
+      
+        
+        <td> 
+          0
+        </td>
+        
+      
+        
+        <td> 
+          0
+        </td>
+        
+      
+        
+        <td> 
+          10941
+        </td>
+        
+      
+    
+    </tr>
+    
+  
+    <tr>
+    
+      
+        
+        <td> 
+          1878_the_europeans
+        </td>
+        
+      
+        
+        <td> 
+          2
+        </td>
+        
+      
+        
+        <td> 
+          0
+        </td>
+        
+      
+        
+        <td> 
+          1
+        </td>
+        
+      
+        
+        <td> 
+          0
+        </td>
+        
+      
+        
+        <td> 
+          295972
+        </td>
+        
+      
+    
+    </tr>
+    
+  
+    <tr>
+    
+      
+        
+        <td> 
+          1879_a_bundle_of_letters
+        </td>
+        
+      
+        
+        <td> 
+          0
+        </td>
+        
+      
+        
+        <td> 
+          0
+        </td>
+        
+      
+        
+        <td> 
+          0
+        </td>
+        
+      
+        
+        <td> 
+          0
+        </td>
+        
+      
+        
+        <td> 
+          6652
+        </td>
+        
+      
+    
+    </tr>
+    
+  
+    <tr>
+    
+      
+        
+        <td> 
+          1879_confidence
+        </td>
+        
+      
+        
+        <td> 
+          0
+        </td>
+        
+      
+        
+        <td> 
+          1
+        </td>
+        
+      
+        
+        <td> 
+          0
+        </td>
+        
+      
+        
+        <td> 
+          0
+        </td>
+        
+      
+        
+        <td> 
+          36189
+        </td>
+        
+      
+    
+    </tr>
+    
+  
+    <tr>
+    
+      
+        
+        <td> 
+          1880_washington_square
+        </td>
+        
+      
+        
+        <td> 
+          0
+        </td>
+        
+      
+        
+        <td> 
+          0
+        </td>
+        
+      
+        
+        <td> 
+          0
+        </td>
+        
+      
+        
+        <td> 
+          0
+        </td>
+        
+      
+        
+        <td> 
+          32005
+        </td>
+        
+      
+    
+    </tr>
+    
+  
+    <tr>
+    
+      
+        
+        <td> 
+          1881_portrait_of_a_lady_vol_1
+        </td>
+        
+      
+        
+        <td> 
+          0
+        </td>
+        
+      
+        
+        <td> 
+          0
+        </td>
+        
+      
+        
+        <td> 
+          0
+        </td>
+        
+      
+        
+        <td> 
+          1
+        </td>
+        
+      
+        
+        <td> 
+          55850
+        </td>
+        
+      
+    
+    </tr>
+    
+  
+    <tr>
+    
+      
+        
+        <td> 
+          1881_portrait_of_a_lady_vol_2
+        </td>
+        
+      
+        
+        <td> 
+          2
+        </td>
+        
+      
+        
+        <td> 
+          0
+        </td>
+        
+      
+        
+        <td> 
+          1
+        </td>
+        
+      
+        
+        <td> 
+          0
+        </td>
+        
+      
+        
+        <td> 
+          52144
+        </td>
+        
+      
+    
+    </tr>
+    
+  
+    <tr>
+    
+      
+        
+        <td> 
+          1886_the_bostonians_vol_1
+        </td>
+        
+      
+        
+        <td> 
+          0
+        </td>
+        
+      
+        
+        <td> 
+          1
+        </td>
+        
+      
+        
+        <td> 
+          1
+        </td>
+        
+      
+        
+        <td> 
+          0
+        </td>
+        
+      
+        
+        <td> 
+          37200
+        </td>
+        
+      
+    
+    </tr>
+    
+  
+    <tr>
+    
+      
+        
+        <td> 
+          1886_the_bostonians_vol_2
+        </td>
+        
+      
+        
+        <td> 
+          1
+        </td>
+        
+      
+        
+        <td> 
+          0
+        </td>
+        
+      
+        
+        <td> 
+          1
+        </td>
+        
+      
+        
+        <td> 
+          0
+        </td>
+        
+      
+        
+        <td> 
+          38126
+        </td>
+        
+      
+    
+    </tr>
+    
+  
+    <tr>
+    
+      
+        
+        <td> 
+          1888_the_aspern_papers
+        </td>
+        
+      
+        
+        <td> 
+          0
+        </td>
+        
+      
+        
+        <td> 
+          0
+        </td>
+        
+      
+        
+        <td> 
+          0
+        </td>
+        
+      
+        
+        <td> 
+          0
+        </td>
+        
+      
+        
+        <td> 
+          16937
+        </td>
+        
+      
+    
+    </tr>
+    
+  
+    <tr>
+    
+      
+        
+        <td> 
+          1888_the_lesson_of_the_master
+        </td>
+        
+      
+        
+        <td> 
+          0
+        </td>
+        
+      
+        
+        <td> 
+          0
+        </td>
+        
+      
+        
+        <td> 
+          0
+        </td>
+        
+      
+        
+        <td> 
+          0
+        </td>
+        
+      
+        
+        <td> 
+          12817
+        </td>
+        
+      
+    
+    </tr>
+    
+  
+    <tr>
+    
+      
+        
+        <td> 
+          1891_the_pupil
+        </td>
+        
+      
+        
+        <td> 
+          0
+        </td>
+        
+      
+        
+        <td> 
+          0
+        </td>
+        
+      
+        
+        <td> 
+          1
+        </td>
+        
+      
+        
+        <td> 
+          0
+        </td>
+        
+      
+        
+        <td> 
+          8866
+        </td>
+        
+      
+    
+    </tr>
+    
+  
+    <tr>
+    
+      
+        
+        <td> 
+          1892_the_real_thing_and_other_tales
+        </td>
+        
+      
+        
+        <td> 
+          0
+        </td>
+        
+      
+        
+        <td> 
+          0
+        </td>
+        
+      
+        
+        <td> 
+          1
+        </td>
+        
+      
+        
+        <td> 
+          2
+        </td>
+        
+      
+        
+        <td> 
+          33811
+        </td>
+        
+      
+    
+    </tr>
+    
+  
+    <tr>
+    
+      
+        
+        <td> 
+          1895_the_altar_of_the_dead
+        </td>
+        
+      
+        
+        <td> 
+          1
+        </td>
+        
+      
+        
+        <td> 
+          0
+        </td>
+        
+      
+        
+        <td> 
+          0
+        </td>
+        
+      
+        
+        <td> 
+          0
+        </td>
+        
+      
+        
+        <td> 
+          6852
+        </td>
+        
+      
+    
+    </tr>
+    
+  
+    <tr>
+    
+      
+        
+        <td> 
+          1896_the_figure_in_the_carpet
+        </td>
+        
+      
+        
+        <td> 
+          0
+        </td>
+        
+      
+        
+        <td> 
+          0
+        </td>
+        
+      
+        
+        <td> 
+          0
+        </td>
+        
+      
+        
+        <td> 
+          1
+        </td>
+        
+      
+        
+        <td> 
+          7427
+        </td>
+        
+      
+    
+    </tr>
+    
+  
+    <tr>
+    
+      
+        
+        <td> 
+          1897_what_maisie_knew
+        </td>
+        
+      
+        
+        <td> 
+          4
+        </td>
+        
+      
+        
+        <td> 
+          1
+        </td>
+        
+      
+        
+        <td> 
+          4
+        </td>
+        
+      
+        
+        <td> 
+          1
+        </td>
+        
+      
+        
+        <td> 
+          44334
+        </td>
+        
+      
+    
+    </tr>
+    
+  
+    <tr>
+    
+      
+        
+        <td> 
+          1898_in_the_cage
+        </td>
+        
+      
+        
+        <td> 
+          2
+        </td>
+        
+      
+        
+        <td> 
+          1
+        </td>
+        
+      
+        
+        <td> 
+          4
+        </td>
+        
+      
+        
+        <td> 
+          1
+        </td>
+        
+      
+        
+        <td> 
+          15643
+        </td>
+        
+      
+    
+    </tr>
+    
+  
+    <tr>
+    
+      
+        
+        <td> 
+          1898_turn_of_the_screw
+        </td>
+        
+      
+        
+        <td> 
+          3
+        </td>
+        
+      
+        
+        <td> 
+          0
+        </td>
+        
+      
+        
+        <td> 
+          9
+        </td>
+        
+      
+        
+        <td> 
+          1
+        </td>
+        
+      
+        
+        <td> 
+          18430
+        </td>
+        
+      
+    
+    </tr>
+    
+  
+    <tr>
+    
+      
+        
+        <td> 
+          1902_some_short_stories
+        </td>
+        
+      
+        
+        <td> 
+          0
+        </td>
+        
+      
+        
+        <td> 
+          1
+        </td>
+        
+      
+        
+        <td> 
+          1
+        </td>
+        
+      
+        
+        <td> 
+          0
+        </td>
+        
+      
+        
+        <td> 
+          18131
+        </td>
+        
+      
+    
+    </tr>
+    
+  
+    <tr>
+    
+      
+        
+        <td> 
+          1902_wings_of_the_dove_vol_1
+        </td>
+        
+      
+        
+        <td> 
+          2
+        </td>
+        
+      
+        
+        <td> 
+          1
+        </td>
+        
+      
+        
+        <td> 
+          4
+        </td>
+        
+      
+        
+        <td> 
+          0
+        </td>
+        
+      
+        
+        <td> 
+          35262
+        </td>
+        
+      
+    
+    </tr>
+    
+  
+    <tr>
+    
+      
+        
+        <td> 
+          1902_wings_of_the_dove_vol_2
+        </td>
+        
+      
+        
+        <td> 
+          2
+        </td>
+        
+      
+        
+        <td> 
+          0
+        </td>
+        
+      
+        
+        <td> 
+          9
+        </td>
+        
+      
+        
+        <td> 
+          1
+        </td>
+        
+      
+        
+        <td> 
+          45163
+        </td>
+        
+      
+    
+    </tr>
+    
+  
+    <tr>
+    
+      
+        
+        <td> 
+          1903_the_ambassadors
+        </td>
+        
+      
+        
+        <td> 
+          4
+        </td>
+        
+      
+        
+        <td> 
+          2
+        </td>
+        
+      
+        
+        <td> 
+          8
+        </td>
+        
+      
+        
+        <td> 
+          2
+        </td>
+        
+      
+        
+        <td> 
+          77633
+        </td>
+        
+      
+    
+    </tr>
+    
+  
+    <tr>
+    
+      
+        
+        <td> 
+          1903_the_beast_in_the_jungle
+        </td>
+        
+      
+        
+        <td> 
+          1
+        </td>
+        
+      
+        
+        <td> 
+          0
+        </td>
+        
+      
+        
+        <td> 
+          1
+        </td>
+        
+      
+        
+        <td> 
+          1
+        </td>
+        
+      
+        
+        <td> 
+          8198
+        </td>
+        
+      
+    
+    </tr>
+    
+  
+    <tr>
+    
+      
+        
+        <td> 
+          1904_the_golden_bowl
+        </td>
+        
+      
+        
+        <td> 
+          6
+        </td>
+        
+      
+        
+        <td> 
+          0
+        </td>
+        
+      
+        
+        <td> 
+          7
+        </td>
+        
+      
+        
+        <td> 
+          1
+        </td>
+        
+      
+        
+        <td> 
+          89794
+        </td>
+        
+      
+    
+    </tr>
+    
+  
+    <tr>
+    
+      
+        
+        <td> 
+          1908_the_jolly_corner
+        </td>
+        
+      
+        
+        <td> 
+          1
+        </td>
+        
+      
+        
+        <td> 
+          1
+        </td>
+        
+      
+        
+        <td> 
+          2
+        </td>
+        
+      
+        
+        <td> 
+          0
+        </td>
+        
+      
+        
+        <td> 
+          6737
+        </td>
+        
+      
+    
+    </tr>
+    
+  
+    <tr>
+    
+      
+        
+        <td> 
+          1909_italian_hours
+        </td>
+        
+      
+        
+        <td> 
+          4
+        </td>
+        
+      
+        
+        <td> 
+          1
+        </td>
+        
+      
+        
+        <td> 
+          19
+        </td>
+        
+      
+        
+        <td> 
+          1
+        </td>
+        
+      
+        
+        <td> 
+          65937
+        </td>
+        
+      
+    
+    </tr>
+    
+  
+    <tr>
+    
+      
+        
+        <td> 
+          1916_notes_on_novelists
+        </td>
+        
+      
+        
+        <td> 
+          4
+        </td>
+        
+      
+        
+        <td> 
+          1
+        </td>
+        
+      
+        
+        <td> 
+          11
+        </td>
+        
+      
+        
+        <td> 
+          4
+        </td>
+        
+      
+        
+        <td> 
+          65544
+        </td>
+        
+      
+    
+    </tr>
+    
+  
+  
+  
+
+</table>
+<p>What&rsquo;s nice about the solution provided by <a href="https://zwbetz.com">Zachary Wade Betz</a> is that it&rsquo;s quite easy to add data to the file that then gets fed into the table in the post. So, I haven&rsquo;t looked at every single Henry James text—if there were more in the future, it would be easy enough to add those texts to a script and then let the computer take care of the rest, ultimately updating the table easily enough.</p>
+<p>More to come, no doubt &hellip;</p>
+]]></content></item><item><title>More _The Turn of the Screw_ Data Analysis</title><link>https://kspicer80.github.io/posts/2022-05-27-henry-james-turn-of-the-screw-data-analysis/</link><pubDate>Fri, 27 May 2022 11:49:00 +0000</pubDate><guid>https://kspicer80.github.io/posts/2022-05-27-henry-james-turn-of-the-screw-data-analysis/</guid><description>I know I mentioned in an earlier post—a couple of different posts actually (here and here too)—that I&amp;rsquo;ve been doing a bunch of work with Henry James&amp;rsquo;s canonical The Turn of the Screw. I thought I would post a little bit more here of what I&amp;rsquo;ve been up to as of late with this. A student of mine was fascinated by the use of the words &amp;ldquo;prodigious&amp;rdquo; and &amp;ldquo;portentous&amp;rdquo; in the Governess&amp;rsquo;s narrative in Turn.</description><content type="html"><![CDATA[<p>I know I mentioned in <a href="https://kspicer80.github.io/posts/2022-04-20-tei-encoding-with-henry-james/">an earlier post</a>—a couple of different posts actually (<a href="https://kspicer80.github.io/posts/2022-05-15-more-tots-hmtl-testing_introductory_post/">here</a> and <a href="">here</a> too)—that I&rsquo;ve been doing a bunch of work with Henry James&rsquo;s canonical <em>The Turn of the Screw</em>. I thought I would post a little bit more here of what I&rsquo;ve been up to as of late with this. A student of mine was fascinated by the use of the words &ldquo;prodigious&rdquo; and &ldquo;portentous&rdquo; in the Governess&rsquo;s narrative in <em>Turn</em>. She said she noticed it frequently. It makes sense that these words would be in the Governess&rsquo;s narrative, given her penchant for playing the detective (or the psychoanalyst), always trying to read the signs pointing to forbidden knowledge. But how often does she use these words? Let&rsquo;s write some code, make some graphs, and figure it out.</p>
 <p>First things first, let&rsquo;s have a look-see at the <a href="https://www.nltk.org/">NLTK library</a> for some basic word counts/<a href="https://www.nltk.org/api/nltk.draw.dispersion.html#module-nltk.draw.dispersion">lexical dispersion plots</a>.</p>
 <p>A simple use of the <a href="https://www.nltk.org/howto/concordance.html"><code>nltk.text.concordance</code></a>  function can give us a nice print out of a specific range of tokens within the text that has the word in question.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> nltk
