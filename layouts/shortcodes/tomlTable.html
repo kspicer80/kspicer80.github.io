@@ -2,7 +2,7 @@
 {{ $dataFile := index .Site.Data $arg }}
 {{ $.Scratch.Set "count" 0 }}
 
-<table style="font-size:12px;">
+<table style="font-size:10.15px; table-layout:auto; width:auto; padding:0; cellspacing:0;">
 {{ range $table := $dataFile }}  
   {{ range $row := $table }}
     <tr>
