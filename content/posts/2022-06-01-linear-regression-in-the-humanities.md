@@ -6,17 +6,22 @@ toc: false
 images:
 tags:
   - digital humanities
-  - henry james
-  - turn of the screw
+  - machine learning
+  - supervised machine learning
+  - linear regression
+  - french coal production
+  - historical datasets
   - matplotlib
-  - nltk
-  - NLTK 
   - data visualization
-  - word frequency counts
   - work stuff
   - python
   - python for digital humanities
   - pandas
-  - custom python functions
 ---
+
+Link to the original dataset [here](https://fred.stlouisfed.org/series/A01214FRA422NNBR)
+
+Gist for this analysis [here](https://gist.github.com/kspicer80/5faed2dd26d1cd09df75fc2901bdfda3)
+
+LaTeX Ninja post on ["Machine Learning for the Humanities: A Very Short Introduction"](https://gist.github.com/kspicer80/5faed2dd26d1cd09df75fc2901bdfda3)
 
