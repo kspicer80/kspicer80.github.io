@@ -1,5 +1,5 @@
 ---
-title: "Linear Regression in the Humanities(?!?!)"
+title: "Linear Regression in the Humanities(?!?!) ... not quite"
 date: 2022-06-01 00:01:00
 draft: false
 toc: false
