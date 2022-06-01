@@ -25,7 +25,7 @@ Working my way through some of the new lessons from Codecademy's new ["Data Scie
 
 In the meantime, I have been working my way through Émile Zola's 1885 novel, _Germinal_. I thought it might be interesting to see if I could find some data on French coal production. That led me down a rather nice rabbit hole of sorts where I learned about [how difficult it is](https://ourworldindata.org/free-data-iea) to get energy data from the IEA ([International Energy Agency](https://www.iea.org/)). I was able to find some data on the St. Louis FRED [site](https://fred.stlouisfed.org/). There were a couple of datasets available [here](https://fred.stlouisfed.org/series/A01214FRA422NNBR) and [here](https://fred.stlouisfed.org/series/M01191FRM580NNBR)].
 
-A gist for the following plots is available [here](https://gist.github.com/kspicer80/5faed2dd26d1cd09df75fc2901bdfda3).
+A gist for the following three plots is available [here](https://gist.github.com/kspicer80/5faed2dd26d1cd09df75fc2901bdfda3) along with the dataset in .csv format.
 
 ![initial plot](/images/imgforblogposts/post_15/coal_production_initial_plot.png)
 
