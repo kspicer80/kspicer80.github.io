@@ -35,7 +35,7 @@ A gist for the following plots is available [here](https://gist.github.com/kspic
 
 Using the second dataset with information from 1918 to 1938 (repo [here](https://github.com/kspicer80/french_coal_production_linear_regression)):
 
-![updated numbers through 1938](/images/imgforblogposts/post_15/1915_1938_linear_regression_plot.png)
+![updated numbers through 1938](/images/imgforblogposts/post_15/1915-1938_linear_regression_plot.png)
 
 As the LaTeX Ninja noted, it would be nice to have some very humanities-specific datasets to work with here.
 
