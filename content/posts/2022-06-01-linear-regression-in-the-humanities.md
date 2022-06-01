@@ -27,15 +27,15 @@ In the meantime, I have been working my way through Émile Zola's 1885 novel, _G
 
 A gist for the following plots is available [here](https://gist.github.com/kspicer80/5faed2dd26d1cd09df75fc2901bdfda3).
 
-![initial plot](/static/images/imgforbloposts/post_15/coal_production_initial_plot.png)
+![initial plot](/images/imgforblogposts/post_15/coal_production_initial_plot.png)
 
-![plot with regression line](/images/imgforbloposts/post_15/coal_production_predicted.png)
+![plot with regression line](/images/imgforblogposts/post_15/coal_production_predicted.png)
 
-![future line predicted](/images/imgforbloposts/post_15/coal_production_with_linear_regression_line_plotted.png)
+![future line predicted](/images/imgforblogposts/post_15/coal_production_with_linear_regression_line_plotted.png)
 
 Using the second dataset with information from 1918 to 1938 (repo [here](https://github.com/kspicer80/french_coal_production_linear_regression)):
 
-![updated numbers through 1938](/images/imgforbloposts/post_15/1915_1938_linear_regression_plot.png)
+![updated numbers through 1938](/images/imgforblogposts/post_15/1915_1938_linear_regression_plot.png)
 
 As the LaTeX Ninja noted, it would be nice to have some very humanities-specific datasets to work with here.
 
