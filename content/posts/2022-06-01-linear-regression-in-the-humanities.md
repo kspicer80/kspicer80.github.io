@@ -27,7 +27,7 @@ In the meantime, I have been working my way through Émile Zola's 1885 novel, _G
 
 A gist for the following plots is available [here](https://gist.github.com/kspicer80/5faed2dd26d1cd09df75fc2901bdfda3).
 
-![initial plot](static/images/imgforbloposts/post_15/coal_production_initial_plot.png)
+![initial plot](/static/images/imgforbloposts/post_15/coal_production_initial_plot.png)
 
 ![plot with regression line](/images/imgforbloposts/post_15/coal_production_predicted.png)
 
