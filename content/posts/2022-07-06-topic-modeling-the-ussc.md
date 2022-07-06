@@ -301,7 +301,7 @@ topic_proportion_by_year.head()
 
 I'll save the printout of the dataframe's head and just go to the visualization, which looks like this (the red vertical line marks the year _Roe_ was decided, 1973):
 
-![topic_14_trend_over_time_plot_1](/images/imgblogposts/post_16/roe_topic_modeling_plot_1.png)
+![topic_14_trend_over_time_plot_1](/images/imgforblogposts/post_16/roe_topic_modeling_plot_1.png)
 
 What if we reran things looking not at the word "viable," but, instead, at the word "abortion"?
 
