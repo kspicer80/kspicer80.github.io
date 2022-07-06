@@ -313,7 +313,7 @@ plt.axvline(x=1973, color='red', label="Roe v. Wade Decision")
 
 ![topic_14_trend_over_time_plot](/images/imgforblogposts/post_16/roe_topic_modeling_plot_1.png)
 
-(What could easily get the counts of the word "abortion" instead if we so wanted.)
+(We could easily get the counts of the word "abortion" instead if we so wanted.)
 
 ``` python
 plt.figure(figsize=(15, 8))
