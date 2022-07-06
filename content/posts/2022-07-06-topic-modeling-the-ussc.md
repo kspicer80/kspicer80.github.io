@@ -319,7 +319,7 @@ print(
 document_topic_distributions.loc[opinion_of_interest_1, abortion_top_topics.index]
 ```
 
-This code gives us the following plot focusing on the 530 US 914 Breyer opinion:
+This code gives us the following plot focusing on the "530 US 914" Breyer opinion:
 
 ![plot of rolling 3-year window](/images/imgforblogposts/post_16/roe_topic_modeling_plot_2.png)
 
