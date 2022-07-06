@@ -1,6 +1,6 @@
 ---
 title: "Topic Modeling the United States Supreme Court Utilizing the Top2Vec Library"
-date: 2022-06-01 00:01:00 [change this!]
+date: 2022-07-01 00:01:00 [change this!]
 draft: true
 toc: false
 images:

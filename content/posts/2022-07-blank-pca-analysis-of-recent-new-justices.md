@@ -1,6 +1,6 @@
 ---
-title: "Topic Modeling the United States Supreme Court"
-date: 2022-06-01 00:01:00 [change this!]
+title: "Comparing Stylistic Tendencies Recent United States Supreme Court Justices (Gorsuch, Kavanaugh, and Barrett)"
+date: 2022-07-01 00:01:00 [change this!]
 draft: true
 toc: false
 images:
