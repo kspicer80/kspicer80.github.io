@@ -1,6 +1,6 @@
 ---
 title: "Topic Modeling the United States Supreme Court Surrounding Abortion"
-date: 2022-07-06 00:01:00 [change this!]
+date: 2022-07-06 00:01:00
 draft: false
 toc: false
 images:
