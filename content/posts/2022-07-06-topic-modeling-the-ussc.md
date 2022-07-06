@@ -322,7 +322,7 @@ document_topic_distributions.loc[opinion_of_interest_1, abortion_top_topics.inde
 
 This code gives us the following plot focusing on the 530 US 914 Breyer opinion:
 
-![plot of rolling 3-year window](/images/imgforblogposts_post_16/roe_topic_modeling_plot_2.png)
+![plot of rolling 3-year window](/images/imgforblogposts/post_16/roe_topic_modeling_plot_2.png)
 
 A similar plot would be produced if we looked at the later 2000 case. (It would be nice to rewrite all of these explorations into a function that we could easily just call in a single line [a task for another day, I would bet]).
 In terms of conclusions one might draw here, one could easily say that a marked increase in documents showing a concern with topics surrounding women, medical care, abortion, viability, and other connected ideas ("child and children," "care", "hospital," "family," and so on) occur right around the time of the _Roe_ decision. Of course, I would want to suggest that the plots above are a perfectly empirical, "data-driven" way to talk about the United States's history with regards to women and their concerns. The main opinion from Justice Alito talked a big game about the use of a proper historical understanding of the whole "abortion" issue. Another part of that history, too, of course, is a quite profound lack of interest in women's equality. That too, sadly to say, is also a part of this whole "history" and for many of us what the _Dobbs_ decision was, unfortunately, simple continue that larger trend of disregard for women's equality.  
