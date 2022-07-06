@@ -213,7 +213,7 @@ ax.set_title('Topic Model and Expert Label Alignment')
 
 which produces the following plot:
 
-![](images/imgforblogposts/post_16/heatmap_of_spaeth_areas.png)
+![heatmap of spaeth areas and topic labels](static/images/imgforblogposts/post_16/heatmap_of_spaeth_areas.png)
 
 So we have all the data here wrangled together to start searching through some of these topics. Let's say we wanted to zero-in on another key abortion case? Using some cataloging work from [Pew Research](https://www.pewresearch.org/religion/2013/01/16/a-history-of-key-abortion-rulings-of-the-us-supreme-court/), we could have a look at [Webster v. Reproductive Health Svcs.](https://supreme.justia.com/cases/federal/us/492/490/) ("492 US 490")—with the opinion authored by Justice Rehnquist—from 1989? Then, we could include a keyword to search for—let's try something like the word "viable."
 
@@ -299,7 +299,6 @@ topic_top_words_joined = ', '.join(topic_top_words)
 print(topic_top_words_joined)
 
   child, children, medical, health, women, treatment, care, hospital, family, age
-
 ```
 
 Next we'll count up how many times these top topic words appear in our ```document_topic_distributions``` matrix:
@@ -315,7 +314,7 @@ topic_proportion_by_year.head()
 
 I'll save the printout of the dataframe's head and just go to the visualization, which looks like this (the red vertical line marks the year _Roe_ was decided, 1973):
 
-![topic_14_trend_over_time_plot_1](/images/imgblogposts/post_16/roe_topic_modeling_plot_1.png)
+![topic_14_trend_over_time_plot_1](static/images/imgblogposts/post_16/roe_topic_modeling_plot_1.png)
 
 What if we reran things looking not at the word "viable," but, instead, at the word "abortion"?
 
@@ -336,7 +335,7 @@ document_topic_distributions.loc[opinion_of_interest_1, abortion_top_topics.inde
 
 This code gives us the following plot focusing on the 530 US 914 Breyer opinion:
 
-![plot of rolling 3-year window](images/imgforblogposts_post_16_roe_topic_modeling_plot_2.png)
+![plot of rolling 3-year window](static/images/imgforblogposts_post_16_roe_topic_modeling_plot_2.png)
 
 A similar plot would be produced if we looked at the later 2000 case. (It would be nice to rewrite all of these explorations into a function that we could easily just call in a single line [a task for another day, I would bet]).
 In terms of conclusions one might draw here, one could easily say that a marked increase in documents showing a concern with topics surrounding women, medical care, abortion, viability, and other connected ideas ("child and children," "care", "hospital," "family," and so on) occur right around the time of the _Roe_ decision. Of course, I would want to suggest that the plots above are a perfectly empirical, "data-driven" way to talk about the United States's history with regards to women and their concerns. The main opinion from Justice Alito talked a big game about the use of a proper historical understanding of the whole "abortion" issue. Another part of that history, too, of course, is a quite profound lack of interest in women's equality. That too, sadly to say, is also a part of this whole "history" and for many of us what the _Dobbs_ decision was, unfortunately, simple continue that larger trend of disregard for women's equality.  
