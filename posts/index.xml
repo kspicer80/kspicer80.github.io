@@ -140,21 +140,11 @@ This Texas federal appeal and its Georgia companion, Doe v. Bolton, post, p. 179
 </span></span><span style="display:flex;"><span>ax<span style="color:#f92672">.</span>set_title(<span style="color:#e6db74">&#39;Topic Model and Expert Label Alignment&#39;</span>)
 </span></span><span style="display:flex;"><span>)
 </span></span></code></pre></div><p>which produces the following plot:</p>
-<p><img src="static/images/imgforblogposts/post_16/heatmap_of_spaeth_areas.png" alt="heatmap of spaeth areas and topic labels"></p>
+<p><img src="/images/imgforblogposts/post_16/heatmap_of_spaeth_areas.png" alt="heatmap of spaeth areas and topic labels"></p>
 <p>So we have all the data here wrangled together to start searching through some of these topics. Let&rsquo;s say we wanted to zero-in on another key abortion case? Using some cataloging work from <a href="https://www.pewresearch.org/religion/2013/01/16/a-history-of-key-abortion-rulings-of-the-us-supreme-court/">Pew Research</a>, we could have a look at <a href="https://supreme.justia.com/cases/federal/us/492/490/">Webster v. Reproductive Health Svcs.</a> (&ldquo;492 US 490&rdquo;)—with the opinion authored by Justice Rehnquist—from 1989? Then, we could include a keyword to search for—let&rsquo;s try something like the word &ldquo;viable.&rdquo;</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>opinion_of_interest <span style="color:#f92672">=</span> (<span style="color:#e6db74">&#39;492 US 490&#39;</span>, <span style="color:#e6db74">&#39;rehnquist&#39;</span>)
 </span></span><span style="display:flex;"><span>document_topic_distributions<span style="color:#f92672">.</span>loc[opinion_of_interest, viable_top_topics<span style="color:#f92672">.</span>index]
 </span></span></code></pre></div><!-- raw HTML omitted -->
-<pre><code>.dataframe tbody tr th {
-    vertical-align: top;
-}
-
-.dataframe thead th {
-    text-align: right;
-}
-</code></pre>
-<p><!-- raw HTML omitted --></p>
-<!-- raw HTML omitted -->
 <p>Curious—what if we took a look at the <a href="https://supreme.justia.com/cases/federal/us/530/914/">Stenberg v. Carhart</a> (&ldquo;530 US 914&rdquo;) case from back in 2000?</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>opinion_of_interest <span style="color:#f92672">=</span> (<span style="color:#e6db74">&#39;530 US 914&#39;</span>, <span style="color:#e6db74">&#34;breyer&#34;</span>)
 </span></span><span style="display:flex;"><span>print(df<span style="color:#f92672">.</span>loc[opinion_of_interest, <span style="color:#e6db74">&#39;text&#39;</span>]<span style="color:#f92672">.</span>values[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">0</span>:<span style="color:#ae81ff">1000</span>])
@@ -185,7 +175,7 @@ This Texas federal appeal and its Georgia companion, Doe v. Bolton, post, p. 179
 </span></span><span style="display:flex;"><span>topic_proportion_by_year <span style="color:#f92672">=</span> topic_word_counts_by_year<span style="color:#f92672">.</span>divide(word_counts_by_year, axis<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;index&#39;</span>)
 </span></span><span style="display:flex;"><span>topic_proportion_by_year<span style="color:#f92672">.</span>head()
 </span></span></code></pre></div><p>I&rsquo;ll save the printout of the dataframe&rsquo;s head and just go to the visualization, which looks like this (the red vertical line marks the year <em>Roe</em> was decided, 1973):</p>
-<p><img src="static/images/imgblogposts/post_16/roe_topic_modeling_plot_1.png" alt="topic_14_trend_over_time_plot_1"></p>
+<p><img src="images/imgblogposts/post_16/roe_topic_modeling_plot_1.png" alt="topic_14_trend_over_time_plot_1"></p>
 <p>What if we reran things looking not at the word &ldquo;viable,&rdquo; but, instead, at the word &ldquo;abortion&rdquo;?</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">15</span>, <span style="color:#ae81ff">8</span>))
 </span></span><span style="display:flex;"><span>abortion_top_topics <span style="color:#f92672">=</span> topic_word_distributions[<span style="color:#e6db74">&#39;abortion&#39;</span>]<span style="color:#f92672">.</span>sort_values(ascending<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>)<span style="color:#f92672">.</span>head(<span style="color:#ae81ff">5</span>)
@@ -200,7 +190,7 @@ This Texas federal appeal and its Georgia companion, Doe v. Bolton, post, p. 179
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>document_topic_distributions<span style="color:#f92672">.</span>loc[opinion_of_interest_1, abortion_top_topics<span style="color:#f92672">.</span>index]
 </span></span></code></pre></div><p>This code gives us the following plot focusing on the 530 US 914 Breyer opinion:</p>
-<p><img src="static/images/imgforblogposts_post_16_roe_topic_modeling_plot_2.png" alt="plot of rolling 3-year window"></p>
+<p><img src="/images/imgforblogposts_post_16_roe_topic_modeling_plot_2.png" alt="plot of rolling 3-year window"></p>
 <p>A similar plot would be produced if we looked at the later 2000 case. (It would be nice to rewrite all of these explorations into a function that we could easily just call in a single line [a task for another day, I would bet]).
 In terms of conclusions one might draw here, one could easily say that a marked increase in documents showing a concern with topics surrounding women, medical care, abortion, viability, and other connected ideas (&ldquo;child and children,&rdquo; &ldquo;care&rdquo;, &ldquo;hospital,&rdquo; &ldquo;family,&rdquo; and so on) occur right around the time of the <em>Roe</em> decision. Of course, I would want to suggest that the plots above are a perfectly empirical, &ldquo;data-driven&rdquo; way to talk about the United States&rsquo;s history with regards to women and their concerns. The main opinion from Justice Alito talked a big game about the use of a proper historical understanding of the whole &ldquo;abortion&rdquo; issue. Another part of that history, too, of course, is a quite profound lack of interest in women&rsquo;s equality. That too, sadly to say, is also a part of this whole &ldquo;history&rdquo; and for many of us what the <em>Dobbs</em> decision was, unfortunately, simple continue that larger trend of disregard for women&rsquo;s equality.</p>
 <p>I was planning to show how the <a href="https://github.com/ddangelov/Top2Vec">Top2Vec library</a>) handles all of this, but this post is getting a bit on the long side; I was also hoping to post some stylometric analysis of three of the recently-new justices (Gorusch, Kavanaugh, and Barrett), but I&rsquo;ll save that for yet another post. So, two more posts to come on this arena here in the near future.</p>
