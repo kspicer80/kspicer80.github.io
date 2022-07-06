@@ -313,7 +313,7 @@ plt.axvline(x=1973, color='red', label="Roe v. Wade Decision")
 
 ![topic_14_trend_over_time_plot](/images/imgforblogposts/post_16/roe_topic_modeling_plot_1.png)
 
-What could easily get the counts of the word "abortion" instead. 
+(What could easily get the counts of the word "abortion" instead if we so wanted.)
 
 ``` python
 plt.figure(figsize=(15, 8))
@@ -330,7 +330,6 @@ print(
 document_topic_distributions.loc[opinion_of_interest_1, abortion_top_topics.index]
 ```
 
-(It would be nice to rewrite some of these explorations into a function that we could easily just call in a single line [a task for another day, I would bet]).
-In terms of conclusions one might draw here—especially the graph showing the rolling 3-year window, one could easily say that a marked increase in documents showing a concern with topics surrounding women, medical care, abortion, viability, and other connected ideas ("child and children," "care", "hospital," "family," and so on) occur right around the time of the _Roe_ decision. Of course, I would want to suggest that the plots above are a perfectly empirical, "data-driven" way to talk about the United States's history with regards to women and their concerns. The main opinion from Justice Alito talked a big game about the use of a proper historical understanding of the whole "abortion" issue. Another part of that history, too, of course, is a quite profound lack of interest in women's equality. That too, sadly to say, is also a part of this whole "history" and for many of us what the _Dobbs_ decision did was, unfortunately, to simply continue that larger trend of disregard for women's equality.  
+(It would be nice to rewrite some of these explorations into a function that we could easily just call in a single line [a task for another day, I would bet]). In terms of conclusions one might draw here—especially the graph showing the rolling 3-year window, one could easily say that a marked increase in documents showing a concern with topics surrounding women, medical care, abortion, viability, and other connected ideas ("child and children," "care", "hospital," "family," and so on) occur right around the time of the _Roe_ decision. Of course, I would want to suggest that the plots above are a perfectly empirical, "data-driven" way to talk about the United States's history with regards to women and their concerns. The main opinion from Justice Alito talked a big game about the use of a proper historical understanding of the whole "abortion" issue. Another part of that history, too, of course, is a quite profound lack of interest in women's equality. That too, sadly to say, is also a part of this whole "history" and for many of us what the _Dobbs_ decision did was, unfortunately, to simply continue that larger trend of disregard for women's equality.  
 
 I was planning to show how the [Top2Vec library](https://github.com/ddangelov/Top2Vec)) handles all of this, but this post is getting a bit on the long side; I was also hoping to post some stylometric analysis of three of the recently-new justices (Gorusch, Kavanaugh, and Barrett), but I'll save that for yet another post. So, two more posts to come on this arena here in the near future.
