@@ -310,7 +310,6 @@ plt.figure(figsize=(15, 8))
 abortion_top_topics = topic_word_distributions['abortion'].sort_values(ascending=False).head(5)
 abortion_top_topics_top_words = topic_word_distributions.loc[abortion_top_topics.index].apply(lambda row: ', '.join(row.sort_values(ascending=False).head().index), axis=1)
 abortion_top_topics_top_words.name = 'topic_top_words'
-#viability_top_topics.to_frame().join(viability_top_topics_top_words)
 opinion_of_interest_1 = ('492 US 490', "rehnquist")
 print(
     f'"abortion" count in 492 US 490:',
