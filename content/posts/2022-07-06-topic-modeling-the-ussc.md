@@ -1,7 +1,7 @@
 ---
-title: "Topic Modeling the United States Supreme Court"
-date: 2022-06-01 00:01:00 [change this!]
-draft: true
+title: "Topic Modeling the United States Supreme Court Surrounding Abortion"
+date: 2022-07-06 00:01:00 [change this!]
+draft: false
 toc: false
 images:
 tags:
@@ -29,17 +29,18 @@ tags:
 
 Friday of last week, June 24th, 2022, was a profoundly dark day for a great many of us in the United States. Feeling somewhat helpless as the Supreme Court published the [final draft](https://www.supremecourt.gov/opinions/21pdf/19-1392_6j37.pdf) of _Dobbs v. Jackson Women's Health Organization_, I couldn't help but fall back on old patterns. Not really knowing what else to do—I had a student with whom I had recently read the leaked original draft posted by [Politico](https://www.politico.com/news/2022/05/02/read-justice-alito-initial-abortion-opinion-overturn-roe-v-wade-pdf-00029504)—I couldn't help but say to her when the opinion came down that I didn't know what else to do other than to get to reading. There's something about the academic position—"Well, let's get started reading ..."—that felt so weak to me at the moment in the face of all the implications and consequences of this huge decision, but, honestly, I wasn't quite sure what else to do other than to go to the default thing that the academic does: read ... and think. Last Friday was a very dark day for sure; as I heard one commentator say (who exactly escapes me at the moment), it isn't every day that you can wake up and can see that your daughter literally has fewer rights on that day than her own mother or grandmother had over all the decades since 1973. "A dark day" doesn't even really capture things.
 
-I read the draft decision multiple times—twice, in fact—; I read the full version of the consenting and dissenting opinions, again, twice. I figured this might be as good an opportunity as any to try out some of the things I've learned recently working with the whole [topic modeling](https://en.wikipedia.org/wiki/Topic_model) area of NLP and machine learning in general.
+I read the draft decision multiple times—twice, in fact (or was it a f three times?)—; I read the finalized version of the opinion along with the concurring and dissenting opinions, again, twice. I figured this might be as good an opportunity as any to try out some of the things I've learned recently working with the whole [topic modeling](https://en.wikipedia.org/wiki/Topic_model) area of NLP and machine learning in general.
 
 ## Roe v. Wade (410 US 113) Topic Modeling Over Time
 
-_Humanities Data Analysis: Case Studies with Python_ by Folgert Karsdorp, Mike Kestemont, and Allen Riddell (a fantastically awesome text, by the way, I should say!) has an entire chapter that would seem perfectly fine for my purposes here. Chapter 9, "A Topic Model of United States Supreme Court Opinions, 1900-2000," has a ton of the data that we would want to be looking at here with regards to thinking about the _Dobbs_ decision. Karsdorp, et. al. has a [dataset with a .jsonl file](https://www.humanitiesdataanalysis.org/topic-models/notebook.html) with a ton of Supreme Court opinions separated by author name, case_id, the type of opinion, and the year the opinion was submitted. We start with the standard moves: importing the necessary libraries and getting the .jsonl file read into a dataframe:
+_Humanities Data Analysis: Case Studies with Python_ by Folgert Karsdorp, Mike Kestemont, and Allen Riddell (a fantastically awesome text, by the way, I should say!) has an entire chapter that would seem perfectly fine for our purposes here. Chapter 9, "A Topic Model of United States Supreme Court Opinions, 1900-2000," has a ton of the data that we would want to be looking at here with regards to thinking about the _Dobbs_ decision. Karsdorp, et. al. has a [dataset with a .jsonl file](https://www.humanitiesdataanalysis.org/topic-models/notebook.html) with a ton of Supreme Court opinions separated by author name, case_id, the type of opinion, and the year the opinion was submitted. We start with the standard moves: importing the necessary libraries and getting the .jsonl file read into a dataframe:
 
 ``` python
 import os
 import gzip
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
 
 with gzip.open('../datasets/supreme-court-opinions-by-author.jsonl.gz', 'rt') as fh:
     df = pd.read_json(fh, lines=True).set_index(['us_reports_citation', 'authors'])
@@ -191,7 +192,30 @@ Name: Topic 14, dtype: float64
 
 Curiously we see some rather high numbers for Topic 14 regarding the areas of "Civil Rights" and also the concern about "Privacy," which should strike anyone and everyone that read the dissenting _Dobbs_ opinion by Justices Breyer, Sotomayor, and Kagan as absolutely, positively spot-on (their dissent begins on page 148 of the .pdf copy [here](https://www.supremecourt.gov/opinions/21pdf/19-1392_6j37.pdf)). A great deal of disagreement was about questions and concerns about "privacy"—the LDA model manages to pick that up quite, quite well: "Civil Rights" and "Privacy" are the key Spaeth areas for this topic—again, seems spot-on.
 
-So we have all the data here wrangled together to start searching through some of these topics. Let's say we wanted to zero-in on another key abortion case? Using some work from [Pew Research](https://www.pewresearch.org/religion/2013/01/16/a-history-of-key-abortion-rulings-of-the-us-supreme-court/), we could have a look at [Webster v. Reproductive Health Svcs.](https://supreme.justia.com/cases/federal/us/492/490/) ("492 US 490")—with the opinion authored by Justice Rehnquist—from 1989? Then, we could include a keyword to search for—let's try something like the word "viable."
+Karsdorp, et. al. also have a nice little heatmap that "[shows] the co-occurrence of topics and labels" (p. 309). They note that: 
+
+> [f]or the most part, topics and Spaeth labels co-occur in an expected pattern. Topics which are associated with criminal procedure tend to co-occur with the Spaeth Criminal Procedure label. Topics associated with economic activity ... tend to co-occur with the Economic Activity label. (p. 309)
+
+For a redone version of that heatmap with a different color pallette is done with this code block:
+
+``` python
+fig, ax = plt.subplots()
+im = ax.imshow(np.flipud(df_plot.values), cmap='Paired')
+ax.set_xticks(np.arange(len(df_plot.columns)))
+ax.set_yticks(np.arange(len(df_plot.index)))
+ax.set_xticklabels(df_plot.columns)
+ax.set_yticklabels(reversed(df_plot.index))
+plt.setp(
+    ax.get_xticklabels(), rotation=45, ha='right', rotation_mode='anchor')
+ax.set_title('Topic Model and Expert Label Alignment')
+)
+```
+
+which produces the following plot:
+
+![](images/imgforblogposts/post_16/heatmap_of_spaeth_areas.png)
+
+So we have all the data here wrangled together to start searching through some of these topics. Let's say we wanted to zero-in on another key abortion case? Using some cataloging work from [Pew Research](https://www.pewresearch.org/religion/2013/01/16/a-history-of-key-abortion-rulings-of-the-us-supreme-court/), we could have a look at [Webster v. Reproductive Health Svcs.](https://supreme.justia.com/cases/federal/us/492/490/) ("492 US 490")—with the opinion authored by Justice Rehnquist—from 1989? Then, we could include a keyword to search for—let's try something like the word "viable."
 
 ``` python
 opinion_of_interest = ('492 US 490', 'rehnquist')
@@ -264,7 +288,7 @@ print(
     "viable" count in 530 US 914: 3
 ```
 
-And what if we wanted to look at these topic distributions over time. Are there any trends (increases in the frequency of our top topic words occuring over time)? Excellent question—and easy enough to do a little coding and see what we can see! So let's see if we can't "graph" Topic 14 and plot it over time.
+And what if we wanted to look at these topic distributions over time? Are there any trends (increases in the frequency of our top topic words occuring over time, say) here that we might be able to see? Excellent question—and easy enough to do with a little coding; let's see what we can see! So let's figure out if we can't "graph" Topic 14 and plot it over time.
 
 ``` python
 topic_fourteen = 'Topic 14'
@@ -314,15 +338,7 @@ This code gives us the following plot focusing on the 530 US 914 Breyer opinion:
 
 ![plot of rolling 3-year window](images/imgforblogposts_post_16_roe_topic_modeling_plot_2.png)
 
-A similar plot would be produced if we looked at the later 2000 case. (It would be nice to rewrite all of these explorations into a function that we could easily just call in a single line (task for another day, I would bet).
-) In terms of conclusions one might draw here, one could easily say that a marked increase in documents dealing with topics surrounding women, medical care, abortion, viability, and other connected ideas ("child and children," "care", "hospital," "family," and so on) occur right around the time of the _Roe_ decision. Of course, I would want to suggest if the plots above are a perfectly empirical, "data-driven" way to talk about the United States's history with regards to women and their concerns. The main opinion talked a big game about the use of a proper historical understanding of the whole "abortion" issue. Another part of that history, too, of course, is a quite profound lack of interest in women's equality. That too, sadly to say, is also a part of this whole "history." 
+A similar plot would be produced if we looked at the later 2000 case. (It would be nice to rewrite all of these explorations into a function that we could easily just call in a single line [a task for another day, I would bet]).
+In terms of conclusions one might draw here, one could easily say that a marked increase in documents showing a concern with topics surrounding women, medical care, abortion, viability, and other connected ideas ("child and children," "care", "hospital," "family," and so on) occur right around the time of the _Roe_ decision. Of course, I would want to suggest that the plots above are a perfectly empirical, "data-driven" way to talk about the United States's history with regards to women and their concerns. The main opinion from Justice Alito talked a big game about the use of a proper historical understanding of the whole "abortion" issue. Another part of that history, too, of course, is a quite profound lack of interest in women's equality. That too, sadly to say, is also a part of this whole "history" and for many of us what the _Dobbs_ decision was, unfortunately, simple continue that larger trend of disregard for women's equality.  
 
-
-[BE SURE TO DO SOME COMPARATIVE ANALYSES HERE: DOES TOP2VEC PRODUCE SIMILAR RESULTS AT ALL?????]
-
-## Top2Vec Topic Modeling Plots
-
-1st Mattingly video [here](https://www.youtube.com/watch?v=bEaxKSQ4Av8)
-2nd Mattingly video on increasing Top2Vec training speed [here](https://www.youtube.com/watch?v=rmWI3xu9SII)
-
-## PCA (Principal Component Analysis) of Opinions by Recent Justices (Gorsuch, Kavanaugh, Barrett)
+I was planning to show how the [Top2Vec library](https://github.com/ddangelov/Top2Vec)) handles all of this, but this post is getting a bit on the long side; I was also hoping to post some stylometric analysis of three of the recently-new justices (Gorusch, Kavanaugh, and Barrett), but I'll save that for yet another post. So, two more posts to come on this arena here in the near future.
