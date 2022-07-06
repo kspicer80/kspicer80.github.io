@@ -189,6 +189,137 @@ Private Action              20.014372
 Name: Topic 14, dtype: float64
 ```
 
+Curiously we see some rather high numbers for Topic 14 regarding the areas of "Civil Rights" and also the concern about "Privacy," which should strike anyone and everyone that read the dissenting _Dobbs_ opinion by Justices Breyer, Sotomayor, and Kagan as absolutely, positively spot-on (their dissent begins on page 148 of the .pdf copy [here](https://www.supremecourt.gov/opinions/21pdf/19-1392_6j37.pdf)). A great deal of disagreement was about questions and concerns about "privacy"—the LDA model manages to pick that up quite, quite well: "Civil Rights" and "Privacy" are the key Spaeth areas for this topic—again, seems spot-on.
+
+So we have all the data here wrangled together to start searching through some of these topics (down below in Section I'll go through a different, probably much easier, way to achieve something very similar with a different library, [Top2Vec](https://github.com/ddangelov/Top2Vec)). Let's say we wanted to zero-in on another key abortion case? Using some work from [Pew Research](https://www.pewresearch.org/religion/2013/01/16/a-history-of-key-abortion-rulings-of-the-us-supreme-court/), we could have a look at [Webster v. Reproductive Health Svcs.](https://supreme.justia.com/cases/federal/us/492/490/) ("492 US 490")—with the opinion authored by Justice Rehnquist—from 1989? Then, we could include a keyword to search for—let's try something like the word "viable."
+
+``` python
+opinion_of_interest = ('492 US 490', 'rehnquist')
+document_topic_distributions.loc[opinion_of_interest, viable_top_topics.index]
+``` 
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th>Topic 14</th>
+      <th>Topic 95</th>
+      <th>Topic 44</th>
+      <th>Topic 63</th>
+      <th>Topic 6</th>
+    </tr>
+    <tr>
+      <th>us_reports_citation</th>
+      <th>authors</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>492 US 490</th>
+      <th>rehnquist</th>
+      <td>0.295593</td>
+      <td>0.018732</td>
+      <td>0.030273</td>
+      <td>0.201863</td>
+      <td>0.031692</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+Curious—what if we took a look at the [Stenberg v. Carhart](https://supreme.justia.com/cases/federal/us/530/914/) ("530 US 914") case from back in 2000? 
+
+```python
+opinion_of_interest = ('530 US 914', "breyer")
+print(df.loc[opinion_of_interest, 'text'].values[0][0:1000])
+print(
+    f'"viable count in 530 US 914:',
+    sum('viable' in word.lower()
+       for word in df.loc[opinion_of_interest, 'text'].values[0].split()))
+    
+    OPINION BY: BREYER
+    OPINION
+    JUSTICE BREYER delivered the opinion of the Court.
+    We again consider the right to an abortion. We understand the controversial nature of the problem. Millions of Americans believe that life begins at conception and consequently that an abortion is akin to causing the death of an innocent child; they recoil at the thought of a law that would permit it. Other millions fear that a law that forbids abortion would condemn many American women to lives that lack dignity, depriving them of equal liberty and leading those with least resources to undergo illegal abortions with the attendant risks of death and suffering. Taking account of these virtually irreconcilable points of view, aware that constitutional law must govern a society whose different members sincerely hold directly opposing views, and considering the matter in light of the Constitution's guarantees of fundamental individual liberty, this Court, in the course of a generation, has determined and then re
+    "viable" count in 530 US 914: 3
+```
+
+And what if we wanted to look at these topic distributions over time. Are there any trends (increases in the frequency of our top topic words occuring over time)? Excellent question—and easy enough to do a little coding and see what we can see! So let's see if we can't "graph" Topic 14 and plot it over time.
+
+``` python
+topic_fourteen = 'Topic 14'
+topic_word_distributions.loc[topic_fourteen].sort_values(ascending=False).head(10)
+
+topic_top_words = topic_word_distributions.loc[topic_fourteen].sort_values(ascending=False).head(10).index
+topic_top_words_joined = ', '.join(topic_top_words)
+print(topic_top_words_joined)
+
+  child, children, medical, health, women, treatment, care, hospital, family, age
+
+```
+
+Next we'll count up how many times these top topic words appear in our ```document_topic_distributions``` matrix:
+
+``` python
+opinion_word_counts = np.array(dtm.sum(axis=1)).ravel()
+word_counts_by_year = pd.Series(opinion_word_counts).groupby(df.year.values).sum()
+topic_word_counts = document_topic_distributions.multiply(opinion_word_counts, axis='index')
+topic_word_counts_by_year = topic_word_counts.groupby(df.year.values).sum()
+topic_proportion_by_year = topic_word_counts_by_year.divide(word_counts_by_year, axis='index')
+topic_proportion_by_year.head()
+```
+
+I'll save the printout of the dataframe's head and just go to the visualization, which looks like this (the red vertical line marks the year _Roe_ was decided, 1973):
+
+![topic_14_trend_over_time_plot_1](/images/imgblogposts/post_16/roe_topic_modeling_plot_1.png)
+
+What if we reran things looking not at the word "viable," but, instead, at the word "abortion"?
+
+``` python
+plt.figure(figsize=(15, 8))
+abortion_top_topics = topic_word_distributions['abortion'].sort_values(ascending=False).head(5)
+abortion_top_topics_top_words = topic_word_distributions.loc[abortion_top_topics.index].apply(lambda row: ', '.join(row.sort_values(ascending=False).head().index), axis=1)
+abortion_top_topics_top_words.name = 'topic_top_words'
+#viability_top_topics.to_frame().join(viability_top_topics_top_words)
+opinion_of_interest_1 = ('492 US 490', "rehnquist")
+print(
+    f'"abortion" count in 492 US 490:',
+    sum('abortion' in word.lower()
+       for word in df.loc[opinion_of_interest_1, 'text'].values[0].split()))
+
+document_topic_distributions.loc[opinion_of_interest_1, abortion_top_topics.index]
+```
+
+This code gives us the following plot focusing on the 530 US 914 Breyer opinion:
+
+![plot of rolling 3-year window](images/imgforblogposts_post_16_roe_topic_modeling_plot_2.png)
+
+A similar plot would be produced if we looked at the later 2000 case. (It would be nice to rewrite all of these explorations into a function that we could easily just call in a single line (task for another day, I would bet).
+) In terms of conclusions one might draw here, one could easily say that a marked increase in documents dealing with topics surrounding women, medical care, abortion, viability, and other connected ideas ("child and children," "care", "hospital," "family," and so on) occur right around the time of the _Roe_ decision. Of course, I would want to suggest if the plots above are a perfectly empirical, "data-driven" way to talk about the United States's history with regards to women and their concerns. The main opinion talked a big game about the use of a proper historical understanding of the whole "abortion" issue. Another part of that history, too, of course, is a quite profound lack of interest in women's equality. That too, sadly to say, is also a part of this whole "history." 
+
+
+[BE SURE TO DO SOME COMPARATIVE ANALYSES HERE: DOES TOP2VEC PRODUCE SIMILAR RESULTS AT ALL?????]
+
 
 
 
@@ -196,4 +327,4 @@ Name: Topic 14, dtype: float64
 
 ## Top2Vec Topic Modeling Plots
 
-## PCA (Principal Component Analysis) of Recent Justices (Gorsuch, Kavanaugh, Barrett)
+## PCA (Principal Component Analysis) of Opinions by Recent Justices (Gorsuch, Kavanaugh, Barrett)
