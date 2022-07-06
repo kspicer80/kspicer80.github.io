@@ -191,7 +191,7 @@ Name: Topic 14, dtype: float64
 
 Curiously we see some rather high numbers for Topic 14 regarding the areas of "Civil Rights" and also the concern about "Privacy," which should strike anyone and everyone that read the dissenting _Dobbs_ opinion by Justices Breyer, Sotomayor, and Kagan as absolutely, positively spot-on (their dissent begins on page 148 of the .pdf copy [here](https://www.supremecourt.gov/opinions/21pdf/19-1392_6j37.pdf)). A great deal of disagreement was about questions and concerns about "privacy"—the LDA model manages to pick that up quite, quite well: "Civil Rights" and "Privacy" are the key Spaeth areas for this topic—again, seems spot-on.
 
-So we have all the data here wrangled together to start searching through some of these topics (down below in Section I'll go through a different, probably much easier, way to achieve something very similar with a different library, [Top2Vec](https://github.com/ddangelov/Top2Vec)). Let's say we wanted to zero-in on another key abortion case? Using some work from [Pew Research](https://www.pewresearch.org/religion/2013/01/16/a-history-of-key-abortion-rulings-of-the-us-supreme-court/), we could have a look at [Webster v. Reproductive Health Svcs.](https://supreme.justia.com/cases/federal/us/492/490/) ("492 US 490")—with the opinion authored by Justice Rehnquist—from 1989? Then, we could include a keyword to search for—let's try something like the word "viable."
+So we have all the data here wrangled together to start searching through some of these topics. Let's say we wanted to zero-in on another key abortion case? Using some work from [Pew Research](https://www.pewresearch.org/religion/2013/01/16/a-history-of-key-abortion-rulings-of-the-us-supreme-court/), we could have a look at [Webster v. Reproductive Health Svcs.](https://supreme.justia.com/cases/federal/us/492/490/) ("492 US 490")—with the opinion authored by Justice Rehnquist—from 1989? Then, we could include a keyword to search for—let's try something like the word "viable."
 
 ``` python
 opinion_of_interest = ('492 US 490', 'rehnquist')
@@ -320,11 +320,9 @@ A similar plot would be produced if we looked at the later 2000 case. (It would 
 
 [BE SURE TO DO SOME COMPARATIVE ANALYSES HERE: DOES TOP2VEC PRODUCE SIMILAR RESULTS AT ALL?????]
 
-
-
-
-
-
 ## Top2Vec Topic Modeling Plots
+
+1st Mattingly video [here](https://www.youtube.com/watch?v=bEaxKSQ4Av8)
+2nd Mattingly video on increasing Top2Vec training speed [here](https://www.youtube.com/watch?v=rmWI3xu9SII)
 
 ## PCA (Principal Component Analysis) of Opinions by Recent Justices (Gorsuch, Kavanaugh, Barrett)
