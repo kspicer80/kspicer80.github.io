@@ -15,10 +15,8 @@ tags:
   - python for digital humanities
   - pandas
   - topic modeling
-  - principal component analysis
   - Top2Vec
   - united states supreme court opinions
-  - sklearn
   - ussc
 ---
 
