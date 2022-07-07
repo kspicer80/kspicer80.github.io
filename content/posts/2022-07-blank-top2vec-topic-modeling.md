@@ -35,7 +35,7 @@ df = pd.read_csv(file)
 docs = df.text.tolist()
 ```
 
-Then it's just a simple call to get a model built: ```top2vec_model = Top2Vec(docs) ```. Given that there are around 10,000 unique values for the ```text``` column, the model took quite a while to get everything processed—of course, one can easily save the model for further work by calling ```top2vec_model.save``` and passing a filename. Once everything was processed, we can get the vectors for all of the documents in the .csv: ```vectors = top2vec_model._get_document_vectors(). We can also see how many different "topics" the model has found in our dataset—in our case the model found 158 different topics. We can also get all the key words and terms associated with each distinct topic by calling the ```top2vec_model.get_num_topics() ``` function. In our case we end up with 157 different topics. We can also see how many different documents within the dataset get clustered together into a topic (see "The size of the topics found is:" line below).
+Then it's just a simple call to get a model built: ```top2vec_model = Top2Vec(docs) ```. Given that there are around 10,000 unique values for the ```text``` column, the model took quite a while to get everything processed—of course, one can easily save the model for further work by calling ```top2vec_model.save``` and passing a filename. Once everything was processed, we can get the vectors for all of the documents in the .csv: ```vectors = top2vec_model._get_document_vectors()```. We can also see how many different "topics" the model has found in our dataset—in our case the model found 158 different topics. We can also get all the key words and terms associated with each distinct topic by calling the ```top2vec_model.get_num_topics() ``` function. In our case we end up with 157 different topics. We can also see how many different documents within the dataset get clustered together into a topic (see "The size of the topics found is:" line below).
 
 ```
 Thu Jul  7 10:12:32 2022 Finding Nearest Neighbors
@@ -128,4 +128,4 @@ I would say that after all of the model building is completed (which, again, did
 
 Testing the HUGO shortcode for zooming—using Adam Willis's work ...:
 
-{{ < img src="/images/imgforblogposts/post_17/zeroing_in_on_topics_51_100_46" type="png" alt="" caption="Zeroed-in UMAP Plot" >}}
+{{ < img src="/images/imgforblogposts/post_17/zeroing_in_on_topics_51_100_46.png" type="png" alt="" caption="Zeroed-in UMAP Plot" >}}
