@@ -126,6 +126,6 @@ We can see towards the bottom right side of the plot that some of our key topics
 
 I would say that after all of the model building is completed (which, again, did take quite a while given the rather large size of our dataset), the steps needed are super quick and simple—and the ease with which all of this happens after model building is nothing short of really awesome. I am greatly looking forward to playing around with this library on all kinds of different datasets, that's for sure! (As Dr. Mattingly noted in his [second video]((https://www.youtube.com/watch?v=rmWI3xu9SII)), there are some parameters in Top2Vec [specifically the ["speed" and "workers"](https://top2vec.readthedocs.io/en/latest/api.html) ones] that could potentially speed up different parts of the process) that I should tweak and play around a little bit to see what the effects are in the final visualizations and clustering of topics. More to come on this front, to be sure!
 
-Testing the HUGO shortcode for zooming:
+Testing the HUGO shortcode for zooming—using Adam Willis's work ...:
 
-{{< mediumlikezoomonimages src="/images/imgforblogposts/post_17/zeroing_in_on_topics_51_100_46.png" alt="zeroing_in_umap_plot" >}}
+{{ < img src="/images/imgforblogposts/post_17/zeroing_in_on_topics_51_100_46" type="png" alt="" caption="Zeroed-in UMAP Plot" >}}
