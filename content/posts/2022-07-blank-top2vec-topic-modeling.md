@@ -128,4 +128,4 @@ I would say that after all of the model building is completed (which, again, did
 
 Testing the HUGO shortcode for zooming:
 
-{{< img src="/images/imgforblogposts/post_17/zeroing_in_on_topics_51_100_46.png > alt='zeroid_in_umap_plot >}}
+{{< mediumlikezoomonimages src="/images/imgforblogposts/post_17/zeroing_in_on_topics_51_100_46.png > alt='zeroid_in_umap_plot >}}
