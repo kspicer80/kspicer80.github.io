@@ -1,6 +1,6 @@
 ---
 title: "Comparing Stylistic Tendencies Recent United States Supreme Court Justices (Gorsuch, Kavanaugh, and Barrett)"
-date: 2022-07-01 00:01:00 [change this!]
+date: 2022-07-08 00:01:00
 draft: true
 toc: false
 images:
@@ -14,10 +14,10 @@ tags:
   - python
   - python for digital humanities
   - pandas
-  - topic modeling
   - PCA
   - principal component analysis
   - united states supreme court opinions
   - sklearn
   - ussc
 ---
+
