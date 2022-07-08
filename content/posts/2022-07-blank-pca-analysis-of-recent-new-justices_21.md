@@ -273,7 +273,47 @@ plt.show()
 
 So we see the algorithm finding a good deal of similarity between opinions by these three justices. We could also wonder a little bit what things would look like if we added some justices on the opposite side of the ideological spectrum. What if we added opinions by Sotomayor and Kagan to the plot? 
 
-Now let's see if we can't streamline the scraping from Court Listener a little bit. Rather than copy and pasting all of the links on each results page, let's write some code that will head to each of the returned results page, pull down all the links, and then move on from there. 
+Now let's see if we can't streamline the scraping from Court Listener a little bit. Rather than copy and pasting all of the links on each results page, let's write some code that will head to each of the returned results page, pull down all the links, and then move on from there. In other words, we could put the results pages (there are three in total) for all of Justices Sotomayor's and Kagan's opinions into lists:
+
+``` python
+sotoymayor_pages = [
+"https://www.courtlistener.com/?type=o&q=&type=o&order_by=score%20desc&judge=sotomayor&stat_Precedential=on&court=scotus",
+"https://www.courtlistener.com/?type=o&type=o&order_by=score+desc&judge=sotomayor&stat_Precedential=on&court=scotus&page=2",
+"https://www.courtlistener.com/?type=o&type=o&order_by=score+desc&judge=sotomayor&stat_Precedential=on&court=scotus&page=3"
+]
+
+kagan_pages = [
+    'https://www.courtlistener.com/?type=o&q=&type=o&order_by=score%20desc&judge=kagan&stat_Precedential=on&court=scotus',        
+    'https://www.courtlistener.com/?type=o&type=o&order_by=score+desc&judge=kagan&stat_Precedential=on&court=scotus&page=2',
+    'https://www.courtlistener.com/?type=o&type=o&order_by=score+desc&judge=kagan&stat_Precedential=on&court=scotus&page=3'
+]
+```
+
+Then we want to alter the scraping script a little bit to grab all of the links (all the ```<a href>``` tags)on the page—in this case (again, after looking at the HTML), we want to find the following:
+
+``` html
+<a href="/opinion/1742/wood-v-allen/?type=o&amp;q=&amp;type=o&amp;order_by=score%20desc&amp;judge=sotomayor&amp;stat_Precedential=on&amp;court=scotus"
+  class="visitable">
+  Wood v. Allen
+  (2010)
+  </a>
+```
+
+Again, we grab all the links with BS4 and then append them to a list:
+
+``` python
+spans = soup.findAll('a', {'class': 'visitable'}, href=True)
+links = []
+
+for span in spans:
+  link = span['href']
+  links.append(link)
+  
+full_links = ["https://www.courtlistener.com" + link for link in links]
+print(full_links)
+```
+
+This will give us a list with the full URLs to each of the different pages containing their opinions. From there, we can feed that into the other scraping functions and grab all of the metadata ("Case Name," "Docket Number," year, opinion type, etc.) from way up above, feed it, again, all into a single dataframe for further analysis. 
 
 
 
