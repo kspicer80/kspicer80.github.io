@@ -20,7 +20,7 @@ tags:
   - ussc
 ---
 
-Here in this post I'd like to continue working on the same project used in the previous post ([here](https://kspicer80.github.io/posts/2022-07-06-topic-modeling-the-ussc/)) while trying out the [Top2Vec library](https://github.com/ddangelov/Top2Vec)). As is so often the case, I came across this library via Dr. William Mattingly's YoutTube channel, who devoted two different videos to using this library ([here](https://www.youtube.com/watch?v=bEaxKSQ4Av8) and [here](https://www.youtube.com/watch?v=rmWI3xu9SII)). So let's jump in and see what we can do with this library. 
+Here in this post I'd like to continue working on the same project used in the previous post ([here](https://kspicer80.github.io/posts/2022-07-06-topic-modeling-the-ussc_19/)) while trying out the [Top2Vec library](https://github.com/ddangelov/Top2Vec)). As is so often the case, I came across this library via Dr. William Mattingly's YoutTube channel, who devoted two different videos to using this library ([here](https://www.youtube.com/watch?v=bEaxKSQ4Av8) and [here](https://www.youtube.com/watch?v=rmWI3xu9SII)). So let's jump in and see what we can do with this library. 
 
 This time around we're using a slightly different dataset that comes Kaggle—[it contains](https://www.kaggle.com/datasets/gqfiddler/scotus-opinions) all of the USSC opinions from 1970 on. So let's load up some libraries and get everything read in as usual. Top2Vec needs a list of strings to process and vectorize, so we'll convert the dataframe column that contains the texts of the opinions (the .csv file has a column named ```text``` that we'll use) into a list:
 
@@ -116,11 +116,11 @@ The output here looks like this:
 
 Thus, topic clusters 51 (which we already knew about), 100, 46, 4, etc. have a preponderance of the word "abortion" in the documents contained within that cluster. What if we tried to visualize all the topics to see what we could see? Following the [Top2Vec documentation](https://github.com/ddangelov/Top2Vec/blob/master/README.md), we can use the [UMAP library](https://umap-learn.readthedocs.io/en/latest/) to get the data into a format (a 2-dimensional) that will allow us to produce a scatterplot of all the topics. First we perform the reduction and then we set up some umap_args for the plot. Following some work by uoneway (the function is available in [this](https://github.com/ddangelov/Top2Vec/pull/120/commits/8a59538f63c55215eda3a366dcf7f80216f56f7c) pull request), we can use their [super-handy function](https://github.com/kspicer80/ussc_topic_modeling_playground/blob/main/testing_generate_documents_plot_function.py) to visually map out all the topic clusters. We can simply call that function in order to produce a plot of everything following—```generate_documents_plot()``` very simply gives us this plot:
 
-![umap_plot_of_clusters](/images/imgforblogposts/post_17/all_top2vec_topics_scatterplot.png)
+![umap_plot_of_clusters](/images/imgforblogposts/post_20/all_top2vec_topics_scatterplot.png)
 
 We can see towards the bottom right side of the plot that some of our key topics, 51, 100, 46, 4, are clustered in that quadrant of the graph. If we zero-in a bit we can see them laid out fairly "close" to one another:
 
-![zeroed_in_umap_plot](/images/imgforblogposts/post_17/zeroing_in_on_topics_51_100_46.png)
+![zeroed_in_umap_plot](/images/imgforblogposts/post_20/zeroing_in_on_topics_51_100_46.png)
 
 (For both images one can right-click 'em, open in a new tab and then zoom in—I'll have to see if I can find a nice HUGO shortcode that would do this without having to load the image in a new tab ...)
 

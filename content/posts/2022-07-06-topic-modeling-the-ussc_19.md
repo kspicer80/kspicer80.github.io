@@ -64,7 +64,7 @@ We can also just quickly looking at the distribution of opinions over time in th
 df['year'].hist(bins=50)
 ```
 
-![distribution of opinions](/images/imgforblogposts/post_16/number_of_opinions_distribution_histogram.png)
+![distribution of opinions](/images/imgforblogposts/post_19/number_of_opinions_distribution_histogram.png)
 
 We can also get some simple information (how many opinions are there in the dataframe, etc.):
 
@@ -213,7 +213,7 @@ ax.set_title('Topic Model and Expert Label Alignment')
 
 which produces the following plot:
 
-![heatmap of spaeth areas and topic labels](/images/imgforblogposts/post_16/heatmap_of_spaeth_areas.png)
+![heatmap of spaeth areas and topic labels](/images/imgforblogposts/post_19/heatmap_of_spaeth_areas.png)
 
 So we have all the data here wrangled together to start searching through some of these topics. Let's say we wanted to zero-in on another key abortion case? Using some cataloging work from [Pew Research](https://www.pewresearch.org/religion/2013/01/16/a-history-of-key-abortion-rulings-of-the-us-supreme-court/), we could have a look at [Webster v. Reproductive Health Svcs.](https://supreme.justia.com/cases/federal/us/492/490/) ("492 US 490")—with the opinion authored by Justice Rehnquist—from 1989? Then, we could include a keyword to search for—let's try something like the word "viable."
 
@@ -311,7 +311,7 @@ plt.title(f'Prevalence of {topic_fourteen} ({window} year rolling average)'
 plt.axvline(x=1973, color='red', label="Roe v. Wade Decision")
 ```
 
-![topic_14_trend_over_time_plot](/images/imgforblogposts/post_16/roe_topic_modeling_plot_1.png)
+![topic_14_trend_over_time_plot](/images/imgforblogposts/post_19/roe_topic_modeling_plot_1.png)
 
 (We could easily get the counts of the word "abortion" instead if we so wanted.)
 

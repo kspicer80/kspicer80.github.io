@@ -19,7 +19,7 @@ Continuing to learn the whole HUGO ecosystem here, I figured I would try a littl
 
 Assuming we had a .toml file that looked like the following, 
 
-![.toml datafile screenshot](/images/imgforblogposts/post_14/toml_datafile_screenshot.png),
+![.toml datafile screenshot](/images/imgforblogposts/post_17/toml_datafile_screenshot.png),
 
 it's pretty simple to get that data fetched and into a table here in this post, like this:
 

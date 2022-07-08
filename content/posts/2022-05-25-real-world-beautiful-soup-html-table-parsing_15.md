@@ -26,13 +26,13 @@ Given that I'm continuing to chronicle my DH journeys here, I figured I'd showca
 
 Doing some research for a favorite student of mine, I've been wandering around websites devoted to law school. One website [here](https://blog.powerscore.com/lsat/top-100-law-school-application-deadlines-2022-edition/) has a really fantastic little table on the page that has everything one could want—especially if one is a little behind on deadlines and trying to catch up a bit (i.e. figuring out which schools will allow students to start in the Spring or Summer semesters [for an answer to that query, head over [here](https://blog.powerscore.com/lsat/bid-153623-which-law-schools-offer-spring-and-summer-starts/)]). Now, of course, one could just do the simple ol' copy and paste of the table, but we all know how ornery things can get when one tries to paste it into Word or some other program and having to deal with all the formatting shenanigans—indeed, copy and pasting ends up with something like the following:
 
-![Ugly Copy and Pasting](/images/imgforblogposts/post_12/copy_and_pasting_html_tables.PNG)
+![Ugly Copy and Pasting](/images/imgforblogposts/post_15/copy_and_pasting_html_tables.PNG)
 
 Rather than worry with that whole mess, why don't we write a little code to get the thing into a nice format, maybe a simple Markdown table since the ```.md``` file extension seems to be my new best friend since getting into all this fantastically cool DH stuff?
 
 First things we had a look at the html for the page, using the "View Page Source" function in Chrome after right-clicking on the page. Looking for a ```table id``` of some kind, sure, enough, here it is:
 
-![](/images/imgforblogposts/post_12/inspecting_the_html.png)
+![](/images/imgforblogposts/post_15/inspecting_the_html.png)
 
 I also want to give a big shoutout to Thiago Santos Figueira's very clear and simple [Medium post](https://medium.com/geekculture/web-scraping-tables-in-python-using-beautiful-soup-8bbc31c5803e) on using Beautiful Soup to parse content in tables. His use case is a little bit complicated as it cleans up some of the numbers in the table in question there, so we can fiddle a little bit and grab only what we want. So for the script, we get all the required libraries imported along with some pandas customizations:
 
