@@ -152,6 +152,7 @@ kavanaugh_opinion_dataframe = pd.DataFrame(
 
 After this we now have a nice little dataframe that contains all of the information we wanted to scrape:
 
+{{< rawhtml >}}
 <div>
 <table border="1" class="dataframe">
   <thead>
@@ -208,6 +209,7 @@ After this we now have a nice little dataframe that contains all of the informat
   </tbody>
 </table>
 </div>
+{{< /rawhtml >}}
 
 Now that we have everything working here for Kavanaugh's opinions, it's simple enough to just rinse and repeat with all the opinions by Gorsuch and Barrett. We thus end up with three different dataframes that we can [concatenate together](https://pandas.pydata.org/docs/reference/api/pandas.concat.html) into a single one. We'll also [output the dataframe to a .jsonl](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.to_json.html?highlight=to_json#pandas.DataFrame.to_json) file for further analysis and so that we don't constantly query the Court Listener website each time:
 
