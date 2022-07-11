@@ -150,7 +150,7 @@ kavanaugh_opinion_dataframe = pd.DataFrame(
 )
 ``` 
 
-After this we now have a nice little dataframe that contains all of the information we wanted to scrap:
+After this we now have a nice little dataframe that contains all of the information we wanted to scrape:
 
 <table border="1" class="dataframe">
   <thead>
