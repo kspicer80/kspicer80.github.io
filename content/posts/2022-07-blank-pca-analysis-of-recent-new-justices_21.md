@@ -214,6 +214,7 @@ Now that we have everything working here for Gorsuch's opinions, it's simple eno
 kavanaugh_gorsuch_barrett_combined = pd.concat([kavanaugh_opinion_dataframe, gorsuch_opinion_dataframe, barrett_opinion_dataframe], ignore_index=True)
 kavanaugh_gorsuch_barrett_combined.to_json('kavanaugh_gorsuch_barrett_combined.jsonl', orient='records', lines=True)
 ```
+
 ## Exploratory Data Analysis (EDA)
 
 Now we've got everything wrangled together into a single dataframe. What might we want to do with this now that we've got in a form that's ready for analysis? As noted in the introductory section above, what if we do a little bit of visualization of the three justice's writing styles? Actually, before we move into running through this some algorithms, let's do a teensy-tiny bit of cleaning of data in the dataframe, as definitely have some things we won't want to utilize (new lines [\n], for example, in the ```text``` column). Thus, let's do a little text cleanup (following Susan Li's nice little gist and function [here](https://gist.github.com/susanli2016/29d4cf9b7db4c6804e174b8eac2891e8))
@@ -236,6 +237,8 @@ def clean_text(text):
 So let's have a look at some visualizations—maybe how many many words are in each of the different opinions? This time around I felt like using [Plotly library](https://plotly.com/python/), largely because I wanted to learn and play around with it a little bit more (I feel pretty confident now with [Matplotlib] (https://matplotlib.org/stable/users/index.html) and figure it might be nice to try a new graphing library). We can very easily get the word counts for the ```text``` column as follows: ```df['num_words'] = df.text.apply(lambda x: len(x.split()))```. Then it's a simple call to plot the histogram: ```fig = px.histogram(df, x='num_words', color='authors', title='Number of Words per Case by Justices Gorsuch, Kavanaugh, and Barrett')```:
 
 ![](/images/imgforblogposts/post_21/num_words_by_author.png)
+
+## Principal Component Analysis (PCA)
 
 So let's continue down the [PCA](https://en.wikipedia.org/wiki/Principal_component_analysis) route and see what we can see. As usual, we need to vectorize the texts and we, again, as per usual, will use that handy ol [sklearn library](https://scikit-learn.org/stable/modules/classes.html). After the imports we'll create a initialize a PCA object, fit and transform the ```df['text']``` column, and then set up a [```DecisionTreeClassifier()```](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html?highlight=decisiontreeclassifier#sklearn.tree.DecisionTreeClassifier) (for more information on the use of PCA before utilizing the decision tree function, hop over [here](https://dorukkilitcioglu.com/2018/08/11/pca-decision-tree.html)):
 
@@ -281,7 +284,45 @@ Oh—and we can plot the word counts as well:
 
 ![](/images/imgforblogposts/post_21/num_words_by_all_five_authors.png)
 
-### 
+We could—also—do a similar analysis with the very large [Kaggle dataset](https://www.kaggle.com/datasets/gqfiddler/scotus-opinions) as well. That too is simple enough with all the functions we've got so far (stand-alone notebook with all the code is available directly [here](https://github.com/kspicer80/recent_ussc_justices_opinions_topic_modeling/blob/main/all_opinions_pca.ipynb)).
+
+The main parameter that we passed to the ```PCA()``` function of [scikitlearn](https://scikit-learn.org/stable/modules/decomposition.html#pca) called ```n_components``` is one we could tweak a little bit. We could also utilize the [```explained_variance_score``` metric](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.explained_variance_score.html?highlight=explained_variance#sklearn.metrics.explained_variance_score) as well to see exactly how much variance is explained by the number of components utilized (for more info on this head over [this way](https://towardsdatascience.com/principal-component-analysis-pca-with-scikit-learn-1e84a0c731b0)):
+
+![](/images/imgforblogposts/post_21/pca_variance_explained.png)
+
+We can then plot all of the opinions in the entire dataset with just a few lines of code:
+
+``` python 
+pca = PCA(n_components=30)
+vectorized_documents = vectorizer.fit_transform(df['text'])
+vectorized_documents = vectorized_documents.todense()
+Xd_full = pca.fit_transform(vectorized_documents)
+
+clf = DecisionTreeClassifier(random_state=14)
+y_full = df['author_name']
+scores_reduced = cross_val_score(clf, Xd_full, y_full, scoring='accuracy')
+
+import matplotlib.colors
+from matplotlib.colors import ListedColormap, LinearSegmentedColormap
+
+plt.figure(figsize=(20, 10))
+classes = set(y_full)
+
+for cur_class, color in zip(classes, cmap):
+    mask = (y_full == cur_class).values
+
+    plt.scatter(Xd_full[mask, 0], Xd_full[mask, 1], marker='s', cmap='viridis', label=cur_class, alpha = 0.5)
+    #plt.legend()
+    plt.title("PCA Analysis of All Opinions in the Kaggle SCOTUS Dataset")
+plt.show()
+``` 
+that results in the plot here:
+
+![](/images/imgforblogposts/post_21/pca_on_all_opinions.png)
+
+My guess is that this clustering is due to the very domain-specific area that we're working with here: namely, the legal system. It makes sense that most of the opinions would be found to be quite similar to one given the shared genre. It would be curious to see what the plots looked like when we tried texts from quite different genres. Sounds like an idea for another project!
+
+## Appendix: Streamlining the Data Scraping with a Pair of Custom Functions
 
 Now let's see if we can't streamline the scraping from Court Listener a little bit. Rather than copy and pasting all of the links on each results page, let's write some code that will head to each of the returned results page, pull down all the links, and then move on from there. In other words, we could put the results pages (there are three in total) for all of Justices Sotomayor's and Kagan's opinions into lists:
 
@@ -384,7 +425,6 @@ def scrape_all_data_and_generate_dataframe(list_of_links, author_name):
         'year': author_case_years}
     )
     return(author_opinion_dataframe)
-    
 ```
 
 
