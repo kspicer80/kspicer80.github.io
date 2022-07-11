@@ -25,7 +25,7 @@ tags:
 
 (All of the code for this post is available in this repo [here](https://github.com/kspicer80/acb_opinion_topic_modeling).)
 
-Continuing off of the last two posts ([here](https://kspicer80.github.io/posts/2022-07-06-topic-modeling-the-ussc_19/) and [here](https://kspicer80.github.io/posts/2022-07-07-top2vec-topic-modeling_20/)), I thought we might continue seeing what we could do with our Supreme Court Opinions dataset(s)—I was also fascinated and inspired by a nice little article on [Wikipedia](https://en.wikipedia.org/wiki/Ideological_leanings_of_United_States_Supreme_Court_justices) the "Ideological leanings of United States Supreme Court justices," which has some really nice images. I thought one might do a little exploratory work with of the more recently appointed Justices: in particular I wanted to look at the work done so far by Justices Gorsuch, Kavanaugh, and Barrett; perhaps a little PCA work to see if we could work through any potential stylistic similarities between their opinions so far. Given that none of the opinions by these newer Justices are in either of our USSC datasets (either from the [Karsdorp, et. al. work]((https://www.humanitiesdataanalysis.org/topic-models/notebook.html)) or from the dataset available on [Kaggle]((https://www.kaggle.com/datasets/gqfiddler/scotus-opinions))), we'll have to do some data wrangling/scraping. We'll focus in on utilizing the data gathered on the [Court Listener website](https://www.courtlistener.com/). I thought I would try to take us through all the steps I went in order to pull down these justices' opinions. There are, of course, some things I figured out to make the whole process a little more streamlined, but I'll go through the non-streamlined paths and will try to show the spots where we could simplify things a good deal.
+Continuing off of the last two posts ([here](https://kspicer80.github.io/posts/2022-07-06-topic-modeling-the-ussc_19/) and [here](https://kspicer80.github.io/posts/2022-07-07-top2vec-topic-modeling_20/)), I thought we might continue seeing what we could do with our Supreme Court Opinions dataset(s)—I was also fascinated and inspired by a nice little article on [Wikipedia](https://en.wikipedia.org/wiki/Ideological_leanings_of_United_States_Supreme_Court_justices) about the "Ideological leanings of United States Supreme Court justices," which has some really nice images. I thought one might do a little exploratory work with the opinions of some of the more recently appointed Justices: in particular I wanted to look at the work done so far by Justices Gorsuch, Kavanaugh, and Barrett; perhaps a little PCA work to see if we could work through any potential stylistic similarities between their opinions so far. Given that none of the opinions by these newer Justices are in either of our USSC datasets (either from the [Karsdorp, et. al. work]((https://www.humanitiesdataanalysis.org/topic-models/notebook.html)) or from the dataset available on [Kaggle]((https://www.kaggle.com/datasets/gqfiddler/scotus-opinions))), we'll have to do some data wrangling/scraping. We'll focus in on utilizing the data gathered through the really awesome [Court Listener website](https://www.courtlistener.com/). I thought I would try to take us through all the steps I went through in order to pull down these Justices' opinions. There are, of course, some things I figured out along the way to make the whole process a little more streamlined, but I'll go through the non-streamlined paths and will try to show the spots where we could simplify things a good deal. (The more streamlined versions are available in the [Appendix](#appendix) below.)
 
 ## Data Wrangling/Gathering/Web Scraping Process
 
@@ -322,7 +322,7 @@ that results in the plot here:
 
 My guess is that this clustering is due to the very domain-specific area that we're working with here: namely, the legal system. It makes sense that most of the opinions would be found to be quite similar to one given the shared genre. It would be curious to see what the plots looked like when we tried texts from quite different genres. Sounds like an idea for another project!
 
-## Appendix: Streamlining the Data Scraping with a Pair of Custom Functions
+## Appendix
 
 Now let's see if we can't streamline the scraping from Court Listener a little bit. Rather than copy and pasting all of the links on each results page, let's write some code that will head to each of the returned results page, pull down all the links, and then move on from there. In other words, we could put the results pages (there are three in total) for all of Justices Sotomayor's and Kagan's opinions into lists:
 
@@ -364,13 +364,7 @@ full_links = ["https://www.courtlistener.com" + link for link in links]
 print(full_links)
 ```
 
-This will give us a list with the full URLs to each of the different pages containing their opinions. From there, we can feed that into the other scraping functions and grab all of the metadata ("Case Name," "Docket Number," year, opinion type, etc.) from way up above, feed it, again, all into a single dataframe for further analysis. 
-
-
-
-## Appendix
-
-The scraping functions utilized here look like the following (cleaned-up a bit and including a simple ```print``` statement to let us know which pages do not contain the text of the opinion in the ```plaintext``` tag):
+This will give us a list with the full URLs to each of the different pages containing their opinions. From there, we can feed that into the other scraping functions and grab all of the metadata ("Case Name," "Docket Number," year, opinion type, etc.) from way up above, feed it, again, all into a single dataframe for further analysis. We can even go a step further and wrap all this work in some functions. The scraping functions utilized here look like the following (cleaned-up a bit and including a simple ```print``` statement to let us know which pages do not contain the text of the opinion in the ```plaintext``` tag):
 
 ``` python
 def get_all_links(list_of_pages):
