@@ -91,7 +91,66 @@ Continuing off of the last two posts (here and here), I thought we might continu
 </span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;year&#39;</span>: kavanaugh_case_years}
 </span></span><span style="display:flex;"><span>)
 </span></span></code></pre></div><p>After this we now have a nice little dataframe that contains all of the information we wanted to scrape:</p>
-<!-- raw HTML omitted -->
+
+
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>authors</th>
+      <th>case_id</th>
+      <th>text</th>
+      <th>type</th>
+      <th>year</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>kavanaugh</td>
+      <td>\n                        17-1272\n           ...</td>
+      <td>(Slip Opinion)              OCTOBER TERM, 2018...</td>
+      <td>Slip Opinion</td>
+      <td>\n                    January 8th, 2019\n     ...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>kavanaugh</td>
+      <td>\n                        17-1625\n           ...</td>
+      <td>(Slip Opinion)              OCTOBER TERM, 2018...</td>
+      <td>Slip Opinion</td>
+      <td>\n                    March 4th, 2019\n       ...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>kavanaugh</td>
+      <td>\n                        17-1104\n           ...</td>
+      <td>(Slip Opinion)              OCTOBER TERM, 2018...</td>
+      <td>Slip Opinion</td>
+      <td>\n                    March 19th, 2019\n      ...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>kavanaugh</td>
+      <td>\n                        18-1109\n           ...</td>
+      <td>(Slip Opinion)              OCTOBER TERM, 2019...</td>
+      <td>Slip Opinion</td>
+      <td>\n                    February 25th, 2020\n   ...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>kavanaugh</td>
+      <td>\n                        18-725\n            ...</td>
+      <td>(Slip Opinion)              OCTOBER TERM, 2019...</td>
+      <td>Slip Opinion</td>
+      <td>\n                    April 23rd, 2020\n      ...</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
 <p>Now that we have everything working here for Kavanaugh&rsquo;s opinions, it&rsquo;s simple enough to just rinse and repeat with all the opinions by Gorsuch and Barrett. We thus end up with three different dataframes that we can <a href="https://pandas.pydata.org/docs/reference/api/pandas.concat.html">concatenate together</a> into a single one. We&rsquo;ll also <a href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.to_json.html?highlight=to_json#pandas.DataFrame.to_json">output the dataframe to a .jsonl</a> file for further analysis and so that we don&rsquo;t constantly query the Court Listener website each time:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>kavanaugh_gorsuch_barrett_combined <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>concat([kavanaugh_opinion_dataframe, gorsuch_opinion_dataframe, barrett_opinion_dataframe], ignore_index<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
 </span></span><span style="display:flex;"><span>kavanaugh_gorsuch_barrett_combined<span style="color:#f92672">.</span>to_json(<span style="color:#e6db74">&#39;kavanaugh_gorsuch_barrett_combined.jsonl&#39;</span>, orient<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;records&#39;</span>, lines<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
