@@ -273,6 +273,16 @@ plt.show()
 
 So we see the algorithm finding a good deal of similarity between opinions by these three justices. We could also wonder a little bit what things would look like if we added some justices on the opposite side of the ideological spectrum. What if we added opinions by Sotomayor and Kagan to the plot? 
 
+That would give us a plot that looks like this:
+
+![](/images/imgforblogposts/post_21/pca_analysis_of_all_five_justices.png)
+
+Oh—and we can plot the word counts as well:
+
+![](/images/imgforblogposts/post_21/num_words_by_all_five_authors.png)
+
+### 
+
 Now let's see if we can't streamline the scraping from Court Listener a little bit. Rather than copy and pasting all of the links on each results page, let's write some code that will head to each of the returned results page, pull down all the links, and then move on from there. In other words, we could put the results pages (there are three in total) for all of Justices Sotomayor's and Kagan's opinions into lists:
 
 ``` python
@@ -314,6 +324,69 @@ print(full_links)
 ```
 
 This will give us a list with the full URLs to each of the different pages containing their opinions. From there, we can feed that into the other scraping functions and grab all of the metadata ("Case Name," "Docket Number," year, opinion type, etc.) from way up above, feed it, again, all into a single dataframe for further analysis. 
+
+
+
+## Appendix
+
+The scraping functions utilized here look like the following (cleaned-up a bit and including a simple ```print``` statement to let us know which pages do not contain the text of the opinion in the ```plaintext``` tag):
+
+``` python
+def get_all_links(list_of_pages):
+    links = []
+
+    for page in sotoymayor_pages:
+        html_page = requests.get(page, headers=header_argument)
+        soup = BeautifulSoup(html_page.content, "html.parser")
+        spans = soup.findAll('a', {'class': 'visitable'}, href=True)
+        for span in spans:
+            link = span['href']
+            links.append(link)
+    
+    full_links = ["https://www.courtlistener.com" + link for link in links]
+    return(full_links)
+
+def scrape_all_data_and_generate_dataframe(list_of_links, author_name):
+    author_opinions = []
+    author_case_years = []
+    author_docket_numbers = []
+    author_case_names = []
+    author_opinion_types = []
+    author_name_list = [author_name for i in range(len(list_of_links))]
+
+    for page in list_of_links:
+        html_page = requests.get(page, headers=header_argument)
+        soup = BeautifulSoup(html_page.content, "html.parser")
+        spans = soup.find_all('span', {'class': 'meta-data-value'})
+        if soup.find(class_='plaintext') is None:
+            opinion = "This case didn't have any plain text available on the web page ..."
+            author_opinions.append(opinion)
+        else:
+            opinion = soup.find(class_='plaintext').get_text()
+            author_opinions.append(opinion)
+        author_case_years.append(spans[0].get_text())
+        case_title = soup.find("meta", {'property': "og:title"})
+        author_case_names.append(case_title['content'])
+        author_docket_numbers.append(spans[3].get_text())
+        if soup.find('pre', {'class': 'inline'}) is None:
+            author_opinion_types.append("No opinion type submitted.")
+        else:
+            opinion_type_soup = soup.find('pre', {'class': 'inline'}).get_text()
+            match = opinion_type_soup[opinion_type_soup.find('(')+1:opinion_type_soup.find(')')]
+            author_opinion_types.append(match)
+        print(f"Successfully parsed {page}")
+
+    author_opinion_dataframe = pd.DataFrame(
+        {'authors': author_name_list, 
+        'case_id': author_docket_numbers,
+        'text': author_opinions,
+        'type': author_opinion_types,
+        'year': author_case_years}
+    )
+    return(author_opinion_dataframe)
+    
+```
+
 
 
 
