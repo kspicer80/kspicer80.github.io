@@ -306,13 +306,12 @@ clf = DecisionTreeClassifier(random_state=14)
 y_full = df['author_name']
 scores_reduced = cross_val_score(clf, Xd_full, y_full, scoring='accuracy')
 
-import matplotlib.colors
-from matplotlib.colors import ListedColormap, LinearSegmentedColormap
 
 plt.figure(figsize=(20, 10))
+colors = ['red', 'green', 'blue', 'mediumorchid', 'orange']
 
 classes = set(y_full)
-for cur_class, color in zip(classes, cmap):
+for cur_class, color in zip(classes, colors):
     mask = (y_full == cur_class).values
 
     plt.scatter(Xd_full[mask, 0], Xd_full[mask, 1], marker='s', cmap='viridis', label=cur_class, alpha = 0.5)
