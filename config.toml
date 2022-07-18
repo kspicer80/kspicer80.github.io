@@ -25,6 +25,8 @@ paginate = 10
   keywords = "homepage, blog"
   images = [""]
 
+  customCSS = ["css/style.css"]
+
 [taxonomies]
     category = "blog"
     tag      = "tags"
