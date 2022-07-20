@@ -1,5 +1,5 @@
 ---
-title: "Visualizing Online Class Discussion Boards (_redux_)"
+title: "Visualizing Online Class Discussion Boards (redux)"
 date: 2022-07-20 00:01:00
 draft: false
 toc: false
