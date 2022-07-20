@@ -3,3 +3,7 @@ body {
     font-weight: 500;
     line-height: 1.54;
 }
+
+.code {
+    font-size: .75rem;
+}
