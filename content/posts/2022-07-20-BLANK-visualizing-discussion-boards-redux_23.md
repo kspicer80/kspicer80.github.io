@@ -34,13 +34,90 @@ So the first thing we need to do is gather all of the data. Ideally, it would be
 
 ![.csv datafile from TamperMonkey script](/images/imgforblogposts/post_23/csv_file_snip.png)
 
-Of course, the fake one above is already a little bit more cleaned-up than what one gets directly from the Userscript, but I think it'll work well-enough for our purposes here. 
+Of course, the fake one above is already a little bit more cleaned-up than what one gets directly from the Userscript, but I think it'll work well-enough for our purposes here. As usual, we import our libraries and get our file read in properly:
 
-Ideally, what we would like to do is 
+``` python
+import pandas as pd
+pd.set_option('display.max_rows', 500)
+from sklearn.preprocessing import OrdinalEncoder
+from pathlib import Path
 
+datafile_path = Path(r'.\datasets\fake_dataset_csv.csv')
+df = pd.read_csv(datafile_path)
 
+ord_enc = OrdinalEncoder()
+df['entry_id'] = ord_enc.fit_transform(df[['entry_id']]).astype('int')
+df['reply_id'] = ord_enc.fit_transform(df[['reply_id']]).astype('int')
+```
 
+Now, in my original workflow, I also had a list of all the student names stored in a dictionary, each keyed to a specific number—for the fake dataset I just ordinally-encoded each of the individual numbers in the ```entry_id``` and ```reply_id``` columns.
 
+Ideally, what we would like to do is write a function to read through all of the text stirings in the ```entry_message``` and ```reply_message``` columns and extract out all of the mentions of any authors in our [_Weird Fiction_](https://en.wikipedia.org/wiki/The_Weird#:~:text=The%20Weird%3A%20A%20Compendium%20of,by%20Ann%20and%20Jeff%20VanderMeer.&text=Published%20on%2030%20Oct%202011,stories%2C%20novellas%20and%20short%20novels.) anthology. I coded a nice long list of all the authors in the anthology along with a list of "aliases" (shorter forms of the names, titles of the stories, etc.) to have a our function search for and extract out of the posts (the dictionary is [here](https://github.com/kspicer80/solo_projects/blob/main/weird_fiction_visualizations/author_names.py)).
+
+I would like to here, at the outset, thank [Jonathan Reeve](https://jonreeve.com/) (yet again) over at Columbia for helping me think through the logic of this function. After importing the dictionary of author names, we write the following: 
+
+``` python
+from author_names import author_Names
+
+def author_extraction(string):
+    authorMentions = {}
+    for author in author_Names:
+        aliases = author_Names[author]
+        for alias in aliases:
+            if alias in string:
+                authorMentions[author] = alias
+    return authorMentions
+```
+
+We can now take this and [apply it to our dataframe](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.apply.html?highlight=apply#pandas.DataFrame.apply), creating a new column that will keep track of all the extracted author names mentioned in an individual post: 
+
+``` python
+df['extracted'] = df['entry_message'].apply(author_extraction)
+df['extracted_from_replies'] = df['reply_message'].apply(author_extraction)
+```
+
+This gives us a new column with all the author mentions that we wanted. The function above returns a python dictionary (```dict```) object, so it would be nice to "explode" that dictionary and just get a list of the numbers (of the authors mentioned). But before we do that we just quickly reverse all the keys and values of the dictionary to get it how we want it:
+
+``` python
+def convert_dict(dictionary):
+    list_of_keys = list(dictionary.keys())
+    return(list_of_keys)
+
+df['target'] = df['extracted'].apply(convert_dict)
+```
+
+Luckily for us (although not too surprising as the pandas library is such a fantastic thing) there's a function already created for us to do exactly what we want: [```pandas.DataFrame.explode()```](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.explode.html?highlight=explode#pandas.DataFrame.explode). 
+
+``` python
+posts_for_explode = df.copy()
+df_exploded = posts_for_explode.explode('target')
+```
+
+We'll do it a little bit more tidying and cleaning-up here:
+
+``` python
+cols_to_keep = ['topic_title', 'entry_id', 'reply_id', 'Semester and Year']
+
+df_student_to_student = df_exploded[cols_to_keep]
+df_exploded_dropped = df_exploded.drop(['entry_message', 'entry_word_count', 'reply_word_count', 'extracted', 'extracted_from_replies', 'reply_message'], axis=1)
+
+frames = [df_student_to_student, df_exploded_dropped]
+all_together = pd.concat(frames)
+all_together.drop_duplicates()
+all_together.dropna(subset=['target'])
+```
+
+If we dump this into a ```.csv``` file we'll have everything together and in the same place and tidied up: ``` all_together.to_csv(r'C:\Users\Kspicer\Desktop\gephi.csv') ``` I really like the Gephi library I already mentioned above—and that file needs a pretty simple structure—it needs a table with a 'source' column (that'll be all the nodes of your graph) along with a 'target' column, which let's Gephi know which nodes to draw edges between in the final graph (any other metadata you'd like to put into the table (maybe the week the story was read, the semester in which the post was made, etc.) just goes into another column):
+
+| source | target | week_read | semester |
+|---|---|---|---|
+| 25 | 45 | 1 | Fall 2019 |
+| 1 | 2 | 14 | Spring 2020 |
+| 3 | 5 | 6 | Summer 2022 |
+| 35 | 56 | 3 | Fall 2022 |
+| 26 | 100 | 5 | Fall 2021 |
+
+Once we have everything that we want in the .csv we can then transfer it over to whatever network graphing or data visualization tool is the one of your choice (this format makes it easy to input into [networkx](https://networkx.org/) or Gephi or [Tableau](https://www.tableau.com/) or what have you). Gephi was one of the very first digital humanities-esque libraries I got my hands dirty with, so I've got a special place in my heart for it in particular. Of course, any of the other visualization libraries can handle this data without any trouble whatsoever ([HoloViews](https://holoviews.org/) and [bokeh](https://docs.bokeh.org/en/latest/) are great and, to be sure, [plotly](https://plotly.com/) is also really nice for this as well). In fact, if one would like to see some of the visualizations of all the semesters from my "Weird Fiction" course, there's a jupyter notebook available [here]() (Big thanks as well go over to [Melanie Walsh](https://melaniewalsh.github.io/Intro-Cultural-Analytics/06-Network-Analysis/02-Making-Network-Viz-with-Bokeh.html) for helping me learn the bokeh visualizations.)
 
 
 All of the plotly visualizations are available [here](https://github.com/kspicer80/solo_projects/blob/main/weird_fiction_visualizations/plotly_network_visualizations.py) ...
