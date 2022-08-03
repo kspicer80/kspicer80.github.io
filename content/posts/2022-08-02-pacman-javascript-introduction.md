@@ -1,6 +1,6 @@
 ---
 title: "(Re)Creating Pacman with Javascript"
-date: 2022-07-20 00:01:00
+date: 2022-08-03 00:01:00
 draft: false
 toc: false
 images:
