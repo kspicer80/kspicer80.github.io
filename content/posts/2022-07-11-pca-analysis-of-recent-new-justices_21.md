@@ -1,5 +1,5 @@
 ---
-title: "Comparing Stylistic Tendencies Recent United States Supreme Court Justices (Gorsuch, Kavanaugh, and Barrett)"
+title: "Comparing Stylistic Tendencies of Recent United States Supreme Court Justices (Gorsuch, Kavanaugh, and Barrett)"
 date: 2022-07-11 00:01:00
 draft: false
 toc: false
@@ -21,7 +21,7 @@ tags:
   - ussc
 ---
 
-## General Introduction  
+## General Introduction
 
 (All of the code for this post is available in this repo [here](https://github.com/kspicer80/acb_opinion_topic_modeling).)
 
@@ -70,7 +70,7 @@ kavanaugh_pages = [
     "https://www.courtlistener.com/opinion/4885592/edwards-v-vannoy/?type=o&type=o&order_by=score+desc&judge=Kavanaugh&stat_Precedential=on&court=scotus&page=1",
     "https://www.courtlistener.com/opinion/4891453/greer-v-united-states/?type=o&type=o&order_by=score+desc&judge=Kavanaugh&stat_Precedential=on&court=scotus&page=1",
     "https://www.courtlistener.com/opinion/4894912/transunion-llc-v-ramirez/?type=o&type=o&order_by=score+desc&judge=Kavanaugh&stat_Precedential=on&court=scotus&page=1",
-    "https://www.courtlistener.com/opinion/4618958/apple-inc-v-pepper/?type=o&type=o&order_by=score+desc&judge=Kavanaugh&stat_Precedential=on&court=scotus&page=2", 
+    "https://www.courtlistener.com/opinion/4618958/apple-inc-v-pepper/?type=o&type=o&order_by=score+desc&judge=Kavanaugh&stat_Precedential=on&court=scotus&page=2",
     "https://www.courtlistener.com/opinion/6457347/thompson-v-clark/?type=o&type=o&order_by=score+desc&judge=Kavanaugh&stat_Precedential=on&court=scotus&page=2",
     "https://www.courtlistener.com/opinion/4627817/quarles-v-united-states/?type=o&type=o&order_by=score+desc&judge=Kavanaugh&stat_Precedential=on&court=scotus&page=2",
     "https://www.courtlistener.com/opinion/6463787/united-states-v-vaello-madero/?type=o&type=o&order_by=score+desc&judge=Kavanaugh&stat_Precedential=on&court=scotus&page=2",
@@ -103,7 +103,7 @@ So, what we want to do is write some code for BS4 to look for the above and pull
 ``` python
 spans = soup.find_all('span', {'class': 'meta-data-value'})
 print(spans[3].get_text())
-``` 
+```
 
 The[```get_text``` function](https://beautiful-soup-4.readthedocs.io/en/latest/index.html?highlight=get_text(#get-text)) will return us just the text within each of the span tags. The titles of the cases are contained within a different tag (and there's only one of them on the page, so we can use the [```find()```](https://beautiful-soup-4.readthedocs.io/en/latest/index.html?highlight=find()#find) method instead of ```find_all```): ```case_title = soup.find("meta", {'property': "og:title"})```
 
@@ -142,13 +142,13 @@ for page in kavanaugh_pages:
     kavanaugh_opinion_types.append(match)
 
 kavanaugh_opinion_dataframe = pd.DataFrame(
-    {'authors': kavanaugh_author_name_list, 
+    {'authors': kavanaugh_author_name_list,
     'case_id': kavanaugh_docket_numbers,
     'text': kavanaugh_opinions,
     'type': kavanaugh_opinion_types,
     'year': kavanaugh_case_years}
 )
-``` 
+```
 
 After this we now have a nice little dataframe that contains all of the information we wanted to scrape:
 
@@ -226,7 +226,7 @@ Now that we've got everything wrangled together into a single dataframe, what mi
 def clean_text(text):
     """
         text: a strin to clean-up
-        
+
         return: modified initial string cleaned-up
     """
     text = BeautifulSoup(text, "lxml").text # HTML decoding
@@ -245,7 +245,7 @@ So let's have a look at some visualizations—maybe how many many words are in e
 
 So let's continue down the [PCA](https://en.wikipedia.org/wiki/Principal_component_analysis) route and see what we can see. As usual, we need to vectorize the texts and we, again, as per usual, will use that handy ol' [sklearn library](https://scikit-learn.org/stable/modules/classes.html). After the imports we'll create and initialize a PCA object, fit and transform the ```df['text']``` column, and then set up a [```DecisionTreeClassifier()```](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html?highlight=decisiontreeclassifier#sklearn.tree.DecisionTreeClassifier) (for more information on the use of PCA before utilizing the decision tree function, hop over [here](https://dorukkilitcioglu.com/2018/08/11/pca-decision-tree.html)):
 
-``` python 
+``` python
 pca = PCA(n_components=3)
 vectorized_documents = vectorizer.fit_transform(df['text'])
 vectorized_documents = vectorized_documents.todense()
@@ -256,7 +256,7 @@ y_full = df['authors']
 scores_reduced = cross_val_score(clf, Xd_full, y_full, scoring='accuracy')
 ```
 
-We can then plot our vectors thusly (following code provided by Robert Layton in his really fantastic book, [_Learning Data Mining with Python_](https://www.packtpub.com/product/learning-data-mining-with-python-second-edition/9781787126787), pp. 97-98):  
+We can then plot our vectors thusly (following code provided by Robert Layton in his really fantastic book, [_Learning Data Mining with Python_](https://www.packtpub.com/product/learning-data-mining-with-python-second-edition/9781787126787), pp. 97-98):
 
 ``` python
 classes = set(y_full)
@@ -265,11 +265,11 @@ colors = ['red', 'blue', 'green']
 for cur_class, color in zip(classes, colors):
     mask = (y_full == cur_class).values
     plt.scatter(
-      Xd_full[mask, 0], 
-      Xd_full[mask, 1], 
-      marker='o', 
-      color=color, 
-      label=cur_class, 
+      Xd_full[mask, 0],
+      Xd_full[mask, 1],
+      marker='o',
+      color=color,
+      label=cur_class,
       alpha = 0.3)
     plt.legend()
     plt.title("PCA Analysis of Opinions by Justices Gorsuch, Kavanaugh, and Barrett")
@@ -278,7 +278,7 @@ plt.show()
 
 ![](/images/imgforblogposts/post_21/pca_analysis_of_gorsuch_kavanaugh_barrett.png)
 
-So we see the algorithm finding a good deal of similarity between opinions by these three justices. We could also wonder a little bit what things would look like if we added some Justices on the opposite side of the ideological spectrum. What if we added opinions by Sotomayor and Kagan to the plot? 
+So we see the algorithm finding a good deal of similarity between opinions by these three justices. We could also wonder a little bit what things would look like if we added some Justices on the opposite side of the ideological spectrum. What if we added opinions by Sotomayor and Kagan to the plot?
 
 That would give us a plot that looks like this:
 
@@ -296,7 +296,7 @@ The main parameter that we passed to the ```PCA()``` function of [scikitlearn](h
 
 We can then plot all of the opinions in the entire dataset with just a few lines of code:
 
-``` python 
+``` python
 pca = PCA(n_components=30)
 vectorized_documents = vectorizer.fit_transform(df['text'])
 vectorized_documents = vectorized_documents.todense()
@@ -318,7 +318,7 @@ for cur_class, color in zip(classes, colors):
     #plt.legend()
     plt.title("PCA Analysis of All Opinions in the Kaggle SCOTUS Dataset")
 plt.show()
-``` 
+```
 
 that results in the plot here:
 
@@ -338,7 +338,7 @@ sotoymayor_pages = [
 ]
 
 kagan_pages = [
-    'https://www.courtlistener.com/?type=o&q=&type=o&order_by=score%20desc&judge=kagan&stat_Precedential=on&court=scotus',        
+    'https://www.courtlistener.com/?type=o&q=&type=o&order_by=score%20desc&judge=kagan&stat_Precedential=on&court=scotus',
     'https://www.courtlistener.com/?type=o&type=o&order_by=score+desc&judge=kagan&stat_Precedential=on&court=scotus&page=2',
     'https://www.courtlistener.com/?type=o&type=o&order_by=score+desc&judge=kagan&stat_Precedential=on&court=scotus&page=3'
 ]
@@ -363,7 +363,7 @@ links = []
 for span in spans:
   link = span['href']
   links.append(link)
-  
+
 full_links = ["https://www.courtlistener.com" + link for link in links]
 print(full_links)
 ```
@@ -381,7 +381,7 @@ def get_all_links(list_of_pages):
         for span in spans:
             link = span['href']
             links.append(link)
-    
+
     full_links = ["https://www.courtlistener.com" + link for link in links]
     return(full_links)
 
@@ -416,7 +416,7 @@ def scrape_all_data_and_generate_dataframe(list_of_links, author_name):
         print(f"Successfully parsed {page}")
 
     author_opinion_dataframe = pd.DataFrame(
-        {'authors': author_name_list, 
+        {'authors': author_name_list,
         'case_id': author_docket_numbers,
         'text': author_opinions,
         'type': author_opinion_types,
