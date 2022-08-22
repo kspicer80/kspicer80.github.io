@@ -20,7 +20,7 @@ tags:
   - ussc
 ---
 
-Here in this post I'd like to continue working on the same project used in the previous post ([here](https://kspicer80.github.io/posts/2022-07-06-topic-modeling-the-ussc_19/)) while trying out the [Top2Vec library](https://github.com/ddangelov/Top2Vec)). As is so often the case, I came across this library via Dr. William Mattingly's YoutTube channel, who devoted two different videos to using this library ([here](https://www.youtube.com/watch?v=bEaxKSQ4Av8) and [here](https://www.youtube.com/watch?v=rmWI3xu9SII)). So let's jump in and see what we can do with this library. 
+Here in this post I'd like to continue working on the same project used in the previous post ([here](https://kspicer80.github.io/posts/2022-07-06-topic-modeling-the-ussc_19/)) while trying out the [Top2Vec library](https://github.com/ddangelov/Top2Vec)). As is so often the case, I came across this library via Dr. William Mattingly's YoutTube channel, who devoted two different videos to using this library ([here](https://www.youtube.com/watch?v=bEaxKSQ4Av8) and [here](https://www.youtube.com/watch?v=rmWI3xu9SII)). So let's jump in and see what we can do with this library.
 
 This time around we're using a slightly different dataset that comes Kaggle—[it contains](https://www.kaggle.com/datasets/gqfiddler/scotus-opinions) all of the USSC opinions from 1970 on. So let's load up some libraries and get everything read in as usual. Top2Vec needs a list of strings to process and vectorize, so we'll convert the dataframe column that contains the texts of the opinions (the .csv file has a column named ```text``` that we'll use) into a list:
 
@@ -87,7 +87,7 @@ We can also very easily print out all of the key terms and words that are associ
   'hospitalization' 'cervix' 'health' 'aborted' 'medical' 'undue']
 ```
 
-We can also search through the documents clustered into each topic (thus doing a simple "sanity" check): 
+We can also search through the documents clustered into each topic (thus doing a simple "sanity" check):
 
 ``` python
 documents, document_scores, document_ids = top2vec_model.search_documents_by_topic(topic_num=51, num_docs=5)
@@ -124,4 +124,4 @@ We can see towards the bottom right side of the plot that some of our key topics
 
 (For both images one can right-click 'em, open in a new tab and then zoom in—I'll have to see if I can find a nice HUGO shortcode that would do this without having to load the image in a new tab ...—I know there is some [talk out there](https://github.com/adityatelange/hugo-PaperMod/issues/384) of potentially implmenting a [Medium.com](https://medium.com//) like zoom on images too.)
 
-I would say that after all of the model building is completed (which, again, did take quite a while given the rather large size of our dataset), the steps needed are super quick and simple—and the ease with which all of this happens after model building is nothing short of really awesome. I am greatly looking forward to playing around with this library on all kinds of different datasets, that's for sure! (As Dr. Mattingly noted in his [second video]((https://www.youtube.com/watch?v=rmWI3xu9SII)), there are some parameters in Top2Vec [specifically the ["speed" and "workers"](https://top2vec.readthedocs.io/en/latest/api.html) ones] that could potentially speed up different parts of the process) that I should tweak and play around a little bit to see what the effects are in the final visualizations and clustering of topics. More to come on this front, to be sure!
+I would say that after all of the model building is completed (which, again, did take quite a while given the rather large size of our dataset), the steps needed are super quick and simple—and the ease with which all of this happens after model building is nothing short of really awesome. I am greatly looking forward to playing around with this library on all kinds of different datasets, that's for sure! (As Dr. Mattingly noted in his [second video]((https://www.youtube.com/watch?v=rmWI3xu9SII)), there are some parameters in Top2Vec [specifically the ["speed" and "workers"](https://top2vec.readthedocs.io/en/latest/api.html) ones] that could potentially speed up different parts of the process) that I should tweak and play around with a little bit to see what the effects are in the final visualizations and clustering of topics. More to come on this front, to be sure!
