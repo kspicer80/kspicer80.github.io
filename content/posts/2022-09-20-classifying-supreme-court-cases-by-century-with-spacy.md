@@ -7,6 +7,7 @@ images:
 tags:
   - python
   - spaCy
+  - spaCy TextClassifier
   - text classification
   - digital humanities
   - dh
