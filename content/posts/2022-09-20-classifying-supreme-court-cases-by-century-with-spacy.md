@@ -62,7 +62,7 @@ This gives us a nice dataframe with a shape of ```(63347, 42)```. Each of the Co
 
 After some text cleaning using some of standard data cleaning functions, we could do a little teeny-tiny bit of exploratory EDA on our cleaned-up data:
 
-![Figure 1]
+![Figure 1](/images/imgforblogposts/post_25/figure_1.png)
 
 ![Figure 2](/images/imgforblogposts/post_25/figure_2_value_counts_of_our_labels.png)
 
@@ -96,21 +96,67 @@ def train(model, train_data, optimizer, batch_size=8):
     random.seed(1)
     random.shuffle(train_data)
 
-    # train_data is a list of tuples [(text0, label0), (text1, label1), ...]
     for batch in minibatch(train_data, size=batch_size):
-        # Split batch into text and labels
         for text, labels in batch:
             doc = nlp.make_doc(text)
             example = Example.from_dict(doc, labels)
-            # TODO: Update model with texts and labels
             nlp.update([example], sgd=optimizer, losses = losses)
 
     return losses
   ```
 
+With the training function written, we can start the model learning!
+
+``` python
+spacy.util.fix_random_seed(1)
+random.seed(1)
+
+optimizer = nlp.begin_training()
+losses = train(nlp, train_data, optimizer)
+print(losses['textcat'])
+```
+
   Of course, if one wants to save the trained model, that's simply enough too with spaCy: ```nlp.to_disk('saved_spacy_model')```.
 
-Let's see what happens when we feed it a text the model hasn't seen before. Given that the [bulk_scotus repo](https://github.com/brianwc/bulk_scotus) only goes up to 2015, why don't we give it a much more recent opinion? (The two recent texts are in the ```texts_for_testing``` for the main repo.
+Let's see what happens when we feed it a text the model hasn't seen before. Given that the [bulk_scotus repo](https://github.com/brianwc/bulk_scotus) only goes up to 2015, why don't we give it a much more recent opinion? (The two recent texts are in the ```texts_for_testing``` for the main repo.) We'll read 'em and see what the model thinks:
+
+``` python
+with open('./texts_for_testing/test_text.json', encoding="utf-8") as f:
+    test_text = json.load(f)
+
+opinion_of_text = test_text['plain_text']
+spacy_doc = nlp(opinion_of_text)
+spacy_doc.cats
+```
+
+``` python
+{'1700': 2.4846047381288372e-05,
+ '1800': 6.585433993677725e-07,
+ '1900': 4.132466528972145e-06,
+ '2000': 0.9999703168869019}
+```
+
+The model seems pretty sure it's from the 2000s. What about another one?
+
+``` python
+with open('./texts_for_testing/test_text_1.json', encoding='utf-8') as f:
+    test_text_1 = json.load(f)
+
+opinion_of_text_01 = test_text_1['plain_text']
+spacy_doc_01 = nlp(opinion_of_text_01)
+spacy_doc_01.cats
+```
+
+Again, pretty sure:
+
+``` python
+{'1700': 3.817029937636107e-05,
+ '1800': 5.630177923876545e-08,
+ '1900': 2.2707074549543904e-06,
+ '2000': 0.9999594688415527}
+```
+
+These numbers seem really high, so it gets one wondering quite a bit here.
 
 
 
