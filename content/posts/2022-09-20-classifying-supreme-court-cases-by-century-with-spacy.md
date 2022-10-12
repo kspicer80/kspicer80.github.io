@@ -117,7 +117,7 @@ losses = train(nlp, train_data, optimizer)
 print(losses['textcat'])
 ```
 
-  Of course, if one wants to save the trained model, that's simply enough too with spaCy: ```nlp.to_disk('saved_spacy_model')```.
+  Of course, if one wants to save the trained model, that's simple enough too with spaCy: ```nlp.to_disk('saved_spacy_model')```.
 
 Let's see what happens when we feed it a text the model hasn't seen before. Given that the [bulk_scotus repo](https://github.com/brianwc/bulk_scotus) only goes up to 2015, why don't we give it a much more recent opinion? (The two recent texts are in the ```texts_for_testing``` for the main repo.) We'll read 'em and see what the model thinks:
 
