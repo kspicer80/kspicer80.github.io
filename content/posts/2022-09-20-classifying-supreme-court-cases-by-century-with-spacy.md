@@ -108,7 +108,9 @@ Everything looks good so we can use sklearn's [```train_test_split```](https://s
 X_train, X_valid, y_train, y_valid = train_test_split(resampled_df["text"].values, resampled_df["label"].values, test_size=0.3)
 ```
 
-Once that is done we feed these sets to our ```make_docs``` function:
+  Of course, if one wants to save the trained model, that's simple enough too with spaCy: ```nlp.to_disk('saved_spacy_model')```.
+
+Let's see what happens when we feed it a text the model hasn't seen before. Given that the [bulk_scotus repo](https://github.com/brianwc/bulk_scotus) only goes up to 2015, why don't we give it a much more recent opinion? (The two recent texts are in the ```texts_for_testing``` for the main repo.) We'll read 'em and see what the model thinks:
 
 ``` python
 tqdm(make_docs(list(zip(X_train, y_train)), "train.spacy", cats=cats))
