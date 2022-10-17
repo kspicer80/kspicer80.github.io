@@ -118,7 +118,7 @@ print("Finished making all the docs!")
 
 Using a very simple little [python script](https://github.com/kspicer80/spacy_text_cat/blob/main/training_script.py), we can set the model training—the results of which look like the following:
 
-![spacy_cli_training_screenshot](../../static/images/imgforblogposts/post_25/spacy_training_screenshot.png)
+![spacy_cli_training_screenshot](/images/imgforblogposts/post_25/spacy_training_screenshot.png)
 
 Now we want to do some evaluating of the classifer model we've created. I selected out a number of different opinions from each of the four centuries and ran them through the model (the full notebook is available [here](https://github.com/kspicer80/spacy_text_cat/blob/main/model_evaluation.ipynb)). One could easily clean-up the output here a little bit to make things easier to read—the model outputs numbers for each of the four classes, with a score 1.0 being a high likelihood that the opinion was from that century:
 
