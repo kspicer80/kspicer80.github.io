@@ -1,5 +1,5 @@
 ---
-title: "Training a SpaCy Text Classifier on Supreme Court Opinions"
+title: "Training a SpaCy Text Classifier on Supreme Court Opinions: Classifying Opinions by Century"
 date: 2022-10-17 00:01:00
 draft: false
 toc: false
@@ -125,6 +125,12 @@ Now we want to do some evaluating of the classifer model we've created. I select
 ``` python
 {'1764_84587': {'1700': 1.0, '1800': 7.777257948760052e-09, '1900': 2.8018092301806703e-16, '2000': 9.425196398636101e-20}, '1783_84599': {'1700': 0.32349979877471924, '1800': 0.034033384174108505, '1900': 0.16195958852767944, '2000': 0.4805071949958801}, '1944_103915': {'1700': 0.0, '1800': 0.0, '1900': 1.0, '2000': 0.0}, '1880_90030': {'1700': 0.0, '1800': 1.0, '1900': 0.0, '2000': 0.0}, '1850_86508': {'1700': 1.708175368559873e-25, '1800': 1.0, '1900': 0.0, '2000': 0.0}, '1764_84586': {'1700': 0.9460902810096741, '1800': 0.0035104146227240562, '1900': 0.021581759676337242, '2000': 0.028817567974328995}, '1985_111301': {'1700': 0.0, '1800': 0.0, '1900': 1.0, '2000': 0.0}, '2022_opinion_2': {'1700': 5.568387912354698e-38, '1800': 5.690646799485532e-28, '1900': 1.0, '2000': 3.485777328789978e-31}, '1865_87621': {'1700': 2.6655867259250954e-05, '1800': 0.9999731779098511, '1900': 7.38305203640266e-08, '2000': 5.533585308720168e-12}, '1902_95542': {'1700': 3.664196701011874e-18, '1800': 1.0, '1900': 5.649902491268908e-18, '2000': 3.246556751151545e-34}, '1764_2381788': {'1700': 0.384422242641449, '1800': 0.038189876824617386, '1900': 0.2620941698551178, '2000': 0.31529369950294495}, '1920_99495': {'1700': 0.0, '1800': 4.156211399347631e-12, '1900': 1.0, '2000': 6.179726227672443e-43}, '1898_94785': {'1700': 5.021724189773055e-15, '1800': 1.0, '1900': 7.398553538091516e-17, '2000': 1.226735308388623e-24}, '1783_84600': {'1700': 1.0, '1800': 9.028870096017272e-09, '1900': 1.044657360615986e-09, '2000': 5.815799231090324e-11}, '1963_106601': {'1700': 0.0, '1800': 0.0, '1900': 1.0, '2000': 0.0}, '2022_opinion_1': {'1700': 2.396220373995437e-43, '1800': 2.923387118178614e-29, '1900': 1.0, '2000': 7.380723387276827e-21}, '1804_84713': {'1700': 3.133987236392244e-10, '1800': 1.0, '1900': 0.0, '2000': 0.0}}
 ```
+
+Actually, there's a nice little library available through ```pip``` that take a dataframe and export it as a .png (see docs for ```dataframe-image``` [here](https://pypi.org/project/dataframe-image/)):
+
+![test_table_png_file](/images/imgforblogposts/post_25/test_table_png_file.png)
+
+That looks much nicer and way easier to read.
 
 The model correctly classified 76% of the opinions correctly—13 out of 17. Not bad, I suppose. It would be interesting to see what would happen if we didn't deal with the [data imbalance](https://developers.google.com/machine-learning/data-prep/construct/sampling-splitting/imbalanced-data) problem and simply fed it the 135 samples from the 1700s along with the full data from the 1800s, 1900s, and 2000s. Sounds like a nice little to check out when I get some more free time here.
 
