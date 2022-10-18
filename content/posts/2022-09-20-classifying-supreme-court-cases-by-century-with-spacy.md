@@ -20,7 +20,7 @@ tags:
 
 Continuing some work with the Supreme Court databases I've been fiddling around with lately, I was wondering if I could get a machine learning model to be able to correctly identify and classify a Supreme Court opinion by the decade in which it was written. So let's grab some data and see what we can do!
 
-There is a really wonderful [github repo](https://github.com/brianwc/bulk_scotus) that contains the .json files of all the Supreme Court cases made available through the [CourtListener API](https://www.courtlistener.com/api/). I forked this repo and then proceeded to do some basic data gathering/wrangling (all the code for this project is in my repo [here](https://github.com/kspicer80/ussc_text_classification)) First, our libraries:
+There is a really wonderful [github repo](https://github.com/brianwc/bulk_scotus) that contains the .json files of all the Supreme Court cases made available through the [CourtListener API](https://www.courtlistener.com/api/). I forked this repo and then proceeded to do some basic data gathering/wrangling (all the code for the data wrangling and exploratory data analysis (EDA) are available in the the repo folder [here](https://github.com/kspicer80/spacy_text_cat/tree/main/data_wrangling_and_eda)) First, our libraries:
 
 ``` python
 import json
@@ -216,6 +216,6 @@ Actually, there's a nice little library available through ```pip``` that takes a
 
 That looks much nicer and way easier to read.
 
-The model correctly classified 76% of the opinions correctly—13 out of 17. Not bad, I suppose. It would be interesting to see what would happen if we didn't deal with the [data imbalance](https://developers.google.com/machine-learning/data-prep/construct/sampling-splitting/imbalanced-data) problem and simply fed it the 135 samples from the 1700s along with the full data from the 1800s, 1900s, and 2000s. Sounds like a nice little to check out when I get some more free time here.
+The model correctly classified 76% of the opinions correctly—13 out of 17. Not bad, I suppose. It would be interesting to see what would happen if we didn't deal with the [data imbalance](https://developers.google.com/machine-learning/data-prep/construct/sampling-splitting/imbalanced-data) problem and simply fed it the 135 samples from the 1700s along with the full data from the 1800s, 1900s, and 2000s. Sounds like a nice little thing to check out when I get some more free time here.
 
 More to come, as always, I'm sure.
