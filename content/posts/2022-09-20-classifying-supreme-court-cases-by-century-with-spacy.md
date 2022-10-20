@@ -1,6 +1,7 @@
 ---
 title: "Training a SpaCy Text Classifier on Supreme Court Opinions: Classifying Opinions by Century"
 date: 2022-10-17 00:01:00
+lastmod: 2022-10-20 11:16:00
 draft: false
 toc: false
 images:
@@ -219,3 +220,5 @@ That looks much nicer and way easier to read.
 The model correctly classified 76% of the opinions correctly—13 out of 17. Not bad, I suppose. It would be interesting to see what would happen if we didn't deal with the [data imbalance](https://developers.google.com/machine-learning/data-prep/construct/sampling-splitting/imbalanced-data) problem and simply fed it the 135 samples from the 1700s along with the full data from the 1800s, 1900s, and 2000s. Sounds like a nice little thing to check out when I get some more free time here.
 
 More to come, as always, I'm sure.
+
+[Update as of Thursday, October 20th, 2022: Increasing the number of samples from the 1800s, 1900s, and 2000s did not result in any increase in terms of accuracy—still 13 out of 17.]
