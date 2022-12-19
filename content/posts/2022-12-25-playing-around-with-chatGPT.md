@@ -18,10 +18,10 @@ So, like so many ([here](https://medium.com/geekculture/hey-chatgpt-solve-these-
 
 The bot spit out the following code snippet utilizing Python's standard [datetime library](https://docs.python.org/3/library/datetime.html), using a simple ```while``` loop:
 
-![first_sceenshot](../../static/images/imgforblogposts/post_26/screenshot_1.png)
+![first_sceenshot](/images/imgforblogposts/post_26/screenshot_1.png)
 
 What I also really liked about this was that if you switch up the language of the initial query, you get a slightly different answer. In the question about I didn't ask it to put the dates in a list, but simply to "print out those dates." If you change it up slightly—"How do I print out a list of dates for every Monday, Wednesday, Friday, and Sunday in a range of dates between January 11th and May 20th?"—you get the following:
 
-![second_screenshot](../../static/images/imgforblogposts/post_26/screenshot_2.png)
+![second_screenshot](/images/imgforblogposts/post_26/screenshot_2.png)
 
 How cool is it that the thing produces code commentary as well? Really sick—that's for darn sure! Admittedly, pitching it a coding problem might not seem like all that hard of a pitch to hit out the park. Even still. I'm greatly looking forward to continuing to play around with this thing.
