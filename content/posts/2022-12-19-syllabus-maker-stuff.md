@@ -1,6 +1,6 @@
 ---
 title: "Automating Syllabus Updating"
-date: 2022-12-20 00:13:12
+date: 2022-12-19 00:13:12
 draft: false
 toc: false
 images:
