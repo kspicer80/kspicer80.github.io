@@ -20,7 +20,7 @@ The bot spit out the following code snippet utilizing Python's standard [datetim
 
 ![first_sceenshot](/images/imgforblogposts/post_26/screenshot_1.png)
 
-What I also really liked about this was that if you switch up the language of the initial query, you get a slightly different answer. In the question about I didn't ask it to put the dates in a list, but simply to "print out those dates." If you change it up slightly—"How do I print out a list of dates for every Monday, Wednesday, Friday, and Sunday in a range of dates between January 11th and May 20th?"—you get the following:
+What I also really liked about this was that if you switch up the language of the initial query, you get a slightly different answer. In the question about I didn't ask it to put the dates in a list, but simply to "print out those dates." If you change it up slightly—"How do I print out a list of dates for every Monday, Wednesday, Friday, and Sunday in a range of dates between January 11th and May 20th?"—you get the following (which utilizes the [```rrule```](https://dateutil.readthedocs.io/en/stable/rrule.html) function from the ```dateutil``` [library](https://dateutil.readthedocs.io/en/stable/index.html))(there's always more than one to skin a cat, as one might say):
 
 ![second_screenshot](/images/imgforblogposts/post_26/screenshot_2.png)
 
