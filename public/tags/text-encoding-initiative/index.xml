@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Text Encoding Initiative on Digital Forays</title>
+    <link>https://kspicer80.github.io/tags/text-encoding-initiative/</link>
+    <description>Recent content in Text Encoding Initiative on Digital Forays</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Sun, 15 May 2022 00:16:00 +0000</lastBuildDate><atom:link href="https://kspicer80.github.io/tags/text-encoding-initiative/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Turn of the Screw TEI-Encoded (pure HTML)</title>
+      <link>https://kspicer80.github.io/posts/2022-05-16-hj_tots_full_version_13/</link>
+      <pubDate>Sun, 15 May 2022 00:16:00 +0000</pubDate>
+      
+      <guid>https://kspicer80.github.io/posts/2022-05-16-hj_tots_full_version_13/</guid>
+      <description>&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;!DOCTYPE html&gt; &lt;italic&gt;The Turn of the Screw The Turn of the Screw By Henry James Encoded by: &amp;nbsp;Dr. Kevin Andrew Spicer Originally made public by Project Gutenberg—taken from their version of the text. Prologue: ¶1 The story had held us, round the fire, sufficiently breathless, but except the obvious remark that it was gruesome, as, on Christmas Eve in an old house, a strange tale should essentially be, I remember no comment uttered till somebody happened to say that it was the only case he had met in which such a visitation had fallen on a child.</description>
+    </item>
+    
+    <item>
+      <title>Transforming TEI XML of _The Turn of the Screw_ into HTML</title>
+      <link>https://kspicer80.github.io/posts/2022-05-15-more-tots-hmtl-testing_introductory_post_12/</link>
+      <pubDate>Sun, 15 May 2022 00:15:00 +0000</pubDate>
+      
+      <guid>https://kspicer80.github.io/posts/2022-05-15-more-tots-hmtl-testing_introductory_post_12/</guid>
+      <description>All right, so let&amp;rsquo;s do a little bit of testing of the whole XML through XSLT process to get an HTML version of James&amp;rsquo;s The Turn of the Screw with all my colored tags for it.
+The original .xml and .xsl file are up and available in the GitHub repo.
+And without further ado, here we go!</description>
+    </item>
+    
+    <item>
+      <title>Text Encoding Initiative (TEI) Fun with Henry James&#39;s _The Turn of the Screw_</title>
+      <link>https://kspicer80.github.io/posts/2022-04-20-tei-encoding-with-henry-james_11/</link>
+      <pubDate>Wed, 20 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://kspicer80.github.io/posts/2022-04-20-tei-encoding-with-henry-james_11/</guid>
+      <description>My English Department colleague, Dr. Anna Ioanes, is teaching the standard course in &amp;ldquo;Critical Theory&amp;rdquo; this semester and students have been working their way through Henry James&amp;rsquo;s The Turn of the Screw over the last few weeks. Somehow—not exactly sure how—I managed to forget how incredibly rich this text is and this is not even to mention the rich secondary criticism produced by this short little novella. Inspired—once again—by some posts from Jonathan Reeve over at Columbia (specifically, his nice write-up about sentence lengths in James along with his encoded .</description>
+    </item>
+    
+    <item>
+      <title>Using Vector Space Models with Shakespeare&#39;s Plays</title>
+      <link>https://kspicer80.github.io/posts/2022-03-29-vector-space-models-and-shakespeare_09/</link>
+      <pubDate>Mon, 28 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://kspicer80.github.io/posts/2022-03-29-vector-space-models-and-shakespeare_09/</guid>
+      <description>Much of the toe-dipping into this new DH field I&amp;rsquo;ve been doing as of late has centered around learning many of the kinds of projects carried out and then turning the methods within those projects onto mew artifacts. A while back I worked my way through Folgert Karsdorp, Mike Kestemont, and Allen Riddell&amp;rsquo;s Humanities Data Analysis: Case Studies with Python. I found a great deal of it thought-provoking and fascinating—especially the chapters devoted to modeling texts with vector spaces and the later chapter on stylometry, which focused on some texts by Hildegard of Bingen and Bernard of Clairvaux.</description>
+    </item>
+    
+  </channel>
+</rss>

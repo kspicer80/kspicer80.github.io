@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>HUGO shortcodes on Digital Forays</title>
+    <link>https://kspicer80.github.io/tags/hugo-shortcodes/</link>
+    <description>Recent content in HUGO shortcodes on Digital Forays</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Sun, 29 May 2022 17:51:00 +0000</lastBuildDate><atom:link href="https://kspicer80.github.io/tags/hugo-shortcodes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fetching Data from a TOML File into a HUGO Table</title>
+      <link>https://kspicer80.github.io/posts/2022-05-29-toml-data-to-hugo-table_17/</link>
+      <pubDate>Sun, 29 May 2022 17:51:00 +0000</pubDate>
+      
+      <guid>https://kspicer80.github.io/posts/2022-05-29-toml-data-to-hugo-table_17/</guid>
+      <description>Continuing to learn the whole HUGO ecosystem here, I figured I would try a little testing of some things. What if I had a bunch of data in a simple .json or .toml or .yaml or whatever file and wanted to pull/fetch data from that file into one of my posts? I did have some data from the last post about Henry James&amp;rsquo;s use of certain words that we used to generate some of the graphs.</description>
+    </item>
+    
+  </channel>
+</rss>

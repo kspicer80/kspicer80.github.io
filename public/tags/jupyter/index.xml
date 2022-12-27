@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>jupyter on Digital Forays</title>
+    <link>https://kspicer80.github.io/tags/jupyter/</link>
+    <description>Recent content in jupyter on Digital Forays</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Mon, 19 Dec 2022 00:13:12 +0000</lastBuildDate><atom:link href="https://kspicer80.github.io/tags/jupyter/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Automating Syllabus Updating</title>
+      <link>https://kspicer80.github.io/posts/2022-12-19-syllabus-maker-stuff/</link>
+      <pubDate>Mon, 19 Dec 2022 00:13:12 +0000</pubDate>
+      
+      <guid>https://kspicer80.github.io/posts/2022-12-19-syllabus-maker-stuff/</guid>
+      <description>In my previous post I mentioned off-handedly the task of updating the dates on my syllabi as I transition from the Fall to the Spring to the Summer semesters. I figured I would post some of the code to help out with this tiny little mini-project. (All the code for this is available in the following repository.)
+I have a pretty simple Canvas main page that has all the dates, readings, and assignments laid out in a simple little table—all on one main page:</description>
+    </item>
+    
+  </channel>
+</rss>
