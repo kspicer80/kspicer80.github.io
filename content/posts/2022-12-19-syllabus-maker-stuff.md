@@ -1,7 +1,7 @@
 ---
 title: "Automating Syllabus Updating"
 date: 2022-12-19 00:13:12
-lastmod: 2022-12-27 07:57:00
+lastmod: 2022-12-27 05:00:00
 draft: false
 toc: false
 images:
