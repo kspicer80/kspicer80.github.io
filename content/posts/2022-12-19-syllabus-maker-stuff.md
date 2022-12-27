@@ -6,7 +6,7 @@ draft: false
 toc: false
 images:
 tags:
-  - datetime
+  - datetime library
   - syllabus creation
   - markdown
   - python
