@@ -1,6 +1,7 @@
 ---
 title: "Automating Syllabus Updating"
 date: 2022-12-19 00:13:12
+lastmod: 2022-12-27 07:57:00
 draft: false
 toc: false
 images:
@@ -33,4 +34,6 @@ We thus get a really nice little Markdown file that converts to an equally nice 
 
 Further tweaks could be made if you've got other information that needs to be changed from semester to semester (i.e. assignments, due dates, etc.) I haven't yet gotten the Canvas shell ported over from the previous semester, but it would be nice to also provide all of the links (to the readings or to the assignment pages) within the Markdown file as well. A task for another day, for sure!
 
-I suppose— now that I think about it—I should actually go and see if there's a way to handle all of this natively from within the Canvas LMS. That said, I like to do it on my own first, so even if there's a way to do all from within Canvas, it's fun to try out solutions of one's own to the problem even when the system might already have a way to handle it. That too is no doubt a little journey for another time as well. I would imagine there's some setting when the courses are migrated from one semester shell to another to handle the date changes, but since this information is stored in an actual "page" of its own within the shell, I'm not sure if there's a function to deal with that. I know there's a function to shift the "due dates" for assignments, but this content in the "Reading Schedule" table is in a slightly different spot ... Ah, as I say: further sleuthing is in order!
+I suppose—now that I think about it—I should actually go and see if there's a way to handle all of this natively from within the Canvas LMS. That said, I like to do it on my own first, so even if there's a way to do all from within Canvas, it's fun to try out solutions of one's own to the problem even when the system might already have a way to handle it. That too is no doubt a little journey for another time as well. I would imagine there's some setting when the courses are migrated from one semester shell to another to handle the date changes, but since this information is stored in an actual "page" of its own within the shell, I'm not sure if there's a function to deal with that. I know there's a function to shift the "due dates" for assignments, but this content in the "Reading Schedule" table is in a slightly different spot ... Ah, as I say: further sleuthing is in order!
+
+(Update as of December 27th, 2022: A fuller treatment of the above—including changes to the assignment links in the table—is available in a Jupyter notebook [here](https://nbviewer.org/github/kspicer80/syllabi_maker_stuff/blob/main/sample_script.ipynb) with the original repo for everything [here](https://github.com/kspicer80/syllabi_maker_stuff).)
