@@ -1,6 +1,7 @@
 ---
 title: "Interacting with the Canvas Live API"
 date: 2023-01-13 00:06:12
+lastmod: 2022-01-27 06:39:00
 draft: false
 toc: false
 tags:
