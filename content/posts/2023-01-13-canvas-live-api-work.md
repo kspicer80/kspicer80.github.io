@@ -1,7 +1,7 @@
 ---
 title: "Interacting with the Canvas Live API"
 date: 2023-01-13 00:06:12
-lastmod: 2022-01-17 12:39:00
+lastmod: 2022-01-25 09:24:00
 draft: false
 toc: false
 tags:
@@ -98,7 +98,7 @@ It strikes me as perhaps much easier to deal directly with the Instructure API r
 
 (All code and sample testing data for this post is available in the following [repository](https://github.com/kspicer80/canvas_api_for_grading_and_commenting).)
 
-##### Addendum, Tuesday, 17 January 2023:
+##### Addendum #1, Tuesday, 17 January 2023:
 
 After spending a couple of days working on writing some functions to handle all of this—included a big one that contains all of the sub-functions necessary to read in a datafile and then upload everything to the proper place, I found myself noticing an odd and peculiar little illusion in my thinking. I know that so much in data analytics and science is data wrangling, getting data into some kind of structured format that you can then do something with, obviously. One could say that the data coming from the Instructure API is incredibly well-structured. I think that's pretty much true. Thus, in working directly with the API, one doesn't need to do a ton of data wrangling, although you do have to do some, especially in terms of getting the data structured so that the API gets the data it's expected, i.e. like with the ```grade_data['text_comment']``` and ```grade_data['posted_score']``` dictionary keys, etc. But all in all, not much wrangling. Now, of course, when you use the ucfopen python wrapper, the data that's being utilized by the wrapper is just as structured as when you don't work through the wrapper. But for some reason, that feels not to be the case—and I really haven't the foggiest idea why. 
 
@@ -122,3 +122,62 @@ student_03_first_name student_03_middle_name student_03_last_name (student_id)
 ```
 
 Of course, when going directly to the API, there's a richness of information, comparatively speaking, that the wrapper doesn't provide ... which I'm sure is by design, for sure. If one wants to dig deeper, then more function calls are in order. Maybe this all isn't that sophisticated. If one can get to their destination while only moving through one hoop (rather, than, say, another path that requires two or three of four hoops), then it would seem pretty to simple that the shorter route is preferable. Don't get me wrong, I love the canvasapi library—it started me on many of journeys here on this Digital Forays blog, but I'm seeing the usefulness of being able to take slightly more direct paths. It may not have anything at all to do—really—with the structured (or unstructured) nature of the data (as, in this case, the data is structured either way), bit perhaps more to do with how the data is being accessed ... as I say, I'll have to continue stewing on this a bit more.
+
+##### Addendum #2, Wednesday, 25 January 2023:
+
+Here's a full script to handle the uploading of grades and comments utilizing data in two ```.json``` files where the data is housed ...:
+
+``` python
+# Script to Upload Discussion Board Comments for Weekly Student Posts
+import json
+import requests
+
+API_KEY = # your Instructure Canvas API key goes here
+header_argument = {"Authorization": "Bearer " + API_KEY}
+
+course_number_id = # Canvas course number here ...
+
+section_d_assignment_number = #assignment number if the course is split up into sections
+section_e_assignment_number = # same as above—you can add as many variables here as required by your own use case ...
+
+def create_dictionary_for_upload(json_data_file):
+    dict_for_upload = {}
+
+    for i in range(len(json_data_file['grade_data'])):
+        id = json_data_file['grade_data'][i]['student_id']
+        score = json_data_file['grade_data'][i]['posted_grade']
+        comment = json_data_file['grade_data'][i]['text_comment']
+        dict_for_upload[f'grade_data[{id}][posted_grade]'] = f"{score}"
+        dict_for_upload[f'grade_data[{id}][text_comment]'] = f"{comment}"
+    
+    return dict_for_upload
+
+def load_json_datafile(file_path):
+    with open(file_path, 'r') as f:
+        section_datafile = json.load(f)
+    return section_datafile
+
+# The following function will get rid of all dictionaries for students who haven't anything to grade ...
+def remove_specific_keys_if_empty(my_dict):
+    my_dict = {key: value for key, value in my_dict.items() if key not in ('posted_grade','text_comment') or value != ''}
+    return my_dict
+
+def post_the_data(data_dict_to_upload, course_number_id, section_assignment_number):
+    section_response = requests.post(
+      # API address goes here, 
+      headers=header_argument, data=data_dict_to_upload)
+
+def process_and_upload(filepath, course_id_number, section_assignment_number):
+    json_data = load_json_datafile(filepath)
+    initial_dict = create_dictionary_for_upload(json_data)
+    dict_for_upload = remove_specific_keys_if_empty(initial_dict)
+    post_the_data(dict_for_upload, course_id_number, section_assignment_number)
+
+section_d_filepath = # filepath for the .json file with the data to upload
+section_e_filepath = # same as above ...
+
+process_and_upload(section_d_filepath, course_number_id, section_d_assignment_number)
+process_and_upload(section_e_filepath, course_number_id, section_e_assignment_number)
+```
+
+There it is ... all nice and clean and tidy—and in a very, very small number of lines of code ... 
