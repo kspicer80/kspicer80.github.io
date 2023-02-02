@@ -1,0 +1,9 @@
+{{/* Bokeh shortcode */}}
+{{$url := .Get "file"}}
+{{$height := .Get "height"}}
+{{$width := .Get "width"}}
+{{$id := .Get "id"}}
+
+{{ with $url }}
+<iframe src="{{ . }}" {{ with $height }}height="{{ . }}"{{ end }} {{ with $width }}width="{{ . }}"{{ end }} frameborder="0"></iframe>
+{{ end }}
