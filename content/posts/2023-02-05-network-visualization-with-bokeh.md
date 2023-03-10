@@ -18,6 +18,4 @@ tags:
 
 Just testing the interactive bokeh plot here:
 
-<div>
-  {{< bokeh_plot_specific_shortcode file="static/html/2023-02-05-bokeh-plot.html" >}}
-</div>
+{{< bokeh_plot_specific_shortcode file="static/html/2023-02-05-bokeh-plot.html" >}}
