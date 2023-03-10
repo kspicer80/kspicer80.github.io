@@ -25,9 +25,7 @@ paginate = 10
   keywords = "homepage, blog"
   images = [""]
 
-  customCSS = ["/css/style.css",
-              "/css/tufte_css_tweaked.css",
-              "/css/tufte.css"]
+  customCSS = ["/css/style.css"]
 
 [taxonomies]
     category = "blog"
