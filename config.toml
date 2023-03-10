@@ -26,7 +26,8 @@ paginate = 10
   images = [""]
 
   customCSS = ["/css/style.css",
-              "/css/tufte_css_tweaked.css"]
+              "/css/tufte_css_tweaked.css",
+              "/css/tufte.css"]
 
 [taxonomies]
     category = "blog"
