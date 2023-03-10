@@ -2,7 +2,7 @@
 title: "Network Graph Visualization with Bokeh"
 date: 2023-01-13 00:06:12
 lastmod: 2022-01-25 09:24:00
-draft: true
+draft: false
 toc: false
 tags:
   - json
@@ -16,7 +16,7 @@ tags:
   - bokeh
 ---
 
-
+Just testing the interactive bokeh plot here:
 
 <div>
   {{< bokeh file="static/html/2023-02-05-bokeh-plot.html" >}}
