@@ -145,7 +145,7 @@ ul {
 p {
     margin-top: 1.4rem;
     margin-bottom: 1.4rem;
-    padding-right: 200px;
+    padding-right: 200px !important;
     vertical-align: baseline;
 }
 
