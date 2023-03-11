@@ -147,6 +147,7 @@ p {
     margin-bottom: 1.4rem;
     padding-right: 200px !important;
     vertical-align: baseline;
+    max-width: 2000px;
 }
 
 /* Chapter Epigraphs */
