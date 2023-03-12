@@ -1,5 +1,5 @@
 ---
-title: "Network Graph Visualization with Bokeh"
+title: "Network Graph Visualization with Bokeh (Testing)"
 date: 2023-01-13 00:06:12
 lastmod: 2022-01-25 09:24:00
 draft: false
@@ -18,6 +18,7 @@ tags:
 
 Just testing the interactive bokeh plot here:
 
+<div>
 <embed
        type="text/html"
        src="/images/imgforblogposts/post_29/test_plot.html"
@@ -25,5 +26,6 @@ Just testing the interactive bokeh plot here:
        height="600"
        >
 </embed>
+</div>
 
 Again, all help for this goes to Barry Sunderland over [here](https://barrysunderland.com/blog/embedding-bokeh-plots.html#static-bokeh-as-a-static-file).
