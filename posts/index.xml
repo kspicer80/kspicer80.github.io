@@ -112,15 +112,9 @@
 </span></span><span style="display:flex;"><span>process_and_upload(section_d_filepath, course_number_id, section_d_assignment_number)
 </span></span><span style="display:flex;"><span>process_and_upload(section_e_filepath, course_number_id, section_e_assignment_number)
 </span></span></code></pre></div><p>There it is &hellip; all nice and clean and tidy—and in a very, very small number of lines of code &hellip;</p>
-]]></content></item><item><title>Network Graph Visualization with Bokeh</title><link>https://kspicer80.github.io/posts/2023-02-05-network-visualization-with-bokeh/</link><pubDate>Fri, 13 Jan 2023 00:06:12 +0000</pubDate><guid>https://kspicer80.github.io/posts/2023-02-05-network-visualization-with-bokeh/</guid><description>Just testing the interactive bokeh plot here:
-&amp;lt;embed type=&amp;ldquo;text/html&amp;rdquo; src=&amp;quot;/images/imgforblogposts/post_29/test_plot.html&amp;quot; width=&amp;ldquo;1100&amp;rdquo; height=&amp;ldquo;600&amp;rdquo; &amp;gt; Again, all help for this goes to Barry Sunderland over here.</description><content type="html"><![CDATA[<p>Just testing the interactive bokeh plot here:</p>
-<p>&lt;embed
-type=&ldquo;text/html&rdquo;
-src=&quot;/images/imgforblogposts/post_29/test_plot.html&quot;
-width=&ldquo;1100&rdquo;
-height=&ldquo;600&rdquo;
-&gt;
-<!-- raw HTML omitted --></p>
+]]></content></item><item><title>Network Graph Visualization with Bokeh (Testing)</title><link>https://kspicer80.github.io/posts/2023-02-05-network-visualization-with-bokeh/</link><pubDate>Fri, 13 Jan 2023 00:06:12 +0000</pubDate><guid>https://kspicer80.github.io/posts/2023-02-05-network-visualization-with-bokeh/</guid><description>Just testing the interactive bokeh plot here:
+Again, all help for this goes to Barry Sunderland over here.</description><content type="html"><![CDATA[<p>Just testing the interactive bokeh plot here:</p>
+<!-- raw HTML omitted -->
 <p>Again, all help for this goes to Barry Sunderland over <a href="https://barrysunderland.com/blog/embedding-bokeh-plots.html#static-bokeh-as-a-static-file">here</a>.</p>
 ]]></content></item><item><title>Automating Syllabus Updating</title><link>https://kspicer80.github.io/posts/2022-12-19-syllabus-maker-stuff/</link><pubDate>Mon, 19 Dec 2022 00:13:12 +0000</pubDate><guid>https://kspicer80.github.io/posts/2022-12-19-syllabus-maker-stuff/</guid><description>In my previous post I mentioned off-handedly the task of updating the dates on my syllabi as I transition from the Fall to the Spring to the Summer semesters. I figured I would post some of the code to help out with this tiny little mini-project. (All the code for this is available in the following repository.)
 I have a pretty simple Canvas main page that has all the dates, readings, and assignments laid out in a simple little table—all on one main page:</description><content type="html"><![CDATA[<p>In my previous post I mentioned off-handedly the task of updating the dates on my syllabi as I transition from the Fall to the Spring to the Summer semesters. I figured I would post some of the code to help out with this tiny little mini-project. (All the code for this is available in the following <a href="https://github.com/kspicer80/syllabi_maker_stuff">repository</a>.)</p>
