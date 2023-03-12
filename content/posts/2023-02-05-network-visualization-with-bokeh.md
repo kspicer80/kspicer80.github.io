@@ -28,6 +28,6 @@ Just testing the interactive bokeh plot here:
        >
 </embed>
 </div>
-{{< rawhtml >}}
+{{< /rawhtml >}}
 
 Again, all help for this goes to Barry Sunderland over [here](https://barrysunderland.com/blog/embedding-bokeh-plots.html#static-bokeh-as-a-static-file).
