@@ -18,4 +18,10 @@ tags:
 
 Just testing the interactive bokeh plot here:
 
-{{< bokeh_plot_specific_shortcode file="/html/2023-02-05-bokeh-plot.html" >}}
+<embed
+       type="text/html"
+       src="/images/imgforblogposts/post_29/test_plot.html"
+       width="1100"
+       height="600"
+       >
+</embed>
