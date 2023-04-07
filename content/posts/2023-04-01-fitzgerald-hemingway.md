@@ -1,24 +1,35 @@
 ---
 title: "Fitzgerald ... Hemingway ... Steinbeck"
-date: 2023-04-01 00:01:00
-draft: true
+date: 2023-04-07 00:01:00
+draft: false
 toc: false
 tags:
-  - json
-  - python json library
+  - naive bayes classifier
+  - random forest classifier
+  - decision tree algorithm
+  - machine learning
+  - seaborn
+  - scikit-learn
+  - matplotlib
+  - data visualization
+  - confusion matrix
   - python
+  - spaCy
   - jupyter
   - jupyter notebooks
   - Canvas LMS
   - Canvas Instructure
   - data visualization
-  - bokeh
+  - ernest hemingway
+  - f. scott fitzgerald
+  - john steinbeck
+  - literature
+  - fiction
 ---
 
-Lately I have been spending a fair amount of time working on my portfolio for the required "Post_Tenure Review" at my current institution. I spent quite a bit of time canvassing a great deal of the DH/computer programming learning I have acquired over the last couple of years. I gave a somewhat interesting test project version of some more stylometry/text classification work,[^6] focusing quite
+Lately I have been spending a fair amount of time working on my portfolio for the required "Post_Tenure Review" at my current institution. I spent quite a bit of time canvassing a great deal of the DH/computer programming learning I have acquired over the last couple of years. I gave a somewhat interesting test project version of some more stylometry/text classification work,[^6] focusing quite directly on some work another (former) student of mine, William Mastin, and I have been doing on one of his most favorite authors, Ernest Hemingway. It would be absolutely impossible to canvas the interminable discussions we had about "Papa" as of late, but I figured I could just share some of the computational work that was tangentially related to this endeavor.
 
-
-I would like to return to a topic of discussion that I discussed already when chronicling William's work with me on Hemingway. In many of those conversations, he would often draw parallels and comparisons between Hemingway and Fitzgerald (we even read very closely one of my most favorite Fitzgerald stories, "Babylon Revisited"). I was curious—could one, say, train a machine learning model to tell the difference between a text written by Hemingway and one by Fitzgerald? For sure—and what I still find so fascinating is that the way in which the models can do this are not really all that "complex" or "complicated" or "sophisticated"—at least, they are definitely not more sophisticated than when a seasoned reader can (perhaps somewhat) intuitively tell the difference immediately between Hemingway's and Fitzgerald's stylistic tendencies. So let's write a little Python code and I'll try to take readers through what's going on along each step of the process.[^2]
+I think the real impetus for much of this computational investigation was due to the fact that, in many of those conversations, William would often draw parallels and comparisons between Hemingway and Fitzgerald (we even read very closely one of my most favorite Fitzgerald stories, "Babylon Revisited"). I was curious—could one, say, train a machine learning model to tell the difference between a text written by Hemingway and one by Fitzgerald? For sure—and what I still find so fascinating about all of this is that the way in which the models can do this are not really all that "complex" or "complicated" or "sophisticated"—at least, they are definitely not more sophisticated than when a seasoned reader can (perhaps somewhat) intuitively tell the difference immediately between Hemingway's and Fitzgerald's stylistic tendencies. So let's write a little Python code and I'll try to take readers through what's going on along each step of the process.[^2]
 
 The first step is data gathering, so we head over to [Project Gutenberg.org](https://gutenberg.org/) to grab texts that are available and in the public domain by both [Fitzgerald](https://gutenberg.org/ebooks/author/420) and [Hemingway](https://gutenberg.org/ebooks/author/50533).[^3] Once we have some texts that we can use to train and test the classifier models, we can start coding. We will be utilizing one of the go-to machine learning libraries within Python, [sci-kit learn](https://scikit-learn.org/stable/), an absolute staple for those working in machine learning. Thus we start with our import statements (we're also using [seaborn](https://seaborn.pydata.org/) and [matplotlib](https://matplotlib.org/) again for plotting, pandas for data wrangling, etc. [the ```load_data``` function is just a simple function to read in all the text files and keep track of the author of each text]):
 
@@ -65,7 +76,7 @@ X_train_vec = vectorizer.fit_transform(X_train)
 X_test_vec = vectorizer.transform(X_test)
 ```
 
-What the [```CountVectorizer()```](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html#sklearn.feature_extraction.text.CountVectorizer) function does is it takes all of the words in the text and converts the whole text file into just a long list of words. (This is often called a ["bag of words" representation](https://en.wikipedia.org/wiki/Bag-of-words_model) because all the program is doing is, quite literally, counting each word and how many times each word appears; everything ends up in a "bag" because this process disregards grammar and also word order too.) The second and third lines of code just apply this technique/function to both the training and testing sets—for more information, the ```.fit``` method is explained in the documentation [here](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html#sklearn.feature_extraction.text.CountVectorizer.fit) and the ```.fit_transform``` [here](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html#sklearn.feature_extraction.text.CountVectorizer.fit_transform).
+As seasoned DH folks knows, what the [```CountVectorizer()```](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html#sklearn.feature_extraction.text.CountVectorizer) function does is it takes all of the words in the text and converts the whole text file into just a long list of words. (This is often called a ["bag of words" representation](https://en.wikipedia.org/wiki/Bag-of-words_model) because all the program is doing is, quite literally, counting each word and how many times each word appears; everything ends up in a "bag" because this process disregards grammar and also word order too.) The second and third lines of code just apply this technique/function to both the training and testing sets—for more information, the ```.fit``` method is explained in the documentation [here](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html#sklearn.feature_extraction.text.CountVectorizer.fit) and the ```.fit_transform``` [here](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html#sklearn.feature_extraction.text.CountVectorizer.fit_transform).
 
 Once the text files are converted into a matrix (i.e. the data has been ["vectorized"](https://www.ritchieng.com/machine-learning-multinomial-naive-bayes-vectorization/)), one can then train a model to make predictions on the testing data. For this little project, we'll utilize a widely used algorithm that is based on "Bayes' theorem," which "describes the probability of an event, based on prior knowledge of conditions that might be related to the event."[^4] This is a very commonly used model for "text classification" problems and it thus serves our purposes here well enough.[^5] Once the model is instantiated, we can fit it on our data as follows:
 
@@ -149,11 +160,11 @@ And, once more, if we pass it a text by Steinbeck (*In Dubious Battle*) for vali
 
 ![in_dubious_battle_prediction](/images/imgforblogposts/post_30/prediction_for_s_in_dubious_battle.png)
 
-What I find so fascinating about this entire process is what I mentioned earlier, the model can seem to figure out who authored what simply by counting words and keeping track of their frequencies—nothing more sophisticated would seem to be required here. There are, of course, far more intricate algorithms and vectorizers that can be used when working with textual data (the "term-frequency inverse document frequency," TF-IDF for short, is just one example), but such sophistication seems unnecessary—at least here in this particular case. The frequency counts of words seem to be enough to distinguish between the writing of these authors. It might perhaps go without saying, but I think these developments ask those of us working within the humanities to potentially rethink how we want to talk about something like a writer's "style." Those working in literature might love to use all kinds of literary techniques, rhetorical tropes, and much more to discuss a writer's style. The machine would seem to be able to get along just fine by merely(?) counting things. As I say, I think this is incredibly thought-provoking for humanistic study more broadly.
+What I find so curious about this entire process is what I mentioned earlier, the model can seem to figure out who authored what simply by counting words and keeping track of their frequencies—nothing more sophisticated would seem to be required here. There are, of course, far more intricate algorithms and vectorizers that can be used when working with textual data (the "term-frequency inverse document frequency," TF-IDF for short, is just one example), but such sophistication seems unnecessary—at least here in this particular case. The frequency counts of words seem to be enough to distinguish between the writing of these authors. It might perhaps go without saying, but I think these developments ask those of us working within the humanities to potentially rethink how we want to talk about something like a writer's "style." Those working in literature might love to use all kinds of literary techniques, rhetorical tropes, and much more to discuss a writer's style. The machine would seem to be able to get along just fine by merely(?) counting things. As I say, I think this is incredibly thought-provoking for humanistic study more broadly—and I continue to be amazed with the results.
 
 [^1]:&nbsp;Of course, one could utilize all the rich information that would come from looking at the author's grammatical tics and preferences. A simple workflow for this would take the texts and extract all of the "parts of speech" (POS) for each word in each sentence (the [spaCy library](https://spacy.io/) is a fantastically awesome workhouse for this kind of thing); once one had "POS tagged" each sentence, those counts—of nouns, verbs, participles, direct objects (something of a big favorite of Hemingway, in particular), even the number of punctuation marks—could be used in further ["feature engineering"](https://en.wikipedia.org/wiki/Feature_engineering) the model so that it could use those numbers to make predictions. For readers that are interested in how some of the different kinds of classifier handle trying to classify texts by all three authors (Fitzgerald, Hemingway, and Steinbeck), the following [Jupyter notebook](https://github.com/kspicer80/fitzgerald_hemingway/blob/main/grammatical_parsing_for_feature_generation.ipynb) has the code and results. (As a tiny teaser here: a standard [logistic regression](https://en.wikipedia.org/wiki/Logistic_regression) model's accuracy comes back at 50%, a ["decision tree" classifier](https://en.wikipedia.org/wiki/Decision_tree_learning) hit 83%, and the ["gradient boosting machine"](https://en.wikipedia.org/wiki/Gradient_boosting) model hit perfect accuracy and was able to correctly classify texts by all three authors.)
-[^2]:&nbsp;Further code for this short project is available in the following [GitHub repo](https://github.com/kspicer80/fitzgerald_hemingway).
+[^2]:&nbsp;All the code for this short project is available in the following [GitHub repo](https://github.com/kspicer80/fitzgerald_hemingway).
 [^3]:&nbsp;Many of the works by Hemingway are not in the public domain in the US, but are in Canada. As this strikes me as a perfect case of "Fair Use," one can head over [this way](https://www.fadedpage.com/csearch.php?author=Hemingway,%20Ernest) for some of those Hemingway works.
 [^4]:&nbsp;See Wikipedia's entry on "Bayes Theorem" [here](https://en.wikipedia.org/wiki/Bayes%27_theorem). The entry on the "Naive Bayes Classifier" is also available [here](https://en.wikipedia.org/wiki/Naive_Bayes_classifier).
 [^5]:&nbsp;The implementation documentation for this in sklearn is available [here](https://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.MultinomialNB.html#sklearn.naive_bayes.MultinomialNB).
-[^6]:&nbsp;Such work has already been treated on this blog here utilizing work by Shakespeare, [Willa Cather](https://kspicer80.github.io/posts/2022-04-10-classification-fun-with-some-literary-texts_10/), and others.
+[^6]:&nbsp;Such work has already been treated on this blog here utilizing work by [Shakespeare](https://kspicer80.github.io/posts/2022-03-29-vector-space-models-and-shakespeare_09/), [Willa Cather](https://kspicer80.github.io/posts/2022-04-10-classification-fun-with-some-literary-texts_10/), and others.
