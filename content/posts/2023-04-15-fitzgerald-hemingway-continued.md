@@ -82,7 +82,7 @@ As [Rice muses](https://www.litcharts.com/blog/analitics/what-makes-hemingway/):
 I also thought we might dig into the direct object counts for Hemingway, following the intuition (again, in [Rice](https://www.litcharts.com/blog/analitics/what-makes-hemingway/)) that "Hemingway’s verbs ('punched', 'stroked', 'galloped', and so on) are visceral and active." Here are some plots of those counts:
 
 ![direct_object_counts](/images/imgforblogposts/post_31/direct_object_counts.png)
-![direct_object_and_punctuation_counts](/images/imgforblogposts/post_31/direct_object_and_punctuation_counts.png)
+![direct_object_and_punctuation_counts](/images/imgforblogposts/post_31/direct_objects_and_punctuation_counts.png)
 
 William, the student I mentioned in [my previous post](https://kspicer80.github.io/posts/2023-04-01-fitzgerald-hemingway/) who got all the wheels turning *re* Hemingway, mentioned another little odd syntactic idiosyncrasy/tic of Hemingway that I would love to be able to pull out somehow. He said that he always noticed something that he called "the Hemingway and" where we would get sentences linked by an "and" where the phrases linked by the "and" are often hard to parse—often, he said, they will veer off on tangents that are hard to keep track of. Here is a nice example from "Cat in the Rain":
 
