@@ -1,5 +1,5 @@
 ---
-title: Predictive Modeling the "OK Cupid" Dataset
+title: "Predictive Modeling with the 'OK Cupid' Dataset"
 date: 2023-04-30 00:01:00
 draft: false
 toc: false
