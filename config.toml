@@ -33,7 +33,6 @@ paginate = 10
     '<a href="https://www.linkedin.com/in/kevin-spicer-61087037"><i class="fa-brands fa-linkedin"></i></a>'
   ]
 
-
 [taxonomies]
     category = "blog"
     tag      = "tags"
