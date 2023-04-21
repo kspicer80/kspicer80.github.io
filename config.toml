@@ -30,10 +30,10 @@ paginate = 10
   [params.footer]
     author = true
     bottomText = [
-      <a href="https://https://github.com/kspicer80>GitHub Profile"</a>,
-      <a href="https://www.linkedin.com/in/kevin-spicer-61087037/">LinkedIn Profile</a>
+      "More info: <a href="https://https://github.com/kspicer80>GitHub Profile"</a>",
+      "Even more info: <a href="https://www.linkedin.com/in/kevin-spicer-61087037/">LinkedIn Profile</a>"
     ]
-    
+
 [taxonomies]
     category = "blog"
     tag      = "tags"
