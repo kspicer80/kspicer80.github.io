@@ -29,8 +29,8 @@ paginate = 10
 
 [params.footer]
   bottomText = [
-    '<a href=\"https://github.com/kspicer80\"><i class=\"fa-brands fa-square-github\"></i></a>',
-    '<a href=\"https://www.linkedin.com/in/kevin-spicer-61087037\"><i class=\"fa-brands fa-linkedin\"></i></a>'
+    "<a href=\"https://github.com/kspicer80\"><i class=\"fa-brands fa-square-github\"></i></a>",
+    "<a href=\"https://www.linkedin.com/in/kevin-spicer-61087037\"><i class=\"fa-brands fa-linkedin\"></i></a>"
   ]
 
 [taxonomies]
