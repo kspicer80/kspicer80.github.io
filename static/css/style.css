@@ -1,0 +1,17 @@
+.social-icons a {
+    margin-right: 10px; /* Adjust the number to increase or decrease the spacing */
+}
+
+.subtitle-container {
+    margin-bottom: 200px; /* Adjust the number to increase or decrease the spacing */
+}
+/*
+footer .footer-social-icons {
+    margin-right: 200px;
+}
+*/
+
+footer .footer-social-icons a:not(:last-child) {
+    margin-right: 1rem;
+  }
+  
