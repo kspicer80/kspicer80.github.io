@@ -1,9 +1,16 @@
 .social-icons a {
-    margin-right: 10px; /* Adjust the number to increase or decrease the spacing */
+    margin-right: 10px; 
+    margin-top: 50px;
 }
 
-.subtitle-container {
+.subtitle-container h2 {
     margin-bottom: 200px; /* Adjust the number to increase or decrease the spacing */
+    margin-top: 0.5rem;
+}
+
+.author-container h3 {
+    margin-bottom: 200px;
+    margin-top: 0.5rem;
 }
 /*
 footer .footer-social-icons {
@@ -13,5 +20,14 @@ footer .footer-social-icons {
 
 footer .footer-social-icons a:not(:last-child) {
     margin-right: 1rem;
-  }
-  
+}
+
+.author-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin-bottom: -175px;
+    margin-top: 50px;
+}  
+
