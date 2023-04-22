@@ -33,6 +33,22 @@ paginate = 10
     "<a href=\"https://www.linkedin.com/in/kevin-spicer-61087037\"><i class=\"fa-brands fa-linkedin\"></i></a>"
   ]
 
+[[params.social]]
+  name = "github"
+  url = "https://github.com/kspicer80"
+
+[[params.social]]
+  name = "linkedin"
+  url = "https://www.linkedin.com/in/kevin-spicer-61087037/"
+
+[[params.social]]
+  name = "email"
+  url = "mailto:kspicer@stfrancis.edu"
+
+[[params.social]]
+  name = "twitter"
+  url = "https://twitter.com/drkas5"
+
 [taxonomies]
     category = "blog"
     tag      = "tags"
@@ -60,17 +76,5 @@ paginate = 10
     name       = "Blog"
     url        = "/posts"
   
-  [[params.social]]
-    name = "github"
-    url = "https://github.com/kspicer80"
-
-    name = "linkedin"
-    url = "https://www.linkedin.com/in/kevin-spicer-61087037/"
-
-    name = "email"
-    url = "mailto:kspicer@stfrancis.edu"
-    
-    name = "twitter"
-    url = "https://twitter.com/drkas5"
 
 
