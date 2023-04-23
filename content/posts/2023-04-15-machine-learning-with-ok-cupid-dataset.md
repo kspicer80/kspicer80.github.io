@@ -17,6 +17,7 @@ tags:
   - jupyter
   - jupyter notebooks
   - codecademy
+  - codecademy capstone projects
   - data visualization
 ---
 
