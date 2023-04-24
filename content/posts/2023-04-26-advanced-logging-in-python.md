@@ -1,6 +1,6 @@
 ---
 title: "Advanced Logging in Python"
-date: 2023-04-27 00:01:00
+date: 2023-04-25 00:02:00
 draft: false
 toc: false
 tags:
@@ -11,7 +11,8 @@ tags:
   - code cleanup
   - codecademy projects
   - error messages
-  - handling errors
+  - error handling
+  - codecademy
 ---
 
 Over this past weekend I was working my through [Codecademy's](https://www.codecademy.com/) "Advanced Python 3" [course](https://www.codecademy.com/learn/learn-advanced-python), which has an initial module that introduces students to Python's [```logging``` library](https://docs.python.org/3/library/logging.html). There was a wonderful little project—"ATM Logging"—that was quite fun to tackle, especially as it made really clear why one might want to use ```logging``` instead of filling one's code with a bunch of ```print()``` statements. The setup was that we had a pretty simple little "ATM" program/script that would allow us to deposit and withdraw money—while providing some error messages to keep track of things throughout the whole process. This is what my fiddling around here looked like.
