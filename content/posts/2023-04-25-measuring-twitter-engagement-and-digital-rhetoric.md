@@ -1,6 +1,6 @@
 ---
 title: "Digital Rhetoric and Predictive Machine Learning Models on Twitter Data"
-date: 2023-04-25 00:01:00
+date: 2023-09-25 00:01:00
 draft: false
 toc: false
 tags:
@@ -22,9 +22,6 @@ tags:
   - grad-level courses
 ---
 
-Recently I came across a wonderful YouTube Channel, [Arjan Codes](https://www.youtube.com/@ArjanCodes), and I have already learned a great deal from many of his videos, tutorials, etc.
-
-[Python Type Hints](https://www.youtube.com/watch?v=dgBCEB2jVU0)
 In my ENGE 515: Digital Rhetoric graduate-level course currently running (full list of courses is available through the [USF REAL program](https://www.stfrancis.edu/real/courses/), housed within the [College of Education](https://www.stfrancis.edu/education/)), we have been getting our feet wet in this field of rhetoric focused on the realm/world of "the digital" (I do notice too now—somehow it had slipped my mind—that I [wrote a little bit already](https://kspicer80.github.io/posts/2022-05-23-grad-level-digital-rhetoric-course_14/) about how this course went last summer). This past week (Week 6), we had a read of some somewhat contemporary work in this field, namely:
 
 1. Crystal VanKooten's "Methodologies and Methods for Research in Digital Rhetoric" (available [here](https://www.enculturation.net/methodologies-and-methods-for-research-in-digital-rhetoric));

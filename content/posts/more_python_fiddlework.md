@@ -1,6 +1,6 @@
 ---
 title: "More Python/Canvas Instructure API Fiddlework"
-date: 2023-04-25 00:01:00
+date: 2023-09-22 00:01:00
 draft: true
 toc: false
 tags:
@@ -16,4 +16,4 @@ tags:
 
 Recently I came across a wonderful YouTube Channel, [Arjan Codes](https://www.youtube.com/@ArjanCodes), and I have already learned a great deal from many of his videos, tutorials, etc.
 
-[Python Type Hints](https://www.youtube.com/watch?v=dgBCEB2jVU0)
+[Python Typing Hints](https://www.youtube.com/watch?v=dgBCEB2jVU0)
