@@ -148,7 +148,7 @@ Or, if we wanted the [plotly](https://plotly.com/python/) image with all the "ho
 <div>
 <embed
        type="text/html"
-       src="/images/imgforblogposts/post_34/energy_with_danceability_with_hover_data.html"
+       src="/images/imgforblogposts/post_34/energy_vs_danceability_with_hover_data.html"
        width="1100"
        height="600"
        >
