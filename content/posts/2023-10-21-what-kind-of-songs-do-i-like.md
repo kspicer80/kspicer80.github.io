@@ -66,7 +66,6 @@ So, this will give us a .json file that has all of our "Liked Songs" in it.
 Now that we have that code written, we can dig a little deeper into how we want/are going to use the spotipy library. Spotify has all kinds of definitions, ideas, data, explanations for their key numbers that describe a song's "audio features." Spotify's numbers and definitions are available [here](https://developer.spotify.com/documentation/web-api/reference/get-audio-features). I am interested in figuring out how well my own musical sensitivity either converges or strongly diverges with those of other Spotify listeners. Here is some code to grab every single song from your "Liked Songs" playlist while also pulling down each song's "audio features":
 
 ``` python
-
 with open('saved_tracks.json', 'r') as infile:
     saved_tracks = json.load(infile)
 ```
