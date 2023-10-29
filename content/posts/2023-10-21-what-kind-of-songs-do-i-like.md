@@ -20,7 +20,7 @@ tags:
 
 ### Some Introductory Remarks
 
-I was having a conversation with my most favorite student that I've ever had in my entire career as a teacher a while back and we got to chatting about my little pattern of sending her songs I like from the "Discover Weekly" and "Release Radar" playlists that come my way via Spotify. She and I seem to have very few similarities when it comes to music. She likes to say that I have somewhat "girlish" music tastes (not meant as a pejorative, far from it, at least, I think!), but I like to think that I like certain songs based on how easy it is for me to move my body in tune with them. I figure I would do a little testing to see if my intuitions were correct or not. So, in order to do just that, off we go.
+I was having a conversation with my most favorite student that I've ever had in my entire career as a teacher a while back and we got to chatting about my little pattern of sending her songs I like from the "Discover Weekly" and "Release Radar" playlists that come my way via Spotify. She and I seem to have very few similarities when it comes to music. She likes to say that I have somewhat "girlish" music tastes (not meant as a pejorative, far from it, at least, I think! that said, I seem to love everything [NERIAH](https://open.spotify.com/artist/1dUrqVHcv2FCXxlIqzIbiG?si=bQ4GRS40Tuq7x_kkbZ7oew) releases), but I like to think that I like certain songs based on how easy it is for me to move my body in tune with them. I figure I would do a little testing to see if my intuitions were correct or not. So, in order to do just that, off we go.
 
 ### Data Collection
 
