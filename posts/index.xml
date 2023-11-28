@@ -141,7 +141,7 @@
 </div>
 
 
-<p>Lol, so, pictures are nice, but maybe we can grab some numbers? As those in the data science field know, the &ldquo;Jaccard index&rdquo; (or &ldquo;Jaccard similarity&rdquo;) can give us a nice numerical representation of how &ldquo;similar&rdquo; William&rsquo;s numbers are to mine. <a href="https://github.com/kspicer80/spotify_analysis/blob/main/comparative_analysis.py">Code</a> for this gives us a Jaccard similarity of, literally, 0.00. :) This would appear to bear out my own intuitions here &hellip;</p>
+<p>Lol, so, pictures are nice, but maybe we can grab some numbers? As those in the data science field know, the &ldquo;Jaccard index&rdquo; (or &ldquo;Jaccard similarity&rdquo;) can give us a nice numerical representation of how &ldquo;similar&rdquo; William&rsquo;s numbers are to mine. <a href="https://github.com/kspicer80/spotify_analysis/blob/main/comparative_analysis.py">Code</a> for this gives us a Jaccard similarity of, literally, 0.00.) This would appear to bear out my own intuitions here &hellip; :)</p>
 <p>Oh, and since we&rsquo;re oh the &ldquo;comparison train&rdquo; here now, I wondered about my &ldquo;valence&rdquo; scores in comparison to his—again, my intuition was that I was just slightly more on the &ldquo;happy&rdquo; side than him? Do the numbers support that?</p>
 <p><img src="/images/imgforblogposts/post_34/im_happier_than_will.png" alt="william_vs_me_wrt_valence"></p>
 <p>Hehehehe, I guess so, but perhaps only &ldquo;barely so&rdquo; &hellip; :) Obviously, there&rsquo;s much more to be done here, especially now that I have William&rsquo;s data &hellip; as is so usual, &ldquo;more to come,&rdquo; to be sure.</p>
