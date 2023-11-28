@@ -199,7 +199,7 @@ So, earlier I mentioned wanting to have some other users to compare my numbers w
 </div>
 {{< /rawhtml >}}
 
-Lol, so, pictures are nice, but maybe we can grab some numbers? As those in the data science field know, the "Jaccard index" (or "Jaccard similarity") can give us a nice numerical representation of how "similar" William's numbers are to mine. [Code](https://github.com/kspicer80/spotify_analysis/blob/main/comparative_analysis.py) for this gives us a Jaccard similarity of, literally, 0.00. :) This would appear to bear out my own intuitions here ... 
+Lol, so, pictures are nice, but maybe we can grab some numbers? As those in the data science field know, the "Jaccard index" (or "Jaccard similarity") can give us a nice numerical representation of how "similar" William's numbers are to mine. [Code](https://github.com/kspicer80/spotify_analysis/blob/main/comparative_analysis.py) for this gives us a Jaccard similarity of, literally, 0.00.) This would appear to bear out my own intuitions here ... :)
 
 Oh, and since we're oh the "comparison train" here now, I wondered about my "valence" scores in comparison to his—again, my intuition was that I was just slightly more on the "happy" side than him? Do the numbers support that?
 
