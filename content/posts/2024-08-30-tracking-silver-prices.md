@@ -19,6 +19,6 @@ tags:
 
 # Silver Price Tracker---Testing
 
-![Silver Price Plot](/static/images/imgforblogposts/post35/silver_price_plot.png)
+![Silver Price Plot](/static/images/imgforblogposts/post_35/silver_price_plot.png)
 
 This page displays the Silver price over the last five years, updated daily.
