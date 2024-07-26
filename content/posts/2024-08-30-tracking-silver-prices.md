@@ -9,6 +9,7 @@ tags:
   - data extraction
   - yfinance
   - stocks
+  - silver prices
   - matplotlib
   - stock analysis
   - market analysis
