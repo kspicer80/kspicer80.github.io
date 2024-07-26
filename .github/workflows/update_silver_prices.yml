@@ -1,11 +1,12 @@
-name: Update Silver Price Plot
+name: Deploy to GitHub Pages
 
 on:
-  schedule:
-    - cron: '0 22 * * *'  # Runs daily at 22:00 UTC
+  push:
+    branches:
+      - main
 
 jobs:
-  update-plot:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -22,13 +23,12 @@ jobs:
         python -m pip install --upgrade pip
         pip install pandas matplotlib yfinance
 
-    - name: Generate plot
-      run: python generate_plot.py
-
-    - name: Commit and push changes
+    - name: Run script
       run: |
-        git config --global user.name 'github-actions[bot]'
-        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-        git add static/imgforblogposts/post35/silver_price_plot.png
-        git commit -m 'Update Silver price plot'
-        git push
+        python scripts/silver_price_tracking.py
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./static
