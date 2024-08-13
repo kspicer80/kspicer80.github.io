@@ -20,7 +20,7 @@ plt.legend()
 plt.grid(True)
 
 # Save the plot to the specified directory
-plt.savefig('static/images/imgforblogposts/post35/silver_price_plot.png')
+plt.savefig('/Users/spicy.kev/Documents/github/kspicer80.github.io/static/images/imgforblogposts/post_35/')
 
 # Show the plot
 plt.show()
