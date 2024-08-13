@@ -1,7 +1,7 @@
 ---
 title: "Total *non sequitur*: Tracking Price of Silver"
 date: 2024-08-24 00:01:00
-draft: false
+draft: true
 toc: false
 tags:
   - python
