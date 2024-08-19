@@ -40,4 +40,4 @@ and then a picture of the ingots themselves:
 
 ![ingots](/images/imgforblogposts/post_35/IMG_0017.jpeg)
 
-I'll try to update the plots pretty frequently. And if anyone is interested in making an offering on this just let me know at: [kspicer@stfrancis.edu](mailto:kspicer@stfrancis.edu).
+I'll try to update the plots pretty frequently. And if anyone is interested in making an offering on this just let me know at [my email address](mailto:kspicer@stfrancis.edu).
