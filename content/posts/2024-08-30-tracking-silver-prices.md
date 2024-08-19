@@ -1,5 +1,5 @@
 ---
-title: "Total *non sequitur*: Tracking Price of Silver"
+title: "Total *non sequitur*: Tracking the Price of Silver"
 date: 2024-08-18 00:01:00
 draft: false
 toc: false
@@ -18,7 +18,7 @@ tags:
   - graph plotting
 ---
 
-# Silver Price Tracker
+### Silver Price Tracker
 
 So, my father has some vintage Silver pieces from 1973 and 1974 produced by the Franklin Mint with all kinds of different national banks on each one.  We've been trying to figure out how to unload them---either to collectors or to folks that will simply melt them down for the silver alone.  I figured I'd do a little coding.  
 
