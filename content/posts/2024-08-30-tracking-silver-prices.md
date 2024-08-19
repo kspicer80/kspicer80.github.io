@@ -40,4 +40,4 @@ and then a picture of the ingots themselves:
 
 ![ingots](static/images/imgforblogposts/post_35/IMG_0017.jpeg)
 
-I'll try update the plots pretty frequently.
+I'll try to update the plots pretty frequently.
