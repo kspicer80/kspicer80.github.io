@@ -24,20 +24,20 @@ So, my father has some vintage Silver pieces from 1973 and 1974 produced by the 
 
 The first is a plot over the last couple of months:
 
-![silver_price_last_couple_of_months](images/imgforblogposts/post_35/last_couple_of_months_plot.png)
+![silver_price_last_couple_of_months](/images/imgforblogposts/post_35/last_couple_of_months_plot.png)
 
 Here is a plot of some model's predictions of future Silver prices:
 
-![silver_price_prediction_models](images/imgforblogposts/post_35/all_models_silver_prices.png)
+![silver_price_prediction_models](/images/imgforblogposts/post_35/all_models_silver_prices.png)
 
 For those interested, here are some pics of the silver ingots themselves ...
 
 I've got the Certificate of Authentication:
 
-![authenticity](images/imgforblogposts/post_35/IMG_0016.jpeg)
+![authenticity](/images/imgforblogposts/post_35/IMG_0016.jpeg)
 
 and then a picture of the ingots themselves:
 
-![ingots](images/imgforblogposts/post_35/IMG_0017.jpeg)
+![ingots](/images/imgforblogposts/post_35/IMG_0017.jpeg)
 
 I'll try to update the plots pretty frequently.
