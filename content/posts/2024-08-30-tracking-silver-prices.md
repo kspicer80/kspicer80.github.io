@@ -20,13 +20,13 @@ tags:
 
 ### Silver Price Tracker
 
-So, my father has some vintage Silver pieces from 1973 and 1974 produced by the Franklin Mint with all kinds of different national banks on each one.  We've been trying to figure out how to unload them---either to collectors or to folks that will simply melt them down for the silver alone.  I figured I'd do a little coding.  
+So, my father has some vintage Silver pieces from 1973 and 1974 produced by the Franklin Mint with all kinds of different national banks on each one.  We've been trying to figure out how to unload them---either to collectors or to folks that will simply melt them down for the silver alone.  I figured I'd do a little coding.
 
-The first is a plot over the last couple of months:
+The first is a plot over the last couple of months of Silver prices:
 
 ![silver_price_last_couple_of_months](/images/imgforblogposts/post_35/last_couple_of_months_plot.png)
 
-Here is a plot of some model's predictions of future Silver prices:
+Here is a plot of some models' predictions of future Silver prices:
 
 ![silver_price_prediction_models](/images/imgforblogposts/post_35/all_models_silver_prices.png)
 
