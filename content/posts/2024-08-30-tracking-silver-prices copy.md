@@ -89,6 +89,6 @@ for course in non_threaded_courses:
     print(course["course_name"])
 ```
 
-This should give you the course's that have the "threaded discussions disallowed" checked.  I'll upload some code soon to have it so you can instantly changed to the allowance of threaded discussions.
+This should give you the courses that have the "threaded discussions disallowed" checked.  I'll upload some code soon to have it so you can instantly changed to the allowance of threaded discussions.
 
 More to come, as always!
