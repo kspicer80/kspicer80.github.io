@@ -6,6 +6,9 @@ toc: false
 tags:
   - python
   - API
+  - Canvas
+  - Instructure
+  - CANVAS API
 ---
 
 ### Introductory Remarks
