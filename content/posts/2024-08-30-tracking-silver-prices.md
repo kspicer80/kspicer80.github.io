@@ -46,5 +46,5 @@ I'll try to update the plots pretty frequently. And if anyone is interested in m
 
 P.S. Some more models, LSTM and SARIMA:
 
-![lstm_and_sarima_model_plots](static/images/imgforblogposts/post_35/lstm_and_other_model_predictions.png)
+![lstm_and_sarima_model_plots](/images/imgforblogposts/post_35/lstm_and_other_model_predictions.png)
 
