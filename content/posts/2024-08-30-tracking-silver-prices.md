@@ -48,3 +48,7 @@ P.S. Some more models, LSTM and SARIMA:
 
 ![lstm_and_sarima_model_plots](/images/imgforblogposts/post_35/lstm_and_other_model_predictions.png)
 
+P.P.S. And here are some plots from the models looking three and six months into the future:
+
+![3_and_6_months_predictions](/images/imgforblogposts/post_35/lstm_and_other_model_predictions_3m_6m.png)
+
