@@ -43,3 +43,7 @@ and then a picture of the ingots themselves:
 I'll try to update the plots pretty frequently. And if anyone is interested in making an offering on this just let me know at [kspicer@stfrancis.edu](mailto:kspicer@stfrancis.edu).
 
 *Nota bene*: Code to produce this is available in this repo [here](https://github.com/kspicer80/silver_price_tracking).
+
+P.S. Some more models, LSTM and SARIMA:
+
+![lstm_and_sarima_model_plots](images/imgforblogposts/post_35/lstm_and_other_model_predictions.png)
