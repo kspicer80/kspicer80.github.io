@@ -44,7 +44,7 @@ I'll try to update the plots pretty frequently. And if anyone is interested in m
 
 *Nota bene*: Code to produce this is available in this repo [here](https://github.com/kspicer80/silver_price_tracking).
 
-P.S. Some more models, LSTM and SARIMA:
+P.S. Some more models, [ETS](https://www.statsmodels.org/dev/examples/notebooks/generated/ets.html#), [SARIMA](https://en.wikipedia.org/wiki/Autoregressive_integrated_moving_average), and [LSTM](https://en.wikipedia.org/wiki/Long_short-term_memory):
 
 ![lstm_and_sarima_model_plots](/images/imgforblogposts/post_35/lstm_and_other_model_predictions.png)
 
