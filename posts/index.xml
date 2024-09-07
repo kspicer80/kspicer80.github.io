@@ -90,7 +90,7 @@ The first is a plot over the last couple of months of Silver prices:</descriptio
 <p><img src="/images/imgforblogposts/post_35/IMG_0017.jpeg" alt="ingots"></p>
 <p>I&rsquo;ll try to update the plots pretty frequently. And if anyone is interested in making an offering on this just let me know at <a href="mailto:kspicer@stfrancis.edu">kspicer@stfrancis.edu</a>.</p>
 <p><em>Nota bene</em>: Code to produce this is available in this repo <a href="https://github.com/kspicer80/silver_price_tracking">here</a>.</p>
-<p>P.S. Some more models, LSTM and SARIMA:</p>
+<p>P.S. Some more models, <a href="https://www.statsmodels.org/dev/examples/notebooks/generated/ets.html#">ETS</a>, <a href="https://en.wikipedia.org/wiki/Autoregressive_integrated_moving_average">SARIMA</a>, and <a href="https://en.wikipedia.org/wiki/Long_short-term_memory">LSTM</a>:</p>
 <p><img src="/images/imgforblogposts/post_35/lstm_and_other_model_predictions.png" alt="lstm_and_sarima_model_plots"></p>
 <p>P.P.S. And here are some plots from the models looking three and six months into the future:</p>
 <p><img src="/images/imgforblogposts/post_35/lstm_and_other_model_predictions_3m_6m.png" alt="3_and_6_months_predictions"></p>
