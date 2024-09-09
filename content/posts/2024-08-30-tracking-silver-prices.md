@@ -5,6 +5,9 @@ draft: false
 toc: false
 tags:
   - python
+  - matplotlib
+  - plotly
+  - bokeh
   - data analysis
   - data extraction
   - yfinance
