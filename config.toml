@@ -12,7 +12,7 @@ paginate = 10
   dateformNumTime = "2006-01-02 15:04"
 
   # Subtitle for home
-  homeSubtitle = "Tracing Paths through the Digital Humanities"
+  homeSubtitle = "Tracing Paths through the Digital Humanities with a Humanist Who Codes"
 
   # Set disableReadOtherPosts to true in order to hide the links to other posts.
   disableReadOtherPosts = false
