@@ -7,7 +7,6 @@ tags:
   - python
   - matplotlib
   - plotly
-  - bokeh
   - data analysis
   - data extraction
   - yfinance
@@ -47,11 +46,7 @@ I'll try to update the plots pretty frequently. And if anyone is interested in m
 
 *Nota bene*: Code to produce this is available in this repo [here](https://github.com/kspicer80/silver_price_tracking).
 
-P.S. Some more models, [ETS](https://www.statsmodels.org/dev/examples/notebooks/generated/ets.html#), [SARIMA](https://en.wikipedia.org/wiki/Autoregressive_integrated_moving_average), and [LSTM](https://en.wikipedia.org/wiki/Long_short-term_memory):
-
-![lstm_and_sarima_model_plots](/images/imgforblogposts/post_35/lstm_and_other_model_predictions.png)
-
-P.P.S. And here are some plots from the models looking three and six months into the future:
+P.S. Some more models, [ETS](https://www.statsmodels.org/dev/examples/notebooks/generated/ets.html#), [SARIMA](https://en.wikipedia.org/wiki/Autoregressive_integrated_moving_average), and [LSTM](https://en.wikipedia.org/wiki/Long_short-term_memory)---using [plotly](https://plotly.com) intead of [matplotlib](https://matplotlib.org):
 
 ![3_and_6_months_predictions](/images/imgforblogposts/post_35/lstm_and_other_model_predictions_3m_6m.png)
 
