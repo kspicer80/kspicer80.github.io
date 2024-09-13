@@ -28,7 +28,11 @@ The first is a plot over the last couple of months of Silver prices:
 
 ![silver_price_last_couple_of_months](/images/imgforblogposts/post_35/last_couple_of_months_plot.png)
 
-Here is a plot of some models' predictions of future Silver prices:
+For those interested, yahoo finance has data going back plus twenty years---the data looks like this:
+
+![all_historical_data](images/imgforblogposts/post_35/all_yfinance_data.png)
+
+Here is a plot of some models' predictions for future Silver prices:
 
 ![silver_price_prediction_models](/images/imgforblogposts/post_35/all_models_silver_prices.png)
 
