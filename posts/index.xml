@@ -81,7 +81,9 @@ The first is a plot over the last couple of months of Silver prices:</descriptio
 <p>So, my father has some vintage Silver pieces from 1973 and 1974 produced by the Franklin Mint with all kinds of different national banks on each one.  We&rsquo;ve been trying to figure out how to unload them&mdash;either to collectors or to folks that will simply melt them down for the silver alone.  I figured I&rsquo;d do a little coding.</p>
 <p>The first is a plot over the last couple of months of Silver prices:</p>
 <p><img src="/images/imgforblogposts/post_35/last_couple_of_months_plot.png" alt="silver_price_last_couple_of_months"></p>
-<p>Here is a plot of some models&rsquo; predictions of future Silver prices:</p>
+<p>For those interested, yahoo finance has data going back plus twenty years&mdash;the data looks like this:</p>
+<p><img src="images/imgforblogposts/post_35/all_yfinance_data.png" alt="all_historical_data"></p>
+<p>Here is a plot of some models&rsquo; predictions for future Silver prices:</p>
 <p><img src="/images/imgforblogposts/post_35/all_models_silver_prices.png" alt="silver_price_prediction_models"></p>
 <p>For those interested, here are some pics of the silver ingots themselves &hellip;</p>
 <p>I&rsquo;ve got the Certificate of Authentication:</p>
