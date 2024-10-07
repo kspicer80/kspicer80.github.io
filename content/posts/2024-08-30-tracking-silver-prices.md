@@ -50,7 +50,17 @@ I'll try to update the plots pretty frequently. And if anyone is interested in m
 
 *Nota bene*: Code to produce this is available in this repo [here](https://github.com/kspicer80/silver_price_tracking).
 
-P.S. Some more models, [ETS](https://www.statsmodels.org/dev/examples/notebooks/generated/ets.html#), [SARIMA](https://en.wikipedia.org/wiki/Autoregressive_integrated_moving_average), and [LSTM](https://en.wikipedia.org/wiki/Long_short-term_memory)---using [plotly](https://plotly.com) intead of [matplotlib](https://matplotlib.org):
+P.S. Some more models, [ETS](https://www.statsmodels.org/dev/examples/notebooks/generated/ets.html#), [SARIMA](https://en.wikipedia.org/wiki/Autoregressive_integrated_moving_average), and [LSTM](https://en.wikipedia.org/wiki/Long_short-term_memory) ...
+
+Here is one week out:
+
+![1_week_predictions](/images/imgforblogposts/post_35/lstm_and_other_model_predictions_1w.png)
+
+And two weeks out:
+
+![2_week_predictions](/images/imgforblogposts/post_35/lstm_and_other_model_predictions_1w.png)
+
+And three to six months out:
 
 ![3_and_6_months_predictions](/images/imgforblogposts/post_35/lstm_and_other_model_predictions_3m_6m.png)
 
