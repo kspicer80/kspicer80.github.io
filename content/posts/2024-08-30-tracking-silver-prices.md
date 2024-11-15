@@ -64,3 +64,7 @@ And three to six months out:
 
 ![3_and_6_months_predictions](/images/imgforblogposts/post_35/lstm_and_other_model_predictions_3m_6m.png)
 
+Testing a candlestick plot with plotly:
+
+![2_months_candlestick_plot](/images/imgforblogposts/post_35/candlestick_plot_11_14_24.html)
+
