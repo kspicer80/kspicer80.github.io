@@ -66,5 +66,5 @@ And three to six months out:
 
 Testing a candlestick plot with plotly:
 
-<ifarme src="/images/imgforblogposts/post_35/candlestick_plot_11_14_24.html" width=100% height="600px"></iframe>
+<iframe src="/images/imgforblogposts/post_35/candlestick_plot_11_14_24.html" width=100% height="600px"></iframe>
 
