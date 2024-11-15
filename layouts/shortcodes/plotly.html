@@ -1,0 +1,8 @@
+{{/* Plotly shortcode */}}
+{{$url := .Get "file"}}
+{{$height := .Get "height" | default "600px"}}
+{{$width := .Get "width" | default "100%"}}
+
+{{ with $url }}
+<iframe src="{{ . }}" height="{{ $height }}" width="{{ $width }}" frameborder="0"></iframe>
+{{ end }}

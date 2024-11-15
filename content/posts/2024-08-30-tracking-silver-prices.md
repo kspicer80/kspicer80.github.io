@@ -63,3 +63,7 @@ And two weeks out:
 And three to six months out:
 
 ![3_and_6_months_predictions](/images/imgforblogposts/post_35/lstm_and_other_model_predictions_3m_6m.png)
+
+Testing plotly shortcode:
+
+{{< plotly file="/images/imgforblogposts/post_35/candlestick_plot_11_14_24.html" height="600px" width="100%" >}}
