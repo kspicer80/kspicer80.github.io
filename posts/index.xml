@@ -99,7 +99,7 @@ The first is a plot over the last couple of months of Silver prices:</descriptio
 <p><img src="/images/imgforblogposts/post_35/lstm_and_other_model_predictions_1w.png" alt="2_week_predictions"></p>
 <p>And three to six months out:</p>
 <p><img src="/images/imgforblogposts/post_35/lstm_and_other_model_predictions_3m_6m.png" alt="3_and_6_months_predictions"></p>
-<p>Testing plotly shortcode:</p>
+<p>For those that want a candlestick plot:</p>
 
 
 
