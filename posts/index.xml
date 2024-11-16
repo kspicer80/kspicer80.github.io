@@ -99,7 +99,7 @@ The first is a plot over the last couple of months of Silver prices:</descriptio
 <p><img src="/images/imgforblogposts/post_35/lstm_and_other_model_predictions_1w.png" alt="2_week_predictions"></p>
 <p>And three to six months out:</p>
 <p><img src="/images/imgforblogposts/post_35/lstm_and_other_model_predictions_3m_6m.png" alt="3_and_6_months_predictions"></p>
-<p>For those that want a candlestick plot:</p>
+<p>For those that want a candlestick plot of the last two months:</p>
 
 
 
@@ -107,6 +107,15 @@ The first is a plot over the last couple of months of Silver prices:</descriptio
 
 
 <iframe src="/images/imgforblogposts/post_35/candlestick_plot_11_14_24.html" height="600px" width="100%" frameborder="0"></iframe>
+
+<p>Those wanting the last six months:</p>
+
+
+
+
+
+
+<iframe src="/images/imgforblogposts/post_35/candlestick_plot_six_months_11_15_24.html" height="600px" width="100%" frameborder="0"></iframe>
 
 ]]></content></item><item><title>What Kind of Songs Do I Like? Goofing Around with the Spotify API and My Bizarre Music Tastes</title><link>https://kspicer80.github.io/posts/2023-10-21-what-kind-of-songs-do-i-like/</link><pubDate>Sat, 21 Oct 2023 00:01:00 +0000</pubDate><guid>https://kspicer80.github.io/posts/2023-10-21-what-kind-of-songs-do-i-like/</guid><description>Some Introductory Remarks I was having a conversation with my most favorite student that I&amp;rsquo;ve ever had in my entire career as a teacher a while back and we got to chatting about my little pattern of sending her songs I like from the &amp;ldquo;Discover Weekly&amp;rdquo; and &amp;ldquo;Release Radar&amp;rdquo; playlists that come my way via Spotify. She and I seem to have very few similarities when it comes to music. She likes to say that I have somewhat &amp;ldquo;girlish&amp;rdquo; music tastes (not meant as a pejorative, far from it, at least, I think!</description><content type="html"><![CDATA[<h3 id="some-introductory-remarks">Some Introductory Remarks</h3>
 <p>I was having a conversation with my most favorite student that I&rsquo;ve ever had in my entire career as a teacher a while back and we got to chatting about my little pattern of sending her songs I like from the &ldquo;Discover Weekly&rdquo; and &ldquo;Release Radar&rdquo; playlists that come my way via Spotify. She and I seem to have very few similarities when it comes to music. She likes to say that I have somewhat &ldquo;girlish&rdquo; music tastes (not meant as a pejorative, far from it, at least, I think! that said, I seem to love everything <a href="https://open.spotify.com/artist/1dUrqVHcv2FCXxlIqzIbiG?si=bQ4GRS40Tuq7x_kkbZ7oew">NERIAH</a> releases), but I like to think that I like certain songs based on how easy it is for me to move my body in tune with them. I figure I would do a little testing to see if my intuitions were correct or not. So, in order to do just that, off we go.</p>
