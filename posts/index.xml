@@ -103,13 +103,13 @@ So, if you have your money in a High-Yield Savings Account (HYSA)&amp;mdash;whic
 </span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>grid(<span style="color:#66d9ef">True</span>)
 </span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
 </span></span></code></pre></div><p>So, this code produces the following plot:</p>
-<p><img src="static/images/imgforblogposts/post_37/general_bitcoin_vs_hysa.png" alt="bitcoin_vs_hysa"></p>
+<p><img src="/images/imgforblogposts/post_37/general_bitcoin_vs_hysa.png" alt="bitcoin_vs_hysa"></p>
 <p>The output to the console is as follows:</p>
-<p><img src="static/images/imgforblogposts/post_37/console_output_hysa_v_bitcoin.png" alt="bitcoin_vs_hysa_console_output"></p>
+<p><img src="/images/imgforblogposts/post_37/console_output_hysa_v_bitcoin.png" alt="bitcoin_vs_hysa_console_output"></p>
 <p>Now, as everyone likes to note, crypto can be extremely volatile, so let&rsquo;s see if we can incorporate that into our calculations, using the <a href="https://www.investing.com/academy/analysis/sharpe-ratio-definition/?utm_source=google&amp;utm_medium=cpc&amp;utm_campaign=21962679734&amp;utm_content=723521203853&amp;utm_term=dsa-1651811503903_&amp;GL_Ad_ID=723521203853&amp;GL_Campaign_ID=21962679734&amp;ISP=1&amp;gad_source=1&amp;gbraid=0AAAAABIq5T6BdsHmRDmyaLYRD3_CimZ5F&amp;gclid=CjwKCAiAjeW6BhBAEiwAdKltMtlJokJsEFbWAPpqUNC80912n2VY3zUTfRCi7N-bHtwiZXlAYY5teRoChbgQAvD_BwE">&ldquo;Sharpe Ratio&rdquo;</a>, which is often used to measure volatility. If we add this we get the following console output:</p>
-<p><img src="static/images/imgforblogposts/post_37/outputs_with_sharpe_ratio.png" alt="bitcoin_vs_hysa_including_sharpe"></p>
+<p><img src="images/imgforblogposts/post_37/outputs_with_sharpe_ratio.png" alt="bitcoin_vs_hysa_including_sharpe"></p>
 <p>Finally, we could have a look at things based on different reductions by the FED of the interest rate:</p>
-<p><img src="static/images/imgforblogposts/post_37/bitcoin_vs_different_fed_rate_reductions.png" alt="different_FED_interest_rate_reductions"></p>
+<p><img src="/images/imgforblogposts/post_37/bitcoin_vs_different_fed_rate_reductions.png" alt="different_FED_interest_rate_reductions"></p>
 <p>Obviously, there is much to consider here:</p>
 <ol>
 <li>Volatility: Bitcoin is clearly quite volatile&mdash;as the Sharpe ratio is high.</li>
