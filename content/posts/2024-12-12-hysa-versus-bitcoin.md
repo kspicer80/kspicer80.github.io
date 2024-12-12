@@ -126,19 +126,19 @@ plt.show()
 
 So, this code produces the following plot:
 
-![bitcoin_vs_hysa](static/images/imgforblogposts/post_37/general_bitcoin_vs_hysa.png)
+![bitcoin_vs_hysa](/images/imgforblogposts/post_37/general_bitcoin_vs_hysa.png)
 
 The output to the console is as follows:
 
-![bitcoin_vs_hysa_console_output](static/images/imgforblogposts/post_37/console_output_hysa_v_bitcoin.png)
+![bitcoin_vs_hysa_console_output](/images/imgforblogposts/post_37/console_output_hysa_v_bitcoin.png)
 
 Now, as everyone likes to note, crypto can be extremely volatile, so let's see if we can incorporate that into our calculations, using the ["Sharpe Ratio"](https://www.investing.com/academy/analysis/sharpe-ratio-definition/?utm_source=google&utm_medium=cpc&utm_campaign=21962679734&utm_content=723521203853&utm_term=dsa-1651811503903_&GL_Ad_ID=723521203853&GL_Campaign_ID=21962679734&ISP=1&gad_source=1&gbraid=0AAAAABIq5T6BdsHmRDmyaLYRD3_CimZ5F&gclid=CjwKCAiAjeW6BhBAEiwAdKltMtlJokJsEFbWAPpqUNC80912n2VY3zUTfRCi7N-bHtwiZXlAYY5teRoChbgQAvD_BwE), which is often used to measure volatility. If we add this we get the following console output:
 
-![bitcoin_vs_hysa_including_sharpe](static/images/imgforblogposts/post_37/outputs_with_sharpe_ratio.png)
+![bitcoin_vs_hysa_including_sharpe](images/imgforblogposts/post_37/outputs_with_sharpe_ratio.png)
 
 Finally, we could have a look at things based on different reductions by the FED of the interest rate:
 
-![different_FED_interest_rate_reductions](static/images/imgforblogposts/post_37/bitcoin_vs_different_fed_rate_reductions.png)
+![different_FED_interest_rate_reductions](/images/imgforblogposts/post_37/bitcoin_vs_different_fed_rate_reductions.png)
 
 Obviously, there is much to consider here:
 
