@@ -147,3 +147,7 @@ Obviously, there is much to consider here:
 3. If we want to go long-term and are okay with the short-term volatility, then we move our monies to Bitcoin; if we want more stable and predictable outcomes, then we keep everything in our HYSA.
 
 Anyways---we'll watch the markets, obviously, and much more to come, as promised, as always.
+
+P.S. For those that want a bit more data---how about a plot of the value of a dollar over time compared to some popular cryptocurrencies?
+
+![value_of_a_dollar](/images/imgforblogposts/post_37/value_of_a_dollar_over_time.png)
