@@ -151,3 +151,5 @@ Anyways---we'll watch the markets, obviously, and much more to come, as promised
 P.S. For those that want a bit more data---how about a plot of the value of a dollar over time compared to some popular cryptocurrencies?
 
 ![value_of_a_dollar](/images/imgforblogposts/post_37/value_of_a_dollar_over_time.png)
+
+Code for this plot is available in this [repo](https://github.com/kspicer80/crypto_vs_us_dollar/tree/main).
