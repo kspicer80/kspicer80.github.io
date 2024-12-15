@@ -153,3 +153,5 @@ P.S. For those that want a bit more data---how about a plot of the value of a do
 ![value_of_a_dollar](/images/imgforblogposts/post_37/value_of_a_dollar_over_time.png)
 
 Code for this plot is available in this [repo](https://github.com/kspicer80/crypto_vs_us_dollar/tree/main).
+
+P.P.S. All this researcch on crypto recently got me thinking of one of my most favorite songs by salem ilese, ["Crypto Boy,"](https://open.spotify.com/track/1huSguFFPyo3saFH9u5Sb6?si=93388ef267cc41c3), lol.
