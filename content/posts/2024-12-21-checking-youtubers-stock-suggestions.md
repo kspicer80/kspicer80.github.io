@@ -23,7 +23,8 @@ tags:
   - stock analysis
   - stock recommender
   - bollinger bands
-  - 
+  - technical analysis
+  - stock indicators
 ---
 
 
