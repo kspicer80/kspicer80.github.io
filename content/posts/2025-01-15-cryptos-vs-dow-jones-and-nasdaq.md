@@ -33,5 +33,7 @@ I thought I would do some coding to see how correlated these stock tickers are w
 
 {{< jupyter src="/notebooks/01-06-2025_btc_vs_regular_exchanges.html" >}}
 
+Repo containing this and lots of other code is available [here](https://github.com/kspicer80/stock_stuff/tree/main).
+
 
 
