@@ -1,5 +1,5 @@
 ---
-title: "BTC and Other Cryptos vs. the DOW and NASDAQ"
+title: "Bitcoin vs. the DOW and NASDAQ"
 date: 2025-01-06 00:10:57
 draft: false
 toc: false
