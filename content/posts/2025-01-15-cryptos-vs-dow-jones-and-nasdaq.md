@@ -24,10 +24,10 @@ tags:
   - BIT-USC
   - Bitcoin
   - ^DJI
-  - ^IXIC,
+  - ^IXI
 ---
 
-So there's been a lot of talk lately about [Microstrategy's](https://finance.yahoo.com/quote/MSTR/) seemingly almost constant buys of Bitcoin. There's also been quite a lot of chatter recently about some other hardware companies, ([Marvel Technologies](https://finance.yahoo.com/quote/MRVL/), [MARA](https://finance.yahoo.com/quote/MARA/), etc.) getting involved. We also have things like ["Coinbase"](https://finance.yahoo.com/quote/COIN/) that is frequently linked to Bitcoin as well. 
+So there's been a lot of talk lately about [Microstrategy's](https://finance.yahoo.com/quote/MSTR/) seemingly almost constant buys of Bitcoin almost every single day. There's also been quite a lot of chatter recently about some other hardware companies, ([Marvel Technologies](https://finance.yahoo.com/quote/MRVL/), [MARA](https://finance.yahoo.com/quote/MARA/), etc.) getting involved. We also have things like ["Coinbase"](https://finance.yahoo.com/quote/COIN/) that is frequently linked to Bitcoin as well. 
 
 I thought I would do some coding to see how correlated these stock tickers are with Bitcoin. But before that I wrote some code to see how correlated the Dow Jones and NASDAQ were with BTC-USD. Do our "normal" markets just follow what Bitcoin's up to ...? Here's an exploratory [Jupyter Notebook](https://jupyter.org) with some analysis:
 
