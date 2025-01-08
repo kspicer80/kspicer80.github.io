@@ -33,6 +33,10 @@ I thought I would do some coding to see how correlated these stock tickers are w
 
 {{< jupyter src="/notebooks/01-06-2025_btc_vs_regular_exchanges.html" >}}
 
+If we wanted a plot of the plot of these exchanges vs. the top ten crypto---here we go:
+
+![dow_nasdaq_vs_top_ten_crypto](/images/imgforblogposts/post_38/dow_nasdas_vs_top_ten_cryptos.png)
+
 Repo containing this and other code related to the markets is available [here](https://github.com/kspicer80/stock_stuff/tree/main).
 
 
