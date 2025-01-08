@@ -25,3 +25,5 @@ It's still a work-in-progress to be sure ... and it's probably totally unnecessa
 
 Just input your Ticker Symbol and click "Submit" and you'll get a current [plot](https://ema-strategy.onrender.com). It may take a little bit of time to load since I'm on the free plan there with render.
 
+P.S. It's still a work in progress---it's looking as if the "Buy/Sell" Signals on the plot are off/reversed. I'll have a look at that when I can ...
+
