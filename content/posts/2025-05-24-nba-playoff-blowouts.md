@@ -9,7 +9,8 @@ tags:
   - data extraction
   - data analysis
   - nba_api
-  - basketball
+  - NBA basketball
+  - NBA Playoffs
   - python for sports
   - pandas
   - seaborn
