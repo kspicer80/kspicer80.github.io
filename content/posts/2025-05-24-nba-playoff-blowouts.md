@@ -19,16 +19,7 @@ tags:
 
 Watching the 2025 NBA Playoffs has been a bit strange: huge blowouts (sometimes, often, unexpected) follow by razor-tight contests that go down to the very last possession or even into overtime.
 
-After the Denver Nuggets' exit from the playoffs at the hands of the OKC Thunder, Aaron Gordon of the Nuggets has a rather intriguing post-game press conference where he himself mentioned the "blowouts" thing (thus making it not something just in *my* head, I suppose):
-
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;">
-  <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
-    src="https://www.youtube.com/embed/xGBHqbVEZUQ"
-    title="YouTube video player" frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    allowfullscreen>
-  </iframe>
-</div>
+After the Denver Nuggets' exit from the playoffs at the hands of the OKC Thunder, Aaron Gordon of the Nuggets has a rather intriguing post-game press conference where [he himself](https://www.youtube.com/shorts/xGBHqbVEZUQ) mentioned the "blowouts" thing (thus making it not something just in *my* head, I suppose).
 
 I thought this posed an interesting little bit of research one could do (NBA stat/history purists will probably know a lot of this, but I did not): when did the NBA change the scheduling to alter the number of rest days, has the one rest day between games been the norm now for a while or not, etc.? Furthermore, after the changes, have we seen more blowout wins or less? 
 
@@ -56,7 +47,6 @@ For those interested in the code to produce both plots—and also so you can twe
 **Appendix**
 
 ``` python
-
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -357,7 +347,6 @@ else:
 # Save data to CSV
 all_games.to_csv('nba_playoff_games.csv', index=False)
 blowout_stats.to_csv('nba_blowout_stats.csv', index=False)
-
 ```
 
 
