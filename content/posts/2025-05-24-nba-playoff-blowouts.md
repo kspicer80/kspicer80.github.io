@@ -23,7 +23,7 @@ After the Denver Nuggets' exit from the playoffs at the hands of the OKC Thunder
 
 <div align="center">
   <iframe width="315" height="560"
-    src="https://youtube.com/shorts/xGBHqbVEZUQ?si=cFbJGW-MbPm9fACV"
+    src="https://www.youtube.com/embed/xGBHqbVEZUQ"
     title="YouTube video player" frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
     allowfullscreen>
@@ -33,7 +33,6 @@ After the Denver Nuggets' exit from the playoffs at the hands of the OKC Thunder
 I thought this posed an interesting little bit of research one could do (NBA stat/history purists will probably know a lot of this, but I did not): when did the NBA change the scheduling to alter the number of rest days, has the one rest day between games been the norm now for a while or not, etc.? Furthermore, after the changes, have we seen more blowout wins or less? 
 
 So let's just see what we can see—not incorporating any historical detail/data just yet—and we'll pull some data just to see how many blowouts (winning margin more than twenty points) there have been in the playoffs since the 1975-76 season:
-
 
 ![first_graph_no_vertical_line](/images/imgforblogposts/post_39/nba_blowout_trend.png)
 
