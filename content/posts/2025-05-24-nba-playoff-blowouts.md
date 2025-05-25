@@ -21,8 +21,8 @@ Watching the 2025 NBA Playoffs has been a bit strange: huge blowouts (sometimes,
 
 After the Denver Nuggets' exit from the playoffs at the hands of the OKC Thunder, Aaron Gordon of the Nuggets has a rather intriguing post-game press conference where he himself mentioned the "blowouts" thing (thus making it not something just in *my* head, I suppose):
 
-<div align="center">
-  <iframe width="315" height="560"
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;">
+  <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
     src="https://www.youtube.com/embed/xGBHqbVEZUQ"
     title="YouTube video player" frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
