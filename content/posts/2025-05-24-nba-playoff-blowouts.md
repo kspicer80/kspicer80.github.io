@@ -15,6 +15,11 @@ tags:
   - pandas
   - seaborn
   - data visualization
+  - scipy
+  - matplotlib
+  - numpy
+  - BeautifulSoup
+  - json
 ---
 
 Watching the 2025 NBA Playoffs has been a bit strange: huge blowouts (sometimes, often, unexpected) follow by razor-tight contests that go down to the very last possession or even into overtime.
