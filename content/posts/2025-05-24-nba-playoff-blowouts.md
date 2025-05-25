@@ -39,7 +39,7 @@ So let's just see what we can see—not incorporating any historical detail/data
 
 Now, after a little bit of googling, it seems like 2013 is the year when the format was [changed](https://www.usatoday.com/story/sports/nba/2013/10/23/finals-schedule-format-playoffs-change-owners-david-stern/3171175/)—the schedule for the Finals allowed for two days of rest in between games, but all the other rounds went to one. 
 
-So, let's write some code to determine if there have been more blowout wins since 2013 as compared to previous years and see what we can se—or, in other words, is Aaron Gordon right to say that the smaller number of rest days *might* be connected to the blowout phenomenon. (Also, one should say that Gordon himself was dealing with an injury in games 6 and 7, so we should factor that into his opinion/position as well). 
+So, let's write some code to determine if there have been more blowout wins since 2013 as compared to previous years and see what we can see—or, in other words, is Aaron Gordon right to say that the smaller number of rest days *might* be connected to the blowout phenomenon. (Also, one should say that Gordon himself was dealing with an injury in games 6 and 7, so we should factor that into his opinion/position as well). 
 
 I pulled all the data I could from the 1975-76 season all the way up until yesterday's most recent playoff game. And from that we can create a plot of blowout victories (again, blowouts being defined by a winning margin of more than 20 points—if one would like to alter this to 15 or 10 that's easy enough and they can do so in the code that will follow down at the end below):
 
