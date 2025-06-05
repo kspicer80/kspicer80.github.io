@@ -1,7 +1,7 @@
 ---
-title: "NBA Playoff Blowouts"
+title: "WNBA Historical Stats"
 date: 2025-05-24 13:01:57
-draft: false
+draft: true
 toc: false
 tags:
   - python
@@ -21,32 +21,6 @@ tags:
   - BeautifulSoup
   - json
 ---
-
-Watching the 2025 NBA Playoffs has been a bit strange: huge blowouts (sometimes, often, unexpected) follow by razor-tight contests that go down to the very last possession or even into overtime.
-
-After the Denver Nuggets' exit from the playoffs at the hands of the OKC Thunder, Aaron Gordon of the Nuggets has a rather intriguing post-game press conference where [he himself](https://www.youtube.com/shorts/xGBHqbVEZUQ) mentioned the "blowouts" thing (thus making it not something just in *my* head, I suppose).
-
-I thought this posed an interesting little bit of research one could do (NBA stat/history purists will probably know a lot of this, but I did not): when did the NBA change the scheduling to alter the number of rest days, has the one rest day between games been the norm now for a while or not, etc.? Furthermore, after the changes, have we seen more blowout wins or less? 
-
-So let's just see what we can see—not incorporating any historical detail/data just yet—and we'll pull some data just to see how many blowouts (winning margin more than twenty points) there have been in the playoffs since the 1975-76 season:
-
-![first_graph_no_vertical_line](/images/imgforblogposts/post_39/nba_blowout_trend.png)
-
-Now, after a little bit of googling, it seems like 2013 is the year when the format was [changed](https://www.usatoday.com/story/sports/nba/2013/10/23/finals-schedule-format-playoffs-change-owners-david-stern/3171175/)—the schedule for the Finals allowed for two days of rest in between games, but all the other rounds went to one. 
-
-So, let's write some code to determine if there have been more blowout wins since 2013 as compared to previous years and see what we can see—or, in other words, is Aaron Gordon right to say that the smaller number of rest days *might* be connected to the blowout phenomenon. (Also, one should say that Gordon himself was dealing with an injury in games 6 and 7, so we should factor that into his opinion/position as well). 
-
-I pulled all the data I could from the 1975-76 season all the way up until yesterday's most recent playoff game. And from that we can create a plot of blowout victories (again, blowouts being defined by a winning margin of more than 20 points—if one would like to alter this to 15 or 10 that's easy enough and they can do so in the code that will follow down at the end below):
-
-![first_graph_with_rest_line](/images/imgforblogposts/post_39/nba_blowout_trend_with_rest_line.png)
-
-Is there another way to visualize whether there's been a trending increase over time? For sure:
-
-![blowout_regression_line_with_rest_line_added](/images/imgforblogposts/post_39/nba_blowout_regression_trend.png)
-
-Looking at these, Gordon might be on to something—we certainly do not want to say rest days is the only factor in a possible explanation for the increased blowouts, but it is certainly something to keep in mind. 
-
-For those interested in the code to produce both plots—and also so you can tweak the winning margin to see if that changes things—I'll stick it in the Appendix below. Feel free to experiment and mess around a little bit (grab historical data going back past the ‘1975-76 season, collect regular season data and compare it with the playoffs, etc.) with this starter code.
 
 **Appendix**
 
