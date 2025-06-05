@@ -31,13 +31,13 @@ This dataset was nice as it offered a ["features_informations.pdf"](https://www.
 
 So then I wrote some code to take the 1997-2020 and update it all the way up to 2024 using the nba_api. I'll put that in Appendix 1 below. Thus we had all the team data from the very creation of the league all the way up until last year. With that, we could do some plotting. I figured we would try some visualizations of the total points, rebounds, assists, and three pointers made in each season of the WNBA (this code is in Appendix 2 below):
 
-![total_stats_over_time](images/imgforblogposts/post_40/wnba_total_stats_plots.png)
+![total_stats_over_time](/images/imgforblogposts/post_40/wnba_total_stats_plots.png)
 
 Obviousy a steady increase in all the stat categories---along with the dip in the COVID year as the WNBA only played half the number of normal games as usual.
 
 We can even take a look at averages of these categories per game today---again, nice upward trend with a dip in 2020:
 
-![average_stats_per_game_over_time](images/imgforblogposts/post_40/wnba_avg_per_game_plots.png)
+![average_stats_per_game_over_time](/images/imgforblogposts/post_40/wnba_avg_per_game_plots.png)
 
 As I say, just messing around---still more to be done and more to come here. Long story short: Welcome back WNBA basketball, I love it!!
 
