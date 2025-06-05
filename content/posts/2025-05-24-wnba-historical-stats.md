@@ -41,7 +41,6 @@ We can even take a look at averages of these categories per game today---again, 
 
 As I say, just messing around---still more to be done and more to come here. Long story short: Welcome back WNBA basketball, I love it!!
 
-
 **Appendix 1: Updating Stats .csv file**
 
 ``` python
