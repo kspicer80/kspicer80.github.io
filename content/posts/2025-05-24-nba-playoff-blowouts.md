@@ -48,6 +48,8 @@ Looking at these, Gordon might be on to something—we certainly do not want to 
 
 For those interested in the code to produce both plots—and also so you can tweak the winning margin to see if that changes things—I'll stick it in the Appendix below. Feel free to experiment and mess around a little bit (grab historical data going back past the ‘1975-76 season, collect regular season data and compare it with the playoffs, etc.) with this starter code.
 
+P.S. As the NBA Finals continue I'll update the graphs accordingly, of course.
+
 **Appendix**
 
 ``` python
