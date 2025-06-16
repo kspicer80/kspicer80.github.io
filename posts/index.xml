@@ -6,8 +6,8 @@ We can project Paul Skenes&amp;rsquo;s trajectory based on some estimates&amp;md
 <p>We can also look at Kershaw&rsquo;s road to 3000 over his career:</p>
 <p><img src="/images/imgforblogposts/post_41/kershaw_strikeouts.png" alt="kershaw_road_to_3000"></p>
 <p>(Code for this is in Appendix 2 <em>infra</em>.)</p>
-<p>Lastly, we could ovelay them together:</p>
-<p><img src="/images/imgforblogposts/post_41/skenes_vs_kersaw_trajectory.png" alt="skenes_career_projectton"></p>
+<p>Lastly, we could oveerlay them together:</p>
+<p><img src="/images/imgforblogposts/post_41/skenes_vs_kerhsaw_trajectory.png" alt="skenes_vs_kershaw"></p>
 <p>(Code is in Appendix 3.)</p>
 <p><strong>Appendix 1: Skenes&rsquo;s Current Trajectory</strong></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>
