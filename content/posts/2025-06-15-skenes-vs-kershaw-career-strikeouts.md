@@ -45,7 +45,6 @@ Lastly, we could oveerlay them together:
 **Appendix 1: Skenes's Current Trajectory**
 
 ``` python
-
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
