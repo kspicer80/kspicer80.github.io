@@ -38,7 +38,7 @@ We can also look at Kershaw's road to 3000 over his career:
 
 Lastly, we could oveerlay them together:
 
-![skenes_vs_kershaw](/images/imgforblogposts/post_41/skenes_vs_kerhsaw_trajectory.png)
+![skenes_vs_kershaw](/images/imgforblogposts/post_41/skenes_vs_kershaw_trajectory.png)
 
 (Code is in Appendix 3.)
 
