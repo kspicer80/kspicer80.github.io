@@ -27,4 +27,4 @@ With [Tarik Skubal](https://www.fangraphs.com/players/tarik-skubal/22267/stats?p
 
 ![skubal_career_K_projection](/images/imgforblogposts/post_42/skubal_projection.png)
 
-Perhaps I'll do some side-by-side comparisons between Skubal and Skenes. More to come.
+Perhaps I'll do some side-by-side comparisons between Skubal and Skenes. I'm sure I will. More to come.
