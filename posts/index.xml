@@ -1,4 +1,391 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Digital Forays</title><link>https://kspicer80.github.io/posts/</link><description>Recent content in Posts on Digital Forays</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&lt;a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0&lt;/a></copyright><lastBuildDate>Tue, 17 Jun 2025 13:50:00 +0000</lastBuildDate><atom:link href="https://kspicer80.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>More MLB Visualizations ... For a Larf</title><link>https://kspicer80.github.io/posts/2025-06-17-skubal-k-projections/</link><pubDate>Tue, 17 Jun 2025 13:50:00 +0000</pubDate><guid>https://kspicer80.github.io/posts/2025-06-17-skubal-k-projections/</guid><description>With Tarik Skubal on the mound tomorrow&amp;mdash;Wednesday, June 18&amp;mdash;for the Tigers against Pittsburgh, considered by many to be the best pitcher in baseball, I thought we could take a look at Skubal&amp;rsquo;s projections real quick as a larf. I figured we could use the code from our previous blog post looking at Paul Skenes and Clatyton Kershaw and see what we can see; just a couple changes to the player we&amp;rsquo;re looking at and we’re good to go:</description><content type="html"><![CDATA[<p>With <a href="https://www.fangraphs.com/players/tarik-skubal/22267/stats?position=P">Tarik Skubal</a> on the mound tomorrow&mdash;Wednesday, June 18&mdash;for the Tigers against Pittsburgh, considered by many to be the best pitcher in baseball, I thought we could take a look at Skubal&rsquo;s projections real quick as a larf. I figured we could use the code from our <a href="https://kspicer80.github.io/posts/2025-06-15-skenes-vs-kershaw-career-strikeouts/">previous blog post</a> looking at Paul Skenes and Clatyton Kershaw and see what we can see; just a couple changes to the player we&rsquo;re looking at and we’re good to go:</p>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Digital Forays</title><link>https://kspicer80.github.io/posts/</link><description>Recent content in Posts on Digital Forays</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&lt;a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0&lt;/a></copyright><lastBuildDate>Thu, 19 Jun 2025 17:50:00 +0000</lastBuildDate><atom:link href="https://kspicer80.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>As Promised---Skubal and Skenes Career K Projections</title><link>https://kspicer80.github.io/posts/2025-06-19-skubal_vs_skenes/</link><pubDate>Thu, 19 Jun 2025 17:50:00 +0000</pubDate><guid>https://kspicer80.github.io/posts/2025-06-19-skubal_vs_skenes/</guid><description>As in my previous post I promised to look at both Skenes and Skubal. I was also thinking about my initial [MLB post](where we were looking at Skenes and Kershaw). I can imagine a reader wondering how we determined what an &amp;ldquo;optimistic&amp;rdquo; versus &amp;ldquo;pessimistic&amp;rdquo; trajectory for Skenes ultimately is &amp;hellip; I figured I would answer that in my writeup here of our Skenes vs. Skubal&amp;rsquo;s career K potential/trajectory. So let&amp;rsquo;s go producing a similar side-by-side comparison for these two but with the initial steps not being left out/omitted.</description><content type="html"><![CDATA[<p>As in my <a href="https://kspicer80.github.io/posts/2025-06-17-skubal-k-projections/">previous post</a> I promised to look at both Skenes and Skubal. I was also thinking about my initial [MLB post](where we were looking at Skenes and Kershaw). I can imagine a reader wondering how we determined what an &ldquo;optimistic&rdquo; versus &ldquo;pessimistic&rdquo; trajectory for Skenes ultimately is &hellip; I figured I would answer that in my writeup here of our Skenes vs. Skubal&rsquo;s career K potential/trajectory. So let&rsquo;s go producing a similar side-by-side comparison for these two but with the initial steps not being left out/omitted.</p>
+<p>So, the first thing is getting an average strikeout rate for this two pitchers. We can get their full stats from the same sources as previous. Those stats look like this:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">NAME</th>
+<th style="text-align:left">SO</th>
+<th style="text-align:left">G</th>
+<th style="text-align:left">W</th>
+<th style="text-align:left">L</th>
+<th style="text-align:left">W%</th>
+<th style="text-align:left">GS</th>
+<th style="text-align:left">ERA</th>
+<th style="text-align:left">CG</th>
+<th style="text-align:left">SHO</th>
+<th style="text-align:left">SV</th>
+<th style="text-align:left">IP</th>
+<th style="text-align:left">H</th>
+<th style="text-align:left">ER</th>
+<th style="text-align:left">R</th>
+<th style="text-align:left">HR</th>
+<th style="text-align:left">BB</th>
+<th style="text-align:left">HBP</th>
+<th style="text-align:left">GF</th>
+<th style="text-align:left">IBB</th>
+<th style="text-align:left">TBF</th>
+<th style="text-align:left">WP</th>
+<th style="text-align:left">K/9</th>
+<th style="text-align:left">BB/9</th>
+<th style="text-align:left">K/BB</th>
+<th style="text-align:left">HR/9</th>
+<th style="text-align:left">K%</th>
+<th style="text-align:left">BB%</th>
+<th style="text-align:left">WHIP</th>
+<th style="text-align:left">BABIP</th>
+<th style="text-align:left">RA</th>
+<th style="text-align:left">ERA-</th>
+<th style="text-align:left">FIP</th>
+<th style="text-align:left">FIP-</th>
+<th style="text-align:left">H/9</th>
+<th style="text-align:left">PRAA</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Tarik Skubal</td>
+<td style="text-align:left">759</td>
+<td style="text-align:left">120</td>
+<td style="text-align:left">48</td>
+<td style="text-align:left">33</td>
+<td style="text-align:left">.593</td>
+<td style="text-align:left">117</td>
+<td style="text-align:left">3.18</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">0</td>
+<td style="text-align:left">661.2</td>
+<td style="text-align:left">537</td>
+<td style="text-align:left">234</td>
+<td style="text-align:left">252</td>
+<td style="text-align:left">78</td>
+<td style="text-align:left">148</td>
+<td style="text-align:left">24</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">0</td>
+<td style="text-align:left">2647</td>
+<td style="text-align:left">9</td>
+<td style="text-align:left">10.32</td>
+<td style="text-align:left">2.01</td>
+<td style="text-align:left">5.13</td>
+<td style="text-align:left">1.06</td>
+<td style="text-align:left">28.7</td>
+<td style="text-align:left">5.6</td>
+<td style="text-align:left">1.04</td>
+<td style="text-align:left">.280</td>
+<td style="text-align:left">3.43</td>
+<td style="text-align:left">77</td>
+<td style="text-align:left">3.17</td>
+<td style="text-align:left">77</td>
+<td style="text-align:left">7.30</td>
+<td style="text-align:left">68.6</td>
+</tr>
+<tr>
+<td style="text-align:left">Paul Skenes</td>
+<td style="text-align:left">267</td>
+<td style="text-align:left">38</td>
+<td style="text-align:left">15</td>
+<td style="text-align:left">9</td>
+<td style="text-align:left">.625</td>
+<td style="text-align:left">38</td>
+<td style="text-align:left">1.89</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">0</td>
+<td style="text-align:left">0</td>
+<td style="text-align:left">229.0</td>
+<td style="text-align:left">154</td>
+<td style="text-align:left">48</td>
+<td style="text-align:left">53</td>
+<td style="text-align:left">15</td>
+<td style="text-align:left">54</td>
+<td style="text-align:left">8</td>
+<td style="text-align:left">0</td>
+<td style="text-align:left">0</td>
+<td style="text-align:left">879</td>
+<td style="text-align:left">3</td>
+<td style="text-align:left">10.49</td>
+<td style="text-align:left">2.12</td>
+<td style="text-align:left">4.94</td>
+<td style="text-align:left">0.59</td>
+<td style="text-align:left">30.4</td>
+<td style="text-align:left">6.1</td>
+<td style="text-align:left">0.91</td>
+<td style="text-align:left">.260</td>
+<td style="text-align:left">2.08</td>
+<td style="text-align:left">45</td>
+<td style="text-align:left">2.45</td>
+<td style="text-align:left">61</td>
+<td style="text-align:left">6.05</td>
+<td style="text-align:left">40.1</td>
+</tr>
+</tbody>
+</table>
+<p>If we want a simplified version:</p>
+<table>
+<thead>
+<tr>
+<th>Player</th>
+<th>Strikeouts</th>
+<th>Starts</th>
+<th>Average K/Start</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tarik Skubal</td>
+<td>759</td>
+<td>117</td>
+<td>6.05</td>
+</tr>
+<tr>
+<td>Paul Skenes</td>
+<td>267</td>
+<td>38</td>
+<td>7.03</td>
+</tr>
+</tbody>
+</table>
+<p>So, Skubal has a slightly lower average strikeouts per start than Skenes does so far. Given this we can use this information to derive an optimistic score (over their average) or pessimistic (assuming they largely perform under their average.)</p>
+<p>That gives us the following visualization:</p>
+<p><img src="/images/imgforblogposts/post_43/skubal_skenes_comparison.png" alt="skubal_vs_skenes_projections"></p>
+<p>As always, code is provided below:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> requests
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> bs4 <span style="color:#f92672">import</span> BeautifulSoup
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> time
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> logging
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> argparse
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> os
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Set up logging</span>
+</span></span><span style="display:flex;"><span>logging<span style="color:#f92672">.</span>basicConfig(level<span style="color:#f92672">=</span>logging<span style="color:#f92672">.</span>INFO, format<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">%(asctime)s</span><span style="color:#e6db74"> - </span><span style="color:#e6db74">%(levelname)s</span><span style="color:#e6db74"> - </span><span style="color:#e6db74">%(message)s</span><span style="color:#e6db74">&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Function to scrape Tarik Skubal&#39;s stats from FanGraphs or ESPN with retries</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_skubal_stats</span>(max_retries<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>, delay<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>):
+</span></span><span style="display:flex;"><span>    url_fangraphs <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://www.fangraphs.com/players/tarik-skubal/18846/stats?position=P&#34;</span>
+</span></span><span style="display:flex;"><span>    url_espn <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;http://www.espn.com/mlb/player/stats/_/id/33794/tarik-skubal&#34;</span>
+</span></span><span style="display:flex;"><span>    headers <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;User-Agent&#39;</span>: <span style="color:#e6db74">&#39;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;Accept&#39;</span>: <span style="color:#e6db74">&#39;text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;Accept-Language&#39;</span>: <span style="color:#e6db74">&#39;en-US,en;q=0.5&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;Referer&#39;</span>: <span style="color:#e6db74">&#39;https://www.fangraphs.com/&#39;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> attempt <span style="color:#f92672">in</span> range(max_retries):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>            response <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</span>get(url_fangraphs, headers<span style="color:#f92672">=</span>headers, timeout<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>)
+</span></span><span style="display:flex;"><span>            response<span style="color:#f92672">.</span>raise_for_status()
+</span></span><span style="display:flex;"><span>            soup <span style="color:#f92672">=</span> BeautifulSoup(response<span style="color:#f92672">.</span>text, <span style="color:#e6db74">&#39;html.parser&#39;</span>)
+</span></span><span style="display:flex;"><span>            table <span style="color:#f92672">=</span> soup<span style="color:#f92672">.</span>find(<span style="color:#e6db74">&#39;table&#39;</span>, id<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;PitchingStandard&#39;</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> table:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">raise</span> <span style="color:#a6e22e">ValueError</span>(<span style="color:#e6db74">&#34;Pitching stats table not found&#34;</span>)
+</span></span><span style="display:flex;"><span>            career_row <span style="color:#f92672">=</span> table<span style="color:#f92672">.</span>find_all(<span style="color:#e6db74">&#39;tr&#39;</span>, class_<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;rgRow&#39;</span>, <span style="color:#e6db74">&#39;rgAltRow&#39;</span>])[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+</span></span><span style="display:flex;"><span>            cells <span style="color:#f92672">=</span> career_row<span style="color:#f92672">.</span>find_all(<span style="color:#e6db74">&#39;td&#39;</span>)
+</span></span><span style="display:flex;"><span>            strikeouts <span style="color:#f92672">=</span> int(cells[<span style="color:#ae81ff">13</span>]<span style="color:#f92672">.</span>text<span style="color:#f92672">.</span>strip())
+</span></span><span style="display:flex;"><span>            games_started <span style="color:#f92672">=</span> int(cells[<span style="color:#ae81ff">5</span>]<span style="color:#f92672">.</span>text<span style="color:#f92672">.</span>strip())
+</span></span><span style="display:flex;"><span>            logging<span style="color:#f92672">.</span>info(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Successfully scraped stats from FanGraphs: </span><span style="color:#e6db74">{</span>strikeouts<span style="color:#e6db74">}</span><span style="color:#e6db74"> strikeouts, </span><span style="color:#e6db74">{</span>games_started<span style="color:#e6db74">}</span><span style="color:#e6db74"> starts&#34;</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> strikeouts, games_started
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">Exception</span> <span style="color:#66d9ef">as</span> e:
+</span></span><span style="display:flex;"><span>            logging<span style="color:#f92672">.</span>warning(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;FanGraphs attempt </span><span style="color:#e6db74">{</span>attempt <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> failed: </span><span style="color:#e6db74">{</span>e<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> attempt <span style="color:#f92672">&lt;</span> max_retries <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>:
+</span></span><span style="display:flex;"><span>                time<span style="color:#f92672">.</span>sleep(delay)
+</span></span><span style="display:flex;"><span>    headers[<span style="color:#e6db74">&#39;Referer&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;http://www.espn.com/&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> attempt <span style="color:#f92672">in</span> range(max_retries):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>            response <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</span>get(url_espn, headers<span style="color:#f92672">=</span>headers, timeout<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>)
+</span></span><span style="display:flex;"><span>            response<span style="color:#f92672">.</span>raise_for_status()
+</span></span><span style="display:flex;"><span>            soup <span style="color:#f92672">=</span> BeautifulSoup(response<span style="color:#f92672">.</span>text, <span style="color:#e6db74">&#39;html.parser&#39;</span>)
+</span></span><span style="display:flex;"><span>            stats_table <span style="color:#f92672">=</span> soup<span style="color:#f92672">.</span>find(<span style="color:#e6db74">&#39;table&#39;</span>, class_<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Table&#39;</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> stats_table:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">raise</span> <span style="color:#a6e22e">ValueError</span>(<span style="color:#e6db74">&#34;Stats table not found on ESPN&#34;</span>)
+</span></span><span style="display:flex;"><span>            career_row <span style="color:#f92672">=</span> stats_table<span style="color:#f92672">.</span>find(<span style="color:#e6db74">&#39;tr&#39;</span>, class_<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Table__TR--lg&#39;</span>)
+</span></span><span style="display:flex;"><span>            cells <span style="color:#f92672">=</span> career_row<span style="color:#f92672">.</span>find_all(<span style="color:#e6db74">&#39;td&#39;</span>)
+</span></span><span style="display:flex;"><span>            strikeouts <span style="color:#f92672">=</span> int(cells[<span style="color:#ae81ff">13</span>]<span style="color:#f92672">.</span>text<span style="color:#f92672">.</span>strip())
+</span></span><span style="display:flex;"><span>            games_started <span style="color:#f92672">=</span> int(cells[<span style="color:#ae81ff">3</span>]<span style="color:#f92672">.</span>text<span style="color:#f92672">.</span>strip())
+</span></span><span style="display:flex;"><span>            logging<span style="color:#f92672">.</span>info(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Successfully scraped stats from ESPN: </span><span style="color:#e6db74">{</span>strikeouts<span style="color:#e6db74">}</span><span style="color:#e6db74"> strikeouts, </span><span style="color:#e6db74">{</span>games_started<span style="color:#e6db74">}</span><span style="color:#e6db74"> starts&#34;</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> strikeouts, games_started
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">Exception</span> <span style="color:#66d9ef">as</span> e:
+</span></span><span style="display:flex;"><span>            logging<span style="color:#f92672">.</span>warning(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;ESPN attempt </span><span style="color:#e6db74">{</span>attempt <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> failed: </span><span style="color:#e6db74">{</span>e<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> attempt <span style="color:#f92672">&lt;</span> max_retries <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>:
+</span></span><span style="display:flex;"><span>                time<span style="color:#f92672">.</span>sleep(delay)
+</span></span><span style="display:flex;"><span>    logging<span style="color:#f92672">.</span>error(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Scraping failed after </span><span style="color:#e6db74">{</span>max_retries<span style="color:#e6db74">}</span><span style="color:#e6db74"> attempts on both sites. Using fallback data.&#34;</span>)
+</span></span><span style="display:flex;"><span>    logging<span style="color:#f92672">.</span>warning(<span style="color:#e6db74">&#34;Consider using --manual or checking https://www.fangraphs.com/players/tarik-skubal/18846/stats?position=P or http://www.espn.com/mlb/player/stats/_/id/33794/tarik-skubal&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">759</span>, <span style="color:#ae81ff">117</span>  <span style="color:#75715e"># Updated fallback: Full career stats as of June 18, 2025</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Function to scrape Paul Skenes&#39; stats from FanGraphs or ESPN with retries</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_skenes_stats</span>(max_retries<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>, delay<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>):
+</span></span><span style="display:flex;"><span>    url_fangraphs <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://www.fangraphs.com/players/paul-skenes/24615/stats?position=P&#34;</span>
+</span></span><span style="display:flex;"><span>    url_espn <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;http://www.espn.com/mlb/player/stats/_/id/42922/paul-skenes&#34;</span>
+</span></span><span style="display:flex;"><span>    headers <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;User-Agent&#39;</span>: <span style="color:#e6db74">&#39;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;Accept&#39;</span>: <span style="color:#e6db74">&#39;text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;Accept-Language&#39;</span>: <span style="color:#e6db74">&#39;en-US,en;q=0.5&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;Referer&#39;</span>: <span style="color:#e6db74">&#39;https://www.fangraphs.com/&#39;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> attempt <span style="color:#f92672">in</span> range(max_retries):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>            response <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</span>get(url_fangraphs, headers<span style="color:#f92672">=</span>headers, timeout<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>)
+</span></span><span style="display:flex;"><span>            response<span style="color:#f92672">.</span>raise_for_status()
+</span></span><span style="display:flex;"><span>            soup <span style="color:#f92672">=</span> BeautifulSoup(response<span style="color:#f92672">.</span>text, <span style="color:#e6db74">&#39;html.parser&#39;</span>)
+</span></span><span style="display:flex;"><span>            table <span style="color:#f92672">=</span> soup<span style="color:#f92672">.</span>find(<span style="color:#e6db74">&#39;table&#39;</span>, id<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;PitchingStandard&#39;</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> table:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">raise</span> <span style="color:#a6e22e">ValueError</span>(<span style="color:#e6db74">&#34;Pitching stats table not found&#34;</span>)
+</span></span><span style="display:flex;"><span>            career_row <span style="color:#f92672">=</span> table<span style="color:#f92672">.</span>find_all(<span style="color:#e6db74">&#39;tr&#39;</span>, class_<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;rgRow&#39;</span>, <span style="color:#e6db74">&#39;rgAltRow&#39;</span>])[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+</span></span><span style="display:flex;"><span>            cells <span style="color:#f92672">=</span> career_row<span style="color:#f92672">.</span>find_all(<span style="color:#e6db74">&#39;td&#39;</span>)
+</span></span><span style="display:flex;"><span>            strikeouts <span style="color:#f92672">=</span> int(cells[<span style="color:#ae81ff">13</span>]<span style="color:#f92672">.</span>text<span style="color:#f92672">.</span>strip())
+</span></span><span style="display:flex;"><span>            games_started <span style="color:#f92672">=</span> int(cells[<span style="color:#ae81ff">5</span>]<span style="color:#f92672">.</span>text<span style="color:#f92672">.</span>strip())
+</span></span><span style="display:flex;"><span>            logging<span style="color:#f92672">.</span>info(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Successfully scraped stats from FanGraphs: </span><span style="color:#e6db74">{</span>strikeouts<span style="color:#e6db74">}</span><span style="color:#e6db74"> strikeouts, </span><span style="color:#e6db74">{</span>games_started<span style="color:#e6db74">}</span><span style="color:#e6db74"> starts&#34;</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> strikeouts, games_started
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">Exception</span> <span style="color:#66d9ef">as</span> e:
+</span></span><span style="display:flex;"><span>            logging<span style="color:#f92672">.</span>warning(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;FanGraphs attempt </span><span style="color:#e6db74">{</span>attempt <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> failed: </span><span style="color:#e6db74">{</span>e<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> attempt <span style="color:#f92672">&lt;</span> max_retries <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>:
+</span></span><span style="display:flex;"><span>                time<span style="color:#f92672">.</span>sleep(delay)
+</span></span><span style="display:flex;"><span>    headers[<span style="color:#e6db74">&#39;Referer&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;http://www.espn.com/&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> attempt <span style="color:#f92672">in</span> range(max_retries):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>            response <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</span>get(url_espn, headers<span style="color:#f92672">=</span>headers, timeout<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>)
+</span></span><span style="display:flex;"><span>            response<span style="color:#f92672">.</span>raise_for_status()
+</span></span><span style="display:flex;"><span>            soup <span style="color:#f92672">=</span> BeautifulSoup(response<span style="color:#f92672">.</span>text, <span style="color:#e6db74">&#39;html.parser&#39;</span>)
+</span></span><span style="display:flex;"><span>            stats_table <span style="color:#f92672">=</span> soup<span style="color:#f92672">.</span>find(<span style="color:#e6db74">&#39;table&#39;</span>, class_<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Table&#39;</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> stats_table:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">raise</span> <span style="color:#a6e22e">ValueError</span>(<span style="color:#e6db74">&#34;Stats table not found on ESPN&#34;</span>)
+</span></span><span style="display:flex;"><span>            career_row <span style="color:#f92672">=</span> stats_table<span style="color:#f92672">.</span>find(<span style="color:#e6db74">&#39;tr&#39;</span>, class_<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Table__TR--lg&#39;</span>)
+</span></span><span style="display:flex;"><span>            cells <span style="color:#f92672">=</span> career_row<span style="color:#f92672">.</span>find_all(<span style="color:#e6db74">&#39;td&#39;</span>)
+</span></span><span style="display:flex;"><span>            strikeouts <span style="color:#f92672">=</span> int(cells[<span style="color:#ae81ff">13</span>]<span style="color:#f92672">.</span>text<span style="color:#f92672">.</span>strip())
+</span></span><span style="display:flex;"><span>            games_started <span style="color:#f92672">=</span> int(cells[<span style="color:#ae81ff">3</span>]<span style="color:#f92672">.</span>text<span style="color:#f92672">.</span>strip())
+</span></span><span style="display:flex;"><span>            logging<span style="color:#f92672">.</span>info(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Successfully scraped stats from ESPN: </span><span style="color:#e6db74">{</span>strikeouts<span style="color:#e6db74">}</span><span style="color:#e6db74"> strikeouts, </span><span style="color:#e6db74">{</span>games_started<span style="color:#e6db74">}</span><span style="color:#e6db74"> starts&#34;</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> strikeouts, games_started
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">Exception</span> <span style="color:#66d9ef">as</span> e:
+</span></span><span style="display:flex;"><span>            logging<span style="color:#f92672">.</span>warning(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;ESPN attempt </span><span style="color:#e6db74">{</span>attempt <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> failed: </span><span style="color:#e6db74">{</span>e<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> attempt <span style="color:#f92672">&lt;</span> max_retries <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>:
+</span></span><span style="display:flex;"><span>                time<span style="color:#f92672">.</span>sleep(delay)
+</span></span><span style="display:flex;"><span>    logging<span style="color:#f92672">.</span>error(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Scraping failed after </span><span style="color:#e6db74">{</span>max_retries<span style="color:#e6db74">}</span><span style="color:#e6db74"> attempts on both sites. Using fallback data.&#34;</span>)
+</span></span><span style="display:flex;"><span>    logging<span style="color:#f92672">.</span>warning(<span style="color:#e6db74">&#34;Consider using --manual or checking https://www.fangraphs.com/players/paul-skenes/24615/stats?position=P or http://www.espn.com/mlb/player/stats/_/id/42922/paul-skenes&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">267</span>, <span style="color:#ae81ff">38</span>  <span style="color:#75715e"># Fallback: 267 strikeouts, 38 starts (as of June 17, 2025)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Function to get stats via manual input</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_manual_stats</span>(player):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>        strikeouts <span style="color:#f92672">=</span> int(input(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Enter </span><span style="color:#e6db74">{</span>player<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;s current strikeouts: &#34;</span>))
+</span></span><span style="display:flex;"><span>        starts <span style="color:#f92672">=</span> int(input(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Enter </span><span style="color:#e6db74">{</span>player<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;s current starts: &#34;</span>))
+</span></span><span style="display:flex;"><span>        logging<span style="color:#f92672">.</span>info(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Manually entered stats for </span><span style="color:#e6db74">{</span>player<span style="color:#e6db74">}</span><span style="color:#e6db74">: </span><span style="color:#e6db74">{</span>strikeouts<span style="color:#e6db74">}</span><span style="color:#e6db74"> strikeouts, </span><span style="color:#e6db74">{</span>starts<span style="color:#e6db74">}</span><span style="color:#e6db74"> starts&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> strikeouts, starts
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">ValueError</span>:
+</span></span><span style="display:flex;"><span>        logging<span style="color:#f92672">.</span>error(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Invalid input for </span><span style="color:#e6db74">{</span>player<span style="color:#e6db74">}</span><span style="color:#e6db74">. Using fallback data.&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">759</span>, <span style="color:#ae81ff">117</span> <span style="color:#66d9ef">if</span> player <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;Tarik Skubal&#34;</span> <span style="color:#66d9ef">else</span> <span style="color:#ae81ff">267</span>, <span style="color:#ae81ff">38</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Parse command-line arguments</span>
+</span></span><span style="display:flex;"><span>parser <span style="color:#f92672">=</span> argparse<span style="color:#f92672">.</span>ArgumentParser(description<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Compare Tarik Skubal and Paul Skenes career strikeouts&#34;</span>)
+</span></span><span style="display:flex;"><span>parser<span style="color:#f92672">.</span>add_argument(<span style="color:#e6db74">&#39;--manual&#39;</span>, action<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;store_true&#39;</span>, help<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Manually input stats instead of scraping&#39;</span>)
+</span></span><span style="display:flex;"><span>parser<span style="color:#f92672">.</span>add_argument(<span style="color:#e6db74">&#39;--no-scrape&#39;</span>, action<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;store_true&#39;</span>, help<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Skip scraping and use fallback data&#39;</span>)
+</span></span><span style="display:flex;"><span>parser<span style="color:#f92672">.</span>add_argument(<span style="color:#e6db74">&#39;--years&#39;</span>, type<span style="color:#f92672">=</span>int, default<span style="color:#f92672">=</span><span style="color:#ae81ff">15</span>, help<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Number of projection years (default: 15)&#39;</span>)
+</span></span><span style="display:flex;"><span>args <span style="color:#f92672">=</span> parser<span style="color:#f92672">.</span>parse_args()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Get current stats</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> args<span style="color:#f92672">.</span>manual:
+</span></span><span style="display:flex;"><span>    skubal_strikeouts, skubal_starts <span style="color:#f92672">=</span> get_manual_stats(<span style="color:#e6db74">&#34;Tarik Skubal&#34;</span>)
+</span></span><span style="display:flex;"><span>    skenes_strikeouts, skenes_starts <span style="color:#f92672">=</span> get_manual_stats(<span style="color:#e6db74">&#34;Paul Skenes&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">elif</span> args<span style="color:#f92672">.</span>no_scrape:
+</span></span><span style="display:flex;"><span>    skubal_strikeouts, skubal_starts <span style="color:#f92672">=</span> <span style="color:#ae81ff">759</span>, <span style="color:#ae81ff">117</span>
+</span></span><span style="display:flex;"><span>    skenes_strikeouts, skenes_starts <span style="color:#f92672">=</span> <span style="color:#ae81ff">267</span>, <span style="color:#ae81ff">38</span>
+</span></span><span style="display:flex;"><span>    logging<span style="color:#f92672">.</span>info(<span style="color:#e6db74">&#34;Skipping scraping as per --no-scrape. Using fallback data: 759 strikeouts, 117 starts for Skubal; 267 strikeouts, 38 starts for Skenes&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>    skubal_strikeouts, skubal_starts <span style="color:#f92672">=</span> get_skubal_stats()
+</span></span><span style="display:flex;"><span>    skenes_strikeouts, skenes_starts <span style="color:#f92672">=</span> get_skenes_stats()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>skubal_age <span style="color:#f92672">=</span> <span style="color:#ae81ff">23</span>  <span style="color:#75715e"># Updated to MLB debut age (September 2020)</span>
+</span></span><span style="display:flex;"><span>skenes_age <span style="color:#f92672">=</span> <span style="color:#ae81ff">23</span>  <span style="color:#75715e"># As of June 17, 2025</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Assumptions</span>
+</span></span><span style="display:flex;"><span>skubal_rates <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;optimistic&#39;</span>: <span style="color:#ae81ff">6.5</span>, <span style="color:#e6db74">&#39;average&#39;</span>: <span style="color:#ae81ff">6.0</span>, <span style="color:#e6db74">&#39;pessimistic&#39;</span>: <span style="color:#ae81ff">5.5</span>}
+</span></span><span style="display:flex;"><span>skenes_rates <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;optimistic&#39;</span>: <span style="color:#ae81ff">7.5</span>, <span style="color:#e6db74">&#39;average&#39;</span>: <span style="color:#ae81ff">7.0</span>, <span style="color:#e6db74">&#39;pessimistic&#39;</span>: <span style="color:#ae81ff">6.5</span>}
+</span></span><span style="display:flex;"><span>starts_per_season <span style="color:#f92672">=</span> <span style="color:#ae81ff">27</span>  <span style="color:#75715e"># Average of 25-30 starts</span>
+</span></span><span style="display:flex;"><span>career_years <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>arange(<span style="color:#ae81ff">0</span>, args<span style="color:#f92672">.</span>years)
+</span></span><span style="display:flex;"><span>skubal_seasons <span style="color:#f92672">=</span> skubal_age <span style="color:#f92672">+</span> career_years
+</span></span><span style="display:flex;"><span>skenes_seasons <span style="color:#f92672">=</span> skenes_age <span style="color:#f92672">+</span> career_years
+</span></span><span style="display:flex;"><span>logging<span style="color:#f92672">.</span>info(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Projecting for </span><span style="color:#e6db74">{</span>len(career_years)<span style="color:#e6db74">}</span><span style="color:#e6db74"> years, Skubal ages </span><span style="color:#e6db74">{</span>skubal_age<span style="color:#e6db74">}</span><span style="color:#e6db74"> to </span><span style="color:#e6db74">{</span>skubal_seasons[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74">, Skenes ages </span><span style="color:#e6db74">{</span>skenes_age<span style="color:#e6db74">}</span><span style="color:#e6db74"> to </span><span style="color:#e6db74">{</span>skenes_seasons[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Function to project strikeouts</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">project_strikeouts</span>(strikeout_rate, starts_per_year, years, current_k):
+</span></span><span style="display:flex;"><span>    cumulative_k <span style="color:#f92672">=</span> [current_k]
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, len(years)):
+</span></span><span style="display:flex;"><span>        season_k <span style="color:#f92672">=</span> strikeout_rate <span style="color:#f92672">*</span> starts_per_year
+</span></span><span style="display:flex;"><span>        cumulative_k<span style="color:#f92672">.</span>append(cumulative_k[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">+</span> season_k)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> cumulative_k
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Calculate projections</span>
+</span></span><span style="display:flex;"><span>skubal_projections <span style="color:#f92672">=</span> {scenario: project_strikeouts(rate, starts_per_season, career_years, skubal_strikeouts) <span style="color:#66d9ef">for</span> scenario, rate <span style="color:#f92672">in</span> skubal_rates<span style="color:#f92672">.</span>items()}
+</span></span><span style="display:flex;"><span>skenes_projections <span style="color:#f92672">=</span> {scenario: project_strikeouts(rate, starts_per_season, career_years, skenes_strikeouts) <span style="color:#66d9ef">for</span> scenario, rate <span style="color:#f92672">in</span> skenes_rates<span style="color:#f92672">.</span>items()}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Create DataFrame for visualization</span>
+</span></span><span style="display:flex;"><span>df_skubal <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({<span style="color:#e6db74">&#39;age&#39;</span>: skubal_seasons, <span style="color:#f92672">**</span>{<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;skubal_</span><span style="color:#e6db74">{</span>scenario<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>: proj <span style="color:#66d9ef">for</span> scenario, proj <span style="color:#f92672">in</span> skubal_projections<span style="color:#f92672">.</span>items()}})
+</span></span><span style="display:flex;"><span>df_skenes <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({<span style="color:#e6db74">&#39;age&#39;</span>: skenes_seasons, <span style="color:#f92672">**</span>{<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;skenes_</span><span style="color:#e6db74">{</span>scenario<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>: proj <span style="color:#66d9ef">for</span> scenario, proj <span style="color:#f92672">in</span> skenes_projections<span style="color:#f92672">.</span>items()}})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Save projections to CSV</span>
+</span></span><span style="display:flex;"><span>csv_path <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/Users/spicy.kev/Documents/github/kspicer80.github.io/static/images/imgforblogposts/post_43/skubal_skenes_projections.csv&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>    pd<span style="color:#f92672">.</span>concat([df_skubal, df_skenes], axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)<span style="color:#f92672">.</span>to_csv(csv_path, index<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>)
+</span></span><span style="display:flex;"><span>    logging<span style="color:#f92672">.</span>info(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Projections saved to </span><span style="color:#e6db74">{</span>csv_path<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">except</span> <span style="color:#a6e22e">Exception</span> <span style="color:#66d9ef">as</span> e:
+</span></span><span style="display:flex;"><span>    logging<span style="color:#f92672">.</span>error(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Failed to save CSV to </span><span style="color:#e6db74">{</span>csv_path<span style="color:#e6db74">}</span><span style="color:#e6db74">: </span><span style="color:#e6db74">{</span>e<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Find years to reach 3000 strikeouts</span>
+</span></span><span style="display:flex;"><span>target_k <span style="color:#f92672">=</span> <span style="color:#ae81ff">3000</span>
+</span></span><span style="display:flex;"><span>reach_3000 <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;skubal&#39;</span>: {}, <span style="color:#e6db74">&#39;skenes&#39;</span>: {}}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> player, projections <span style="color:#f92672">in</span> [(<span style="color:#e6db74">&#39;skubal&#39;</span>, skubal_projections), (<span style="color:#e6db74">&#39;skenes&#39;</span>, skenes_projections)]:
+</span></span><span style="display:flex;"><span>    seasons <span style="color:#f92672">=</span> skubal_seasons <span style="color:#66d9ef">if</span> player <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;skubal&#39;</span> <span style="color:#66d9ef">else</span> skenes_seasons
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> scenario <span style="color:#f92672">in</span> projections:
+</span></span><span style="display:flex;"><span>        years_to_3000 <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>where(np<span style="color:#f92672">.</span>array(projections[scenario]) <span style="color:#f92672">&gt;=</span> target_k)[<span style="color:#ae81ff">0</span>]
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> len(years_to_3000) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>            year_idx <span style="color:#f92672">=</span> years_to_3000[<span style="color:#ae81ff">0</span>]
+</span></span><span style="display:flex;"><span>            reach_3000[player][scenario] <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;age&#39;</span>: seasons[year_idx], <span style="color:#e6db74">&#39;strikeouts&#39;</span>: projections[scenario][year_idx]}
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>            reach_3000[player][scenario] <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;age&#39;</span>: <span style="color:#66d9ef">None</span>, <span style="color:#e6db74">&#39;strikeouts&#39;</span>: projections[scenario][<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Plotting with debugging</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;Skubal DataFrame:</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, df_skubal)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;Skenes DataFrame:</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, df_skenes)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">8</span>))
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> scenario <span style="color:#f92672">in</span> skubal_projections:
+</span></span><span style="display:flex;"><span>    plt<span style="color:#f92672">.</span>plot(df_skubal[<span style="color:#e6db74">&#39;age&#39;</span>], df_skubal[<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;skubal_</span><span style="color:#e6db74">{</span>scenario<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>], label<span style="color:#f92672">=</span><span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;Skubal </span><span style="color:#e6db74">{</span>scenario<span style="color:#f92672">.</span>capitalize()<span style="color:#e6db74">}</span><span style="color:#e6db74"> (</span><span style="color:#e6db74">{</span>skubal_rates[scenario]<span style="color:#e6db74">}</span><span style="color:#e6db74"> K/start)&#39;</span>, linestyle<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;--&#39;</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;C</span><span style="color:#e6db74">{</span>list(skubal_rates<span style="color:#f92672">.</span>keys())<span style="color:#f92672">.</span>index(scenario)<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> scenario <span style="color:#f92672">in</span> skenes_projections:
+</span></span><span style="display:flex;"><span>    plt<span style="color:#f92672">.</span>plot(df_skenes[<span style="color:#e6db74">&#39;age&#39;</span>], df_skenes[<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;skenes_</span><span style="color:#e6db74">{</span>scenario<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>], label<span style="color:#f92672">=</span><span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;Skenes </span><span style="color:#e6db74">{</span>scenario<span style="color:#f92672">.</span>capitalize()<span style="color:#e6db74">}</span><span style="color:#e6db74"> (</span><span style="color:#e6db74">{</span>skenes_rates[scenario]<span style="color:#e6db74">}</span><span style="color:#e6db74"> K/start)&#39;</span>, linestyle<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;-&#39;</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;C</span><span style="color:#e6db74">{</span>list(skenes_rates<span style="color:#f92672">.</span>keys())<span style="color:#f92672">.</span>index(scenario)<span style="color:#f92672">+</span><span style="color:#ae81ff">3</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>axhline(y<span style="color:#f92672">=</span><span style="color:#ae81ff">3000</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;r&#39;</span>, linestyle<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;--&#39;</span>, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;3000 Strikeouts&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>xlabel(<span style="color:#e6db74">&#39;Age&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>ylabel(<span style="color:#e6db74">&#39;Cumulative Strikeouts&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>title(<span style="color:#e6db74">&#39;Skubal vs. Skenes Career Strikeout Projection&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>legend()
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>grid(<span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>tight_layout()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Save plot with error handling</span>
+</span></span><span style="display:flex;"><span>save_path <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/Users/spicy.kev/Documents/github/kspicer80.github.io/static/images/imgforblogposts/post_43/skubal_skenes_comparison.png&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>    os<span style="color:#f92672">.</span>makedirs(os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>dirname(save_path), exist_ok<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>    plt<span style="color:#f92672">.</span>savefig(save_path, dpi<span style="color:#f92672">=</span><span style="color:#ae81ff">300</span>, bbox_inches<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;tight&#39;</span>)
+</span></span><span style="display:flex;"><span>    logging<span style="color:#f92672">.</span>info(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Plot saved to </span><span style="color:#e6db74">{</span>save_path<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">except</span> <span style="color:#a6e22e">Exception</span> <span style="color:#66d9ef">as</span> e:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Error saving plot: </span><span style="color:#e6db74">{</span>e<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    logging<span style="color:#f92672">.</span>error(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Failed to save plot to </span><span style="color:#e6db74">{</span>save_path<span style="color:#e6db74">}</span><span style="color:#e6db74">: </span><span style="color:#e6db74">{</span>e<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Print results</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Tarik Skubal Current Stats: </span><span style="color:#e6db74">{</span>skubal_strikeouts<span style="color:#e6db74">}</span><span style="color:#e6db74"> strikeouts in </span><span style="color:#e6db74">{</span>skubal_starts<span style="color:#e6db74">}</span><span style="color:#e6db74"> starts&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Paul Skenes Current Stats: </span><span style="color:#e6db74">{</span>skenes_strikeouts<span style="color:#e6db74">}</span><span style="color:#e6db74"> strikeouts in </span><span style="color:#e6db74">{</span>skenes_starts<span style="color:#e6db74">}</span><span style="color:#e6db74"> starts&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Projecting for </span><span style="color:#e6db74">{</span>len(career_years)<span style="color:#e6db74">}</span><span style="color:#e6db74"> years (Skubal ages </span><span style="color:#e6db74">{</span>skubal_age<span style="color:#e6db74">}</span><span style="color:#e6db74"> to </span><span style="color:#e6db74">{</span>skubal_seasons[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74">, Skenes ages </span><span style="color:#e6db74">{</span>skenes_age<span style="color:#e6db74">}</span><span style="color:#e6db74"> to </span><span style="color:#e6db74">{</span>skenes_seasons[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74">)&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;Career Strikeout Projections:&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> player <span style="color:#f92672">in</span> [<span style="color:#e6db74">&#39;Skubal&#39;</span>, <span style="color:#e6db74">&#39;Skenes&#39;</span>]:
+</span></span><span style="display:flex;"><span>    projections <span style="color:#f92672">=</span> skubal_projections <span style="color:#66d9ef">if</span> player <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;Skubal&#39;</span> <span style="color:#66d9ef">else</span> skenes_projections
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> scenario, info <span style="color:#f92672">in</span> reach_3000[player<span style="color:#f92672">.</span>lower()]<span style="color:#f92672">.</span>items():
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> info[<span style="color:#e6db74">&#39;age&#39;</span>] <span style="color:#f92672">is</span> <span style="color:#f92672">not</span> <span style="color:#66d9ef">None</span>:
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>player<span style="color:#e6db74">}</span><span style="color:#e6db74"> </span><span style="color:#e6db74">{</span>scenario<span style="color:#f92672">.</span>capitalize()<span style="color:#e6db74">}</span><span style="color:#e6db74"> Scenario: Reaches 3000 strikeouts at age </span><span style="color:#e6db74">{</span>info[<span style="color:#e6db74">&#39;age&#39;</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74"> with </span><span style="color:#e6db74">{</span>int(info[<span style="color:#e6db74">&#39;strikeouts&#39;</span>])<span style="color:#e6db74">}</span><span style="color:#e6db74"> strikeouts&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>player<span style="color:#e6db74">}</span><span style="color:#e6db74"> </span><span style="color:#e6db74">{</span>scenario<span style="color:#f92672">.</span>capitalize()<span style="color:#e6db74">}</span><span style="color:#e6db74"> Scenario: Ends at </span><span style="color:#e6db74">{</span>int(info[<span style="color:#e6db74">&#39;strikeouts&#39;</span>])<span style="color:#e6db74">}</span><span style="color:#e6db74"> strikeouts by age </span><span style="color:#e6db74">{</span>skubal_seasons[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#66d9ef">if</span> player <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;Skubal&#39;</span> <span style="color:#66d9ef">else</span> skenes_seasons[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span></code></pre></div>]]></content></item><item><title>More MLB Visualizations ... For a Larf</title><link>https://kspicer80.github.io/posts/2025-06-17-skubal-k-projections/</link><pubDate>Tue, 17 Jun 2025 13:50:00 +0000</pubDate><guid>https://kspicer80.github.io/posts/2025-06-17-skubal-k-projections/</guid><description>With Tarik Skubal on the mound tomorrow&amp;mdash;Wednesday, June 18&amp;mdash;for the Tigers against Pittsburgh, considered by many to be the best pitcher in baseball, I thought we could take a look at Skubal&amp;rsquo;s projections real quick as a larf. I figured we could use the code from our previous blog post looking at Paul Skenes and Clatyton Kershaw and see what we can see; just a couple changes to the player we&amp;rsquo;re looking at and we’re good to go:</description><content type="html"><![CDATA[<p>With <a href="https://www.fangraphs.com/players/tarik-skubal/22267/stats?position=P">Tarik Skubal</a> on the mound tomorrow&mdash;Wednesday, June 18&mdash;for the Tigers against Pittsburgh, considered by many to be the best pitcher in baseball, I thought we could take a look at Skubal&rsquo;s projections real quick as a larf. I figured we could use the code from our <a href="https://kspicer80.github.io/posts/2025-06-15-skenes-vs-kershaw-career-strikeouts/">previous blog post</a> looking at Paul Skenes and Clatyton Kershaw and see what we can see; just a couple changes to the player we&rsquo;re looking at and we’re good to go:</p>
 <p><img src="/images/imgforblogposts/post_42/skubal_projection.png" alt="skubal_career_K_projection"></p>
 <p>Perhaps I&rsquo;ll do some side-by-side comparisons between Skubal and Skenes. I&rsquo;m sure I will. More to come.</p>
 ]]></content></item><item><title>We've Done Some NBA and WNBA Data Analysis ... How About Some MLB?</title><link>https://kspicer80.github.io/posts/2025-06-15-skenes-vs-kershaw-career-strikeouts/</link><pubDate>Sun, 15 Jun 2025 23:50:00 +0000</pubDate><guid>https://kspicer80.github.io/posts/2025-06-15-skenes-vs-kershaw-career-strikeouts/</guid><description>Watching the LA Dodgers and SF Giants game yesterday&amp;mdash;Saturday, June 14, 2025&amp;mdash;the commentators were talking about Clayton Kershaw&amp;rsquo;s closing in a on 3000 career strikeouts. Having earlier watched Pittsburgh Pirates ace Paul Skenes go, I wonder if we could visualize the possibilities of the latter eventually clearing that line.
