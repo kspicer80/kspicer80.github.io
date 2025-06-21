@@ -31,7 +31,7 @@ tags:
   - Tigers
 ---
 
-As in my [previous post](https://kspicer80.github.io/posts/2025-06-17-skubal-k-projections/) I promised to look at both Skenes and Skubal. I was also thinking about my initial [MLB post](where we were looking at Skenes and Kershaw). I can imagine a reader wondering how we determined what an "optimistic" versus "pessimistic" trajectory for Skenes ultimately is ... I figured I would answer that in my writeup here of our Skenes vs. Skubal's career K potential/trajectory. So let's go producing a similar side-by-side comparison for these two but with the initial steps not being left out/omitted.
+As in my [previous post](https://kspicer80.github.io/posts/2025-06-17-skubal-k-projections/) I promised to look at both Skenes and Skubal. I was also thinking about my initial [MLB post](https://kspicer80.github.io/posts/2025-06-15-skenes-vs-kershaw-career-strikeouts/) (where we were looking at Skenes and Kershaw). I can imagine a reader wondering how we determined what an "optimistic" versus "pessimistic" trajectory for Skenes ultimately is ... I figured I would answer that in my writeup here of our Skenes vs. Skubal's career K potential/trajectory. So let's go producing a similar side-by-side comparison for these two but with the initial steps not being left out/omitted.
 
 So, the first thing is getting an average strikeout rate for this two pitchers. We can get their full stats from the same sources as previous. Those stats look like this:
 
