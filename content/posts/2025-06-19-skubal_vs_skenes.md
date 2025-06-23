@@ -21,7 +21,7 @@ tags:
   - BeautifulSoup
   - json
   - csv
-  - Patrick Skenes
+  - Paul Skenes
   - Tarik Skubal
   - Skenes
   - Skubal

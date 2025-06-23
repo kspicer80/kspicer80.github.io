@@ -20,6 +20,8 @@ tags:
   - numpy
   - BeautifulSoup
   - json
+  - Paul Skenes
+  - Clayton Kershaw
 ---
 
 Watching the LA Dodgers and SF Giants game yesterday---Saturday, June 14, 2025---the commentators were talking about Clayton Kershaw's closing in a on 3000 career strikeouts. Having earlier watched Pittsburgh Pirates ace Paul Skenes go, I wonder if we could visualize the possibilities of the latter eventually clearing that line.
