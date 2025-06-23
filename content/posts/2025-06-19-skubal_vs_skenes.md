@@ -31,7 +31,31 @@ tags:
   - Tigers
 ---
 
-As in my [previous post](https://kspicer80.github.io/posts/2025-06-17-skubal-k-projections/) I promised to look at both Skenes and Skubal. I was also thinking about my initial [MLB post](https://kspicer80.github.io/posts/2025-06-15-skenes-vs-kershaw-career-strikeouts/) (where we were looking at Skenes and Kershaw). I can imagine a reader wondering how we determined what an "optimistic" versus "pessimistic" trajectory for Skenes ultimately is ... I figured I would answer that in my writeup here of our Skenes vs. Skubal's career K potential/trajectory. So let's go producing a similar side-by-side comparison for these two but with the initial steps not being left out/omitted.
+As in my [previous post](https://kspicer80.github.io/posts/2025-06-17-skubal-k-projections/) I promised to look at both Skenes and Skubal and their projected trajectories towards 3000 career strikeouts. If we're being honest, this benchmark is far from easy to achieve, only 19 pitchers in the history of baseball have done it before:
+
+| Pitcher          | Strikeouts |
+|------------------|-----------:|
+| Nolan Ryan       |      5,714 |
+| Randy Johnson    |      4,875 |
+| Roger Clemens    |      4,672 |
+| Steve Carlton    |      4,136 |
+| Bert Blyleven    |      3,701 |
+| Tom Seaver       |      3,640 |
+| Don Sutton       |      3,574 |
+| Gaylord Perry    |      3,534 |
+| Walter Johnson   |      3,509 |
+| Greg Maddux      |      3,371 |
+| Phil Niekro      |      3,342 |
+| Ferguson Jenkins |      3,192 |
+| Pedro Martinez   |      3,154 |
+| Bob Gibson       |      3,117 |
+| Curt Schilling   |      3,116 |
+| CC Sabathia      |      3,093 |
+| John Smoltz      |      3,084 |
+| Justin Verlander |      3,041 |
+| Max Scherzer     |      3,000 |
+
+(IIRC, CC Sabathia and Justin Verlander are also on this list too.) So, just making clear how hard this is to manage, I'd like to continue our analysis. I was also thinking about my initial [MLB post](https://kspicer80.github.io/posts/2025-06-15-skenes-vs-kershaw-career-strikeouts/) (where we were looking at Skenes and Kershaw). I can imagine a reader wondering how we determined what an "optimistic" versus "pessimistic" trajectory for Skenes ultimately is ... I figured I would answer that in my writeup here of our Skenes vs. Skubal's career K potential/trajectory. So let's go producing a similar side-by-side comparison for these two but with the initial steps not being left out/omitted.
 
 So, the first thing is getting an average strikeout rate for this two pitchers. We can get their full stats from the same sources as previous. Those stats look like this:
 
