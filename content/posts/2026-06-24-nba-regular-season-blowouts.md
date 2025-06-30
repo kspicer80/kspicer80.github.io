@@ -1,7 +1,7 @@
 ---
 title: "NBA Regular Season Blowouts"
-date: 2025-06-30 00:05:00
-draft: true
+date: 2025-06-29 00:05:00
+draft: false
 toc: false
 tags:
   - python
