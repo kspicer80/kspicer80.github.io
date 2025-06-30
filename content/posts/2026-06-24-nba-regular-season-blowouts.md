@@ -33,7 +33,7 @@ So, we filtered out all the regular season game and then plotted the data. We ha
 
 ![raw_data](/images/imgforblogposts/post_44/nba_regular_season_blowouts_over_history.png)
 
-![proportions](/images/imgforblogposts_post_44/proportion_of_regular_season_blowouts_over_time.png)
+![proportions](/images/imgforblogposts/post_44/proportion_of_regular_season_blowouts_over_time.png)
 
 Code is here:
 
