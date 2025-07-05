@@ -29,7 +29,7 @@ So, spending some time looking at NBA blouwouts in the playoffs over time in pre
 
 I found a dataset on [Kaggle Datasets](https://www.kaggle.com/datasets/eoinamoore/historical-nba-data-and-player-box-scores?select=LeagueSchedule24_25.csv) that had data from the very start of the NBA up until today.
 
-So, we filtered out all the regular season game and then plotted the data. We have the raw blowout data in the first image and then the proportions in the second plot below:
+So, we filtered out all the regular season games and then plotted the data. We have the raw blowout data in the first image and then the proportions in the second plot below:
 
 ![raw_data](/images/imgforblogposts/post_44/nba_regular_season_blowouts_over_history.png)
 
