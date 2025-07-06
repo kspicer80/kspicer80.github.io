@@ -25,7 +25,7 @@ tags:
   - kaggle datasets
 ---
 
-Given that we've been doing some work with the NBA and "blowouts" in a couple of different posts---one [here](https://kspicer80.github.io/posts/2025-05-24-nba-playoff-blowouts/) and another [here](https://kspicer80.github.io/posts/2026-06-24-nba-regular-season-blowouts/)---I thought we might look at the WNBA too. So, first step, I found a [Kaggle dataset](https://www.kaggle.com/datasets/rafaelgreca/wnba-games-box-score-since-1997) that gave us data up until 2020, if I remember correctly. We then wrote some code to update to the most latest games:
+Given that we've been doing some work with the NBA and "blowouts" in a couple of different posts---one [here](https://kspicer80.github.io/posts/2025-05-24-nba-playoff-blowouts/) and another [here](https://kspicer80.github.io/posts/2026-06-24-nba-regular-season-blowouts/)---I thought we might look at the WNBA too. So, first step, I found a [Kaggle dataset](https://www.kaggle.com/datasets/rafaelgreca/wnba-games-box-score-since-1997) that gave us data up until 2020, if I remember correctly. We then wrote some code to update to the most recent games:
 
 ``` python
 import pandas as pd
