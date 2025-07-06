@@ -307,7 +307,7 @@ import pandas as pd import numpy as np from nba_api.</description><content type=
 </span></span></code></pre></div><p>Now, with the updated dataset, we can write some code to plot the blowouts and their proportions over time:</p>
 <p><img src="/images/imgforblogposts/post_45/wnba_blowout_counts.png" alt="blowout_counts"></p>
 <p><img src="/images/imgforblogposts/post_45/wnba_blowout_proportions.png" alt="blowout_proportions"></p>
-<p>Script to produce this is here:</p>
+<p>Script to produce these plots is here:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
 </span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
 </span></span><span style="display:flex;"><span>
