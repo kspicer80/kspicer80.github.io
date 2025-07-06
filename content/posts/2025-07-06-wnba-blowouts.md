@@ -340,7 +340,7 @@ Now, with the updated dataset, we can write some code to plot the blowouts and t
 
 ![blowout_proportions](/images/imgforblogposts/post_45/wnba_blowout_proportions.png)
 
-Script to produce this is here:
+Script to produce these plots is here:
 
 ``` python
 import pandas as pd
