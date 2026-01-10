@@ -98,16 +98,16 @@ if __name__ == "__main__":
 
 With everything cleaned and filtered we can produce some plots. I’ll just put the plots here and point again to the github repo that has separate scripts for all these visualizations.
 
-![Fourth Down Attempts](https://rawgithubusercontent.com/kspicer80/nfl_fourth_downs/blob/main/images/plot_1_fourth_down_attempts-1.png)
+![Fourth Down Attempts](/images/imgforblogposts/post_46/plot_1_fourth_down_attempts.png)
 
-![Fourth Down Conversion Rates](https://rawgithubusercontent.com/kspicer80/nfl_fourth_downs/blob/main/images/plot_2_fourth_down_conversion_rate.png)
+![Fourth Down Conversion Rates](/images/imgforblogposts/post_46/plot_2_fourth_down_conversion_rate.png)
 
-![Go-For-It Rate by Field Position and Era Heatmap](https://rawgithubusercontent.com/kspicer80/nfl_fourth_downs/blob/main/images/plot_3_go_for_it_rate_by_field_position_and_era_heatmap.png)
+![Go-For-It Rate by Field Position and Era Heatmap](/images/imgforblogposts/post_46/plot_3_go_for_it_rate_by_field_position_and_era_heatmap.png)
 
-![Go-For-It Rate by Field Position and Era Scatter Lines](https://rawgithubusercontent.com/kspicer80/nfl_fourth_downs/blob/main/images/plot_4_go_for_it_scatter_lines_by_era.png)
+![Go-For-It Rate by Field Position and Era Scatter Lines](/images/imgforblogposts/post_46/plot_4_go_for_it_scatter_lines_by_era.png)
 
-![By Field Position and Era Alternative](https://rawgithubusercontent.com/kspicer80/nfl_fourth_downs/blob/main/images/step_7_plot.png)
+![By Field Position and Era Alternative](/images/imgforblogposts/post_46/step_7_plot.png)
 
-![By Field Position and Era Scatter Plot No Lines](https://rawgithubusercontent.com/kspicer80/nfl_fourth_downs/blob/main/images/step_8_scatter_no_lines.png)
+![By Field Position and Era Scatter Plot No Lines](/images/imgforblogposts/post_46/step_8_scatter_no_lines.png)
 
 Obviously, there are some tweaks we could make to the aesthetics of many of these to fine-tune them even further. More to come, as always.
