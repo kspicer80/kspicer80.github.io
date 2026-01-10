@@ -19,13 +19,13 @@ tags:
 
 ### Introductory Setup
 
-This past Thanksgiving I headed over to Sioux City, IA to visit my folks, brother, sister-in-law, and baby sister. Thursday found my father and I watching the Chiefs game against the Cowboys (Dallas carried the day [31-28](https://www.nfl.com/games/chiefs-at-cowboys-2025-reg-13?tab=stats)). At some point, my dad turned to me and said something to the effect of you, "Doesn't it seem like teams nowadays are going for it on fourth down far more than they used to?" "Oooh, I suppose so, though that's a fantastically empirical question we could figure out." "Sounds like a question for [ChatGPT](https://chatgpt.com)," he comically quipped. As per usual, I told him that don't sound like any fun and said I'd much rather code it up myself. So, here, below, is the workflow to investigate (github repo with everything is available [here](https://github.com/kspicer80/nfl_fourth_downs)). I've split said repo into a number of different steps, which we'll have a look at below.
+This past Thanksgiving I headed over to Sioux City, IA to visit my folks, brother, sister-in-law, and baby sister. Thursday found my father and I watching the Chiefs game against the Cowboys (Dallas carried the day [31-28](https://www.nfl.com/games/chiefs-at-cowboys-2025-reg-13?tab=stats)). At some point, my dad turned to me and said something to the effect of you, "Doesn't it seem like teams nowadays are going for it on fourth down far more than they used to?" "Oooh, I suppose so, though that's a fantastically empirical question we could figure out." "Sounds like a question for [ChatGPT](https://chatgpt.com)," he comically quipped. As per usual, I told him that don't sound like any fun and said I'd much rather code it up myself. So, here, below, is the workflow to investigate (github repo with everything is available [here](https://rawgithubusercontent.com/kspicer80/nfl_fourth_downs)). I've split said repo into a number of different steps, which we'll have a look at below.
 
 #### Step 1: Gathering the Data
 
-As always, we start by gathering the data we need. Obviously we need a way to pull down some NFL stats—and the [nflreadpy](https://github.com/nflverse/nflreadpy) library is designed exactly for this. So our first step is to create a script to download the NFL data required.
+As always, we start by gathering the data we need. Obviously we need a way to pull down some NFL stats—and the [nflreadpy](https://rawgithubusercontent.com/nflverse/nflreadpy) library is designed exactly for this. So our first step is to create a script to download the NFL data required.
 
-Here’s our data fetching script—I also thought I would try working with [polars](https://github.com/pola-rs/polar) rather than my/our usual pandas. (Polars touts itself as blazingly fast—since we’re looking at quite a lot of data [twenty plus years of play by play data], I figured I’d give it a try. I also wrote some miscellaneous scripts to benchmark polars vs. pandas and, indeed, the former is faster.)
+Here’s our data fetching script—I also thought I would try working with [polars](https://rawgithubusercontent.com/pola-rs/polar) rather than my/our usual pandas. (Polars touts itself as blazingly fast—since we’re looking at quite a lot of data [twenty plus years of play by play data], I figured I’d give it a try. I also wrote some miscellaneous scripts to benchmark polars vs. pandas and, indeed, the former is faster.)
 
 ``` python
 import nflreadpy as nfl
@@ -98,16 +98,16 @@ if __name__ == "__main__":
 
 With everything cleaned and filtered we can produce some plots. I’ll just put the plots here and point again to the github repo that has separate scripts for all these visualizations.
 
-![Fourth Down Attempts](https://github.com/kspicer80/nfl_fourth_downs/blob/main/images/plot_1_fourth_down_attempts-1.png)
+![Fourth Down Attempts](https://rawgithubusercontent.com/kspicer80/nfl_fourth_downs/blob/main/images/plot_1_fourth_down_attempts-1.png)
 
-![Fourth Down Conversion Rates](https://github.com/kspicer80/nfl_fourth_downs/blob/main/images/plot_2_fourth_down_conversion_rate.png)
+![Fourth Down Conversion Rates](https://rawgithubusercontent.com/kspicer80/nfl_fourth_downs/blob/main/images/plot_2_fourth_down_conversion_rate.png)
 
-![Go-For-It Rate by Field Position and Era Heatmap](https://github.com/kspicer80/nfl_fourth_downs/blob/main/images/plot_3_go_for_it_rate_by_field_position_and_era_heatmap.png)
+![Go-For-It Rate by Field Position and Era Heatmap](https://rawgithubusercontent.com/kspicer80/nfl_fourth_downs/blob/main/images/plot_3_go_for_it_rate_by_field_position_and_era_heatmap.png)
 
-![Go-For-It Rate by Field Position and Era Scatter Lines](https://github.com/kspicer80/nfl_fourth_downs/blob/main/images/plot_4_go_for_it_scatter_lines_by_era.png)
+![Go-For-It Rate by Field Position and Era Scatter Lines](https://rawgithubusercontent.com/kspicer80/nfl_fourth_downs/blob/main/images/plot_4_go_for_it_scatter_lines_by_era.png)
 
-![By Field Position and Era Alternative](https://github.com/kspicer80/nfl_fourth_downs/blob/main/images/step_7_plot.png)
+![By Field Position and Era Alternative](https://rawgithubusercontent.com/kspicer80/nfl_fourth_downs/blob/main/images/step_7_plot.png)
 
-![By Field Position and Era Scatter Plot No Lines](https://github.com/kspicer80/nfl_fourth_downs/blob/main/images/step_8_scatter_no_lines.png)
+![By Field Position and Era Scatter Plot No Lines](https://rawgithubusercontent.com/kspicer80/nfl_fourth_downs/blob/main/images/step_8_scatter_no_lines.png)
 
 Obviously, there are some tweaks we could make to the aesthetics of many of these to fine-tune them even further. More to come, as always.
