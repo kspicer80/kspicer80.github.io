@@ -64,12 +64,12 @@
 </span></span><span style="display:flex;"><span>    print(season_trends)
 </span></span></code></pre></div><h3 id="steps-3-8-visualizing-the-data">Steps 3-8: Visualizing the Data</h3>
 <p>With everything cleaned and filtered we can produce some plots. I’ll just put the plots here and point again to the github repo that has separate scripts for all these visualizations.</p>
-<p><img src="https://rawgithubusercontent.com/kspicer80/nfl_fourth_downs/blob/main/images/plot_1_fourth_down_attempts-1.png" alt="Fourth Down Attempts"></p>
-<p><img src="https://rawgithubusercontent.com/kspicer80/nfl_fourth_downs/blob/main/images/plot_2_fourth_down_conversion_rate.png" alt="Fourth Down Conversion Rates"></p>
-<p><img src="https://rawgithubusercontent.com/kspicer80/nfl_fourth_downs/blob/main/images/plot_3_go_for_it_rate_by_field_position_and_era_heatmap.png" alt="Go-For-It Rate by Field Position and Era Heatmap"></p>
-<p><img src="https://rawgithubusercontent.com/kspicer80/nfl_fourth_downs/blob/main/images/plot_4_go_for_it_scatter_lines_by_era.png" alt="Go-For-It Rate by Field Position and Era Scatter Lines"></p>
-<p><img src="https://rawgithubusercontent.com/kspicer80/nfl_fourth_downs/blob/main/images/step_7_plot.png" alt="By Field Position and Era Alternative"></p>
-<p><img src="https://rawgithubusercontent.com/kspicer80/nfl_fourth_downs/blob/main/images/step_8_scatter_no_lines.png" alt="By Field Position and Era Scatter Plot No Lines"></p>
+<p><img src="/images/imgforblogposts/post_46/plot_1_fourth_down_attempts.png" alt="Fourth Down Attempts"></p>
+<p><img src="/images/imgforblogposts/post_46/plot_2_fourth_down_conversion_rate.png" alt="Fourth Down Conversion Rates"></p>
+<p><img src="/images/imgforblogposts/post_46/plot_3_go_for_it_rate_by_field_position_and_era_heatmap.png" alt="Go-For-It Rate by Field Position and Era Heatmap"></p>
+<p><img src="/images/imgforblogposts/post_46/plot_4_go_for_it_scatter_lines_by_era.png" alt="Go-For-It Rate by Field Position and Era Scatter Lines"></p>
+<p><img src="/images/imgforblogposts/post_46/step_7_plot.png" alt="By Field Position and Era Alternative"></p>
+<p><img src="/images/imgforblogposts/post_46/step_8_scatter_no_lines.png" alt="By Field Position and Era Scatter Plot No Lines"></p>
 <p>Obviously, there are some tweaks we could make to the aesthetics of many of these to fine-tune them even further. More to come, as always.</p>
 ]]></content></item><item><title>WNBA Regular Season Blowouts</title><link>https://kspicer80.github.io/posts/2025-07-06-wnba-blowouts/</link><pubDate>Sat, 05 Jul 2025 00:05:00 +0000</pubDate><guid>https://kspicer80.github.io/posts/2025-07-06-wnba-blowouts/</guid><description>Given that we&amp;rsquo;ve been doing some work with the NBA and &amp;ldquo;blowouts&amp;rdquo; in a couple of different posts&amp;mdash;one here and another here&amp;mdash;I thought we might look at the WNBA too. So, first step, I found a Kaggle dataset that gave us data up until 2020, if I remember correctly. We then wrote some code to update to the most recent games:
 import pandas as pd import numpy as np from nba_api.</description><content type="html"><![CDATA[<p>Given that we&rsquo;ve been doing some work with the NBA and &ldquo;blowouts&rdquo; in a couple of different posts&mdash;one <a href="https://kspicer80.github.io/posts/2025-05-24-nba-playoff-blowouts/">here</a> and another <a href="https://kspicer80.github.io/posts/2026-06-24-nba-regular-season-blowouts/">here</a>&mdash;I thought we might look at the WNBA too. So, first step, I found a <a href="https://www.kaggle.com/datasets/rafaelgreca/wnba-games-box-score-since-1997">Kaggle dataset</a> that gave us data up until 2020, if I remember correctly. We then wrote some code to update to the most recent games:</p>
