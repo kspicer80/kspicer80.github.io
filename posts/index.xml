@@ -1,4 +1,132 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Digital Forays</title><link>https://kspicer80.github.io/posts/</link><description>Recent content in Posts on Digital Forays</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&lt;a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0&lt;/a></copyright><lastBuildDate>Fri, 09 Jan 2026 00:01:00 +0000</lastBuildDate><atom:link href="https://kspicer80.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Going For It on 4th Down!</title><link>https://kspicer80.github.io/posts/2026-01-10-nfl-4th-downs/</link><pubDate>Fri, 09 Jan 2026 00:01:00 +0000</pubDate><guid>https://kspicer80.github.io/posts/2026-01-10-nfl-4th-downs/</guid><description>Introductory Setup This past Thanksgiving I headed over to Sioux City, IA to visit my folks, brother, sister-in-law, and baby sister. Thursday found my father and I watching the Chiefs game against the Cowboys (Dallas carried the day 31-28). At some point, my dad turned to me and said something to the effect of you, &amp;ldquo;Doesn&amp;rsquo;t it seem like teams nowadays are going for it on fourth down far more than they used to?</description><content type="html"><![CDATA[<h3 id="introductory-setup">Introductory Setup</h3>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Digital Forays</title><link>https://kspicer80.github.io/posts/</link><description>Recent content in Posts on Digital Forays</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&lt;a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0&lt;/a></copyright><lastBuildDate>Sat, 10 Jan 2026 00:01:46 +0000</lastBuildDate><atom:link href="https://kspicer80.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>More NBA Stats ... but in R no less!: Klay Thompson's Career PPG</title><link>https://kspicer80.github.io/posts/2026-01-10-nba_stats_in_r_klay_thompson/</link><pubDate>Sat, 10 Jan 2026 00:01:46 +0000</pubDate><guid>https://kspicer80.github.io/posts/2026-01-10-nba_stats_in_r_klay_thompson/</guid><description>On Thursday, January 8th I was watching the Dallas Mavericks play the Utah Jazz. Early on Klay Thompson seemed a little off. I thought of his time back in Golden State (I was actually in San Francisco in 2015 when the Warriors won the title) and thought about how far we have all fallen (this was a little premature, if I&amp;rsquo;m honest, as he finished 23, 3, and 5, IIRC). I got it into my head to see what the stats say.</description><content type="html"><![CDATA[<p>On Thursday, January 8th I was watching the Dallas Mavericks play the Utah Jazz. Early on Klay Thompson seemed a little off. I thought of his time back in Golden State (I was actually in San Francisco in 2015 when the Warriors won the title) and thought about how far we have all fallen (this was a little premature, if I&rsquo;m honest, as he finished 23, 3, and 5, <a href="https://www.nba.com/game/dal-vs-uta-0022500531/box-score#box-score">IIRC</a>). I got it into my head to see what the stats say. I&rsquo;ve also been working my way towards learning R and thought I might try to produce some graphs of Thompson&rsquo;s career using that language. So, here we go&mdash;it&rsquo;s not much but, as I say, I&rsquo;m still in the baby steps phase of learning this language. (Repo is <a href="https://github.com/kspicer80/klay_thompson_career_ppg_in_R">here</a>.)</p>
+<p>The script is plenty simple enough&mdash;utilizing the <a href="https://hoopr.sportsdataverse.org">&ldquo;hoopR&rdquo; package</a>:</p>
+<pre tabindex="0"><code># Load packages
+library(hoopR)
+library(ggplot2)
+library(dplyr)
+
+# Get Klay Thompson&#39;s player ID
+players_list &lt;- nba_commonallplayers(season = &#34;2024-25&#34;)
+
+# Extract the actual dataframe
+players &lt;- players_list$CommonAllPlayers
+
+# Now filter for Klay
+klay_id &lt;- players %&gt;% 
+  filter(DISPLAY_FIRST_LAST == &#34;Klay Thompson&#34;) %&gt;% 
+  pull(PERSON_ID)
+
+print(paste(&#34;Klay&#39;s ID:&#34;, klay_id))
+
+# ===== PLOT 1: Annual Averages =====
+
+# Get career stats by season
+klay_career &lt;- nba_playercareerstats(player_id = klay_id)
+
+# Extract the season totals dataframe and convert to numeric
+klay_seasons &lt;- klay_career$SeasonTotalsRegularSeason %&gt;%
+  mutate(
+    PTS = as.numeric(PTS),
+    GP = as.numeric(GP),
+    PPG = PTS / GP
+  )
+
+# Create the annual averages plot
+plot1 &lt;- ggplot(klay_seasons, aes(x = SEASON_ID, y = PPG)) +
+  geom_line(group = 1, color = &#34;#1D428A&#34;, linewidth = 1.2) +
+  geom_point(color = &#34;#FFC72C&#34;, size = 3) +
+  theme_minimal() +
+  labs(title = &#34;Klay Thompson - Points Per Game by Season&#34;,
+       x = &#34;Season&#34;,
+       y = &#34;Points Per Game&#34;) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+print(plot1)
+
+# Save Plot 1
+ggsave(&#34;klay_ppg_by_season.png&#34;, plot = plot1, width = 10, height = 6, dpi = 300)
+
+
+# ===== PLOT 2 &amp; 3: Game-by-Game Scatterplots =====
+
+# Get all seasons
+seasons_list &lt;- c(&#34;2011-12&#34;, &#34;2012-13&#34;, &#34;2013-14&#34;, &#34;2014-15&#34;, &#34;2015-16&#34;, 
+                  &#34;2016-17&#34;, &#34;2017-18&#34;, &#34;2018-19&#34;, &#34;2021-22&#34;, &#34;2022-23&#34;, 
+                  &#34;2023-24&#34;, &#34;2024-25&#34;)
+
+all_games &lt;- list()
+
+for(s in seasons_list) {
+  tryCatch({
+    game_log &lt;- nba_playergamelog(player_id = klay_id, season = s)
+    
+    # Extract the dataframe from the list
+    if(&#34;PlayerGameLog&#34; %in% names(game_log)) {
+      all_games[[s]] &lt;- game_log$PlayerGameLog
+    } else {
+      all_games[[s]] &lt;- game_log
+    }
+    
+    print(paste(&#34;Got data for&#34;, s))
+    Sys.sleep(0.5)  # Small delay to avoid rate limiting
+  }, error = function(e) {
+    print(paste(&#34;Error with season&#34;, s, &#34;:&#34;, e$message))
+  })
+}
+
+# Combine all games
+klay_games &lt;- bind_rows(all_games) %&gt;%
+  mutate(
+    PTS = as.numeric(PTS),
+    GAME_DATE = as.Date(GAME_DATE, format = &#34;%b %d, %Y&#34;),
+    # Check if DAL appears at the START of MATCHUP (meaning Klay is on DAL)
+    # MATCHUP format is typically &#34;DAL vs. OPP&#34; or &#34;DAL @ OPP&#34; when on Dallas
+    Team = ifelse(grepl(&#34;^DAL&#34;, MATCHUP), &#34;Mavericks&#34;, &#34;Warriors&#34;)
+  )
+
+# Create scatterplot WITHOUT regression line
+plot2 &lt;- ggplot(klay_games, aes(x = GAME_DATE, y = PTS, color = Team)) +
+  geom_point(alpha = 0.6, size = 2) +
+  scale_color_manual(values = c(&#34;Warriors&#34; = &#34;#FFC72C&#34;, &#34;Mavericks&#34; = &#34;#00538C&#34;)) +
+  theme_minimal() +
+  labs(title = &#34;Klay Thompson - Points by Game (Career)&#34;,
+       x = &#34;Date&#34;,
+       y = &#34;Points&#34;,
+       subtitle = &#34;Each point represents one game&#34;,
+       color = &#34;Team&#34;) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+print(plot2)
+
+# Save Plot 2
+ggsave(&#34;klay_points_by_game_no_regression.png&#34;, plot = plot2, width = 12, height = 6, dpi = 300)
+
+
+# Create scatterplot WITH regression line
+plot3 &lt;- ggplot(klay_games, aes(x = GAME_DATE, y = PTS, color = Team)) +
+  geom_point(alpha = 0.6, size = 2) +
+  geom_smooth(aes(group = 1), method = &#34;loess&#34;, color = &#34;gray30&#34;, se = TRUE) +
+  scale_color_manual(values = c(&#34;Warriors&#34; = &#34;#FFC72C&#34;, &#34;Mavericks&#34; = &#34;#00538C&#34;)) +
+  theme_minimal() +
+  labs(title = &#34;Klay Thompson - Points by Game (Career)&#34;,
+       x = &#34;Date&#34;,
+       y = &#34;Points&#34;,
+       subtitle = &#34;Each point represents one game with smoothed trend line&#34;,
+       color = &#34;Team&#34;) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+print(plot3)
+
+# Save Plot 3
+ggsave(&#34;klay_points_by_game_with_regression.png&#34;, plot = plot3, width = 12, height = 6, dpi = 300)
+
+print(&#34;All three plots saved successfully!&#34;)
+</code></pre><p>And here are our plots:</p>
+<p><img src="/images/imgforblogposts/post_47/klay_1.png" alt="Klay PPG Over His Career"></p>
+<p><img src="/images/imgforblogposts/post_47/klay_2.png" alt="Klay&amp;rsquo;s Every Game Scatterplot"></p>
+<p><img src="/images/imgforblogposts/post_47/klay_3.png" alt="Klay&amp;rsquo;s Every Game Scatterplot with Smoothed Regression Line"></p>
+<p>P.S. I&rsquo;m thinking of writing a more general script that will work for any player regardless of the number of teams they have played for&mdash;more to come.</p>
+]]></content></item><item><title>Going For It on 4th Down!</title><link>https://kspicer80.github.io/posts/2026-01-09-nfl-4th-downs/</link><pubDate>Fri, 09 Jan 2026 00:01:00 +0000</pubDate><guid>https://kspicer80.github.io/posts/2026-01-09-nfl-4th-downs/</guid><description>Introductory Setup This past Thanksgiving I headed over to Sioux City, IA to visit my folks, brother, sister-in-law, and baby sister. Thursday found my father and I watching the Chiefs game against the Cowboys (Dallas carried the day 31-28). At some point, my dad turned to me and said something to the effect of you, &amp;ldquo;Doesn&amp;rsquo;t it seem like teams nowadays are going for it on fourth down far more than they used to?</description><content type="html"><![CDATA[<h3 id="introductory-setup">Introductory Setup</h3>
 <p>This past Thanksgiving I headed over to Sioux City, IA to visit my folks, brother, sister-in-law, and baby sister. Thursday found my father and I watching the Chiefs game against the Cowboys (Dallas carried the day <a href="https://www.nfl.com/games/chiefs-at-cowboys-2025-reg-13?tab=stats">31-28</a>). At some point, my dad turned to me and said something to the effect of you, &ldquo;Doesn&rsquo;t it seem like teams nowadays are going for it on fourth down far more than they used to?&rdquo; &ldquo;Oooh, I suppose so, though that&rsquo;s a fantastically empirical question we could figure out.&rdquo; &ldquo;Sounds like a question for <a href="https://chatgpt.com">ChatGPT</a>,&rdquo; he comically quipped. As per usual, I told him that don&rsquo;t sound like any fun and said I&rsquo;d much rather code it up myself. So, here, below, is the workflow to investigate (github repo with everything is available <a href="https://rawgithubusercontent.com/kspicer80/nfl_fourth_downs">here</a>). I&rsquo;ve split said repo into a number of different steps, which we&rsquo;ll have a look at below.</p>
 <h4 id="step-1-gathering-the-data">Step 1: Gathering the Data</h4>
 <p>As always, we start by gathering the data we need. Obviously we need a way to pull down some NFL stats—and the <a href="https://rawgithubusercontent.com/nflverse/nflreadpy">nflreadpy</a> library is designed exactly for this. So our first step is to create a script to download the NFL data required.</p>
