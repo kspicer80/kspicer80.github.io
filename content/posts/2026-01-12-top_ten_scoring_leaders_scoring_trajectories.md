@@ -13,7 +13,6 @@ tags:
   - R for sports
   - ggplot
   - data visualization
-  
 ---
 
 Given my last two posts on [Klay Thompson](https://kspicer80.github.io/posts/2026-01-10-nba_stats_in_r_klay_thompson/) and [LeBron James’](https://kspicer80.github.io/posts/2026-01-11-nba_stats_in_r_lebron_james/) PPG over their careers, I go to thinking about the top 10 scoring leaders all time (Kevin Durant recently moved up the list](https://www.bbc.com/sport/basketball/articles/cvgrqe2eggjo) past Wilt Chamberlain). How about plotting their stats all together? Let’s do it (all the code in R to reproduce these is available [here](https://github.com/kspicer80/nba_top_ten_scorers_scoring_trajectories) in the "scripts" folder)! I have a number of different visualizations so go have a look-see!
