@@ -18,7 +18,7 @@ tags:
 
 A couple of days ago (January 9, 2026) I watched LeBron and the Lakers take on the Milwaukee Bucks. He played [well](https://www.espn.com/nba/recap/_/gameId/401810396) (26, 9, and 10 is pretty damned good, in fact.) Figures I would use the code from my previous [post](https://kspicer80.github.io/posts/2026-01-10-nba_stats_in_r_klay_thompson/) on Klay Thompson. Here’s what we get (including the more generalized code I promised).
 
-More generalized code first:
+The more generalized code I promised first:
 
 ```{r}
 
