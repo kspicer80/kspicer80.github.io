@@ -207,6 +207,7 @@ ggsave(paste0(gsub(" ", "_", tolower(player_name)), "_points_by_game_with_regres
 
 print("All three plots saved successfully!")
 ```
+
 Plots second (for LeBron James in this iteration):
 
 ![LeBron PPG Over His Career](/images/imgforblogposts/post_48/lebron_1.png)
