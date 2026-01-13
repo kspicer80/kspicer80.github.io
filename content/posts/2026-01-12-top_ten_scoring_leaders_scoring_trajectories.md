@@ -1,5 +1,5 @@
 ---
-title: "Even More NBA Stats ... but in R no less!: LeBron James's Career PPG"
+title: "Even More NBA Stats: Top Ten All-Time Scorers' Scoring Trajectories Over Their Careers"
 date: 2026-01-11 00:03:46
 draft: false
 toc: false
