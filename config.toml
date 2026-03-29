@@ -2,7 +2,7 @@ baseURL = 'https://kspicer80.github.io/'
 languageCode = 'en-us'
 title = 'Digital Forays'
 theme = 'hello-friend-ng'
-paginate = 10
+paginate = 50
 
 [params]
   author = "Dr. Kevin Andrew Spicer"
