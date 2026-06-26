@@ -6,7 +6,7 @@ tags:
   - Python
   - Shakespeare
   - Star Trek
-  - *TNG*
+  - TNG
   - natural language processing
   - fuzzy matching
   - sentence transformers
