@@ -76,7 +76,7 @@ sims = sk_cosine(batch, shak_vecs)
 
 The relationship between the two scoring methods is itself worth examining. The scatter plot below shows fuzzy score against semantic score for a sample of 2,000 matches, coloured by play. Points in the upper-right quadrant---high on both axes---represent the most confident matches; points that score high on fuzzy but lower on semantic tend to be lexical overlaps that don't hold up under deeper comparison, while the reverse (high semantic, moderate fuzzy) often flags looser thematic allusions where the wording has been substantially reworked.
 
-![Fuzzy vs. semantic score by play](/images/imgforblogposts/post_50/tng_shakespeare/05_scatter.png)
+![Fuzzy vs. semantic score by play](static/images/imgforblogposts/post_50/tng_shakespeare/05_scatter.png)
 
 The final output is two files: `matching/candidates.csv` (everything above the loose threshold) and `matching/confirmed.csv` (the high-confidence subset). The confirmed set came in at 1,109 matches.
 
@@ -84,13 +84,13 @@ The final output is two files: `matching/candidates.csv` (everything above the l
 
 The top-line results are, frankly, quite fun to look at. Hamlet leads with 91 confirmed references, followed by *Twelfth Night* (76), *Henry VIII* (70), *Othello* (65), and *Measure for Measure* (57).
 
-![Top 15 Shakespeare plays referenced in TNG](/images/imgforblogposts/post_50/tng_shakespeare/01_plays_bar.png)
+![Top 15 Shakespeare plays referenced in TNG](static/images/imgforblogposts/post_50/tng_shakespeare/01_plays_bar.png)
 
 Hamlet leading the field is hardly surprising---it is the most canonical of canonical texts, and Picard's obsession with it is explicitly scripted in several episodes. What is perhaps more interesting is the presence of *Twelfth Night* so near the top, and the strong showing from the histories (*Henry VIII*, *Henry V*) and the problem plays (*Measure for Measure*, *Troilus and Cressida*). These are not the plays one would necessarily expect a television writing room to reach for, which suggests either that the matching is picking up on something real about the show's literary texture or that the algorithm is finding coincidental overlaps in registers---political, martial, formal---that these plays happen to share with TNG's dialogue. That question is, as I'll talk about below, one the algorithm cannot resolve on its own.
 
 On the speaker side, Picard leads with 223 references, followed by Data (137), Worf (86), Riker (80), and Crusher (50).
 
-![Top 10 TNG speakers quoting Shakespeare](/images/imgforblogposts/post_50/tng_shakespeare/02_speakers_bar.png)
+![Top 10 TNG speakers quoting Shakespeare](static/images/imgforblogposts/post_50/tng_shakespeare/02_speakers_bar.png)
 
 The Picard and Data numbers make intuitive sense and are probably among the most reliable hits in the dataset. Picard is famously literary---there are whole episodes built around his love of Shakespeare, and the writers clearly use Shakespearean allusion as a characterization device. When Picard quotes, it tends to be deliberate, close to the source text, and easy to score with high confidence. Data's references are similarly intentional but differently motivated: his quotations tend to be slightly off in ways that are themselves meaningful, as with the "prick me / leak" substitution, where the computational detection of a paraphrase happens to mirror the character's own computational relationship to human language and embodied experience.
 
@@ -98,13 +98,13 @@ The Worf number is where things get genuinely interesting from a methodological 
 
 The heatmap below breaks the confirmed matches down by season and play, which adds a useful temporal dimension to the picture:
 
-![References by season and play](/images/imgforblogposts/post_50/tng_shakespeare/03_heatmap.png)
+![References by season and play](static/images/imgforblogposts/post_50/tng_shakespeare/03_heatmap.png)
 
 A few things stand out here. Hamlet references are distributed fairly evenly across all seven seasons rather than clustering in particular years, which makes sense given that Picard's literary interests are a consistent characterization device throughout the series rather than a phase the writers went through. The *Henry VIII* concentration in certain seasons is worth investigating further---it is possible that a handful of episodes involving formal political ceremony or ritual are driving those numbers. The relative absence of references in Season 2 is also interesting; Season 2 is generally considered the shakiest of the run, and it would be worth checking whether the reduced Shakespeare count is a real signal about the writing or an artifact of shorter episodes or transcript quality.
 
 The timeline view makes the episode-by-episode distribution somewhat clearer:
 
-![Shakespeare references across all 176 episodes](/images/imgforblogposts/post_50/tng_shakespeare/04_timeline.png)
+![Shakespeare references across all 176 episodes](static/images/imgforblogposts/post_50/tng_shakespeare/04_timeline.png)
 
 What I find most striking here is not the spikes---though some of those are worth looking at individually---but the cumulative line, which is reassuringly close to linear. A genuinely random distribution of references across the run would produce a roughly linear cumulative curve, and that is broadly what we see, which is at least consistent with the hypothesis that Shakespearean language is a fairly steady background feature of the show's dialogue rather than something the writers turned on and off in particular seasons or arcs. There are some visible upticks in Seasons 3–4, which coincide with what most fans and critics consider the creative peak of the series, but I would want to do more work before drawing any firm conclusions from that.
 
