@@ -1,0 +1,2200 @@
+.
+├── README.md
+├── archetypes
+│   └── default.md
+├── config.toml
+├── content
+│   └── posts
+│       ├── 2019-07-06-inaugural-post_01.md
+│       ├── 2019-07-06-more-initial-digital-humanities-stuff_02.md
+│       ├── 2019-12-24-still-playing-around-with-python-nltk-spacy-etc_03.md
+│       ├── 2019-12-31-visualizing-online-class-discussion-boards_04.md
+│       ├── 2021-12-27-playing-with-plain-text-and-css-templates_05.md
+│       ├── 2022-01-18-letting-excel-go_06.md
+│       ├── 2022-02-15-twitter-sentiment-analysis_07.md
+│       ├── 2022-03-26-twitter-viral-tweet-classification-project_08.md
+│       ├── 2022-03-29-vector-space-models-and-shakespeare_09.md
+│       ├── 2022-04-10-classification-fun-with-some-literary-texts_10.md
+│       ├── 2022-04-20-tei-encoding-with-henry-james_11.md
+│       ├── 2022-05-15-more-tots-hmtl-testing_introductory_post_12.md
+│       ├── 2022-05-16-hj_tots_full_version_13.html
+│       ├── 2022-05-23-grad-level-digital-rhetoric-course_14.md
+│       ├── 2022-05-25-real-world-beautiful-soup-html-table-parsing_15.md
+│       ├── 2022-05-27-henry-james-turn-of-the-screw-data-analysis_16.md
+│       ├── 2022-05-29-toml-data-to-hugo-table_17.md
+│       ├── 2022-05-30-BLANK-repetitions-in-turn-of-the-screw.md
+│       ├── 2022-06-01-linear-regression-in-the-humanities_18.md
+│       ├── 2022-07-06-topic-modeling-the-ussc_19.md
+│       ├── 2022-07-07-top2vec-topic-modeling_20.md
+│       ├── 2022-07-11-pca-analysis-of-recent-new-justices_21.md
+│       ├── 2022-07-15-automating-canvas-grading-and-feedback_22.md
+│       ├── 2022-07-20-visualizing-discussion-boards-redux_23.md
+│       ├── 2022-08-02-pacman-javascript-introduction.md
+│       ├── 2022-08-02-pacman-javascript.html
+│       ├── 2022-08-31-jstor-constellate-text-data-analysis.md
+│       ├── 2022-09-20-classifying-supreme-court-cases-by-century-with-spacy.md
+│       ├── 2022-12-19-playing-around-with-chatGPT.md
+│       ├── 2022-12-19-syllabus-maker-stuff.md
+│       ├── 2023-01-13-canvas-live-api-work.md
+│       ├── 2023-02-05-network-visualization-with-bokeh.md
+│       ├── 2023-04-07-fitzgerald-hemingway.md
+│       ├── 2023-04-15-fitzgerald-hemingway-continued.md
+│       ├── 2023-04-15-machine-learning-with-ok-cupid-dataset.md
+│       ├── 2023-04-25-advanced-logging-in-python.md
+│       ├── 2023-04-25-measuring-twitter-engagement-and-digital-rhetoric.md
+│       ├── 2023-09-21-more_python_fiddlework.md
+│       ├── 2023-10-21-what-kind-of-songs-do-i-like.md
+│       ├── 2024-08-29-recent-canvas-changes-to-discussions.md
+│       ├── 2024-08-30-tracking-silver-prices.md
+│       ├── 2024-09-15-course-scheduler.md
+│       ├── 2024-09-15-working-with-apple-health-data.md
+│       ├── 2024-12-12-hysa-versus-bitcoin.md
+│       ├── 2024-12-14-building_a_dash_app_to_visualize_investment_strategy.md
+│       ├── 2024-12-21-checking-youtubers-stock-suggestions.md
+│       ├── 2025-01-06-cryptos-vs-dow-jones-and-nasdaq.md
+│       ├── 2025-05-24-nba-playoff-blowouts.md
+│       ├── 2025-05-24-wnba-historical-stats.md
+│       ├── 2025-06-15-skenes-vs-kershaw-career-strikeouts.md
+│       ├── 2025-06-17-skubal-k-projections.md
+│       ├── 2025-06-19-skubal_vs_skenes.md
+│       ├── 2025-06-24-nba-regular-season-blowouts.md
+│       ├── 2025-07-06-wnba-blowouts.md
+│       ├── 2026-01-09-nfl-4th-downs.md
+│       ├── 2026-01-10-nba_stats_in_r_klay_thompson.md
+│       ├── 2026-01-11-nba_stats_in_r_lebron_james.md
+│       ├── 2026-01-12-top_ten_scoring_leaders_scoring_trajectories.md
+│       └── 2026-06-24-tng-shakespeare.md
+├── data
+│   └── hj_prodigious_portentous_word_counts.toml
+├── full_file_list.txt
+├── layouts
+│   └── shortcodes
+│       ├── baseurl.html
+│       ├── bokeh_plot_specific_shortcode.html
+│       ├── include-html.html
+│       ├── jupyter.html
+│       ├── partials
+│       ├── plotly.html
+│       ├── rawhtml.html
+│       └── tomlTable.html
+├── public
+│   ├── 404.html
+│   ├── blog
+│   │   ├── index.html
+│   │   ├── index.xml
+│   │   └── page
+│   │       └── 1
+│   │           └── index.html
+│   ├── bundle.min.bb2c6bc3ed452ca4759660e4020811f248bc2320081559e8a32d8b0092773852941133639d35e8370d03d3ddaa750b1edd6b343c5bd22a55d5bdeae8f648f49b.js
+│   ├── css
+│   │   ├── hj_tots_style.css
+│   │   └── style.css
+│   ├── fonts
+│   │   ├── Inter-Bold.woff
+│   │   ├── Inter-Bold.woff2
+│   │   ├── Inter-BoldItalic.woff
+│   │   ├── Inter-BoldItalic.woff2
+│   │   ├── Inter-Italic.woff
+│   │   ├── Inter-Italic.woff2
+│   │   ├── Inter-Medium.woff
+│   │   ├── Inter-Medium.woff2
+│   │   ├── Inter-MediumItalic.woff
+│   │   ├── Inter-MediumItalic.woff2
+│   │   ├── Inter-Regular.woff
+│   │   └── Inter-Regular.woff2
+│   ├── html
+│   │   └── 2021_02-14_usf_tweet_bokeh.html
+│   ├── images
+│   │   └── imgforblogposts
+│   │       ├── post_1
+│   │       │   └── ramona_sentence.svg
+│   │       ├── post_10
+│   │       │   ├── cather_mean_sentence_lengths.png
+│   │       │   ├── cather_sentence_lengths.png
+│   │       │   ├── death_comes_testing.png
+│   │       │   ├── hac_dendrogram.png
+│   │       │   ├── jewett_mean_sentence_lengths.png
+│   │       │   ├── model_accuracy.png
+│   │       │   ├── model_loss.png
+│   │       │   ├── model_predictions_scatter_for_mate.png
+│   │       │   ├── model_predictions_scatter_for_pauls_case.png
+│   │       │   ├── o_pioneers_1913_dedication_to_jewett.png
+│   │       │   └── predictions_for_pauls_case.png
+│   │       ├── post_13
+│   │       │   └── hj_tots_color_coded_tag_table.png
+│   │       ├── post_15
+│   │       │   ├── copy_and_pasting_html_tables.PNG
+│   │       │   └── inspecting_the_html.png
+│   │       ├── post_16
+│   │       │   ├── concordance_for_prodigious.png
+│   │       │   ├── lemma_lexical_dispersion_plot.png
+│   │       │   ├── lexical_dispersion_plot_for_prodigious.png
+│   │       │   ├── lexical_dispersion_plot_for_prodigious_and_portentous.png
+│   │       │   └── prodigious_and_portentous_counts_across_james_corpus.png
+│   │       ├── post_17
+│   │       │   └── toml_datafile_screenshot.png
+│   │       ├── post_18
+│   │       │   ├── 1915-1938_linear_regression_plot.png
+│   │       │   ├── coal_production_initial_plot.png
+│   │       │   ├── coal_production_predicted.png
+│   │       │   └── coal_production_with_linear_regression_line_plotted.png
+│   │       ├── post_19
+│   │       │   ├── heatmap_of_spaeth_areas.png
+│   │       │   ├── number_of_opinions_distribution_histogram.png
+│   │       │   └── roe_topic_modeling_plot_1.png
+│   │       ├── post_2
+│   │       │   └── moretti.jpg
+│   │       ├── post_20
+│   │       │   ├── all_top2vec_topics_scatterplot.png
+│   │       │   └── zeroing_in_on_topics_51_100_46.png
+│   │       ├── post_21
+│   │       │   ├── num_words_by_all_five_authors.png
+│   │       │   ├── num_words_by_author.png
+│   │       │   ├── pca_analysis_of_all_five_justices.png
+│   │       │   ├── pca_analysis_of_gorsuch_kavanaugh_barrett.png
+│   │       │   ├── pca_on_all_opinions.png
+│   │       │   └── pca_variance_explained.png
+│   │       ├── post_23
+│   │       │   ├── bokeh_plot_with_simulated_data.png
+│   │       │   ├── csv_file_snip.PNG
+│   │       │   └── gephi_final_figure.png
+│   │       ├── post_24
+│   │       │   ├── block.png
+│   │       │   ├── capBottom.png
+│   │       │   ├── capLeft.png
+│   │       │   ├── capRight.png
+│   │       │   ├── capTop.png
+│   │       │   ├── pipeConnectorBottom.png
+│   │       │   ├── pipeConnectorDownwards.png
+│   │       │   ├── pipeConnectorLeft.png
+│   │       │   ├── pipeConnectorRight.png
+│   │       │   ├── pipeConnectorTop.png
+│   │       │   ├── pipeCorner1.png
+│   │       │   ├── pipeCorner2.png
+│   │       │   ├── pipeCorner3.png
+│   │       │   ├── pipeCorner4.png
+│   │       │   ├── pipeCross.png
+│   │       │   ├── pipeHorizontal.png
+│   │       │   └── pipeVertical.png
+│   │       ├── post_25
+│   │       │   ├── figure_1.png
+│   │       │   ├── figure_2_value_counts_of_our_labels.png
+│   │       │   ├── spacy_training_screenshot.png
+│   │       │   └── test_table_png_file.png
+│   │       ├── post_26
+│   │       │   ├── screenshot_1.png
+│   │       │   └── screenshot_2.png
+│   │       ├── post_27
+│   │       │   ├── screenshot_1.png
+│   │       │   └── screenshot_2.png
+│   │       ├── post_28
+│   │       │   └── submission_object_canvas.png
+│   │       ├── post_3
+│   │       │   ├── figure_1_stoker_word_cloud.png
+│   │       │   ├── figure_2_time_in_stoker.png
+│   │       │   ├── figure_3_character_dispersion_plots.png
+│   │       │   ├── figure_4_common_word_counts.png
+│   │       │   ├── figure_5_kinds_of_words_kerouac.png
+│   │       │   └── figure_6_kerouac_gender.png
+│   │       ├── post_4
+│   │       │   ├── figure_10_most_popular.png
+│   │       │   ├── figure_1_the_weird.jpg
+│   │       │   ├── figure_2_week_1_discussion_board_venn_diagram.png
+│   │       │   ├── figure_3_week_2_posts_by_story.png
+│   │       │   ├── figure_4_gephi.png
+│   │       │   ├── figure_5_gephi.png
+│   │       │   ├── figure_6_gephi.png
+│   │       │   ├── figure_7_gephi.png
+│   │       │   ├── figure_8_gephi.png
+│   │       │   └── figure_9_gephi.png
+│   │       ├── post_6
+│   │       │   ├── Figure_1.png
+│   │       │   ├── Figure_2.png
+│   │       │   ├── Figure_3.png
+│   │       │   ├── excel_worksheet_clutter.png
+│   │       │   ├── markdown_pandoc_screenshot.png
+│   │       │   ├── markdown_to_pdf_example.PNG
+│   │       │   └── simple_csv_file.png
+│   │       ├── post_7
+│   │       │   ├── ben_since_covid_start.png
+│   │       │   ├── ben_u_all_time.png
+│   │       │   ├── ben_u_sentiment_results_pie_chart.png
+│   │       │   ├── bokeh_test.html
+│   │       │   ├── dom_u_all_time.png
+│   │       │   ├── dominican_since_since_covid_start.png
+│   │       │   ├── dominican_u_sentiment_results_pie_chart.png
+│   │       │   ├── lewis_since_covid_start.png
+│   │       │   ├── lewis_u_all_time.png
+│   │       │   ├── lewis_u_sentiment_results_pie_chart.png
+│   │       │   ├── lewisu_like_retweet_over_time.png
+│   │       │   ├── sx_sentiment_results_pie_chart.png
+│   │       │   ├── sx_since_covid_start.png
+│   │       │   ├── sxu_all_time.png
+│   │       │   ├── usf_sentiment_results_pie_chart.png
+│   │       │   ├── usf_sentiment_scores_all_time.png
+│   │       │   └── usf_since_covid_start.png
+│   │       ├── post_8
+│   │       │   ├── Figure_1_summary_statistics.png
+│   │       │   ├── Figure_2_first_run_of_scores_01.png
+│   │       │   ├── four_models.png
+│   │       │   ├── four_models_with_mean_as_threshold.png
+│   │       │   ├── hashtag_added.png
+│   │       │   ├── tweet_length_alone.png
+│   │       │   └── tweet_length_friends_count_favorite_count.png
+│   │       └── post_9
+│   │           ├── Figure_1.png
+│   │           ├── Figure_2.png
+│   │           └── Figure_3.png
+│   ├── index.html
+│   ├── index.xml
+│   ├── main.4e5c639214707eff609bb55fe49e183dee42258a73bc90e4cc7b0a84f900798a.css
+│   ├── main.css.map
+│   ├── posts
+│   │   ├── 2019-07-06-inaugural-post_01
+│   │   │   └── index.html
+│   │   ├── 2019-07-06-more-initial-digital-humanities-stuff_02
+│   │   │   └── index.html
+│   │   ├── 2019-12-24-still-playing-around-with-python-nltk-spacy-etc_03
+│   │   │   └── index.html
+│   │   ├── 2019-12-31-visualizing-online-class-discussion-boards_04
+│   │   │   └── index.html
+│   │   ├── 2021-12-27-playing-with-plain-text-and-css-templates_05
+│   │   │   └── index.html
+│   │   ├── 2022-01-18-letting-excel-go_06
+│   │   │   └── index.html
+│   │   ├── 2022-02-15-twitter-sentiment-analysis_07
+│   │   │   └── index.html
+│   │   ├── 2022-03-26-twitter-viral-tweet-classification-project_08
+│   │   │   └── index.html
+│   │   ├── 2022-03-29-vector-space-models-and-shakespeare_09
+│   │   │   └── index.html
+│   │   ├── 2022-04-10-classification-fun-with-some-literary-texts_10
+│   │   │   └── index.html
+│   │   ├── 2022-04-20-tei-encoding-with-henry-james_11
+│   │   │   └── index.html
+│   │   ├── 2022-05-15-more-tots-hmtl-testing_introductory_post_12
+│   │   │   └── index.html
+│   │   ├── 2022-05-16-hj_tots_full_version_13
+│   │   │   └── index.html
+│   │   ├── 2022-05-23-grad-level-digital-rhetoric-course_14
+│   │   │   └── index.html
+│   │   ├── 2022-05-25-real-world-beautiful-soup-html-table-parsing_15
+│   │   │   └── index.html
+│   │   ├── 2022-05-27-henry-james-turn-of-the-screw-data-analysis_16
+│   │   │   └── index.html
+│   │   ├── 2022-05-29-toml-data-to-hugo-table_17
+│   │   │   └── index.html
+│   │   ├── 2022-06-01-linear-regression-in-the-humanities_18
+│   │   │   └── index.html
+│   │   ├── 2022-07-06-topic-modeling-the-ussc_19
+│   │   │   └── index.html
+│   │   ├── 2022-07-07-top2vec-topic-modeling_20
+│   │   │   └── index.html
+│   │   ├── 2022-07-11-pca-analysis-of-recent-new-justices_21
+│   │   │   └── index.html
+│   │   ├── 2022-07-15-automating-canvas-grading-and-feedback_22
+│   │   │   └── index.html
+│   │   ├── 2022-07-20-visualizing-discussion-boards-redux_23
+│   │   │   └── index.html
+│   │   ├── 2022-08-02-pacman-javascript-introduction
+│   │   │   └── index.html
+│   │   ├── 2022-08-02-pacman-javascript.html
+│   │   ├── 2022-09-20-classifying-supreme-court-cases-by-century-with-spacy
+│   │   │   └── index.html
+│   │   ├── 2022-12-19-playing-around-with-chatgpt
+│   │   │   └── index.html
+│   │   ├── 2022-12-19-syllabus-maker-stuff
+│   │   │   └── index.html
+│   │   ├── index.html
+│   │   ├── index.xml
+│   │   └── page
+│   │       ├── 1
+│   │       │   └── index.html
+│   │       ├── 2
+│   │       │   └── index.html
+│   │       └── 3
+│   │           └── index.html
+│   ├── series
+│   │   ├── index.html
+│   │   ├── index.xml
+│   │   └── page
+│   │       └── 1
+│   │           └── index.html
+│   ├── sitemap.xml
+│   └── tags
+│       ├── assessment
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── automating-grading
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── automating-student-feedback
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── beautiful-soup
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── beverly-cleary-bevery-cleary-ramona-dependency-parsing-dh-digital-humanities-old-wordpress-posts-displacy-python-python-nltk-spacy-visualization
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── bokeh-visualization-library
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── box-plots
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── bs4
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── canvas-instructure
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── canvas-lms
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── chatbots
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── chatgpt
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── city-block-distance
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── close-reading
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── close-reading-deleuze-derrida-dh-digital-humanities-digital-methods-distant-reading-event-hp-lovecraft-iterability-lolita-nabokov-reading
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── codecademy
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── coding-practice
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── cosine-distance
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── csl
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── css
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── csv
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── custom-functions
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── data-analytics
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── data-cleaning
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── data-literacy
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── data-munging
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── data-scientist-natural-language-processing-specialist
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── data-visualization
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── data-wrangling
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── dataframe
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── datetime
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── dh
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── digital-close-reading
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── digital-humanities
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       ├── 1
+│       │       │   └── index.html
+│       │       ├── 2
+│       │       │   └── index.html
+│       │       └── 3
+│       │           └── index.html
+│       ├── digital-literacy
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── digital-rhetoric
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── discussion-boards
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── distance-metrics
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── document-term-matrix
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── dual-credit-english-composition
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── english-department-assessment-reporting
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── euclidean-distance
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── folger-digital-library
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── french-coal-production
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── gephi
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── henry-james
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── historical-datasets
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── html
+│       │   ├── css
+│       │   │   ├── index.html
+│       │   │   ├── index.xml
+│       │   │   └── page
+│       │   │       └── 1
+│       │   │           └── index.html
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── html-parsing
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── html-table-parsing
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── html-tables
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── hugo-shortcodes
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── hugo-tables
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── index.html
+│       ├── index.xml
+│       ├── javascript
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── json
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── json-data
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── jupyter
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── jupyter-notebooks
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── k-nearest-neighbors
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── keras
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── kids
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── law-school-rankings
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── linear-regression
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── literary-style
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── lms
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── lxml
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── machine-learning
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── manhattan-distance
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── markdown
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── matplotlib
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── networkx
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── nlp
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── nltk
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── online-discussion-boards
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── online-learning
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── oxygen-xml
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── oxygen-xml-editor
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── pacman
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── page
+│       │   ├── 1
+│       │   │   └── index.html
+│       │   ├── 10
+│       │   │   └── index.html
+│       │   ├── 11
+│       │   │   └── index.html
+│       │   ├── 12
+│       │   │   └── index.html
+│       │   ├── 13
+│       │   │   └── index.html
+│       │   ├── 14
+│       │   │   └── index.html
+│       │   ├── 2
+│       │   │   └── index.html
+│       │   ├── 3
+│       │   │   └── index.html
+│       │   ├── 4
+│       │   │   └── index.html
+│       │   ├── 5
+│       │   │   └── index.html
+│       │   ├── 6
+│       │   │   └── index.html
+│       │   ├── 7
+│       │   │   └── index.html
+│       │   ├── 8
+│       │   │   └── index.html
+│       │   └── 9
+│       │       └── index.html
+│       ├── pandas
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       ├── 1
+│       │       │   └── index.html
+│       │       └── 2
+│       │           └── index.html
+│       ├── pandas-dataframe
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── pandoc
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── pca
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── pd.to_markdown
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── plain-text
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── plotly
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── principal-component-analysis
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── python
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       ├── 1
+│       │       │   └── index.html
+│       │       └── 2
+│       │           └── index.html
+│       ├── python-data-wrangling
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── python-for-digital-humanities
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── python-for-the-digital-humanities
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── real-world-applications
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── real-world-implementations
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── sarah-orne-jewett
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── sentiment-analysis
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── shakespeare
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── sklearn
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── spacy
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── spacy-textclassifier
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── summer-teaching
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── supervised-machine-learning
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── syllabus-creation
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── teaching
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── tei
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── tei-simple
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── tensorflow
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── text-classification
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── text-encoding-initiative
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── textblob
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── the-turn-of-the-screw
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── tidy-data-in-python
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── toml
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── top2vec
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── topic-modeling
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── tufte
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── tufte.css
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── turn-of-the-screw
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── twitter
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── twitter-analysis
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── united-states-supreme-court-opinions
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── usf
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── usf-real-academy
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── using-js-in-hugo
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── ussc
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── viral-tweets
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── willa-cather
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── word-frequencies
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── word-frequency
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── word-frequency-counts
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── work-stuff
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── xml
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       ├── xslt
+│       │   ├── index.html
+│       │   ├── index.xml
+│       │   └── page
+│       │       └── 1
+│       │           └── index.html
+│       └── zotero
+│           ├── index.html
+│           ├── index.xml
+│           └── page
+│               └── 1
+│                   └── index.html
+├── resources
+│   └── _gen
+│       ├── assets
+│       │   └── scss
+│       │       └── scss
+│       │           ├── main.scss_38b1322b728d0fc31bc0aabb683ebc6d.content
+│       │           ├── main.scss_38b1322b728d0fc31bc0aabb683ebc6d.json
+│       │           ├── main.scss_de1a7f5f1c8c46959803c429bb697ff0.content
+│       │           └── main.scss_de1a7f5f1c8c46959803c429bb697ff0.json
+│       └── images
+├── scripts
+│   ├── generate_silver_plot.py
+│   └── silver_price_tracking.py
+├── static
+│   ├── css
+│   │   ├── hj_tots_style.css
+│   │   ├── style.css
+│   │   ├── tufte.css
+│   │   └── tufte_css_tweaked.css
+│   ├── html
+│   │   ├── 2021_02-14_usf_tweet_bokeh.html
+│   │   ├── 2023-02-05-bokeh-plot.html
+│   │   ├── 2023-04-20-date_a_scientist_notebook.html
+│   │   └── 2023-04-25-twitter-engagement-notebook.html
+│   ├── images
+│   │   └── imgforblogposts
+│   │       ├── post_1
+│   │       │   └── ramona_sentence.svg
+│   │       ├── post_10
+│   │       │   ├── cather_mean_sentence_lengths.png
+│   │       │   ├── cather_sentence_lengths.png
+│   │       │   ├── death_comes_testing.png
+│   │       │   ├── hac_dendrogram.png
+│   │       │   ├── jewett_mean_sentence_lengths.png
+│   │       │   ├── model_accuracy.png
+│   │       │   ├── model_loss.png
+│   │       │   ├── model_predictions_scatter_for_mate.png
+│   │       │   ├── model_predictions_scatter_for_pauls_case.png
+│   │       │   ├── o_pioneers_1913_dedication_to_jewett.png
+│   │       │   └── predictions_for_pauls_case.png
+│   │       ├── post_13
+│   │       │   └── hj_tots_color_coded_tag_table.png
+│   │       ├── post_15
+│   │       │   ├── copy_and_pasting_html_tables.PNG
+│   │       │   └── inspecting_the_html.png
+│   │       ├── post_16
+│   │       │   ├── concordance_for_prodigious.png
+│   │       │   ├── lemma_lexical_dispersion_plot.png
+│   │       │   ├── lexical_dispersion_plot_for_prodigious.png
+│   │       │   ├── lexical_dispersion_plot_for_prodigious_and_portentous.png
+│   │       │   └── prodigious_and_portentous_counts_across_james_corpus.png
+│   │       ├── post_17
+│   │       │   └── toml_datafile_screenshot.png
+│   │       ├── post_18
+│   │       │   ├── 1915-1938_linear_regression_plot.png
+│   │       │   ├── coal_production_initial_plot.png
+│   │       │   ├── coal_production_predicted.png
+│   │       │   └── coal_production_with_linear_regression_line_plotted.png
+│   │       ├── post_19
+│   │       │   ├── heatmap_of_spaeth_areas.png
+│   │       │   ├── number_of_opinions_distribution_histogram.png
+│   │       │   └── roe_topic_modeling_plot_1.png
+│   │       ├── post_2
+│   │       │   └── moretti.jpg
+│   │       ├── post_20
+│   │       │   ├── all_top2vec_topics_scatterplot.png
+│   │       │   └── zeroing_in_on_topics_51_100_46.png
+│   │       ├── post_21
+│   │       │   ├── num_words_by_all_five_authors.png
+│   │       │   ├── num_words_by_author.png
+│   │       │   ├── pca_analysis_of_all_five_justices.png
+│   │       │   ├── pca_analysis_of_gorsuch_kavanaugh_barrett.png
+│   │       │   ├── pca_on_all_opinions.png
+│   │       │   └── pca_variance_explained.png
+│   │       ├── post_23
+│   │       │   ├── bokeh_plot_with_simulated_data.png
+│   │       │   ├── csv_file_snip.PNG
+│   │       │   └── gephi_final_figure.png
+│   │       ├── post_24
+│   │       │   ├── block.png
+│   │       │   ├── capBottom.png
+│   │       │   ├── capLeft.png
+│   │       │   ├── capRight.png
+│   │       │   ├── capTop.png
+│   │       │   ├── pipeConnectorBottom.png
+│   │       │   ├── pipeConnectorDownwards.png
+│   │       │   ├── pipeConnectorLeft.png
+│   │       │   ├── pipeConnectorRight.png
+│   │       │   ├── pipeConnectorTop.png
+│   │       │   ├── pipeCorner1.png
+│   │       │   ├── pipeCorner2.png
+│   │       │   ├── pipeCorner3.png
+│   │       │   ├── pipeCorner4.png
+│   │       │   ├── pipeCross.png
+│   │       │   ├── pipeHorizontal.png
+│   │       │   └── pipeVertical.png
+│   │       ├── post_25
+│   │       │   ├── figure_1.png
+│   │       │   ├── figure_2_value_counts_of_our_labels.png
+│   │       │   ├── spacy_training_screenshot.png
+│   │       │   └── test_table_png_file.png
+│   │       ├── post_26
+│   │       │   ├── screenshot_1.png
+│   │       │   └── screenshot_2.png
+│   │       ├── post_27
+│   │       │   ├── screenshot_1.png
+│   │       │   └── screenshot_2.png
+│   │       ├── post_28
+│   │       │   ├── canvas_api_docs_screenshot.png
+│   │       │   ├── dict_for_upload.png
+│   │       │   ├── get_request_that_returns_submission_comment_data.png
+│   │       │   ├── test_json_datafile.png
+│   │       │   └── type_from_json_load_and_full_dict_image.png
+│   │       ├── post_29
+│   │       │   └── test_plot.html
+│   │       ├── post_3
+│   │       │   ├── figure_1_stoker_word_cloud.png
+│   │       │   ├── figure_2_time_in_stoker.png
+│   │       │   ├── figure_3_character_dispersion_plots.png
+│   │       │   ├── figure_4_common_word_counts.png
+│   │       │   ├── figure_5_kinds_of_words_kerouac.png
+│   │       │   └── figure_6_kerouac_gender.png
+│   │       ├── post_30
+│   │       │   ├── classification_report_for_f_v_h_problem.png
+│   │       │   ├── classification_report_for_h_v_s_problem.png
+│   │       │   ├── cm_for_f_v_h_classification_problem.png
+│   │       │   ├── cm_for_h_v_steinbeck.png
+│   │       │   ├── prediction_for_h_snows.png
+│   │       │   └── prediction_for_s_in_dubious_battle.png
+│   │       ├── post_31
+│   │       │   ├── direct_object_counts.png
+│   │       │   ├── direct_objects_and_punctuation_counts.png
+│   │       │   ├── extended_POS_counts.png
+│   │       │   ├── post_30
+│   │       │   │   ├── classification_report_for_f_v_h_problem.png
+│   │       │   │   ├── classification_report_for_h_v_s_problem.png
+│   │       │   │   ├── cm_for_f_v_h_classification_problem.png
+│   │       │   │   ├── cm_for_h_v_steinbeck.png
+│   │       │   │   ├── prediction_for_h_snows.png
+│   │       │   │   └── prediction_for_s_in_dubious_battle.png
+│   │       │   └── standard_POS_counts.png
+│   │       ├── post_32
+│   │       │   ├── multiple_plots_of_linear_regression_model.png
+│   │       │   └── twitter_linear_regression_plot.png
+│   │       ├── post_33
+│   │       │   ├── insufficient_balance_log.png
+│   │       │   ├── negative_value_entered.png
+│   │       │   └── output_of_reworked_script.png
+│   │       ├── post_34
+│   │       │   ├── comparisons_between_william_and_me.html
+│   │       │   ├── danceability_distribution.png
+│   │       │   ├── danceability_vs_energy_plotly.png
+│   │       │   ├── danceability_with_mean.png
+│   │       │   ├── energy_hist_with_mean.png
+│   │       │   ├── energy_vs_danceability_by_year.png
+│   │       │   ├── energy_vs_danceability_with_hover_data.html
+│   │       │   ├── energy_vs_tempo.png
+│   │       │   ├── energy_vs_valence.png
+│   │       │   ├── im_happier_than_will.png
+│   │       │   ├── pairplot.png
+│   │       │   ├── recently_added_energy_vs_danceability_with_annotations.html
+│   │       │   ├── spotify_docs_for_danceability.png
+│   │       │   └── spotify_docs_for_energy.png
+│   │       ├── post_35
+│   │       │   ├── IMG_0016.jpeg
+│   │       │   ├── IMG_0017.jpeg
+│   │       │   ├── actual_vs_predicted.png
+│   │       │   ├── all_models_silver_prices.png
+│   │       │   ├── all_yfinance_data.png
+│   │       │   ├── candlestick_plot_01_07_25.html
+│   │       │   ├── candlestick_plot_11_14_24.html
+│   │       │   ├── candlestick_plot_11_15_24.html
+│   │       │   ├── candlestick_plot_11_16_24.html
+│   │       │   ├── candlestick_plot_11_18_24.html
+│   │       │   ├── candlestick_plot_11_19_24.html
+│   │       │   ├── candlestick_plot_11_20_24.html
+│   │       │   ├── candlestick_plot_11_21_24.html
+│   │       │   ├── candlestick_plot_11_22_24.html
+│   │       │   ├── candlestick_plot_11_24_24.html
+│   │       │   ├── candlestick_plot_11_25_24.html
+│   │       │   ├── candlestick_plot_11_26_24.html
+│   │       │   ├── candlestick_plot_11_27_24.html
+│   │       │   ├── candlestick_plot_11_28_24.html
+│   │       │   ├── candlestick_plot_11_29_24.html
+│   │       │   ├── candlestick_plot_11_30_24.html
+│   │       │   ├── candlestick_plot_12_01_24.html
+│   │       │   ├── candlestick_plot_12_02_24.html
+│   │       │   ├── candlestick_plot_12_04_24.html
+│   │       │   ├── candlestick_plot_12_05_24.html
+│   │       │   ├── candlestick_plot_12_07_24.html
+│   │       │   ├── candlestick_plot_12_11_24.html
+│   │       │   ├── candlestick_plot_12_13_24.html
+│   │       │   ├── candlestick_plot_12_19_24.html
+│   │       │   ├── candlestick_plot_six_months_01_07_25.html
+│   │       │   ├── candlestick_plot_six_months_11_15_24.html
+│   │       │   ├── candlestick_plot_six_months_11_16_24.html
+│   │       │   ├── candlestick_plot_six_months_11_18_24.html
+│   │       │   ├── candlestick_plot_six_months_11_19_24.html
+│   │       │   ├── candlestick_plot_six_months_11_20_24.html
+│   │       │   ├── candlestick_plot_six_months_11_21_24.html
+│   │       │   ├── candlestick_plot_six_months_11_22_24.html
+│   │       │   ├── candlestick_plot_six_months_11_24_24.html
+│   │       │   ├── candlestick_plot_six_months_11_25_24.html
+│   │       │   ├── candlestick_plot_six_months_11_26_24.html
+│   │       │   ├── candlestick_plot_six_months_11_27_24.html
+│   │       │   ├── candlestick_plot_six_months_11_28_24.html
+│   │       │   ├── candlestick_plot_six_months_11_29_24.html
+│   │       │   ├── candlestick_plot_six_months_11_30_24.html
+│   │       │   ├── candlestick_plot_six_months_12_01_24.html
+│   │       │   ├── candlestick_plot_six_months_12_02_24.html
+│   │       │   ├── candlestick_plot_six_months_12_04_24.html
+│   │       │   ├── candlestick_plot_six_months_12_05_24.html
+│   │       │   ├── candlestick_plot_six_months_12_07_24.html
+│   │       │   ├── candlestick_plot_six_months_12_11_24.html
+│   │       │   ├── candlestick_plot_six_months_12_13_24.html
+│   │       │   ├── candlestick_plot_six_months_12_19_24.html
+│   │       │   ├── combined_silver_data.png
+│   │       │   ├── last_couple_of_months_plot.png
+│   │       │   ├── last_couple_of_months_plot_01_07_25.png
+│   │       │   ├── last_couple_of_months_plot_11_14_24.png
+│   │       │   ├── last_couple_of_months_plot_11_15_24.png
+│   │       │   ├── last_couple_of_months_plot_11_16_24.png
+│   │       │   ├── last_couple_of_months_plot_11_18_24.png
+│   │       │   ├── last_couple_of_months_plot_11_19_24.png
+│   │       │   ├── last_couple_of_months_plot_11_20_24.png
+│   │       │   ├── last_couple_of_months_plot_11_21_24.png
+│   │       │   ├── last_couple_of_months_plot_11_22_24.png
+│   │       │   ├── last_couple_of_months_plot_11_24_24.png
+│   │       │   ├── last_couple_of_months_plot_11_25_24.png
+│   │       │   ├── last_couple_of_months_plot_11_26_24.png
+│   │       │   ├── last_couple_of_months_plot_11_27_24.png
+│   │       │   ├── last_couple_of_months_plot_11_28_24.png
+│   │       │   ├── last_couple_of_months_plot_11_29_24.png
+│   │       │   ├── last_couple_of_months_plot_11_30_24.png
+│   │       │   ├── last_couple_of_months_plot_12_01_24.png
+│   │       │   ├── last_couple_of_months_plot_12_02_24.png
+│   │       │   ├── last_couple_of_months_plot_12_04_24.png
+│   │       │   ├── last_couple_of_months_plot_12_05_24.png
+│   │       │   ├── last_couple_of_months_plot_12_07_24.png
+│   │       │   ├── last_couple_of_months_plot_12_11_24.png
+│   │       │   ├── last_couple_of_months_plot_12_13_24.png
+│   │       │   ├── last_couple_of_months_plot_12_19_24.png
+│   │       │   ├── lstm_and_other_model_predictions.html
+│   │       │   ├── lstm_and_other_model_predictions.png
+│   │       │   ├── lstm_and_other_model_predictions_1w.png
+│   │       │   ├── lstm_and_other_model_predictions_2w.png
+│   │       │   ├── lstm_and_other_model_predictions_3m.png
+│   │       │   ├── lstm_and_other_model_predictions_3m_6m.png
+│   │       │   ├── lstm_and_other_model_predictions_3m_6m_using_plotly.png
+│   │       │   ├── lstm_and_other_model_predictions_6m.png
+│   │       │   └── residuals.png
+│   │       ├── post_36
+│   │       │   ├── json_data_structure.png
+│   │       │   └── results.png
+│   │       ├── post_37
+│   │       │   ├── bitcoin_vs_different_fed_rate_reductions.png
+│   │       │   ├── console_output_hysa_v_bitcoin.png
+│   │       │   ├── general_bitcoin_vs_hysa.png
+│   │       │   ├── outputs_with_sharpe_ratio.png
+│   │       │   └── value_of_a_dollar_over_time.png
+│   │       ├── post_38
+│   │       │   └── dow_nasdas_vs_top_ten_cryptos.png
+│   │       ├── post_39
+│   │       │   ├── nba_blowout_regression_trend.png
+│   │       │   ├── nba_blowout_trend.png
+│   │       │   ├── nba_blowout_trend_with_rest_line.json
+│   │       │   └── nba_blowout_trend_with_rest_line.png
+│   │       ├── post_4
+│   │       │   ├── figure_10_most_popular.png
+│   │       │   ├── figure_1_the_weird.jpg
+│   │       │   ├── figure_2_week_1_discussion_board_venn_diagram.png
+│   │       │   ├── figure_3_week_2_posts_by_story.png
+│   │       │   ├── figure_4_gephi.png
+│   │       │   ├── figure_5_gephi.png
+│   │       │   ├── figure_6_gephi.png
+│   │       │   ├── figure_7_gephi.png
+│   │       │   ├── figure_8_gephi.png
+│   │       │   └── figure_9_gephi.png
+│   │       ├── post_40
+│   │       │   ├── wnba_avg_per_game_plots.png
+│   │       │   └── wnba_total_stats_plots.png
+│   │       ├── post_41
+│   │       │   ├── kershaw_strikeouts.csv
+│   │       │   ├── kershaw_strikeouts.png
+│   │       │   ├── skenes_projection.png
+│   │       │   ├── skenes_vs_kershaw_trajectory.csv
+│   │       │   ├── skenes_vs_kershaw_trajectory.png
+│   │       │   ├── skubal_projection.png
+│   │       │   └── skubal_projections.csv
+│   │       ├── post_42
+│   │       │   ├── skubal_projection.png
+│   │       │   └── skubal_projections.csv
+│   │       ├── post_43
+│   │       │   ├── skubal_skenes_comparison.png
+│   │       │   └── skubal_skenes_projections.csv
+│   │       ├── post_44
+│   │       │   ├── nba_regular_season_blowouts_over_history.png
+│   │       │   └── proportion_of_regular_season_blowouts_over_time.png
+│   │       ├── post_45
+│   │       │   ├── wnba_blowout_counts.png
+│   │       │   └── wnba_blowout_proportions.png
+│   │       ├── post_46
+│   │       │   ├── plot_1_fourth_down_attempts.png
+│   │       │   ├── plot_2_fourth_down_conversion_rate.png
+│   │       │   ├── plot_3_go_for_it_rate_by_field_position_and_era_heatmap.png
+│   │       │   ├── plot_4_go_for_it_scatter_lines_by_era.png
+│   │       │   ├── step_7_plot.png
+│   │       │   └── step_8_scatter_no_lines.png
+│   │       ├── post_47
+│   │       │   ├── klay_1.png
+│   │       │   ├── klay_2.png
+│   │       │   └── klay_3.png
+│   │       ├── post_48
+│   │       │   ├── lebron_1.png
+│   │       │   ├── lebron_2.png
+│   │       │   ├── lebron_3.png
+│   │       │   ├── mj_1.png
+│   │       │   ├── mj_2.png
+│   │       │   └── mj_3.png
+│   │       ├── post_49
+│   │       │   ├── top_ten_oem_1.png
+│   │       │   ├── top_ten_oem_2.png
+│   │       │   ├── top_ten_oem_3.png
+│   │       │   ├── top_ten_plot_1.png
+│   │       │   ├── top_ten_plot_2.png
+│   │       │   └── top_ten_plot_3.png
+│   │       ├── post_50
+│   │       │   ├── 01_plays_bar.png
+│   │       │   ├── 02_speakers_bar.png
+│   │       │   ├── 03_heatmap.png
+│   │       │   ├── 04_timeline.png
+│   │       │   └── 05_scatter.png
+│   │       ├── post_6
+│   │       │   ├── Figure_1.png
+│   │       │   ├── Figure_2.png
+│   │       │   ├── Figure_3.png
+│   │       │   ├── excel_worksheet_clutter.png
+│   │       │   ├── markdown_pandoc_screenshot.png
+│   │       │   ├── markdown_to_pdf_example.PNG
+│   │       │   └── simple_csv_file.png
+│   │       ├── post_7
+│   │       │   ├── ben_since_covid_start.png
+│   │       │   ├── ben_u_all_time.png
+│   │       │   ├── ben_u_sentiment_results_pie_chart.png
+│   │       │   ├── bokeh_test.html
+│   │       │   ├── dom_u_all_time.png
+│   │       │   ├── dominican_since_since_covid_start.png
+│   │       │   ├── dominican_u_sentiment_results_pie_chart.png
+│   │       │   ├── lewis_since_covid_start.png
+│   │       │   ├── lewis_u_all_time.png
+│   │       │   ├── lewis_u_sentiment_results_pie_chart.png
+│   │       │   ├── lewisu_like_retweet_over_time.png
+│   │       │   ├── sx_sentiment_results_pie_chart.png
+│   │       │   ├── sx_since_covid_start.png
+│   │       │   ├── sxu_all_time.png
+│   │       │   ├── usf_sentiment_results_pie_chart.png
+│   │       │   ├── usf_sentiment_scores_all_time.png
+│   │       │   └── usf_since_covid_start.png
+│   │       ├── post_8
+│   │       │   ├── Figure_1_summary_statistics.png
+│   │       │   ├── Figure_2_first_run_of_scores_01.png
+│   │       │   ├── four_models.png
+│   │       │   ├── four_models_with_mean_as_threshold.png
+│   │       │   ├── hashtag_added.png
+│   │       │   ├── tweet_length_alone.png
+│   │       │   └── tweet_length_friends_count_favorite_count.png
+│   │       └── post_9
+│   │           ├── Figure_1.png
+│   │           ├── Figure_2.png
+│   │           └── Figure_3.png
+│   └── notebooks
+│       └── 01-06-2025_btc_vs_regular_exchanges.html
+└── themes
+    └── hello-friend-ng
+        ├── CHANGELOG.md
+        ├── CONTRIBUTING.md
+        ├── LICENSE.md
+        ├── README.md
+        ├── archetypes
+        │   ├── default.md
+        │   └── posts.md
+        ├── assets
+        │   ├── js
+        │   │   ├── main.js
+        │   │   ├── menu.js
+        │   │   └── prism.js
+        │   └── scss
+        │       ├── _404.scss
+        │       ├── _buttons.scss
+        │       ├── _flag-icons.scss
+        │       ├── _fonts.scss
+        │       ├── _footer.scss
+        │       ├── _header.scss
+        │       ├── _list.scss
+        │       ├── _logo.scss
+        │       ├── _main.scss
+        │       ├── _menu.scss
+        │       ├── _mixins.scss
+        │       ├── _normalize.scss
+        │       ├── _prism.scss
+        │       ├── _sharing-buttons.scss
+        │       ├── _single.scss
+        │       ├── _tables.scss
+        │       ├── _variables.scss
+        │       └── main.scss
+        ├── data
+        │   └── langFlags.yaml
+        ├── docs
+        │   ├── config.md
+        │   ├── favicons.md
+        │   └── svgs.md
+        ├── exampleSite
+        │   ├── config.toml
+        │   ├── content
+        │   │   ├── about.md
+        │   │   └── posts
+        │   │       ├── creating-a-new-theme.fr.md
+        │   │       ├── creating-a-new-theme.md
+        │   │       ├── goisforlovers.fr.md
+        │   │       ├── goisforlovers.md
+        │   │       ├── hugoisforlovers.fr.md
+        │   │       ├── hugoisforlovers.md
+        │   │       ├── migrate-from-jekyll.fr.md
+        │   │       └── migrate-from-jekyll.md
+        │   └── resources
+        │       └── _gen
+        │           └── assets
+        │               └── scss
+        │                   └── scss
+        │                       ├── main.scss_de1a7f5f1c8c46959803c429bb697ff0.content
+        │                       └── main.scss_de1a7f5f1c8c46959803c429bb697ff0.json
+        ├── i18n
+        │   ├── de.toml
+        │   ├── en.toml
+        │   ├── es.toml
+        │   ├── fr.toml
+        │   ├── gl.toml
+        │   ├── hi.toml
+        │   ├── id.toml
+        │   ├── it.toml
+        │   ├── ja.toml
+        │   ├── lmo.toml
+        │   ├── ml.toml
+        │   ├── pt-br.toml
+        │   ├── ro.toml
+        │   ├── ru.toml
+        │   ├── tr.toml
+        │   ├── uk.toml
+        │   ├── zh-cn.toml
+        │   ├── zh-hk.toml
+        │   └── zh-tw.toml
+        ├── images
+        │   ├── screenshot.png
+        │   └── tn.png
+        ├── layouts
+        │   ├── 404.html
+        │   ├── _default
+        │   │   ├── baseof.html
+        │   │   ├── list.html
+        │   │   └── single.html
+        │   ├── index.html
+        │   ├── partials
+        │   │   ├── categories.html
+        │   │   ├── favicons.html
+        │   │   ├── footer.html
+        │   │   ├── head.html
+        │   │   ├── header.html
+        │   │   ├── javascript.html
+        │   │   ├── logo.html
+        │   │   ├── menu.html
+        │   │   ├── pagination-list.html
+        │   │   ├── pagination-single.html
+        │   │   ├── sharing-buttons.html
+        │   │   ├── social-icons.html
+        │   │   ├── subtitle.html
+        │   │   ├── svg.html
+        │   │   ├── tags.html
+        │   │   └── theme-toggle-icon.html
+        │   ├── posts
+        │   │   ├── rss.xml
+        │   │   └── single.html
+        │   └── shortcodes
+        │       └── image.html
+        ├── static
+        │   ├── css
+        │   │   └── flag-icons.min.css
+        │   ├── flags
+        │   │   ├── 1x1
+        │   │   │   ├── ac.svg
+        │   │   │   ├── ad.svg
+        │   │   │   ├── ae.svg
+        │   │   │   ├── af.svg
+        │   │   │   ├── ag.svg
+        │   │   │   ├── ai.svg
+        │   │   │   ├── al.svg
+        │   │   │   ├── am.svg
+        │   │   │   ├── ao.svg
+        │   │   │   ├── aq.svg
+        │   │   │   ├── ar.svg
+        │   │   │   ├── as.svg
+        │   │   │   ├── at.svg
+        │   │   │   ├── au.svg
+        │   │   │   ├── aw.svg
+        │   │   │   ├── ax.svg
+        │   │   │   ├── az.svg
+        │   │   │   ├── ba.svg
+        │   │   │   ├── bb.svg
+        │   │   │   ├── bd.svg
+        │   │   │   ├── be.svg
+        │   │   │   ├── bf.svg
+        │   │   │   ├── bg.svg
+        │   │   │   ├── bh.svg
+        │   │   │   ├── bi.svg
+        │   │   │   ├── bj.svg
+        │   │   │   ├── bl.svg
+        │   │   │   ├── bm.svg
+        │   │   │   ├── bn.svg
+        │   │   │   ├── bo.svg
+        │   │   │   ├── bq.svg
+        │   │   │   ├── br.svg
+        │   │   │   ├── bs.svg
+        │   │   │   ├── bt.svg
+        │   │   │   ├── bv.svg
+        │   │   │   ├── bw.svg
+        │   │   │   ├── by.svg
+        │   │   │   ├── bz.svg
+        │   │   │   ├── ca.svg
+        │   │   │   ├── cc.svg
+        │   │   │   ├── cd.svg
+        │   │   │   ├── cefta.svg
+        │   │   │   ├── cf.svg
+        │   │   │   ├── cg.svg
+        │   │   │   ├── ch.svg
+        │   │   │   ├── ci.svg
+        │   │   │   ├── ck.svg
+        │   │   │   ├── cl.svg
+        │   │   │   ├── cm.svg
+        │   │   │   ├── cn.svg
+        │   │   │   ├── co.svg
+        │   │   │   ├── cp.svg
+        │   │   │   ├── cr.svg
+        │   │   │   ├── cu.svg
+        │   │   │   ├── cv.svg
+        │   │   │   ├── cw.svg
+        │   │   │   ├── cx.svg
+        │   │   │   ├── cy.svg
+        │   │   │   ├── cz.svg
+        │   │   │   ├── de.svg
+        │   │   │   ├── dg.svg
+        │   │   │   ├── dj.svg
+        │   │   │   ├── dk.svg
+        │   │   │   ├── dm.svg
+        │   │   │   ├── do.svg
+        │   │   │   ├── dz.svg
+        │   │   │   ├── ea.svg
+        │   │   │   ├── ec.svg
+        │   │   │   ├── ee.svg
+        │   │   │   ├── eg.svg
+        │   │   │   ├── eh.svg
+        │   │   │   ├── er.svg
+        │   │   │   ├── es-ct.svg
+        │   │   │   ├── es-ga.svg
+        │   │   │   ├── es-pv.svg
+        │   │   │   ├── es.svg
+        │   │   │   ├── et.svg
+        │   │   │   ├── eu.svg
+        │   │   │   ├── fi.svg
+        │   │   │   ├── fj.svg
+        │   │   │   ├── fk.svg
+        │   │   │   ├── fm.svg
+        │   │   │   ├── fo.svg
+        │   │   │   ├── fr.svg
+        │   │   │   ├── ga.svg
+        │   │   │   ├── gb-eng.svg
+        │   │   │   ├── gb-nir.svg
+        │   │   │   ├── gb-sct.svg
+        │   │   │   ├── gb-wls.svg
+        │   │   │   ├── gb.svg
+        │   │   │   ├── gd.svg
+        │   │   │   ├── ge.svg
+        │   │   │   ├── gf.svg
+        │   │   │   ├── gg.svg
+        │   │   │   ├── gh.svg
+        │   │   │   ├── gi.svg
+        │   │   │   ├── gl.svg
+        │   │   │   ├── gm.svg
+        │   │   │   ├── gn.svg
+        │   │   │   ├── gp.svg
+        │   │   │   ├── gq.svg
+        │   │   │   ├── gr.svg
+        │   │   │   ├── gs.svg
+        │   │   │   ├── gt.svg
+        │   │   │   ├── gu.svg
+        │   │   │   ├── gw.svg
+        │   │   │   ├── gy.svg
+        │   │   │   ├── hk.svg
+        │   │   │   ├── hm.svg
+        │   │   │   ├── hn.svg
+        │   │   │   ├── hr.svg
+        │   │   │   ├── ht.svg
+        │   │   │   ├── hu.svg
+        │   │   │   ├── ic.svg
+        │   │   │   ├── id.svg
+        │   │   │   ├── ie.svg
+        │   │   │   ├── il.svg
+        │   │   │   ├── im.svg
+        │   │   │   ├── in.svg
+        │   │   │   ├── io.svg
+        │   │   │   ├── iq.svg
+        │   │   │   ├── ir.svg
+        │   │   │   ├── is.svg
+        │   │   │   ├── it.svg
+        │   │   │   ├── je.svg
+        │   │   │   ├── jm.svg
+        │   │   │   ├── jo.svg
+        │   │   │   ├── jp.svg
+        │   │   │   ├── ke.svg
+        │   │   │   ├── kg.svg
+        │   │   │   ├── kh.svg
+        │   │   │   ├── ki.svg
+        │   │   │   ├── km.svg
+        │   │   │   ├── kn.svg
+        │   │   │   ├── kp.svg
+        │   │   │   ├── kr.svg
+        │   │   │   ├── kw.svg
+        │   │   │   ├── ky.svg
+        │   │   │   ├── kz.svg
+        │   │   │   ├── la.svg
+        │   │   │   ├── lb.svg
+        │   │   │   ├── lc.svg
+        │   │   │   ├── li.svg
+        │   │   │   ├── lk.svg
+        │   │   │   ├── lr.svg
+        │   │   │   ├── ls.svg
+        │   │   │   ├── lt.svg
+        │   │   │   ├── lu.svg
+        │   │   │   ├── lv.svg
+        │   │   │   ├── ly.svg
+        │   │   │   ├── ma.svg
+        │   │   │   ├── mc.svg
+        │   │   │   ├── md.svg
+        │   │   │   ├── me.svg
+        │   │   │   ├── mf.svg
+        │   │   │   ├── mg.svg
+        │   │   │   ├── mh.svg
+        │   │   │   ├── mk.svg
+        │   │   │   ├── ml.svg
+        │   │   │   ├── mm.svg
+        │   │   │   ├── mn.svg
+        │   │   │   ├── mo.svg
+        │   │   │   ├── mp.svg
+        │   │   │   ├── mq.svg
+        │   │   │   ├── mr.svg
+        │   │   │   ├── ms.svg
+        │   │   │   ├── mt.svg
+        │   │   │   ├── mu.svg
+        │   │   │   ├── mv.svg
+        │   │   │   ├── mw.svg
+        │   │   │   ├── mx.svg
+        │   │   │   ├── my.svg
+        │   │   │   ├── mz.svg
+        │   │   │   ├── na.svg
+        │   │   │   ├── nc.svg
+        │   │   │   ├── ne.svg
+        │   │   │   ├── nf.svg
+        │   │   │   ├── ng.svg
+        │   │   │   ├── ni.svg
+        │   │   │   ├── nl.svg
+        │   │   │   ├── no.svg
+        │   │   │   ├── np.svg
+        │   │   │   ├── nr.svg
+        │   │   │   ├── nu.svg
+        │   │   │   ├── nz.svg
+        │   │   │   ├── om.svg
+        │   │   │   ├── pa.svg
+        │   │   │   ├── pe.svg
+        │   │   │   ├── pf.svg
+        │   │   │   ├── pg.svg
+        │   │   │   ├── ph.svg
+        │   │   │   ├── pk.svg
+        │   │   │   ├── pl.svg
+        │   │   │   ├── pm.svg
+        │   │   │   ├── pn.svg
+        │   │   │   ├── pr.svg
+        │   │   │   ├── ps.svg
+        │   │   │   ├── pt.svg
+        │   │   │   ├── pw.svg
+        │   │   │   ├── py.svg
+        │   │   │   ├── qa.svg
+        │   │   │   ├── re.svg
+        │   │   │   ├── ro.svg
+        │   │   │   ├── rs.svg
+        │   │   │   ├── ru.svg
+        │   │   │   ├── rw.svg
+        │   │   │   ├── sa.svg
+        │   │   │   ├── sb.svg
+        │   │   │   ├── sc.svg
+        │   │   │   ├── sd.svg
+        │   │   │   ├── se.svg
+        │   │   │   ├── sg.svg
+        │   │   │   ├── sh.svg
+        │   │   │   ├── si.svg
+        │   │   │   ├── sj.svg
+        │   │   │   ├── sk.svg
+        │   │   │   ├── sl.svg
+        │   │   │   ├── sm.svg
+        │   │   │   ├── sn.svg
+        │   │   │   ├── so.svg
+        │   │   │   ├── sr.svg
+        │   │   │   ├── ss.svg
+        │   │   │   ├── st.svg
+        │   │   │   ├── sv.svg
+        │   │   │   ├── sx.svg
+        │   │   │   ├── sy.svg
+        │   │   │   ├── sz.svg
+        │   │   │   ├── ta.svg
+        │   │   │   ├── tc.svg
+        │   │   │   ├── td.svg
+        │   │   │   ├── tf.svg
+        │   │   │   ├── tg.svg
+        │   │   │   ├── th.svg
+        │   │   │   ├── tj.svg
+        │   │   │   ├── tk.svg
+        │   │   │   ├── tl.svg
+        │   │   │   ├── tm.svg
+        │   │   │   ├── tn.svg
+        │   │   │   ├── to.svg
+        │   │   │   ├── tr.svg
+        │   │   │   ├── tt.svg
+        │   │   │   ├── tv.svg
+        │   │   │   ├── tw.svg
+        │   │   │   ├── tz.svg
+        │   │   │   ├── ua.svg
+        │   │   │   ├── ug.svg
+        │   │   │   ├── um.svg
+        │   │   │   ├── un.svg
+        │   │   │   ├── us.svg
+        │   │   │   ├── uy.svg
+        │   │   │   ├── uz.svg
+        │   │   │   ├── va.svg
+        │   │   │   ├── vc.svg
+        │   │   │   ├── ve.svg
+        │   │   │   ├── vg.svg
+        │   │   │   ├── vi.svg
+        │   │   │   ├── vn.svg
+        │   │   │   ├── vu.svg
+        │   │   │   ├── wf.svg
+        │   │   │   ├── ws.svg
+        │   │   │   ├── xk.svg
+        │   │   │   ├── xx.svg
+        │   │   │   ├── ye.svg
+        │   │   │   ├── yt.svg
+        │   │   │   ├── za.svg
+        │   │   │   ├── zm.svg
+        │   │   │   └── zw.svg
+        │   │   └── 4x3
+        │   │       ├── ac.svg
+        │   │       ├── ad.svg
+        │   │       ├── ae.svg
+        │   │       ├── af.svg
+        │   │       ├── ag.svg
+        │   │       ├── ai.svg
+        │   │       ├── al.svg
+        │   │       ├── am.svg
+        │   │       ├── ao.svg
+        │   │       ├── aq.svg
+        │   │       ├── ar.svg
+        │   │       ├── as.svg
+        │   │       ├── at.svg
+        │   │       ├── au.svg
+        │   │       ├── aw.svg
+        │   │       ├── ax.svg
+        │   │       ├── az.svg
+        │   │       ├── ba.svg
+        │   │       ├── bb.svg
+        │   │       ├── bd.svg
+        │   │       ├── be.svg
+        │   │       ├── bf.svg
+        │   │       ├── bg.svg
+        │   │       ├── bh.svg
+        │   │       ├── bi.svg
+        │   │       ├── bj.svg
+        │   │       ├── bl.svg
+        │   │       ├── bm.svg
+        │   │       ├── bn.svg
+        │   │       ├── bo.svg
+        │   │       ├── bq.svg
+        │   │       ├── br.svg
+        │   │       ├── bs.svg
+        │   │       ├── bt.svg
+        │   │       ├── bv.svg
+        │   │       ├── bw.svg
+        │   │       ├── by.svg
+        │   │       ├── bz.svg
+        │   │       ├── ca.svg
+        │   │       ├── cc.svg
+        │   │       ├── cd.svg
+        │   │       ├── cefta.svg
+        │   │       ├── cf.svg
+        │   │       ├── cg.svg
+        │   │       ├── ch.svg
+        │   │       ├── ci.svg
+        │   │       ├── ck.svg
+        │   │       ├── cl.svg
+        │   │       ├── cm.svg
+        │   │       ├── cn.svg
+        │   │       ├── co.svg
+        │   │       ├── cp.svg
+        │   │       ├── cr.svg
+        │   │       ├── cu.svg
+        │   │       ├── cv.svg
+        │   │       ├── cw.svg
+        │   │       ├── cx.svg
+        │   │       ├── cy.svg
+        │   │       ├── cz.svg
+        │   │       ├── de.svg
+        │   │       ├── dg.svg
+        │   │       ├── dj.svg
+        │   │       ├── dk.svg
+        │   │       ├── dm.svg
+        │   │       ├── do.svg
+        │   │       ├── dz.svg
+        │   │       ├── ea.svg
+        │   │       ├── ec.svg
+        │   │       ├── ee.svg
+        │   │       ├── eg.svg
+        │   │       ├── eh.svg
+        │   │       ├── er.svg
+        │   │       ├── es-ct.svg
+        │   │       ├── es-ga.svg
+        │   │       ├── es-pv.svg
+        │   │       ├── es.svg
+        │   │       ├── et.svg
+        │   │       ├── eu.svg
+        │   │       ├── fi.svg
+        │   │       ├── fj.svg
+        │   │       ├── fk.svg
+        │   │       ├── fm.svg
+        │   │       ├── fo.svg
+        │   │       ├── fr.svg
+        │   │       ├── ga.svg
+        │   │       ├── gb-eng.svg
+        │   │       ├── gb-nir.svg
+        │   │       ├── gb-sct.svg
+        │   │       ├── gb-wls.svg
+        │   │       ├── gb.svg
+        │   │       ├── gd.svg
+        │   │       ├── ge.svg
+        │   │       ├── gf.svg
+        │   │       ├── gg.svg
+        │   │       ├── gh.svg
+        │   │       ├── gi.svg
+        │   │       ├── gl.svg
+        │   │       ├── gm.svg
+        │   │       ├── gn.svg
+        │   │       ├── gp.svg
+        │   │       ├── gq.svg
+        │   │       ├── gr.svg
+        │   │       ├── gs.svg
+        │   │       ├── gt.svg
+        │   │       ├── gu.svg
+        │   │       ├── gw.svg
+        │   │       ├── gy.svg
+        │   │       ├── hk.svg
+        │   │       ├── hm.svg
+        │   │       ├── hn.svg
+        │   │       ├── hr.svg
+        │   │       ├── ht.svg
+        │   │       ├── hu.svg
+        │   │       ├── ic.svg
+        │   │       ├── id.svg
+        │   │       ├── ie.svg
+        │   │       ├── il.svg
+        │   │       ├── im.svg
+        │   │       ├── in.svg
+        │   │       ├── io.svg
+        │   │       ├── iq.svg
+        │   │       ├── ir.svg
+        │   │       ├── is.svg
+        │   │       ├── it.svg
+        │   │       ├── je.svg
+        │   │       ├── jm.svg
+        │   │       ├── jo.svg
+        │   │       ├── jp.svg
+        │   │       ├── ke.svg
+        │   │       ├── kg.svg
+        │   │       ├── kh.svg
+        │   │       ├── ki.svg
+        │   │       ├── km.svg
+        │   │       ├── kn.svg
+        │   │       ├── kp.svg
+        │   │       ├── kr.svg
+        │   │       ├── kw.svg
+        │   │       ├── ky.svg
+        │   │       ├── kz.svg
+        │   │       ├── la.svg
+        │   │       ├── lb.svg
+        │   │       ├── lc.svg
+        │   │       ├── li.svg
+        │   │       ├── lk.svg
+        │   │       ├── lr.svg
+        │   │       ├── ls.svg
+        │   │       ├── lt.svg
+        │   │       ├── lu.svg
+        │   │       ├── lv.svg
+        │   │       ├── ly.svg
+        │   │       ├── ma.svg
+        │   │       ├── mc.svg
+        │   │       ├── md.svg
+        │   │       ├── me.svg
+        │   │       ├── mf.svg
+        │   │       ├── mg.svg
+        │   │       ├── mh.svg
+        │   │       ├── mk.svg
+        │   │       ├── ml.svg
+        │   │       ├── mm.svg
+        │   │       ├── mn.svg
+        │   │       ├── mo.svg
+        │   │       ├── mp.svg
+        │   │       ├── mq.svg
+        │   │       ├── mr.svg
+        │   │       ├── ms.svg
+        │   │       ├── mt.svg
+        │   │       ├── mu.svg
+        │   │       ├── mv.svg
+        │   │       ├── mw.svg
+        │   │       ├── mx.svg
+        │   │       ├── my.svg
+        │   │       ├── mz.svg
+        │   │       ├── na.svg
+        │   │       ├── nc.svg
+        │   │       ├── ne.svg
+        │   │       ├── nf.svg
+        │   │       ├── ng.svg
+        │   │       ├── ni.svg
+        │   │       ├── nl.svg
+        │   │       ├── no.svg
+        │   │       ├── np.svg
+        │   │       ├── nr.svg
+        │   │       ├── nu.svg
+        │   │       ├── nz.svg
+        │   │       ├── om.svg
+        │   │       ├── pa.svg
+        │   │       ├── pe.svg
+        │   │       ├── pf.svg
+        │   │       ├── pg.svg
+        │   │       ├── ph.svg
+        │   │       ├── pk.svg
+        │   │       ├── pl.svg
+        │   │       ├── pm.svg
+        │   │       ├── pn.svg
+        │   │       ├── pr.svg
+        │   │       ├── ps.svg
+        │   │       ├── pt.svg
+        │   │       ├── pw.svg
+        │   │       ├── py.svg
+        │   │       ├── qa.svg
+        │   │       ├── re.svg
+        │   │       ├── ro.svg
+        │   │       ├── rs.svg
+        │   │       ├── ru.svg
+        │   │       ├── rw.svg
+        │   │       ├── sa.svg
+        │   │       ├── sb.svg
+        │   │       ├── sc.svg
+        │   │       ├── sd.svg
+        │   │       ├── se.svg
+        │   │       ├── sg.svg
+        │   │       ├── sh.svg
+        │   │       ├── si.svg
+        │   │       ├── sj.svg
+        │   │       ├── sk.svg
+        │   │       ├── sl.svg
+        │   │       ├── sm.svg
+        │   │       ├── sn.svg
+        │   │       ├── so.svg
+        │   │       ├── sr.svg
+        │   │       ├── ss.svg
+        │   │       ├── st.svg
+        │   │       ├── sv.svg
+        │   │       ├── sx.svg
+        │   │       ├── sy.svg
+        │   │       ├── sz.svg
+        │   │       ├── ta.svg
+        │   │       ├── tc.svg
+        │   │       ├── td.svg
+        │   │       ├── tf.svg
+        │   │       ├── tg.svg
+        │   │       ├── th.svg
+        │   │       ├── tj.svg
+        │   │       ├── tk.svg
+        │   │       ├── tl.svg
+        │   │       ├── tm.svg
+        │   │       ├── tn.svg
+        │   │       ├── to.svg
+        │   │       ├── tr.svg
+        │   │       ├── tt.svg
+        │   │       ├── tv.svg
+        │   │       ├── tw.svg
+        │   │       ├── tz.svg
+        │   │       ├── ua.svg
+        │   │       ├── ug.svg
+        │   │       ├── um.svg
+        │   │       ├── un.svg
+        │   │       ├── us.svg
+        │   │       ├── uy.svg
+        │   │       ├── uz.svg
+        │   │       ├── va.svg
+        │   │       ├── vc.svg
+        │   │       ├── ve.svg
+        │   │       ├── vg.svg
+        │   │       ├── vi.svg
+        │   │       ├── vn.svg
+        │   │       ├── vu.svg
+        │   │       ├── wf.svg
+        │   │       ├── ws.svg
+        │   │       ├── xk.svg
+        │   │       ├── xx.svg
+        │   │       ├── ye.svg
+        │   │       ├── yt.svg
+        │   │       ├── za.svg
+        │   │       ├── zm.svg
+        │   │       └── zw.svg
+        │   └── fonts
+        │       ├── Inter-Bold.woff
+        │       ├── Inter-Bold.woff2
+        │       ├── Inter-BoldItalic.woff
+        │       ├── Inter-BoldItalic.woff2
+        │       ├── Inter-Italic.woff
+        │       ├── Inter-Italic.woff2
+        │       ├── Inter-Medium.woff
+        │       ├── Inter-Medium.woff2
+        │       ├── Inter-MediumItalic.woff
+        │       ├── Inter-MediumItalic.woff2
+        │       ├── Inter-Regular.woff
+        │       └── Inter-Regular.woff2
+        └── theme.toml
+
+582 directories, 1616 files

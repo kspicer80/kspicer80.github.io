@@ -77,7 +77,7 @@ sims = sk_cosine(batch, shak_vecs)
 
 The relationship between the two scoring methods is itself worth examining. The scatter plot below shows fuzzy score against semantic score for a sample of 2,000 matches, coloured by play. Points in the upper-right quadrant---high on both axes---represent the most confident matches; points that score high on fuzzy but lower on semantic tend to be lexical overlaps that don't hold up under deeper comparison, while the reverse (high semantic, moderate fuzzy) often flags looser thematic allusions where the wording has been substantially reworked.
 
-![Fuzzy vs. semantic score by play](images/imgforblogposts/post_50/tng_shakespeare/05_scatter.png)
+![Fuzzy vs. semantic score by play](/images/imgforblogposts/post_50/tng_shakespeare/05_scatter.png)
 
 The final output is two files: `matching/candidates.csv` (everything above the loose threshold) and `matching/confirmed.csv` (the high-confidence subset). The confirmed set came in at 1,109 matches.
 
