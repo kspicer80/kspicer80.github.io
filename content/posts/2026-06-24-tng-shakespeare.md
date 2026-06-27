@@ -101,7 +101,7 @@ The heatmap below breaks the confirmed matches down by season and play, which ad
 
 ![References by season and play](/images/imgforblogposts/post_50/03_heatmap.png)
 
-A few things stand out here. Hamlet references are distributed fairly evenly across all seven seasons rather than clustering in particular years, which makes sense given that Picard's literary interests are a consistent characterization device throughout the series rather than a phase the writers went through. The *Henry VIII* concentration in certain seasons is worth investigating further---it is possible that a handful of episodes involving formal political ceremony or ritual are driving those numbers. The relative absence of references in Season 2 is also interesting; Season 2 is generally considered the shakiest of the run, and it would be worth checking whether the reduced Shakespeare count is a real signal about the writing or an artifact of shorter episodes or transcript quality.
+A few things stand out here. Hamlet references are distributed fairly evenly across all seven seasons rather than clustering in particular years, which makes sense given that Picard's literary interests are a consistent characterization device throughout the series rather than a phase the writers went through. The *Henry VIII* concentration in certain seasons is worth investigating further, without a doubt---it is possible that a handful of episodes involving formal political ceremony or ritual are driving those numbers. The relative absence of references in Season 2 is also interesting; Season 2 is generally considered (from what I understand) the shakiest of the run, and it would be worth checking whether the reduced Shakespeare count is a real signal about the writing or an artifact of shorter episodes or transcript quality.
 
 The timeline view makes the episode-by-episode distribution somewhat clearer:
 
@@ -119,9 +119,9 @@ As usual, more to come, for sure.
 
 ---
 
-[^1]: The original Shylock speech, of course, runs: "If you prick us, do we not bleed? If you tickle us, do we not laugh? If you poison us, do we not die? And if you wrong us, shall we not revenge?" (*The Merchant of Venice*, III.i). Data's version substitutes "leak" for "bleed," which is both a joke about his android physiology and, depending on how one reads it, something considerably more than a joke, to be sure.
+[^1]: The original Shylock speech, of course, runs: "If you prick us, do we not bleed? If you tickle us, do we not laugh? If you poison us, do we not die? And if you wrong us, shall we not revenge?" (*The Merchant of Venice*, III.i). Data's version substitutes "leak" for "bleed," which is obviously both a joke about his android physiology and, depending on how one reads it, something considerably more than a joke, to be sure.
 
-[^2]: There was one small hiccup with the scraper: chakoteya numbers its episode pages sequentially (1.htm, 2.htm, ... 176.htm), and the original scraping script misread 3-digit sequential numbers like `101` as "Season 1, Episode 1" rather than "episode 101 overall." A quick fix script using the canonical episode list sorted everything out without requiring a re-download---skipping over two episodes with accented characters in their titles ("Déjà Q" and "Ménage à Troi") that needed a manual rename.
+[^2]: There was one small hiccup with the scraper: the chakoteya website numbers its episode pages sequentially (1.htm, 2.htm, ... 176.htm), and the original scraping script misread 3-digit sequential numbers like `101` as "Season 1, Episode 1" rather than "episode 101 overall." A quick fix script using the canonical episode list sorted everything out without requiring a re-download---skipping over two episodes with accented characters in their titles ("Déjà Q" and "Ménage à Troi") that needed a manual rename.
 
 [^3]: `sentence-transformers` requires PyTorch >= 2.4, which necessitated creating a dedicated conda environment (`conda create -n tng_shakespeare python=3.11`) rather than fighting with the base environment's existing PyTorch 2.2 install.
 
