@@ -1,5 +1,5 @@
 ---
-title: "The Bard Aboard the Enterprise: Tracking Shakespeare References in Star Trek: The Next Generation"
+title: "The Bard Aboard the Enterprise: Tracking Shakespeare References in *Star Trek: The Next Generation*"
 date: 2026-06-24
 tags:
   - digital humanities
